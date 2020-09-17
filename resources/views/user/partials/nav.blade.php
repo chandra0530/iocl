@@ -16,7 +16,7 @@
                                 <div class="menu-search">
                                     <nav class="main-menu">
                                         <ul>
-                                            <li class="active-item"><a href="index.html">Home</a></li>
+                                            <li class="active-item"><a href="#">Home</a></li>
                                             <!-- <li>
                                                 <a href="index.html">Pages</a>
                                                 <ul class="dropdown-menus">
@@ -30,8 +30,8 @@
                                                     <li><a href="404.html">404 / Error</a></li>
                                                 </ul>
                                             </li> -->
-                                            <li><a href="about.html">NEWS</a></li>
-                                            <li><a href="portfolio.html">EVENTS</a></li>
+                                            <li><a href="#news_section">NEWS</a></li>
+                                            <li><a href="#our_events">EVENTS</a></li>
                                             <!-- <li>
                                                 <a href="blog.html">Blog</a>
                                                 <ul class="dropdown-menus">
@@ -42,10 +42,10 @@
                                                     <li><a href="single-left-sidebar.html">Single Left Sidebar</a></li>
                                                 </ul>
                                             </li> -->
-                                            <li><a href="contact.html">COMPETITIONS</a></li>
-                                            <li><a href="contact.html">ANNOUCEMENT</a></li>
-                                            <li><a href="contact.html">GALLERY</a></li>
-                                            <li><a href="contact.html">CONTACT</a></li>
+                                            <li><a href="#compititions">COMPETITIONS</a></li>
+                                            <li><a href="#announcements">ANNOUCEMENT</a></li>
+                                            <li><a href="#gallery">GALLERY</a></li>
+                                            <li><a href="#contact_us">CONTACT</a></li>
                                         </ul>
                                     </nav>
                                    

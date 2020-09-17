@@ -97,7 +97,7 @@
 
 
 
-<section class="recent-blog section">
+<section class="recent-blog section" id="news_section">
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -155,7 +155,7 @@
         </section>
 
 
-        <section class="our-service section">
+        <section class="our-service section" id="our_events">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -338,7 +338,7 @@
 			</div> <!-- /.full-width-sec.full-width-sec-2nd -->
 		</section>
 
-        <section class="we-do section">
+        <section class="we-do section" id="compititions">
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -442,7 +442,7 @@
         
 
 <!-- Announcements -->
-<section class="full-width-sec">
+<section class="full-width-sec" id="announcements">
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-12 col-md-6 pos-static">
@@ -496,7 +496,7 @@
 
 
 
-        <section class="portfolios section">
+        <section class="portfolios section" id="gallery">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -608,7 +608,7 @@
 
 
 
-        <section class="get-touch section">
+        <section class="get-touch section" id="contact_us"> 
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
