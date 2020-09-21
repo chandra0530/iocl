@@ -48,7 +48,7 @@ button:focus{
 	font-size: 12px;
 }
 .header-top a:hover {
-	color: #febd00;
+	color: #e25732;
 }
 .top-left ul li {
 	float: left;
@@ -101,7 +101,7 @@ button:focus{
 	padding: 10px 20px;
 }
 .top-right .dropdown-menu>li>a:hover {
-	color: #febd00;
+	color: #e25732;
 }
 .top-right .dropdown-menu {
 	left: -1px;
@@ -144,7 +144,7 @@ button:focus{
 	overflow: hidden;
 }
 .main-menu ul li.active-item > a {
-	color:  #febd00;
+	color:  #e25732;
 	position: relative;
 }
 .main-menu ul li.active-item > a:after,
@@ -155,7 +155,7 @@ button:focus{
 	left: 0;
 	right: 0;
 	height: 2px;
-	background: #febd00;
+	background: #e25732;
 }
 .main-menu ul li.active-item > a:before {
     position: absolute;
@@ -170,7 +170,7 @@ button:focus{
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    background: #febd00;
+    background: #e25732;
 }
 
 
@@ -179,13 +179,13 @@ button:focus{
 	width: 0;
 }
 .main-menu ul li:hover > a {
-    color: #febd00;
+    color: #e25732;
 }
 .main-menu > ul > li > a > i {
-	color: #febd00;
+	color: #e25732;
 }
 .main-menu > ul > li a.current_page {
-	color: #febd00;
+	color: #e25732;
 }
 /*dropdown*/
 .main-menu ul li ul.dropdown-menus li a::before {
@@ -217,7 +217,7 @@ button:focus{
     left: 0;
     right: 0;
     height: 2px;
-    background: #febd00;
+    background: #e25732;
 }
 .dropdown-menus:before {
     content: "";
@@ -227,7 +227,7 @@ button:focus{
     left: 0;
     right: 0;
     height: 2px;
-    background: #febd00;
+    background: #e25732;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -294,13 +294,13 @@ ul.dropdown-menus li a {
 	font-size: 18px;
 }
 .mob-menu li:hover a strong {
-	color: #febd00;
+	color: #e25732;
 }
 .mob-menu li:hover a strong span {
-	color: #febd00;
+	color: #e25732;
 }
 .mob-menu li:hover a i{
-	color: #febd00;
+	color: #e25732;
 }
 .mob-menu li a strong span {
 	font-weight: 400;
@@ -379,7 +379,7 @@ ul.dropdown-menus li a {
 }
 .search a {
     font-size: 14px;
-    color: #febd00;
+    color: #e25732;
     font-weight: 400;
     padding: 0px 20px;
     line-height: 100px;
@@ -415,7 +415,7 @@ ul.dropdown-menus li a {
 	position: absolute;
 	right: 0;
 	height: 100%;
-	background:#febd00;
+	background:#e25732;
 	width: 40px;
 	color: #fff;
 	font-weight: 600;
@@ -617,7 +617,7 @@ ul.dropdown-menus li a {
 	line-height: 100px;
 }
 .close-menu i {
-	color: #febd00;
+	color: #e25732;
 	line-height: 100px;
 	top: 0;
 	position: relative;
@@ -650,7 +650,7 @@ ul.dropdown-menus li a {
 	top: 0;
 	line-height: 60px;
 	font-size: 20px;
-	color: #febd00;
+	color: #e25732;
 }
 
 /*Responsive CSS*/

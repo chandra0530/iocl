@@ -200,14 +200,14 @@
                                         <li class="col-xs-6 col-sm-4 slick-slide active slick-active" data-toggle="tab" data-target="#service-img2" style="width: 187px;" tabindex="0" data-slick-index="1" aria-hidden="false">
                                             <div class="get-item">
                                                 <img src="assets/images/events-small-2.jpg" alt="Img">
-                                                <h6>Christmas Carol's </h6>
+                                                <h6> New Year Eve</h6>
                                             </div>
                                             <!-- /.get-item -->
                                         </li>
                                         <li class="col-xs-6 col-sm-4 slick-slide active slick-active" data-toggle="tab" data-target="#service-img3" style="width: 187px;" tabindex="0" data-slick-index="2" aria-hidden="false">
                                             <div class="get-item">
                                                 <img src="assets/images/events-small-3.jpg" alt="Img">
-                                                <h6>New Year Eve</h6>
+                                                <h6>Christmas Carol's</h6>
                                             </div>
                                             <!-- /.get-item -->
                                         </li>
@@ -268,8 +268,8 @@
                                 <li class="active" data-toggle="tab" data-target="#creative1">
                                     <div class="col-sm-4 col-md-4">
                                         <div class="we-item">
-                                            <i class="flaticon-idea"></i>
-                                            <!-- <img src="assets/images/paint-palette.png"> -->
+                                            <!-- <i class="flaticon-idea"></i> -->
+                                            <img src="assets/images/paint-palette.png">
                                             
                                             <a href="#"><h4 class="gen-title">Art Exhibition </h4></a>
                                             <p>Lorem ipsum is simply dummy text.</p>
