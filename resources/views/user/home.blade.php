@@ -7,7 +7,7 @@
 @section('content')      
         <!-- Start Main Slider -->
         <!-- Start Main Slider -->
-        <section id="main-slider">
+        <section id="main-slider" id="home">
             <!-- Carousel -->
             <div id="main-slide" class="main-slider carousel slide" data-ride="carousel">
                 <!-- Carousel inner -->
@@ -18,14 +18,14 @@
                             <div class="slider-content">
                                 <div class="container">
                                     <h2 class="animated4">
-                                        <span>Welcome To <strong>IOCL Family</strong></span>
+                                        <span>Welcome To <strong>IOCL Parivaar</strong></span>
                                     </h2>
                                     <p class="animated6 slide-para">
                                         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</span>
                                     </p>
                                     <p class="animated4">
-                                        <a href="#" class="slider-btn cbiz-btn">Gallery</a>
-                                        <a href="#" class="slider-btn cbiz-btn cbiz-btn-border">Events</a>
+                                        <a href="#gallery" class="slider-btn cbiz-btn">Gallery</a>
+                                        <a href="#our_events" class="slider-btn cbiz-btn cbiz-btn-border">Events</a>
                                     </p>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
                         <div class="section-heading">
-                            <h2 class="title"><span>Our</span> Daily News</h2>
+                            <h2 class="title" style="font-family: Samarkan !important;"><span>Our Daily</span>  Thaza Khabar</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                         </div>
                     </div>
@@ -126,219 +126,219 @@
         
         
         <section class="working">
-   <div class="full-width-sec">
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-12 col-md-6 padding-0 pos-static">
-               <div class="tab-content">
-                  <div class="cel-feature full-w-h tab-pane fade active in" id="service-img1">
-                     <img class="img-responsive" src="https://iskconnews.org/media/img_versions/2018/04-Apr/far1_slideshow.jpg" alt="Img">
-                  </div>
-                  <div class="cel-feature full-w-h tab-pane fade" id="service-img2">
-                     <img class="img-responsive" src="https://content3.jdmagicbox.com/comp/bhubaneshwar/y3/0674px674.x674.120711163809.e4y3/catalogue/altitude-events-surya-nagar-bhubaneshwar-event-organisers-tigl5ihxtl.jpg?clr=29293d" alt="Img">
-                  </div>
-                  <div class="cel-feature full-w-h tab-pane fade" id="service-img3">
-                     <img class="img-responsive" src="assets/images/services/3.jpg" alt="Img">
-                  </div>
-               </div>
-               <!-- /.tab-content -->
+            <div class="full-width-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 padding-0 pos-static">
+                        <div class="tab-content">
+                            <div class="cel-feature full-w-h tab-pane fade active in" id="service-img1">
+                                <img class="img-responsive" src="https://iskconnews.org/media/img_versions/2018/04-Apr/far1_slideshow.jpg" alt="Img">
+                            </div>
+                            <div class="cel-feature full-w-h tab-pane fade" id="service-img2">
+                                <img class="img-responsive" src="https://content3.jdmagicbox.com/comp/bhubaneshwar/y3/0674px674.x674.120711163809.e4y3/catalogue/altitude-events-surya-nagar-bhubaneshwar-event-organisers-tigl5ihxtl.jpg?clr=29293d" alt="Img">
+                            </div>
+                            <div class="cel-feature full-w-h tab-pane fade" id="service-img3">
+                                <img class="img-responsive" src="assets/images/services/3.jpg" alt="Img">
+                            </div>
+                        </div>
+                        <!-- /.tab-content -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-12 col-md-6 padding-0">
+                        <div class="get-us">
+                            <div class="get-head">
+                                <div class="get-icon">
+                                    <img src="assets/images/icons/filter.png" alt="Icon">
+                                    <div class="get-number">
+                                    3
+                                    </div>
+                                </div>
+                                <div class="get-title">
+                                    <h4>what you get <br>from us?</h4>
+                                </div>
+                            </div>
+                            <!-- /.get-head -->
+                            <div class="slider service-slider-content slick-initialized slick-slider">
+                                <div class="slick-list">
+                                    <div class="slick-track" style="opacity: 1; width: 3710px; transform: translate3d(-530px, 0px, 0px);">
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    <div class="get-content slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 530px;" tabindex="0">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+                                    </div>
+                                    <div class="get-content slick-slide" data-slick-index="1" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="get-content slick-slide" data-slick-index="2" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="3" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+                                    </div>
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="4" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.service-slider-content -->
+                            <div class="row get-all-items">
+                                <ul class="slider slider-thumb slick-initialized slick-slider">
+                                    <div class="slick-list draggable">
+                                    <div class="slick-track" style="opacity: 1; width: 561px; transform: translate3d(0px, 0px, 0px);">
+                                        <li class="col-xs-6 col-sm-4 active slick-slide slick-current slick-active" data-toggle="tab" data-target="#service-img1" style="width: 187px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                                            <div class="get-item">
+                                                <img src="assets/images/services/b2.jpg" alt="Img">
+                                                <h6>website build</h6>
+                                            </div>
+                                            <!-- /.get-item -->
+                                        </li>
+                                        <li class="col-xs-6 col-sm-4 slick-slide active slick-active" data-toggle="tab" data-target="#service-img2" style="width: 187px;" tabindex="0" data-slick-index="1" aria-hidden="false">
+                                            <div class="get-item">
+                                                <img src="assets/images/services/2.jpg" alt="Img">
+                                                <h6>redesign website</h6>
+                                            </div>
+                                            <!-- /.get-item -->
+                                        </li>
+                                        <li class="col-xs-6 col-sm-4 slick-slide active slick-active" data-toggle="tab" data-target="#service-img3" style="width: 187px;" tabindex="0" data-slick-index="2" aria-hidden="false">
+                                            <div class="get-item">
+                                                <img src="assets/images/services/3.jpg" alt="Img">
+                                                <h6>heavy marketing</h6>
+                                            </div>
+                                            <!-- /.get-item -->
+                                        </li>
+                                    </div>
+                                    </div>
+                                </ul>
+                                <!-- /.slider-thumb -->
+                            </div>
+                            <!-- /.get-all-items -->
+                        </div>
+                        <!-- /.get-us -->					
+                        </div>
+                        <!-- /.col- -->
+                    </div>
+                    <!-- /.row -->  
+                </div>
+                <!-- /.container -->
             </div>
-            <!-- /.col -->
-            <div class="col-sm-12 col-md-6 padding-0">
-               <div class="get-us">
-                  <div class="get-head">
-                     <div class="get-icon">
-                        <img src="assets/images/icons/filter.png" alt="Icon">
-                        <div class="get-number">
-                           3
+            <!-- /.full-width-sec full-width-sec-2nd -->
+            <div class="full-width-sec full-width-sec-2nd">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 padding-0">
+                        <div class="get-us">
+                            <div class="get-head">
+                                <div class="get-icon">
+                                    <img src="assets/images/icons/filter2.png" alt="Icon">
+                                    <div class="get-number">
+                                    6
+                                    </div>
+                                </div>
+                                <div class="get-title">
+                                    <h4>Our several servire <br>for you??</h4>
+                                </div>
+                            </div>
+                            <!-- /.get-head -->
+                            <div class="slider service-slider-content-2nd slick-initialized slick-slider">
+                                <div class="slick-list">
+                                    <div class="slick-track" style="opacity: 1; width: 6890px; transform: translate3d(-530px, 0px, 0px);">
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Incididunt Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    <div class="get-content slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 530px;" tabindex="0">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+                                    </div>
+                                    <div class="get-content slick-slide" data-slick-index="1" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="get-content slick-slide" data-slick-index="2" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    <div class="get-content slick-slide" data-slick-index="3" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad , quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+                                    </div>
+                                    <div class="get-content slick-slide" data-slick-index="4" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Nisi ut Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris  aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="get-content slick-slide" data-slick-index="5" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Incididunt Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+                                    </div>
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="8" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad , quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+                                    </div>
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="10" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Nisi ut Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris  aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="11" aria-hidden="true" style="width: 530px;" tabindex="-1">
+                                        <p>Incididunt Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.service-slider-content -->
+                            <div class="row get-all-items">
+                                <ul class="get-services slider slider-thumb-2nd slick-initialized slick-slider">
+                                    <div class="slick-list draggable">
+                                    <div class="slick-track" style="opacity: 1; width: 480px; transform: translate3d(0px, 0px, 0px);">
+                                        <li class="active slick-slide slick-current slick-active" data-toggle="tab" data-target="#service-2nd-img1" style="width: 65px;" tabindex="0" data-slick-index="0" aria-hidden="false">Responsive1</li>
+                                        <li data-toggle="tab" data-target="#service-2nd-img2" class="slick-slide slick-active" style="width: 65px;" tabindex="0" data-slick-index="1" aria-hidden="false">Organised</li>
+                                        <li data-toggle="tab" data-target="#service-2nd-img3" class="slick-slide slick-active" style="width: 65px;" tabindex="0" data-slick-index="2" aria-hidden="false">Editable</li>
+                                        <li data-toggle="tab" data-target="#service-2nd-img4" class="slick-slide slick-active" style="width: 65px;" tabindex="0" data-slick-index="3" aria-hidden="false">Creative</li>
+                                        <li data-toggle="tab" data-target="#service-2nd-img5" class="slick-slide slick-active" style="width: 65px;" tabindex="0" data-slick-index="4" aria-hidden="false">Perfect pixel</li>
+                                        <li data-toggle="tab" data-target="#service-2nd-img6" class="slick-slide slick-active" style="width: 65px;" tabindex="0" data-slick-index="5" aria-hidden="false">New trand</li>
+                                    </div>
+                                    </div>
+                                </ul>
+                            </div>
                         </div>
-                     </div>
-                     <div class="get-title">
-                        <h4>what you get <br>from us?</h4>
-                     </div>
-                  </div>
-                  <!-- /.get-head -->
-                  <div class="slider service-slider-content slick-initialized slick-slider">
-                     <div class="slick-list">
-                        <div class="slick-track" style="opacity: 1; width: 3710px; transform: translate3d(-530px, 0px, 0px);">
-                           <div class="get-content slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                           </div>
-                           <div class="get-content slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 530px;" tabindex="0">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                           </div>
-                           <div class="get-content slick-slide" data-slick-index="1" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                           </div>
-                           <div class="get-content slick-slide" data-slick-index="2" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                           </div>
-                           <div class="get-content slick-slide slick-cloned" data-slick-index="3" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                           </div>
-                           <div class="get-content slick-slide slick-cloned" data-slick-index="4" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                           </div>
-                           <div class="get-content slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                           </div>
+                        <!-- /.get-us -->				
                         </div>
-                     </div>
-                  </div>
-                  <!-- /.service-slider-content -->
-                  <div class="row get-all-items">
-                     <ul class="slider slider-thumb slick-initialized slick-slider">
-                        <div class="slick-list draggable">
-                           <div class="slick-track" style="opacity: 1; width: 561px; transform: translate3d(0px, 0px, 0px);">
-                              <li class="col-xs-6 col-sm-4 active slick-slide slick-current slick-active" data-toggle="tab" data-target="#service-img1" style="width: 187px;" tabindex="0" data-slick-index="0" aria-hidden="false">
-                                 <div class="get-item">
-                                    <img src="assets/images/services/b2.jpg" alt="Img">
-                                    <h6>website build</h6>
-                                 </div>
-                                 <!-- /.get-item -->
-                              </li>
-                              <li class="col-xs-6 col-sm-4 slick-slide active slick-active" data-toggle="tab" data-target="#service-img2" style="width: 187px;" tabindex="0" data-slick-index="1" aria-hidden="false">
-                                 <div class="get-item">
-                                    <img src="assets/images/services/2.jpg" alt="Img">
-                                    <h6>redesign website</h6>
-                                 </div>
-                                 <!-- /.get-item -->
-                              </li>
-                              <li class="col-xs-6 col-sm-4 slick-slide active slick-active" data-toggle="tab" data-target="#service-img3" style="width: 187px;" tabindex="0" data-slick-index="2" aria-hidden="false">
-                                 <div class="get-item">
-                                    <img src="assets/images/services/3.jpg" alt="Img">
-                                    <h6>heavy marketing</h6>
-                                 </div>
-                                 <!-- /.get-item -->
-                              </li>
-                           </div>
+                        <!-- /.col- -->
+                        <div class="col-sm-12 col-md-6 padding-0 pos-static">
+                        <div class="tab-content">
+                            <div class="cel-feature full-w-h tab-pane fade in active" id="service-2nd-img1">
+                                <img class="img-responsive" src="https://content3.jdmagicbox.com/comp/bhubaneshwar/y3/0674px674.x674.120711163809.e4y3/catalogue/altitude-events-surya-nagar-bhubaneshwar-event-organisers-tigl5ihxtl.jpg?clr=29293d" alt="Img">
+                            </div>
+                            <div class="cel-feature full-w-h tab-pane fade" id="service-2nd-img2">
+                                <img class="img-responsive" src="assets/images/700x400/1.jpg" alt="Img">
+                            </div>
+                            <div class="cel-feature full-w-h tab-pane fade" id="service-2nd-img3">
+                                <img class="img-responsive" src="assets/images/700x400/3.jpg" alt="Img">
+                            </div>
+                            <div class="cel-feature full-w-h tab-pane fade" id="service-2nd-img4">
+                                <img class="img-responsive" src="assets/images/700x400/4.jpg" alt="Img">
+                            </div>
+                            <div class="cel-feature full-w-h tab-pane fade" id="service-2nd-img5">
+                                <img class="img-responsive" src="assets/images/700x400/5.jpg" alt="Img">
+                            </div>
+                            <div class="cel-feature full-w-h tab-pane fade" id="service-2nd-img6">
+                                <img class="img-responsive" src="assets/images/700x400/6.jpg" alt="Img">
+                            </div>
                         </div>
-                     </ul>
-                     <!-- /.slider-thumb -->
-                  </div>
-                  <!-- /.get-all-items -->
-               </div>
-               <!-- /.get-us -->					
+                        <!-- /.tab-content -->
+                        </div>
+                        <!-- /.col- -->
+                    </div>
+                    <!-- /.row -->  
+                </div>
+                <!-- /.container -->
             </div>
-            <!-- /.col- -->
-         </div>
-         <!-- /.row -->  
-      </div>
-      <!-- /.container -->
-   </div>
-   <!-- /.full-width-sec full-width-sec-2nd -->
-   <div class="full-width-sec full-width-sec-2nd">
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-12 col-md-6 padding-0">
-               <div class="get-us">
-                  <div class="get-head">
-                     <div class="get-icon">
-                        <img src="assets/images/icons/filter2.png" alt="Icon">
-                        <div class="get-number">
-                           6
-                        </div>
-                     </div>
-                     <div class="get-title">
-                        <h4>Our several servire <br>for you??</h4>
-                     </div>
-                  </div>
-                  <!-- /.get-head -->
-                  <div class="slider service-slider-content-2nd slick-initialized slick-slider">
-                     <div class="slick-list">
-                        <div class="slick-track" style="opacity: 1; width: 6890px; transform: translate3d(-530px, 0px, 0px);">
-                           <div class="get-content slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Incididunt Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                           </div>
-                           <div class="get-content slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 530px;" tabindex="0">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                           </div>
-                           <div class="get-content slick-slide" data-slick-index="1" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                           </div>
-                           <div class="get-content slick-slide" data-slick-index="2" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                           </div>
-                           <div class="get-content slick-slide" data-slick-index="3" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad , quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                           </div>
-                           <div class="get-content slick-slide" data-slick-index="4" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Nisi ut Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris  aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                           </div>
-                           <div class="get-content slick-slide" data-slick-index="5" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Incididunt Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                           </div>
-                           <div class="get-content slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                           </div>
-                           <div class="get-content slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                           </div>
-                           <div class="get-content slick-slide slick-cloned" data-slick-index="8" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                           </div>
-                           <div class="get-content slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad , quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                           </div>
-                           <div class="get-content slick-slide slick-cloned" data-slick-index="10" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Nisi ut Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris  aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                           </div>
-                           <div class="get-content slick-slide slick-cloned" data-slick-index="11" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                              <p>Incididunt Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- /.service-slider-content -->
-                  <div class="row get-all-items">
-                     <ul class="get-services slider slider-thumb-2nd slick-initialized slick-slider">
-                        <div class="slick-list draggable">
-                           <div class="slick-track" style="opacity: 1; width: 480px; transform: translate3d(0px, 0px, 0px);">
-                              <li class="active slick-slide slick-current slick-active" data-toggle="tab" data-target="#service-2nd-img1" style="width: 65px;" tabindex="0" data-slick-index="0" aria-hidden="false">Responsive1</li>
-                              <li data-toggle="tab" data-target="#service-2nd-img2" class="slick-slide slick-active" style="width: 65px;" tabindex="0" data-slick-index="1" aria-hidden="false">Organised</li>
-                              <li data-toggle="tab" data-target="#service-2nd-img3" class="slick-slide slick-active" style="width: 65px;" tabindex="0" data-slick-index="2" aria-hidden="false">Editable</li>
-                              <li data-toggle="tab" data-target="#service-2nd-img4" class="slick-slide slick-active" style="width: 65px;" tabindex="0" data-slick-index="3" aria-hidden="false">Creative</li>
-                              <li data-toggle="tab" data-target="#service-2nd-img5" class="slick-slide slick-active" style="width: 65px;" tabindex="0" data-slick-index="4" aria-hidden="false">Perfect pixel</li>
-                              <li data-toggle="tab" data-target="#service-2nd-img6" class="slick-slide slick-active" style="width: 65px;" tabindex="0" data-slick-index="5" aria-hidden="false">New trand</li>
-                           </div>
-                        </div>
-                     </ul>
-                  </div>
-               </div>
-               <!-- /.get-us -->				
-            </div>
-            <!-- /.col- -->
-            <div class="col-sm-12 col-md-6 padding-0 pos-static">
-               <div class="tab-content">
-                  <div class="cel-feature full-w-h tab-pane fade in active" id="service-2nd-img1">
-                     <img class="img-responsive" src="https://content3.jdmagicbox.com/comp/bhubaneshwar/y3/0674px674.x674.120711163809.e4y3/catalogue/altitude-events-surya-nagar-bhubaneshwar-event-organisers-tigl5ihxtl.jpg?clr=29293d" alt="Img">
-                  </div>
-                  <div class="cel-feature full-w-h tab-pane fade" id="service-2nd-img2">
-                     <img class="img-responsive" src="assets/images/700x400/1.jpg" alt="Img">
-                  </div>
-                  <div class="cel-feature full-w-h tab-pane fade" id="service-2nd-img3">
-                     <img class="img-responsive" src="assets/images/700x400/3.jpg" alt="Img">
-                  </div>
-                  <div class="cel-feature full-w-h tab-pane fade" id="service-2nd-img4">
-                     <img class="img-responsive" src="assets/images/700x400/4.jpg" alt="Img">
-                  </div>
-                  <div class="cel-feature full-w-h tab-pane fade" id="service-2nd-img5">
-                     <img class="img-responsive" src="assets/images/700x400/5.jpg" alt="Img">
-                  </div>
-                  <div class="cel-feature full-w-h tab-pane fade" id="service-2nd-img6">
-                     <img class="img-responsive" src="assets/images/700x400/6.jpg" alt="Img">
-                  </div>
-               </div>
-               <!-- /.tab-content -->
-            </div>
-            <!-- /.col- -->
-         </div>
-         <!-- /.row -->  
-      </div>
-      <!-- /.container -->
-   </div>
-   <!-- /.full-width-sec.full-width-sec-2nd -->
-</section>
+            <!-- /.full-width-sec.full-width-sec-2nd -->
+        </section>
 
 <section class="we-do section" id="compititions">
             <div class="container">    

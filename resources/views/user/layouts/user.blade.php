@@ -9,11 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>IOCL</title>
+    <title>IOCL Parivaar</title>
 
     <!-- Page Description and Author -->
-    <meta name="description" content="" />
-    <meta name="author" content="iocl" />
+    <meta name="description" content="IOCL Parivaar" />
+    <meta name="author" content="IOCL Parivaar" />
 
  <!--  Favicons / Title Bar Icon  -->
  <link rel="shortcut icon" href="{{ asset('assets/images/favicon/icon.png')}}" />
@@ -87,13 +87,13 @@
                                         <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that.</p>
                                         <ul class="wi-list">
                                             <li>
-                                                <a href="#"><i class="fa fa-home"></i>43, Chanmry Bazar, khulna-9201</a>
+                                                <a href="#"><i class="fa fa-home"></i>iocl address</a>
                                             </li>
                                             <li>
-                                                <a href="#"><i class="fa fa-envelope-o"></i>admin@yoursite.com</a>
+                                                <a href="#"><i class="fa fa-envelope-o"></i>admin@ioclparivar.com</a>
                                             </li>
                                             <li>
-                                                <a href="#"><i class="fa fa-phone"></i>+880 123 727 525</a>
+                                                <a href="#"><i class="fa fa-phone"></i>contact details iocl</a>
                                             </li>
 
                                         </ul>
