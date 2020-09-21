@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('admin', function () {
     return view('admin.home');
 });
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
+});

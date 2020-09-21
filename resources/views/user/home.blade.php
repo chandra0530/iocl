@@ -189,22 +189,22 @@
                             <div class="row get-all-items">
                                 <ul class="slider slider-thumb slick-initialized slick-slider">
                                     <div class="slick-list draggable">
-                                    <div class="slick-track" style="opacity: 1; width: 561px; transform: translate3d(0px, 0px, 0px);">
-                                        <li class="col-xs-6 col-sm-4 active slick-slide slick-current slick-active" data-toggle="tab" data-target="#service-img1" style="width: 187px;" tabindex="0" data-slick-index="0" aria-hidden="false">
+                                    <div class="slick-track" style="opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                        <li class="col-xs-4 col-sm-4 active slick-slide slick-current slick-active" data-toggle="tab" data-target="#service-img1"  tabindex="0" data-slick-index="0" aria-hidden="false">
                                             <div class="get-item">
                                                 <img src="assets/images/events-small-1.jpg" alt="Img">
                                                 <h6>Diwali Dhamaka</h6>
                                             </div>
                                             <!-- /.get-item -->
                                         </li>
-                                        <li class="col-xs-6 col-sm-4 slick-slide active slick-active" data-toggle="tab" data-target="#service-img2" style="width: 187px;" tabindex="0" data-slick-index="1" aria-hidden="false">
+                                        <li class="col-xs-4 col-sm-4 active slick-slide slick-current slick-active" data-toggle="tab" data-target="#service-img2"  tabindex="0" data-slick-index="1" aria-hidden="false">
                                             <div class="get-item">
                                                 <img src="assets/images/events-small-2.jpg" alt="Img">
                                                 <h6> New Year Eve</h6>
                                             </div>
                                             <!-- /.get-item -->
                                         </li>
-                                        <li class="col-xs-6 col-sm-4 slick-slide active slick-active" data-toggle="tab" data-target="#service-img3" style="width: 187px;" tabindex="0" data-slick-index="2" aria-hidden="false">
+                                        <li class="col-xs-4 col-sm-4 active slick-slide slick-current slick-active" data-toggle="tab" data-target="#service-img3" tabindex="0" data-slick-index="2" aria-hidden="false">
                                             <div class="get-item">
                                                 <img src="assets/images/events-small-3.jpg" alt="Img">
                                                 <h6>Christmas Carol's</h6>
@@ -230,6 +230,8 @@
            
             <!-- /.full-width-sec.full-width-sec-2nd -->
         </section>
+
+      
 
 <section class="we-do section" id="compititions">
             <div class="container">    
@@ -268,8 +270,8 @@
                                 <li class="active" data-toggle="tab" data-target="#creative1">
                                     <div class="col-sm-4 col-md-4">
                                         <div class="we-item">
-                                            <!-- <i class="flaticon-idea"></i> -->
-                                            <img src="assets/images/paint-palette.png">
+                                            <i class="flaticon-idea"></i>
+                                            <!-- <img src="assets/images/paint-palette.png"> -->
                                             
                                             <a href="#"><h4 class="gen-title">Art Exhibition </h4></a>
                                             <p>Lorem ipsum is simply dummy text.</p>
@@ -329,7 +331,22 @@
             </div> <!-- /.container -->
         </section>
 
-<section class="full-width-sec" id="announcements">
+
+        <section class="our-service section" id="announcements">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
+						<div class="section-heading">
+							<h2 class="title"><span>Announcements</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+						</div>
+					</div>
+				</div> <!-- /.row -->
+			
+			</div><!-- container -->
+		</section>
+<section class="full-width-sec" >
+<!-- /.row -->
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-12 col-md-6 pos-static">
