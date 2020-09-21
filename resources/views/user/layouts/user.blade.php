@@ -9,14 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Iocl</title>
+    <title>IOCL</title>
 
     <!-- Page Description and Author -->
     <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="author" content="iocl" />
 
-    <!--  Favicons / Title Bar Icon  -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon/icon.png')}}" />
+ <!--  Favicons / Title Bar Icon  -->
+ <link rel="shortcut icon" href="{{ asset('assets/images/favicon/icon.png')}}" />
     <link rel="apple-touch-icon-precomposed" href="{{ asset('assets/images/favicon/icon.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('assets/images/favicon/icon.png')}}" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('assets/images/favicon/icon.png')}}" />
@@ -46,8 +46,10 @@
     <!-- Responsive CSS  -->
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}" type="text/css" />
 
+
+
     @stack('css')
-    
+
     <!--[if IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -65,9 +67,9 @@
     <!-- Full Body Container -->
     <div id="all-area" class="all-section">
 
-    @include('user.partials.nav')
-
+        @include('user.partials.nav')
         @yield('content')
+        
 
 
         <!-- Footer AREA START -->
@@ -79,7 +81,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-4">
                                 <div class="widget logo">
                                     <div class="wi-title">
-                                        <!-- <a href="index.html"> <img src="{{ asset('assets/images/indian.png')}}" alt=""></a> -->
+                                        <a href="index.html"><img src="assets/images/IndianOil LS Logo-pdf.png" alt="Logo"></a>
                                     </div>
                                     <div class="wi-content">
                                         <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that.</p>
@@ -105,15 +107,10 @@
                                     </div>
                                     <div class="wi-content wi-tags">
                                         <ul>
-                                            <li><a href="#">UI Design</a></li>
-                                            <li><a href="#">Web Design</a></li>
-                                            <li><a href="#">HTML</a></li>
-                                            <li><a href="#">WordPress</a></li>
-                                            <li><a href="#">Bootstrap</a></li>
-                                            <li><a href="#">Joomla</a></li>
-                                            <li><a href="#">jQuery</a></li>
-                                            <li><a href="#">Internet</a></li>
-                                            <li><a href="#">News</a></li>
+                                            <li><a href="#">Petroliun</a></li>
+                                            <li><a href="#">Oil</a></li>
+                                            <li><a href="#">Food</a></li>
+                                           
                                         </ul>
                                     </div> <!-- /.wi-content -->
                                 </div> <!-- /.widget -->
@@ -204,7 +201,7 @@
             </div> <!-- /.footer-main -->
             <div class="copyright">
                 <div class="container">
-                    Designelit &copy; 2018 All rights reserved. Terms of use and Privacy Policy
+                  2020 All rights reserved. Terms of use and Privacy Policy
                 </div>
             </div> <!-- /.copyright -->
         </footer> <!-- /.footer -->
@@ -214,6 +211,11 @@
         <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
     </div> <!-- /#all-area -->
     <!-- End Full Body / all-area -->
+
+
+
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{{ asset('assets/js/jquery-3.2.1.min.js')}}"></script>
@@ -251,7 +253,7 @@
 
 
     <!-- Main / Custom JS  -->
-    <script src="assets/js/custom.js"></script>
+    <script src="{{ asset('assets/js/custom.js')}}"></script>
 </body>
 
 </html>

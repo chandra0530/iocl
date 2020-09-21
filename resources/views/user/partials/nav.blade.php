@@ -1,5 +1,43 @@
-<header class="clearfix header" data-spy="affix" data-offset-top="60">
+
+        <header class="clearfix header" data-spy="affix" data-offset-top="60">
             <!-- Header Top Start -->
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="top-left">
+                                <ul>
+                                    <li class="hidden-xs">
+                                        <a href="#"><span><i class="fa fa-paper-plane"></i>Location:</span> indianoil </a>
+                                    </li>
+                                    <li class="hidden-xs">
+                                        <a href="#"><span><i class="fa fa-phone"></i>Phone:</span> +91 indian iol</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span><i class="fa fa-envelope"></i>Email:</span> contact@indialoil.com</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- /.top-left -->
+                        </div> <!-- /.col- -->
+                        <div class="col-3">
+                            <div class="top-right">
+                                <div class="dropdown">
+                                    <div class="dropdown-toggle" data-toggle="dropdown">
+                                        Language
+                                        <span class="caret"></span>
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">English</a></li>
+                                        <li><a href="#">Arabic</a></li>
+                                        <li><a href="#">Hindi</a></li>
+                                    </ul>
+                                </div>
+                            </div> <!-- /.top-right -->
+                        </div>
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div> <!-- /.header-top -->
+            <!-- /Header Top End -->
 
             <div id="menu-area">
                 <div class="menu-area">
@@ -8,16 +46,16 @@
                             <div class="col-lg-2 col-sm-2">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <!-- <img src="{{ asset('assets/images/indian.png')}}" alt=""> -->
+                                        <img src="assets/images/IndianOil LS Logo-pdf.png" style="width:200px;" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-10 col-sm-10">
                                 <div class="menu-search">
                                     <nav class="main-menu">
-                                        <ul>
-                                            <li class="active-item"><a href="#">Home</a></li>
-                                            <!-- <li>
+                                    <ul>
+                                            <li class="active-item"><a href="index.html">Home</a></li>
+                                            <li>
                                                 <a href="index.html">Pages</a>
                                                 <ul class="dropdown-menus">
                                                     <li><a href="index.html">Home</a></li>
@@ -29,10 +67,10 @@
                                                     <li><a href="portfolio.html">Portfolio</a></li>
                                                     <li><a href="404.html">404 / Error</a></li>
                                                 </ul>
-                                            </li> -->
-                                            <li><a href="#news_section">NEWS</a></li>
-                                            <li><a href="#our_events">EVENTS</a></li>
-                                            <!-- <li>
+                                            </li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="portfolio.html">Portfolio</a></li>
+                                            <li>
                                                 <a href="blog.html">Blog</a>
                                                 <ul class="dropdown-menus">
                                                     <li><a href="blog2.html">Blog No Sidebar</a></li>
@@ -41,14 +79,22 @@
                                                     <li><a href="single.html">Single right Sidebar</a></li>
                                                     <li><a href="single-left-sidebar.html">Single Left Sidebar</a></li>
                                                 </ul>
-                                            </li> -->
-                                            <li><a href="#compititions">COMPETITIONS</a></li>
-                                            <li><a href="#announcements">ANNOUCEMENT</a></li>
-                                            <li><a href="#gallery">GALLERY</a></li>
-                                            <li><a href="#contact_us">CONTACT</a></li>
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
                                         </ul>
                                     </nav>
-                                   
+                                    <div class="search">
+                                        <a href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                        <!-- Search -->
+                                        <div class="search-form">
+                                           <form action="#">
+                                                <input type="text" placeholder="Search here">
+                                                <button>&gt;</button>
+                                            </form>
+                                        </div>
+                                    </div> <!-- /.search -->
                                 </div> <!-- /.menu-search -->
                             </div>
                         </div> <!-- /.row -->
@@ -60,7 +106,7 @@
                     <div class="container">
                         <div class="mobile-logo">
                             <a href="index.html">
-                                <img src="assets/images/logo.png" alt="Logo">
+                                <img src="assets/images/IndianOil LS Logo-pdf.png" style="width:200px;" alt="Logo">
                             </a>
                         </div>
                         <div class="toggle-inner"></div>
@@ -70,7 +116,7 @@
                     <div class="mobile-in-logo">
                         <div class="mob-inner-logo">
                             <a href="index.html">
-                               <img src="assets/images/logo-blue.png" alt="Logo">
+                               <img src="assets/images/IndianOil LS Logo-pdf.png" style="width:200px;" alt="Logo">
                             </a>
                         </div>
                         <div class="close-menu">
