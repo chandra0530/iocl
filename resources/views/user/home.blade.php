@@ -20,9 +20,7 @@
                                     <h2 class="animated4">
                                         <span>Welcome To <strong>IOCL Parivaar</strong></span>
                                     </h2>
-                                    <p class="animated6 slide-para">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</span>
-                                    </p>
+                                    
                                     <p class="animated4">
                                         <a href="#gallery" class="slider-btn cbiz-btn">Gallery</a>
                                         <a href="#our_events" class="slider-btn cbiz-btn cbiz-btn-border">Events</a>
@@ -114,7 +112,7 @@
 				<div class="row">
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
-							<h2 class="title"><span>Our</span> Events</h2>
+							<h2 class="title">Events</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
 						</div>
 					</div>
@@ -238,7 +236,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
                         <div class="section-heading">
-                            <h2 class="title"><span>Competitions</span></h2>
+                            <h2 class="title">Competitions</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                         </div>
                     </div>
@@ -337,7 +335,7 @@
 				<div class="row">
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
-							<h2 class="title"><span>Announcements</h2>
+							<h2 class="title">Announcements</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
 						</div>
 					</div>
@@ -405,7 +403,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
                         <div class="section-heading">
-                            <h2 class="title"><span>Our</span> Wonderful Gallery</h2>
+                            <h2 class="title">Gallery</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                         </div>
                     </div>
