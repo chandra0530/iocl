@@ -46,7 +46,7 @@
                             <div class="col-lg-2 col-sm-2">
                                 <div class="logo">
                                     <a href="#home">
-                                        <img src="assets/images/IndianOil LS Logo-pdf.png" style="width:200px;" alt="">
+                                        <img src="assets/images/IndianOil-Parivaar-Logo.png" style="width:200px;" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                     <div class="container">
                         <div class="mobile-logo">
                             <a href="index.html">
-                                <img src="assets/images/IndianOil LS Logo-pdf.png" style="width:200px;" alt="Logo">
+                                <img src="assets/images/IndianOil-Parivaar-Logo.png" style="width:200px;" alt="Logo">
                             </a>
                         </div>
                         <div class="toggle-inner"></div>
@@ -86,7 +86,7 @@
                     <div class="mobile-in-logo">
                         <div class="mob-inner-logo">
                             <a href="index.html">
-                               <img src="assets/images/IndianOil LS Logo-pdf.png" style="width:200px;" alt="Logo">
+                               <img src="assets/images/IndianOil-Parivaar-Logo.png" style="width:200px;" alt="Logo">
                             </a>
                         </div>
                         <div class="close-menu">

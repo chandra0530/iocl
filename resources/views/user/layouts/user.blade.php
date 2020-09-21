@@ -81,7 +81,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-4">
                                 <div class="widget logo">
                                     <div class="wi-title">
-                                        <a href="index.html"><img src="assets/images/IndianOil LS Logo-pdf.png" alt="Logo"></a>
+                                        <a href="index.html"><img src="assets/images/IndianOil-Parivaar-Logo.png" alt="Logo"></a>
                                     </div>
                                     <div class="wi-content">
                                         <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that.</p>
@@ -155,45 +155,7 @@
                                 </div> <!-- /.widget -->
                             </div> <!-- /.col- -->
                             <div class="col-xs-12 col-sm-12 col-md-4">
-                                <div class="widget">
-                                    <div class="wi-title">
-                                        <h5>Latest News</h5>
-                                    </div>
-                                    <div class="wi-content wi-news">
-                                       <ul>
-                                           <li>
-                                               <div class="news-left">
-                                                   <a href="#">
-                                                        <img src="assets/images/1.jpg" alt="News">
-                                                    </a>
-                                               </div>    
-                                               <div class="news-right">
-                                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                                                   <div class="posted">
-                                                       <span class="post-date"><a href="#">Aug 05, 2017</a></span>
-                                                       <span class="post-tag"><a href="#"><i class="fa fa-comments"></i>18</a></span>
-                                                       <span class="post-like"><a href="#"><i class="fa fa-heart"></i>32</a></span>
-                                                    </div>
-                                                </div> <!-- /.news-right -->
-                                           </li>
-                                           <li>
-                                               <div class="news-left">
-                                                   <a href="#">
-                                                        <img src="assets/images/2.jpg" alt="News">
-                                                    </a>
-                                               </div>    
-                                               <div class="news-right">
-                                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                                                   <div class="posted">
-                                                       <span class="post-date"><a href="#">Aug 05, 2017</a></span>
-                                                       <span class="post-tag"><a href="#"><i class="fa fa-comments"></i>18</a></span>
-                                                       <span class="post-like"><a href="#"><i class="fa fa-heart"></i>32</a></span>
-                                                    </div>
-                                                </div> <!-- /.news-right -->
-                                           </li>
-                                       </ul>
-                                    </div> <!-- /wi-content -->
-                                </div> <!-- /.widget -->
+                              
                             </div> <!-- /.col- -->
                         </div> <!-- /.widgets -->
                     </div> <!-- /.row -->  
