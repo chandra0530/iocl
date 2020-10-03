@@ -105,15 +105,15 @@
           <li class=" navigation-header"><span>Apps</span>
           </li>
 
-          <!-- <li class=" nav-item"><a href="#"><i class="feather icon-shopping-cart"></i><span class="menu-title" data-i18n="Ecommerce">Balance</span></a>
+          <li class=" nav-item"><a href="#"><i class="feather icon-shopping-cart"></i><span class="menu-title" data-i18n="Ecommerce">Gallery</span></a>
             <ul class="menu-content">
-              <li><a href="/balance/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add Balance</span></a>
+              <li><a href="/admin/gallery/event/add"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add Event</span></a>
               </li>
-              <li><a href="/balance"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">View Balance</span></a>
+              <li><a href="/admin/gallery/eventprictures/add"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Add Event Pictures</span></a>
               </li>
             </ul>
           </li>
-          <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="Ecommerce">Users</span></a>
+          <!-- <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="Ecommerce">Users</span></a>
             <ul class="menu-content">
               <li><a href="/user/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add User</span></a>
               </li>

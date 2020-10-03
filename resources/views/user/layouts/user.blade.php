@@ -45,6 +45,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}" type="text/css" />
     <!-- Responsive CSS  -->
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/sharetastic.css')}}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="{{ asset('assets/js/sharetastic.js')}}"></script>
 
 
 
@@ -177,7 +180,9 @@
 
 
 
-
+    <script>
+      $('.sharetastic').sharetastic();
+    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{{ asset('assets/js/jquery-3.2.1.min.js')}}"></script>
