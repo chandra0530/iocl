@@ -181,8 +181,29 @@
 
 
     <script>
-      $('.sharetastic').sharetastic();
+    //   $('.sharetastic').sharetastic();
+    function fbs_click(TheImg) {
+     console.log(TheImg);
+     var img = document.getElementById('image'+TheImg);
+
+    window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(img.src),'sharer','toolbar=0,status=0,width=626,height=436');return false;
+}
+function instagram(TheImg) {
+     console.log(TheImg);
+     var img = document.getElementById('image'+TheImg);
+
+    window.open('http://www.instagram.com/');return false;
+}
+
+function whatsapp(TheImg) {
+     console.log(TheImg);
+     var img = document.getElementById('image'+TheImg);
+
+    window.open('https://wa.me/+97333161261/?text=Hi checkout out event images '+encodeURIComponent(img.src));return false;
+}
     </script>
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{{ asset('assets/js/jquery-3.2.1.min.js')}}"></script>
@@ -216,8 +237,7 @@
     <script src="{{ asset('assets/js/particles.min.js')}}"></script>
     <script src="{{ asset('assets/js/particles-config.js')}}"></script>
     <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD92XF6BndfvP0ysXAlyvdhvaKmdqvXI5E" async defer></script>
-
+   
 
     <!-- Main / Custom JS  -->
     <script src="{{ asset('assets/js/custom.js')}}"></script>

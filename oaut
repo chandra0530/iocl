@@ -1,0 +1,19 @@
+https://{shop}.myshopify.com/admin/oauth/authorize?client_id={api_key}&scope={scopes}&redirect_uri={redirect_uri}&state={nonce}&grant_options[]={access_mode}
+
+
+https://custom-app-dev.myshopify.com/
+https://custom-app-dev.myshopify.com/admin/oauth/authorize?client_id=351860cd9b1aa800139659ae942384ae&scope=write_orders,read_customers&redirect_uri=https://535d8b40aeca.ngrok.io/auth/callback/&grant_options[]=per-user
+https://custom-app-dev.myshopify.com/admin/oauth/request_grant?client_id=351860cd9b1aa800139659ae942384ae&grant_options[]=per-user&redirect_uri=https://535d8b40aeca.ngrok.io/auth/callback&scope=write_products,write_customers,write_draft_orders,read_orders,write_orders
+
+
+https://custom-app-dev.myshopify.com/admin/oauth/request_grant?client_id=351860cd9b1aa800139659ae942384ae&grant_options%5B%5D=per-user&redirect_uri=https%3A%2F%2F535d8b40aeca.ngrok.io%2Fauth%2Fcallback&scope=write_products%2Cwrite_customers%2Cwrite_draft_orders&state=160188075781200
+
+https://custom-app-dev.myshopify.com/admin/oauth/request_grant?client_id=351860cd9b1aa800139659ae942384ae&grant_options[]=per-user&redirect_uri=https://535d8b40aeca.ngrok.io/auth/callback&scope=write_products,write_customers,write_draft_orders&state=160188075781200
+
+
+https://custom-app-dev.myshopify.com/admin/oauth/authorize?client_id=351860cd9b1aa800139659ae942384ae&scope=write_products,write_customers,write_draft_orders&redirect_uri=https://535d8b40aeca.ngrok.io/auth/callback&grant_options[]=per-user
+
+
+APP NAME        testprinting
+KEYSTRING       onw1qlauzueynmhdo67xpyo0
+SHARED SECRET   190mwkg3ej
