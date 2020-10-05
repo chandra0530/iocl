@@ -39,8 +39,38 @@
 						@foreach ($eventpictures as $picture)
 						<div class="grid-item col-md-4 col-sm-6 col-xs-12 {{$picture->slug}} limited" style="position: absolute; left: 0%; top: 0px;">
 								<div class="portfolio-item">
-									<img class="img-responsive" src="{{$picture->image}}" alt="Gallery">	
+									<img class="img-responsive" src="{{$picture->image}}" alt="Gallery">
+									<div class="port-hover">
+										<div class="port-content">
+											<a href="{{$picture->image}}" data-fancybox="group" class="port-icon">
+												<img class="hidden-thumbnail" src="{{$picture->image}}" alt="Thumbnail">
+												<img src="assets/images/icons/plus-btn.png" alt="Icon">
+											</a>
+										</div> <!-- /.port-content -->
+									</div>
 								</div><!-- /.portfolio-item -->
+								<div class="blog-share">
+									<div class="row">
+									<div class="col-md-3">
+									<a href="#"><i class="fa fa-heart heart"></i></a>
+									</div>
+									<div class="col-md-3">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									</div>
+									<div class="col-md-3">
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									</div>
+									<div class="col-md-3">
+									<a href="#"><i class="fa fa-whatsapp"></i></a>
+									</div>
+									</div>
+										
+										
+										
+										
+										
+									</div>	
+								
 							</div> <!-- /.grid-item -->
 					@endforeach
 													

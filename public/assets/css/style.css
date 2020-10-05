@@ -2170,21 +2170,26 @@ ul.get-services li a:hover {
     overflow: hidden;
 }
 .blog-share {
-    position: absolute;
-    top: 100px;
+    /* position: absolute;
+    top: 10px;
     left: 0;
-    width: 50px;
-    background-color: #e25732;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    width: 50px; */
+    background-color:#ffffff ;
+    /* background-color: #e25732; */
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
+    border-radius: 10px;
 }
+.heart {
+    color:red; 
+  }
 .blog-share a {
     display: block;
     text-align: center; 
     font-size: 18px;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: #fff;
+    color: #e25732;
 }
 .blog-share a:hover {
     color: #11193d;
