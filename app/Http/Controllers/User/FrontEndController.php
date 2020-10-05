@@ -87,7 +87,7 @@ class FrontEndController extends Controller
 
     public function showGallery(){
         $events=GalleryEvent::get();
-        $eventpictures=Gallery::join('gallery_events','gallery_events.id','=','galleries.event_id')->select('gallery_events.gallery_event_name','galleries.*')->get();
+        $eventpictures=Gallery::join('gallery_events','gallery_events.id','=','galleries.event_id')->select('gallery_events.gallery_event_name','gallery_events.slug','galleries.*')->get();
         // return $eventpictures;
         return view('user.gallery',compact('events','eventpictures'));
 

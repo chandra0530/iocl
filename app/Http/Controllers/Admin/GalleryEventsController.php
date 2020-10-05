@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\GalleryEvent;
+use Illuminate\Support\Str;
+use App\Slug;
+
 class GalleryEventsController extends Controller
 {
     /**
@@ -39,6 +42,7 @@ class GalleryEventsController extends Controller
     {
         $gallery=new GalleryEvent();
         $gallery->gallery_event_name=$request->event_name;
+        $gallery->slug=(new Slug())->createSlug($request->event_name);
         $gallery->save();
         return redirect()->back()->with(['success' => 'New category completed successfully.']);
 
