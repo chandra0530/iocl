@@ -457,12 +457,18 @@
                                 </div><!-- /.portfolio-item -->
                             </div> <!-- /.grid-item -->
                            
-                           
+                            
                             
                             
                         </div><!-- /.portfolio-container -->
+                        <div class="gallery-button">
+                          <a href="gallery">       Show more</a>
+                            </div>
+                        
                     </div> <!-- /.portfolio-details -->
+                    
                 </div> <!-- /.row -->
+                
             </div> <!-- /.container --> 
         </section>
 

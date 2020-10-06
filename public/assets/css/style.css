@@ -3105,7 +3105,31 @@ ul.get-services li a:hover {
 
 
 
-
+.gallery-button{
+    position: relative;
+    top: 100%;
+    left: 50%;
+    background-color: #e25732;
+    border-radius: 30px;
+    padding: 8px 30px;
+    color: #fff;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    top:0px !Important;left:0px !Important; width: 150px;
+    text-align: center; margin-left: 48%;
+    
+}
+.gallery-button > a{
+    color: white;
+}
 
 
 

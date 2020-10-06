@@ -201,6 +201,17 @@ function whatsapp(TheImg) {
 
     window.open('https://wa.me/+97333161261/?text=Hi checkout out event images '+encodeURIComponent(img.src));return false;
 }
+function mail(TheImg){
+    var img = document.getElementById('image'+TheImg);
+    window.open('mailto:test@example.com?subject=Checkoutout our event pictures&body='+encodeURIComponent(img.src));
+
+}
+function messenger(TheImg){
+    var img = document.getElementById('image'+TheImg);
+    window.open('fb-messenger://share?link=' + encodeURIComponent(img.src) + '&app_id=' + encodeURIComponent("1234"));
+
+}
+
     </script>
 
 

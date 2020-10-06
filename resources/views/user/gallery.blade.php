@@ -42,6 +42,7 @@
 									<img class="img-responsive" id="image{{$picture->id}}" src="{{$picture->image}}" alt="Gallery">
 									<div class="port-hover">
 										<div class="port-content">
+										<p>Added by admin.</p>
 											<a href="{{$picture->image}}" data-fancybox="group" class="port-icon">
 												<img class="hidden-thumbnail" src="{{$picture->image}}" alt="Thumbnail">
 												<img src="assets/images/icons/plus-btn.png" alt="Icon">
@@ -51,17 +52,23 @@
 								</div><!-- /.portfolio-item -->
 								<div class="blog-share">
 									<div class="row">
-									<div class="col-md-3">
+									<div class="col-md-2">
 									<a href="#"><i class="fa fa-heart heart"></i></a>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-2">
+									<a href="#"><i class="fa fa-comment"></i></a>
+									</div>
+									<div class="col-md-2">
 									<a href="#"><i class="fa fa-facebook" onclick="fbs_click({{$picture->id}})"></i></a>
 									</div>
-									<div class="col-md-3">
-									<a href="#"><i class="fa fa-instagram" onclick="instagram({{$picture->id}})"></i></a>
+									<div class="col-md-2">
+									<a href="#"><i class="fa fa-envelope" onclick="mail({{$picture->id}})"></i></a>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-2">
 									<a href="#"><i class="fa fa-whatsapp" onclick="whatsapp({{$picture->id}})"></i></a>
+									</div>
+									<div class="col-md-2">
+									<a href="#"><img src="assets/icons/facebook-messenger-brands.svg" style="width: 15px;" onclick="messenger({{$picture->id}})"></a>
 									</div>
 									</div>
 										
