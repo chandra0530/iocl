@@ -3110,7 +3110,7 @@ ul.get-services li a:hover {
     top: 100%;
     left: 50%;
     background-color: #e25732;
-    border-radius: 30px;
+    border-radius: 5px;
     padding: 8px 30px;
     color: #fff;
     -webkit-transform: translate(-50%,-50%);
