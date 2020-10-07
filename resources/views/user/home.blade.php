@@ -4,6 +4,7 @@
    
 
 @endpush
+@include('user.partials.nav')
 @section('content')      
         <!-- Start Main Slider -->
         <!-- Start Main Slider -->

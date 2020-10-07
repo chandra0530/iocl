@@ -4,6 +4,7 @@
    
 
 @endpush
+@include('user.partials.nav2')
 @section('content')  
 
 

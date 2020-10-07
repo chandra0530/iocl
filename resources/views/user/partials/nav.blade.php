@@ -1,42 +1,9 @@
 
         <header class="clearfix header" data-spy="affix" data-offset-top="60">
             <!-- Header Top Start -->
-            <div class="header-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-9">
-                            <div class="top-left">
-                                <ul>
-                                    <li class="hidden-xs">
-                                        <a href="#"><span><i class="fa fa-paper-plane"></i>Location:</span> indianoil </a>
-                                    </li>
-                                    <li class="hidden-xs">
-                                        <a href="#"><span><i class="fa fa-phone"></i>Phone:</span> +91 indian iol</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span><i class="fa fa-envelope"></i>Email:</span> contact@indialoil.com</a>
-                                    </li>
-                                </ul>
-                            </div> <!-- /.top-left -->
-                        </div> <!-- /.col- -->
-                        <div class="col-3">
-                            <div class="top-right">
-                                <div class="dropdown">
-                                    <div class="dropdown-toggle" data-toggle="dropdown">
-                                        Language
-                                        <span class="caret"></span>
-                                    </div>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">English</a></li>
-                                        <li><a href="#">Arabic</a></li>
-                                        <li><a href="#">Hindi</a></li>
-                                    </ul>
-                                </div>
-                            </div> <!-- /.top-right -->
-                        </div>
-                    </div> <!-- /.row -->
-                </div> <!-- /.container -->
-            </div> <!-- /.header-top -->
+           
+            
+            <!-- /.header-top -->
             <!-- /Header Top End -->
 
             <div id="menu-area">

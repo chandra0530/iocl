@@ -42,6 +42,9 @@ Route::get('/announcement', function () {
 Route::get('/contact', function () {
     return view('user.contact');
 });
+Route::get('/videos', function () {
+    return view('user.videos');
+});
 
 
 Route::prefix('admin')->group(function () {

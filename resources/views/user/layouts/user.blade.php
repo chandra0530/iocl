@@ -70,7 +70,7 @@
     <!-- Full Body Container -->
     <div id="all-area" class="all-section">
 
-        @include('user.partials.nav')
+       
         @yield('content')
         
 

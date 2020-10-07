@@ -4,6 +4,7 @@
    
 
 @endpush
+@include('user.partials.nav2')
 @section('content')  
 <section class="page-head page-bg" style="background-image: url('assets/images/bg/blog.jpg')">
 			<div class="container">    
