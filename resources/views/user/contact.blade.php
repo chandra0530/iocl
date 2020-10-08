@@ -1,10 +1,9 @@
-@extends('user.layouts.user')
+@extends('user.layouts.user2')
 
 @push('css')
    
 
 @endpush
-@include('user.partials.nav2')
 @section('content')  
 
 

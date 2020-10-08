@@ -4,7 +4,6 @@
    
 
 @endpush
-@include('user.partials.nav')
 @section('content')      
         <!-- Start Main Slider -->
         <!-- Start Main Slider -->
@@ -281,8 +280,8 @@
                                     <div class="col-sm-4 col-md-4">
                                         <div class="we-item">
                                             <i class="flaticon-layers"></i>
-                                            <a href="#"><h4 class="gen-title">Bollywood Dumka </h4></a>
-                                            <p>Lorem ipsum </p>
+                                            <a href="#"><h4 style="font-size: 15px;" class="gen-title">Bollywood Dumka </h4></a>
+                                            <p>Lorem ipsum is simply dummy text</p>
                                         </div> <!-- /.we-item -->
                                     </div>
                                 </li>
