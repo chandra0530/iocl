@@ -106,6 +106,9 @@
                 </div> <!-- /.row -->  
             </div> <!-- /.container -->
         </section>
+        <div class="gallery-button" >
+            <a href="gallery">       Show more</a>
+        </div>
 
         <section class="our-service section" id="our_events">
 			<div class="container">
@@ -228,7 +231,9 @@
            
             <!-- /.full-width-sec.full-width-sec-2nd -->
         </section>
-
+        <div class="gallery-button" style="margin-top:50px" >
+            <a href="gallery">       Show more</a>
+        </div>
       
 
 <section class="we-do section" id="compititions">
@@ -328,7 +333,9 @@
                 </div> <!-- /.row -->  
             </div> <!-- /.container -->
         </section>
-
+        <div class="gallery-button">
+            <a href="gallery">       Show more</a>
+        </div>
 
         <section class="our-service section" id="announcements">
 			<div class="container">
@@ -391,9 +398,13 @@
                         </ul>
                     </div> <!-- /.col- -->
                 </div> <!-- /.row -->  
+                
             </div> <!-- /.container -->
+            
         </section>
-
+        <div class="gallery-button" style="margin-top: 51px;">
+                          <a href="gallery">       Show more</a>
+                        </div>
 
 
 
@@ -413,7 +424,7 @@
                         <div class="portfolio-container grid" style="position: relative; height: 852.969px;">
                             <div class="grid-item col-md-4 col-xs-6 figts limited" style="position: absolute; left: 0px; top: 0px;">
                                 <div class="portfolio-item">
-                                    <img class="img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/mediacentre-olacare/wordpress/wp-content/uploads/2017/11/20072449/Ola_IOCL-Inaugration-1024x678.jpeg" alt="Gallery">
+                                    <!-- <img class="img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/mediacentre-olacare/wordpress/wp-content/uploads/2017/11/20072449/Ola_IOCL-Inaugration-1024x678.jpeg" alt="Gallery"> -->
                                     <div class="port-hover">
                                         <div class="port-content">
                                             <a href="#"><h3>Project Title Here</h3></a>
@@ -428,7 +439,7 @@
                             </div> <!-- /.grid-item -->
                             <div class="grid-item col-md-4 col-xs-6 feature bseller" style="position: absolute; left: 390px; top: 0px;">
                                 <div class="portfolio-item">
-                                    <img class="img-responsive" src="https://images.newindianexpress.com/uploads/user/imagelibrary/2020/8/1/w900X450/indian_oil_corp-_PTI.jpg" alt="Gallery">
+                                    <!-- <img class="img-responsive" src="https://images.newindianexpress.com/uploads/user/imagelibrary/2020/8/1/w900X450/indian_oil_corp-_PTI.jpg" alt="Gallery"> -->
                                     <div class="port-hover">
                                         <div class="port-content">
                                             <a href="#"><h3>Project Title Here</h3></a>
@@ -443,7 +454,7 @@
                             </div> <!-- /.grid-item -->
                             <div class="grid-item col-md-4 col-xs-6 feature limited figts" style="position: absolute; left: 780px; top: 0px;">
                                 <div class="portfolio-item">
-                                    <img class="img-responsive" src="https://i0.wp.com/orissadiary.com/wp-content/uploads/2019/12/Honda-2Wheelers-India-signs-partnership-agreement-with-IOCL-for-new-rang....jpeg?fit=1280%2C854&ssl=1" alt="Gallery">
+                                    <!-- <img class="img-responsive" src="https://i0.wp.com/orissadiary.com/wp-content/uploads/2019/12/Honda-2Wheelers-India-signs-partnership-agreement-with-IOCL-for-new-rang....jpeg?fit=1280%2C854&ssl=1" alt="Gallery"> -->
                                     <div class="port-hover">
                                         <div class="port-content">
                                             <a href="#"><h3>Project Title Here</h3></a>
@@ -463,7 +474,7 @@
                         </div><!-- /.portfolio-container -->
                         <div class="gallery-button">
                           <a href="gallery">       Show more</a>
-                            </div>
+                        </div>
                         
                     </div> <!-- /.portfolio-details -->
                     

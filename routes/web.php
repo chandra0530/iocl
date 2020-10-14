@@ -6,6 +6,10 @@ use App\Http\Controllers\Admin\GalleryEventsController;
 use App\Http\Controllers\Admin\GalleryEventPicturesController;
 use App\Http\Controllers\Admin\NewsController;
 
+use App\Http\Controllers\Admin\AnnouncementsController;
+use App\Http\Controllers\Admin\CompititionsController;
+use App\Http\Controllers\Admin\EmployesController;
+use App\Http\Controllers\Admin\EventsController;
 
 Use App\Http\Controllers\User\FrontEndController;
 Use App\Http\Controllers\AuthController;
@@ -53,7 +57,16 @@ Route::prefix('admin')->group(function () {
 
     Route::post('gallery/eventpictures', [GalleryEventPicturesController::class, 'store'])->name('galleryevent.store');
     Route::get('gallery/eventpictures', [GalleryEventPicturesController::class, 'index']);
+    Route::get('news/delete/{id}', [NewsController::class,'destroy'])->name('news.destroy');
     Route::resource('news', NewsController::class);
+    Route::get('events/delete/{id}', [EventsController::class,'destroy'])->name('events.destroy');
+    Route::resource('events', EventsController::class);
+    Route::get('compititions/delete/{id}', [CompititionsController::class,'destroy'])->name('compititions.destroy');
+    Route::resource('compititions', CompititionsController::class);
+    Route::get('announcements/delete/{id}', [AnnouncementsController::class,'destroy'])->name('announcements.destroy');
+    Route::resource('announcements', AnnouncementsController::class);
+    Route::resource('employes', EmployesController::class);
+
    
 });
 

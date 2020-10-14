@@ -44,8 +44,8 @@
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                             News Name
                                                         </div>
-                                                        <input type="text" class="form-control" name="product_name"
-                                                               id="basicInput" placeholder="Enter product name">
+                                                        <input type="text" class="form-control" name="news_heading"
+                                                               id="basicInput" placeholder="Enter news headline">
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-sm-12 col-6">
@@ -53,8 +53,8 @@
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                             News Small Description
                                                         </div>
-                                                        <input type="text" class="form-control" name="product_name"
-                                                               id="basicInput" placeholder="Enter product name">
+                                                        <input type="text" class="form-control" name="news_small_desc"
+                                                               id="basicInput" placeholder="Enter news small description">
                                                     </fieldset>
                                                 </div>
                                                
@@ -62,20 +62,14 @@
                                                 <div class="col-sm-6 col-12">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
-                                                            Photos <small>( 900 * 400 )Px</small>
+                                                            Photo <small>( 900 * 400 )Px</small>
                                                         </div>
-                                                        <input type="file" multiple name="photos[]" class="form-control"
+                                                        <input type="file" multiple name="photos" class="form-control"
                                                                id="photos" placeholder="Select product images">
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-sm-6 col-12">
-                                                    <fieldset class="form-group">
-                                                        <div class="text-bold-600 font-medium-2 mb-2">
-                                                            Thumbnail <small>( 150 * 150 )Px</small>
-                                                        </div>
-                                                        <input type="file" class="form-control" name="thumbnail"
-                                                               id="thumbnail" placeholder="Select product thumbnail">
-                                                    </fieldset>
+                                                    
                                                 </div>
                                                 <div class="col-sm-12 col-12">
                                                     <fieldset class="form-group">

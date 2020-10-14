@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+Use App\Models\News;
+use Illuminate\Support\Facades\Storage;
 class NewsController extends Controller
 {
     /**
@@ -14,7 +15,9 @@ class NewsController extends Controller
      */
     public function index()
     {
-        return "index";
+        $news=News::get();
+        return view('admin.news.index',compact('news'));
+
     }
 
     /**
@@ -35,7 +38,16 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $news=new News();
+        $news->heading=$request->news_heading;
+        $news->news_short_description=$request->news_small_desc;
+        $news->news_details=$request->desc;
+        if ($request->has('photos')) {
+            $temp_url = $request->file('photos')->store('news_photos', 'public');
+            $news->images = url(Storage::url($temp_url));
+        }
+        $news->save();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
     }
 
     /**
@@ -80,6 +92,7 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        News::where('id', $id)->delete();
+        return redirect()->back()->with(['success' => 'News deleted successfully.']);
     }
 }
