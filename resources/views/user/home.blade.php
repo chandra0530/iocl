@@ -107,7 +107,7 @@
             </div> <!-- /.container -->
         </section>
         <div class="gallery-button" >
-            <a href="gallery">       Show more</a>
+            <a href="news">       Show more</a> 
         </div>
 
         <section class="our-service section" id="our_events">
@@ -232,7 +232,7 @@
             <!-- /.full-width-sec.full-width-sec-2nd -->
         </section>
         <div class="gallery-button" style="margin-top:50px" >
-            <a href="gallery">       Show more</a>
+            <a href="events">       Show more</a>
         </div>
       
 
@@ -334,7 +334,7 @@
             </div> <!-- /.container -->
         </section>
         <div class="gallery-button">
-            <a href="gallery">       Show more</a>
+            <a href="compotitions">       Show more</a>
         </div>
 
         <section class="our-service section" id="announcements">
@@ -403,7 +403,7 @@
             
         </section>
         <div class="gallery-button" style="margin-top: 51px;">
-                          <a href="gallery">       Show more</a>
+                          <a href="announcement">       Show more</a>
                         </div>
 
 
