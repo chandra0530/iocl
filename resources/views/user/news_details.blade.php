@@ -43,6 +43,7 @@
 								</div>
 								<div class="post-content">
 									<p>{{$news_details->news_short_description}}</p>
+									<p> {!! html_entity_decode($news_details->news_details) !!}</p>
 								</div>
 							</div> <!-- /.blog-content -->
 
@@ -56,7 +57,7 @@
 											<h3>Admin</h3>
 										</a>
 										<div class="his-text">
-											<p>{{$news_details->news_details}}</p>
+											
 										</div>
 									</div> <!-- /.admin-content -->
 								</div> <!-- /.admin -->
