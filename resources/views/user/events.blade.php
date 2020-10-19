@@ -34,7 +34,7 @@
 						<div class="col-sm-12 col-md-6">
 							<div class="about-text">
 								<h4>{{$event->events_names}}.</h4>
-								<p>{{$event->event_details}}</p>
+								<p> {!! html_entity_decode($event->event_details) !!}</p>
 							</div>
 						</div> <!-- /.col- -->
 						<div class="about-overview-img">
