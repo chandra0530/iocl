@@ -58,7 +58,7 @@
 									<p>{{$news->news_short_description}}</p>
 								</div>
 								<div class="read-more">
-									<a href="/news_details/{{$new->id}}">Read More</a>
+									<a href="/news_details/{{$news->id}}">Read More</a>
 								</div>
 							</div> <!-- /.blog-content -->	
 						
