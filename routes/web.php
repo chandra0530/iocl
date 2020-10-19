@@ -38,7 +38,7 @@ Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 Route::get('/', [UserViewController::class, 'home'])->name('home');
 Route::get('news', [UserViewController::class, 'news'])->name('news');
-Route::get('news_details', [UserViewController::class, 'news_detials'])->name('news_details');
+Route::get('news_details/{id}', [UserViewController::class, 'news_detials'])->name('news_details');
 Route::get('events', [UserViewController::class, 'events'])->name('events');
 Route::get('compotitions', [UserViewController::class, 'compititions'])->name('compititions');
 Route::get('announcement', [UserViewController::class, 'ammouncement'])->name('announcements');

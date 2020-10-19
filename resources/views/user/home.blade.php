@@ -61,21 +61,26 @@
                     </div>
                 </div> <!-- /row -->
                 <div class="row">
-                    <div class="col-sm-6 col-md-4">
+
+
+                @foreach($news as $new)
+                <div class="col-sm-6 col-md-4">
                         <div class="re-blog-item">
                             <div class="re-feature-img">
-                                <img src="assets/images/NEWSCOVID.jpg" alt="Features">
+                                <img src="{{$new->images}}" alt="Features">
                             </div>
                             <div class="caption">
-                                <a href="#"><h4 class="gen-title">Iocl New Rules For Covid19</h4></a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicingiu elit, sed eiusmod tempor incididunt ut labore et dolore.</p>
+                                <a href="/news_details/{{$new->id}}"><h4 class="gen-title">{{$new->heading}}</h4></a>
+                                <p>{{$new->news_short_description}}</p>
                             </div>
                             <div class="re-time">
-                                Dec 14, 2017
+                           {{  date('d-m-Y', strtotime($new->created_at)) }}
                             </div>
                         </div> <!-- /.re-blog-item -->
                     </div> <!-- /.col- -->
-                    <div class="col-sm-6 col-md-4">
+            @endforeach
+                    
+                    <!-- <div class="col-sm-6 col-md-4">
                         <div class="re-blog-item">
                             <div class="re-feature-img">
                                 <img src="assets/images/post/3.jpg" alt="Features">
@@ -87,8 +92,8 @@
                             <div class="re-time">
                                 Dec 14, 2017
                             </div>
-                        </div> <!-- /.re-blog-item -->
-                    </div> <!-- /.col- -->
+                        </div> 
+                    </div> 
                     <div class="col-sm-6 col-md-4">
                         <div class="re-blog-item">
                             <div class="re-feature-img">
@@ -101,8 +106,8 @@
                             <div class="re-time">
                                 Dec 14, 2017
                             </div>
-                        </div> <!-- /.re-blog-item -->
-                    </div> <!-- /.col- -->
+                        </div> 
+                    </div>  -->
                 </div> <!-- /.row -->  
             </div> <!-- /.container -->
         </section>
@@ -145,6 +150,8 @@
                         <!-- /.tab-content -->
                         </div>
                         <!-- /.col -->
+                       
+                        @foreach($event as $new)
                         <div class="col-sm-12 col-md-6 padding-0">
                         <div class="get-us">
                             <div class="get-head">
@@ -219,8 +226,12 @@
                             </div>
                             <!-- /.get-all-items -->
                         </div>
-                        <!-- /.get-us -->					
-                        </div>
+                          <!-- /.get-us -->					
+                          </div>
+            @endforeach
+            
+                        
+                      
                         <!-- /.col- -->
                     </div>
                     <!-- /.row -->  
@@ -248,84 +259,33 @@
                 </div> <!-- /.row -->
                 <div class="row">
                     <div class="tab-content">
-                        <div class="col-xs-12 col-sm-12 col-md-5 tab-pane fade in active" id="creative1">
-                            <img src="assets/images/competition1.jpg" alt="Img">
+                    @foreach($compitition as $key => $compit)
+                    <div class="col-xs-12 col-sm-12 col-md-5 tab-pane fade   {{ $key ==  '0' ? 'in active' : ''  }}  " id="creative{{$key}}">
+                            <img src="{{$compit->competition_image}}" alt="Img">
                         </div> <!-- /.col- -->
-                        <div class="col-xs-12 col-sm-12 col-md-5 tab-pane fade" id="creative2">
-                            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201909/Diwali-festival-India.jpeg?1Kh6EmfcWCtOKXtlSvqd8VasbOzHVy4S&size=1200:675" alt="Img">
-                        </div> <!-- /.col- -->
-                        <div class="col-xs-12 col-sm-12 col-md-5 tab-pane fade" id="creative3">
-                            <img src="https://www.afternoonvoice.com/media/2019/09/Navratri-Garba.jpg" alt="Img">
-                        </div> <!-- /.col- -->
-                        <div class="col-xs-12 col-sm-12 col-md-5 tab-pane fade" id="creative4">
-                            <img src="https://www.whatsonnetwork.co.uk/uploads/800x600/c18312a106961d13bc5882ac906da608.jpg" alt="Img">
-                        </div> <!-- /.col- -->
-                        <div class="col-xs-12 col-sm-12 col-md-5 tab-pane fade" id="creative5">
-                            <img src="https://www.holidify.com/images/cmsuploads/compressed/sunburn_20191018174928.jpeg" alt="Img">
-                        </div> <!-- /.col- -->
-                        <div class="col-xs-12 col-sm-12 col-md-5 tab-pane fade" id="creative6">
-                            <img src="https://pbs.twimg.com/media/CMbPTuZVAAAMY51.jpg" alt="Img">
-                        </div> <!-- /.col- -->
+                    @endforeach
+                        
+                        
                     </div> <!-- /.tab-content -->
                     <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
                         <div class="row">
                             <ul class="we-tab">
-                                <li class="active" data-toggle="tab" data-target="#creative1">
+
+                            @foreach($compitition as $key => $compit)
+                            <li class="{{ $key ==  '1' ? 'in active' : ''  }}" data-toggle="tab" data-target="#creative{{$key}}">
                                     <div class="col-sm-4 col-md-4">
                                         <div class="we-item">
                                             <i class="flaticon-idea"></i>
                                             <!-- <img src="assets/images/paint-palette.png"> -->
                                             
-                                            <a href="#"><h4 class="gen-title">Art Exhibition </h4></a>
-                                            <p>Lorem ipsum is simply dummy text.</p>
+                                            <a href="#"><h4 class="gen-title">{{$compit->competition_name}} </h4></a>
+                                            <p> {!! html_entity_decode($compit->competition_details) !!}</p>
                                         </div> <!-- /.we-item -->
                                     </div>
                                 </li>
-                                <li data-toggle="tab" data-target="#creative2">
-                                    <div class="col-sm-4 col-md-4">
-                                        <div class="we-item">
-                                            <i class="flaticon-layers"></i>
-                                            <a href="#"><h4 style="font-size: 15px;" class="gen-title">Bollywood Dumka </h4></a>
-                                            <p>Lorem ipsum is simply dummy text</p>
-                                        </div> <!-- /.we-item -->
-                                    </div>
-                                </li>
-                                <li data-toggle="tab" data-target="#creative3">
-                                    <div class="col-sm-4 col-md-4">
-                                        <div class="we-item">
-                                            <i class="flaticon-responsive"></i>
-                                            <a href="#"><h4 class="gen-title">Laughter club </h4></a>
-                                            <p>Lorem ipsum is simply dummy text.</p>
-                                        </div> <!-- /.we-item -->
-                                    </div>
-                                </li>
-                                <li data-toggle="tab" data-target="#creative4">
-                                    <div class="col-sm-4 col-md-4">
-                                        <div class="we-item">
-                                            <i class="flaticon-vector-1"></i>
-                                            <a href="#"><h4 class="gen-title">Parivaar Eye </h4></a>
-                                            <p>Lorem ipsum is simply dummy text.</p>
-                                        </div> <!-- /.we-item -->
-                                    </div>
-                                </li>
-                                <li data-toggle="tab" data-target="#creative5">
-                                    <div class="col-sm-4 col-md-4">
-                                        <div class="we-item">
-                                            <i class="flaticon-settings"></i>
-                                            <a href="#"><h4 class="gen-title">Bol Bhachan </h4></a>
-                                            <p>Lorem ipsum is simply dummy text.</p>
-                                        </div> <!-- /.we-item -->
-                                    </div>
-                                </li>
-                                <li data-toggle="tab" data-target="#creative6">
-                                    <div class="col-sm-4 col-md-4">
-                                        <div class="we-item">
-                                            <i class="flaticon-podium"></i>
-                                            <a href="#"><h4 class="gen-title">Drama bhaaz</h4></a>
-                                            <p>Lorem ipsum is simply dummy text.</p>
-                                        </div> <!-- /.we-item -->
-                                    </div>
-                                </li>
+                    @endforeach
+                                
+                               
 
                             </ul>
                         </div> <!-- /.row -->
@@ -361,18 +321,21 @@
                     </div>
                     <div class="col-sm-12 col-md-6 padding-0">
                         <ul class="cele-list">
-                            <li>
+                        @foreach($announcement as $key => $announce)
+                        <li>
                                 <div class="cel-img">
-                                    <img class="flaticon-img icon-large" src="assets/flaticons/png/020-goal.png" alt="Icon">
+                                    <img class="flaticon-img icon-large" src="{{$announce->announcement_image}}" alt="Icon">
                                 </div>
                                 <div class="cel-content">
                                     <a href="#">
-                                        <h4 class="gen-title">Celebration of success</h4>
+                                        <h4 class="gen-title">{{$announce->annoucemnt_name}}</h4>
                                     </a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                                    <p>{{$announce->announcement_details}}</p>
                                 </div>
                             </li>
-                            <li>
+                    @endforeach
+                            
+                            <!-- <li>
                                 <div class="cel-img">
                                     <img class="flaticon-img icon-large" src="assets/flaticons/png/010-analytics.png" alt="Icon">
                                 </div>
@@ -393,7 +356,7 @@
                                     </a>
                                     <p>Aliquam rhoncus finibus orci et facilisis. Vivamus ullamcorper at erat sit amet congue. Sed quis tellus in ex pellentesque sodales. </p>
                                 </div>
-                            </li>
+                            </li> -->
                             
                         </ul>
                     </div> <!-- /.col- -->
@@ -424,13 +387,13 @@
                         <div class="portfolio-container grid" style="position: relative; height: 852.969px;">
                             <div class="grid-item col-md-4 col-xs-6 figts limited" style="position: absolute; left: 0px; top: 0px;">
                                 <div class="portfolio-item">
-                                    <!-- <img class="img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/mediacentre-olacare/wordpress/wp-content/uploads/2017/11/20072449/Ola_IOCL-Inaugration-1024x678.jpeg" alt="Gallery"> -->
+                                    <img class="img-responsive" src="{{$gallery[0]->image}}" alt="Gallery">
                                     <div class="port-hover">
                                         <div class="port-content">
-                                            <a href="#"><h3>Project Title Here</h3></a>
-                                            <p>Lorem ipsum dolor sit amet.</p>
-                                            <a href="assets/images/gallery/11.jpg" data-fancybox="group" class="port-icon">
-                                                <img class="hidden-thumbnail" src="assets/images/gallery/1.jpg" alt="Thumbnail">
+                                            <!-- <a href="#"><h3>Project Title Here</h3></a>
+                                            <p>Lorem ipsum dolor sit amet.</p> -->
+                                            <a href="{{$gallery[0]->image}}" data-fancybox="group" class="port-icon">
+                                                <img class="hidden-thumbnail" src="{{$gallery[0]->image}}" alt="Thumbnail">
                                                 <img src="assets/images/icons/plus-btn.png" alt="Icon">
                                             </a>
                                         </div> <!-- /.port-content -->
@@ -439,13 +402,13 @@
                             </div> <!-- /.grid-item -->
                             <div class="grid-item col-md-4 col-xs-6 feature bseller" style="position: absolute; left: 390px; top: 0px;">
                                 <div class="portfolio-item">
-                                    <!-- <img class="img-responsive" src="https://images.newindianexpress.com/uploads/user/imagelibrary/2020/8/1/w900X450/indian_oil_corp-_PTI.jpg" alt="Gallery"> -->
+                                    <img class="img-responsive" src="{{$gallery[1]->image}}" alt="Gallery">
                                     <div class="port-hover">
                                         <div class="port-content">
-                                            <a href="#"><h3>Project Title Here</h3></a>
-                                            <p>Lorem ipsum dolor sit amet.</p>
-                                            <a href="assets/images/gallery/22.jpg" data-fancybox="group" class="port-icon">
-                                                <img class="hidden-thumbnail" src="assets/images/gallery/2.jpg" alt="Thumbnail">
+                                            <!-- <a href="#"><h3>Project Title Here</h3></a>
+                                            <p>Lorem ipsum dolor sit amet.</p> -->
+                                            <a href="{{$gallery[1]->image}}" data-fancybox="group" class="port-icon">
+                                                <img class="hidden-thumbnail" src="{{$gallery[1]->image}}" alt="Thumbnail">
                                                 <img src="assets/images/icons/plus-btn.png" alt="Icon">
                                             </a>
                                         </div> <!-- /.port-content -->
@@ -454,13 +417,13 @@
                             </div> <!-- /.grid-item -->
                             <div class="grid-item col-md-4 col-xs-6 feature limited figts" style="position: absolute; left: 780px; top: 0px;">
                                 <div class="portfolio-item">
-                                    <!-- <img class="img-responsive" src="https://i0.wp.com/orissadiary.com/wp-content/uploads/2019/12/Honda-2Wheelers-India-signs-partnership-agreement-with-IOCL-for-new-rang....jpeg?fit=1280%2C854&ssl=1" alt="Gallery"> -->
+                                    <img class="img-responsive" src="{{$gallery[2]->image}}" alt="Gallery">
                                     <div class="port-hover">
                                         <div class="port-content">
-                                            <a href="#"><h3>Project Title Here</h3></a>
-                                            <p>Lorem ipsum dolor sit amet.</p>
-                                            <a href="assets/images/gallery/33.jpg" data-fancybox="group" class="port-icon">
-                                                <img class="hidden-thumbnail" src="assets/images/gallery/3.jpg" alt="Thumbnail">
+                                            <!-- <a href="#"><h3>Project Title Here</h3></a>
+                                            <p>Lorem ipsum dolor sit amet.</p> -->
+                                            <a href="{{$gallery[2]->image}}" data-fancybox="group" class="port-icon">
+                                                <img class="hidden-thumbnail" src="{{$gallery[2]->image}}" alt="Thumbnail">
                                                 <img src="assets/images/icons/plus-btn.png" alt="Icon">
                                             </a>
                                         </div> <!-- /.port-content -->

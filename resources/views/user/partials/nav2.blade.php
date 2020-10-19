@@ -13,7 +13,7 @@
                             <div class="col-lg-2 col-sm-2">
                                 <div class="logo">
                                     <a href="#home">
-                                        <img src="assets/images/IndianOil-Parivaar-Logo.png" style="width:200px;" alt="">
+                                        <img src="{{ asset('assets/images/IndianOil-Parivaar-Logo.png')}}" style="width:200px;" alt="">
                                     </a>
                                 </div>
                             </div>

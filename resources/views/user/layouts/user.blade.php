@@ -84,7 +84,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-4">
                                 <div class="widget logo">
                                     <div class="wi-title">
-                                        <a href="index.html"><img src="assets/images/IndianOil-Parivaar-Logo.png" alt="Logo"></a>
+                                        <a href="/"><img src="{{ asset('assets/images/IndianOil-Parivaar-Logo.png')}}" alt="Logo"></a>
                                     </div>
                                     <div class="wi-content">
                                         <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that.</p>

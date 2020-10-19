@@ -25,10 +25,12 @@
 						</div>
 					</div>
 				</div> <!-- /.row -->
+				
+				@foreach($comp as $new)
 				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-md-3">
+				<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="team-member">
-							<img src="https://www.irishtimes.com/polopoly_fs/1.3791550.1549996234!/image/image.jpg_gen/derivatives/ratio_1x1_w1200/image.jpg" alt="Team Member">
+							<img src="{{$new->competition_image}}" alt="Team Member">
 							<div class="member-hover">
 								<div class="member-info">
 									<div>
@@ -48,16 +50,14 @@
 							</div><!-- /.member-hover -->
 						</div> <!-- /.team-members -->
 						<div class="member-name">
-							<h4>100m race</h4>
+							<h4>{{$new->competition_name}}</h4>
 							<p>Location: Bag stadium</p>
 						</div><!-- /.member-name -->
 					</div> <!-- /.col -->
 					<div class="col-xs-12 col-sm-6 col-md-5">
 						<div class="skill-info">
 							<h3>Compotition Name</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit.</p>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit.</p>
+							<p> {!! html_entity_decode($new->competition_details) !!}</p>
 						</div>
 					</div> <!-- /.col -->
 
@@ -83,7 +83,10 @@
 							</div>
 						</div> <!-- /.skill-progress -->
 					</div> <!-- /.col- -->
-				</div><!-- row -->
+					</div><!-- row -->
+				@endforeach
+					
+				
 			</div><!-- container -->
 		</section>
 @endsection

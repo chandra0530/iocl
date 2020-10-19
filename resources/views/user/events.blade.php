@@ -27,22 +27,24 @@
 				</div> <!-- /.row -->
 			</div> <!-- /.container -->
 			<div class="about-overview">
-				<div class="container">    
+				<div class="container">   
+				@foreach($event as $key => $event)
+						
 					<div class="row">
 						<div class="col-sm-12 col-md-6">
 							<div class="about-text">
-								<h4>Event name.</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur <a href="#"> adipisicing elit. Libero</a> ab voluptates minus cum eum molestias? Recusandae dolore sunt, a impedit. Harum quasi ullam tempore minus, delectus labore illo accusantium dolor.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus adipisci praesentium laboriosam aliquam commodi, quae dignissimos, cumque quas blanditiis suscipit animi ipsa deleniti cupiditate ex quidem. Officia ipsam impedit aspernatur.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi deserunt <a href="#"> iusto laboriosam facilis. Nostrum accusantium molestiae porro,</a> laudantium ipsum nihil corrupti quis eum, in consectetur quibusdam incidunt laboriosam eius accusantiu</p>
+								<h4>{{$event->events_names}}.</h4>
+								<p>{{$event->event_details}}</p>
 							</div>
 						</div> <!-- /.col- -->
 						<div class="about-overview-img">
 							<div class="col-sm-12 col-md-6 visible-xs visible-sm">
-								<img class="img-responsive" src="https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2019/11/Bachelor-Party-In-Jakarta-og_5th-Nov.jpg" alt="Img">
+								<img class="img-responsive" src="{{$event->event_images}}" alt="Img">
+							
 							</div>
 						</div> <!-- /.about-overview-img -->
 					</div> <!-- /.row -->  
+				@endforeach
 				</div> <!-- /.container -->
 			</div> <!-- /.about-overview -->
 		</section>
