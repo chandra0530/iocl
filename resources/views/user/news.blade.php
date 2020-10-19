@@ -50,7 +50,7 @@
 									</div> <!-- /.posted-by -->
 								</div> <!-- /.blog-feature -->
 								<div class="post-title">
-									<a href="/news_details/{{$new->id}}">
+									<a href="/news_details/{{$news->id}}">
 										<h3>{{$news->heading}}.</h3>
 									</a>
 								</div>
