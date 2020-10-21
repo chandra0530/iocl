@@ -5,18 +5,11 @@
 
 @endpush
 @section('content')  
-
-
-<section class="page-head page-bg" style="background-image: url('assets/images/bg/contact.jpg')">
-			<div class="container">    
-				<h3 class="page-heading">Contact</h3>
-				<div class="sub-title">
-					<a href="#"><span>Home</span></a>
-					<i class="fa fa-angle-right"></i>
-					<a href="#"><span>Contact</span></a>
-				</div>
-			</div> <!-- /.container -->
+<section class="page-head">
+			
 		</section>
+
+
 <section class="contact-us section">
 			<div class="container">    
 				<div class="row">

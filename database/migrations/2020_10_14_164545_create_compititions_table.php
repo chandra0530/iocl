@@ -16,8 +16,8 @@ class CreateCompititionsTable extends Migration
         Schema::create('compititions', function (Blueprint $table) {
             $table->id();
             $table->string('event_name');
-            $table->string('event_image');
-            $table->string('event_details');
+            $table->longText('event_image');
+            $table->longText('event_details');
             $table->timestamps();
         });
     }

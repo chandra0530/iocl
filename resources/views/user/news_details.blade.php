@@ -5,15 +5,8 @@
 
 @endpush
 @section('content')  
-<section class="page-head page-bg" style="background-image: url('assets/images/bg/blog.jpg')">
-			<div class="container">    
-				<h3 class="page-heading">News details</h3>
-				<div class="sub-title">
-					<a href="#"><span>Home</span></a>
-					<i class="fa fa-angle-right"></i>
-					<span>News Details</span>
-				</div>
-			</div> <!-- /.container -->
+<section class="page-head">
+			
 		</section>
 <section class="page-in section">
 			<div class="container">    

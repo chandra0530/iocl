@@ -56,7 +56,7 @@
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
                         <div class="section-heading">
                             <h2 class="title" style="font-family: Samarkan !important;">Thaza Khabar</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
                         </div>
                     </div>
                 </div> <!-- /row -->
@@ -121,7 +121,7 @@
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
 							<h2 class="title">Events</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
 				</div> <!-- /.row -->
@@ -253,7 +253,7 @@
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
                         <div class="section-heading">
                             <h2 class="title">Competitions</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
                         </div>
                     </div>
                 </div> <!-- /.row -->
@@ -303,7 +303,7 @@
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
 							<h2 class="title">Announcements</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
 				</div> <!-- /.row -->
@@ -378,7 +378,7 @@
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
                         <div class="section-heading">
                             <h2 class="title">Gallery</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
                         </div>
                     </div>
                 </div> <!-- /.row -->
@@ -455,7 +455,7 @@
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
                         <div class="section-heading">
                             <h2 class="title"><span>Get</span> in Touch</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
                         </div>
                     </div> <!-- /.col- -->
                 </div> <!-- /.row -->

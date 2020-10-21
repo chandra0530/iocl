@@ -5,15 +5,8 @@
 
 @endpush
 @section('content')  
-<section class="page-head page-bg" style="background-image: url('assets/images/bg/portfolio.jpg');">
-			<div class="container">    
-				<h3 class="page-heading">Our Gallery</h3>
-				<div class="sub-title">
-					<a href="#"><span>Home</span></a>
-					<i class="fa fa-angle-right"></i>
-					<span>Gallery</span>
-				</div>
-			</div> <!-- /.container -->
+<section class="page-head">
+			
 		</section>
 <section class="portfolios section">
 <div class="sharetastic"></div>
@@ -22,7 +15,7 @@
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
 							<h2 class="title"><span>Our</span> Events Gallery</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
 				</div> <!-- /.row -->

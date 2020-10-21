@@ -186,8 +186,8 @@ p {
     background-color: #e25732;
 }
 .section {
-    padding-top: 80px;
-    padding-bottom: 70px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 .section-heading {
     text-align: center;
@@ -209,7 +209,6 @@ p {
     margin: 0;
 }
 .page-head {
-    padding-top: 237px;
     padding-bottom: 90px;
 }
 .page-heading {

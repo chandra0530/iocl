@@ -7,12 +7,6 @@
 @section('content')  
 
 
-<section class="page-head page-bg" style="background-image: url('assets/images/bg/contact.jpg')">
-			<div class="container">    
-				<h3 class="page-heading">Resister your account</h3>
-				
-			</div> <!-- /.container -->
-		</section>
 <section class="contact-us section">
 			<div class="container">    
 				<div class="row">
