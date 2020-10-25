@@ -252,6 +252,7 @@ function messenger(TheImg){
 
     <!-- Main / Custom JS  -->
     <script src="{{ asset('assets/js/custom.js')}}"></script>
+    @stack('js')
 </body>
 
 </html>

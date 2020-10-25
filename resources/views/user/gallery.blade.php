@@ -18,6 +18,7 @@
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#gallery">Add Gallery</button>
 				</div> <!-- /.row -->
 				<div class="portfolio-filter">
 					<a class="current" href="#" data-filter="*">All</a>
@@ -127,6 +128,70 @@ Your browser does not support the video tag.
                 
             </div> <!-- /.container --> 
         </section>
+
+
+
+
+		<div id="myModal" class="modal fade" role="dialog" style="margin-top: 100px;">
+   <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Add News</h4>
+         </div>
+         <div class="modal-body">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="card">
+                        <div class="card-header">
+                           <h4 class="card-title">Add News</h4>
+                        </div>
+                        <div class="card-content">
+                           <div class="card-body">
+						   <form enctype="multipart/form-data" method="POST" action="{{ route('galleryevent.store') }}">
+                                        @csrf
+                        
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <fieldset class="form-group">
+                                    <label for="basicInputFile">Select Event</label>
+                                    <div class="form-group">
+                                                        <select class="select2 form-control" id='choice_attributes' name="event_id">
+                                                        @foreach($events as $event)
+                                        <option value="{{ $event->id }}">{{ $event->gallery_event_name }}</option>
+                                    @endforeach
+                                                        </select>
+                                                    </div>
+                                    
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <fieldset class="form-group">
+                                    <label for="basicInputFile">With Browse button</label>
+                                    <div class="custom-file">
+                                        <input type="file" name="gallery_image" class="custom-file-input" id="inputGroupFile01">
+                                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary waves-effect waves-light" type="submit">Submit</button>
+                        </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+   </div>
+</div>
 @endsection
 
 

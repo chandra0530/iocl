@@ -39,13 +39,22 @@
                                               action="{{ route('compititions.store') }}">
                                             @csrf
                                             <div class="row">
-                                                <div class="col-sm-12 col-6">
+                                                <div class="col-sm-6 col-6">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                         Compitition Name
                                                         </div>
                                                         <input type="text" class="form-control" name="competition_name"
-                                                               id="basicInput" placeholder="Enter news headline">
+                                                               id="basicInput" placeholder="Enter compitition name">
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-sm-6 col-6">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                        Compitition Location
+                                                        </div>
+                                                        <input type="text" class="form-control" name="competition_location"
+                                                               id="basicInput" placeholder="Enter compitition location">
                                                     </fieldset>
                                                 </div>
                                                 
@@ -54,13 +63,42 @@
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                             Photo <small>( 900 * 400 )Px</small>
                                                         </div>
-                                                        <input type="file" multiple name="photos" class="form-control"
-                                                               id="photos" placeholder="Select product images">
+                                                        <input type="file" multiple name="photos[]" class="form-control"
+                                                               id="photos" placeholder="Select compitition images">
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-sm-6 col-12">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                        Compitition From
+                                                        </div>
+                                                        <input type="datetime-local" class="form-control" name="compitition_from"
+                                                               id="basicInput" placeholder="Enter compitition from date">
+                                                    </fieldset>
                                                     
                                                 </div>
+                                                <div class="col-sm-6 col-12">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                        Compitition to
+                                                        </div>
+                                                        <input type="datetime-local" class="form-control" name="compitition_to"
+                                                               id="basicInput" placeholder="Enter compitition to date">
+                                                    </fieldset>
+                                                    
+                                                </div>
+                                                <div class="col-sm-6 col-12">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                        Compitition Type
+                                                        </div>
+                                                        <select class="form-control" name="event_type">
+                                                        <option>Free</option>
+                                                        <option>Paid</option>
+                                                        </select>
+                                                    </fieldset>
+                                                    
+                                                </div>  
                                                 <div class="col-sm-12 col-12">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">

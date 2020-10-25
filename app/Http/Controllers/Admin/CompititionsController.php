@@ -36,13 +36,24 @@ class CompititionsController extends Controller
      */
     public function store(Request $request)
     {
+        $images=[];
         $competition=new Compitition();
         $competition->competition_name=$request->competition_name;
         $competition->competition_details=$request->desc;
-        if ($request->has('photos')) {
-            $temp_url = $request->file('photos')->store('announcement', 'public');
-            $competition->competition_image = url(Storage::url($temp_url));
+
+        if ($request->hasFile('photos')) {
+            foreach ($request->photos as $key => $photo) {
+                $path = $photo->store('event_images', 'public');
+                $image_url= url(Storage::url($path));
+                array_push($images,$image_url);
+            }
         }
+        $competition->competition_image=json_encode($images);
+        $competition->compitition_location=$request->competition_location;
+        $competition->event_from=$request->compitition_from;
+        $competition->event_to=$request->compitition_to;
+        $competition->event_type=$request->event_type;
+
         $competition->save();
         return redirect()->back()->with(['success' => 'Competition added successfully.']);
     }

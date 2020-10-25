@@ -7,7 +7,7 @@
 @section('content')      
         <!-- Start Main Slider -->
         <!-- Start Main Slider -->
-        <section id="main-slider" id="home">
+        <section id="main-slider">
             <!-- Carousel -->
             <div id="main-slide" class="main-slider carousel slide" data-ride="carousel">
                 <!-- Carousel inner -->
@@ -20,11 +20,11 @@
                                     <h2 class="animated4">
                                         <span>Welcome To <strong>IOCL Parivaar</strong></span>
                                     </h2>
-                                    
+<!--                                     
                                     <p class="animated4">
                                         <a href="#gallery" class="slider-btn cbiz-btn">Gallery</a>
                                         <a href="#our_events" class="slider-btn cbiz-btn cbiz-btn-border">Events</a>
-                                    </p>
+                                    </p> -->
                                 </div>
                             </div>
                         </div> <!-- /.container -->
@@ -67,7 +67,7 @@
                 <div class="col-sm-6 col-md-4">
                         <div class="re-blog-item">
                             <div class="re-feature-img">
-                                <img src="{{$new->images}}" alt="Features">
+                                <img src="{{$new->images}}" alt="Features" style="height:200px;witth:300px;">
                             </div>
                             <div class="caption">
                                 <a href="/news_details/{{$new->id}}"><h4 class="gen-title">{{$new->heading}}</h4></a>
@@ -120,7 +120,7 @@
 				<div class="row">
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
-							<h2 class="title">Events</h2>
+							<h2 class="title">Events <?=sizeof(json_decode($event[0]->event_images))?></h2>
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
@@ -132,116 +132,68 @@
         
         
         <section class="working">
-            <div class="full-width-sec">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 padding-0 pos-static">
-                        <div class="tab-content">
-                            <div class="cel-feature full-w-h tab-pane fade active in" id="service-img1">
-                                <img class="img-responsive" src="assets/images/events-main.jpg" alt="Img">
-                            </div>
-                            <div class="cel-feature full-w-h tab-pane fade" id="service-img2">
-                                <img class="img-responsive" src="https://content3.jdmagicbox.com/comp/bhubaneshwar/y3/0674px674.x674.120711163809.e4y3/catalogue/altitude-events-surya-nagar-bhubaneshwar-event-organisers-tigl5ihxtl.jpg?clr=29293d" alt="Img">
-                            </div>
-                            <div class="cel-feature full-w-h tab-pane fade" id="service-img3">
-                                <img class="img-responsive" src="assets/images/services/3.jpg" alt="Img">
-                            </div>
-                        </div>
-                        <!-- /.tab-content -->
-                        </div>
-                        <!-- /.col -->
-                       
-                        @foreach($event as $new)
-                        <div class="col-sm-12 col-md-6 padding-0">
-                        <div class="get-us">
-                            <div class="get-head">
-                                <div class="get-icon">
-                                    <img src="assets/images/icons/filter.png" alt="Icon">
-                                    <div class="get-number">
-                                    3
-                                    </div>
-                                </div>
-                                <div class="get-title">
-                                    <h4>what you get <br>from us?</h4>
-                                </div>
-                            </div>
-                            <!-- /.get-head -->
-                            <div class="slider service-slider-content slick-initialized slick-slider">
-                                <div class="slick-list">
-                                    <div class="slick-track" style="opacity: 1; width: 3710px; transform: translate3d(-530px, 0px, 0px);">
-                                    <div class="get-content slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                                        <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    </div>
-                                    <div class="get-content slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 530px;" tabindex="0">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                                    </div>
-                                    <div class="get-content slick-slide" data-slick-index="1" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    </div>
-                                    <div class="get-content slick-slide" data-slick-index="2" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                                        <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    </div>
-                                    <div class="get-content slick-slide slick-cloned" data-slick-index="3" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-                                    </div>
-                                    <div class="get-content slick-slide slick-cloned" data-slick-index="4" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    </div>
-                                    <div class="get-content slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" style="width: 530px;" tabindex="-1">
-                                        <p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.service-slider-content -->
-                            <div class="row get-all-items">
-                                <ul class="slider slider-thumb slick-initialized slick-slider">
-                                    <div class="slick-list draggable">
-                                    <div class="slick-track" style="opacity: 1; transform: translate3d(0px, 0px, 0px);">
-                                        <li class="col-xs-4 col-sm-4 active slick-slide slick-current slick-active" data-toggle="tab" data-target="#service-img1"  tabindex="0" data-slick-index="0" aria-hidden="false">
-                                            <div class="get-item">
-                                                <img src="assets/images/events-small-1.jpg" alt="Img">
-                                                <h6>Diwali Dhamaka</h6>
-                                            </div>
-                                            <!-- /.get-item -->
-                                        </li>
-                                        <li class="col-xs-4 col-sm-4 active slick-slide slick-current slick-active" data-toggle="tab" data-target="#service-img2"  tabindex="0" data-slick-index="1" aria-hidden="false">
-                                            <div class="get-item">
-                                                <img src="assets/images/events-small-2.jpg" alt="Img">
-                                                <h6> New Year Eve</h6>
-                                            </div>
-                                            <!-- /.get-item -->
-                                        </li>
-                                        <li class="col-xs-4 col-sm-4 active slick-slide slick-current slick-active" data-toggle="tab" data-target="#service-img3" tabindex="0" data-slick-index="2" aria-hidden="false">
-                                            <div class="get-item">
-                                                <img src="assets/images/events-small-3.jpg" alt="Img">
-                                                <h6>Christmas Carol's</h6>
-                                            </div>
-                                            <!-- /.get-item -->
-                                        </li>
-                                    </div>
-                                    </div>
-                                </ul>
-                                <!-- /.slider-thumb -->
-                            </div>
-                            <!-- /.get-all-items -->
-                        </div>
-                          <!-- /.get-us -->					
-                          </div>
-            @endforeach
-            
+			<div class="full-width-sec">
+				<div class="container">    
+                @foreach($event as $new)
+					<div class="row">
+						<div class="col-sm-12 col-md-6 padding-0 pos-static">
+							<div class="tab-content">
+
+                            <?php $images=json_decode($event[0]->event_images); ?>
+                            @for ($i = 0; $i < sizeof($images); $i++)
+                            @if($i ===0)         
+                                <div class="cel-feature full-w-h tab-pane fade active in" id="service-img{{$i}}">
+									<img class="img-responsive" src="{{$images[$i]}}" alt="Img">
+								</div>
+                            @else
+                                 <div class="cel-feature full-w-h tab-pane fade" id="service-img{{$i}}">
+									<img class="img-responsive" src="{{$images[$i]}}" alt="Img">
+								</div>   
+                            @endif
+                            @endfor
+								
+								
+							</div> <!-- /.tab-content -->   
+						</div> <!-- /.col -->
                         
-                      
-                        <!-- /.col- -->
-                    </div>
-                    <!-- /.row -->  
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /.full-width-sec full-width-sec-2nd -->
-           
-            <!-- /.full-width-sec.full-width-sec-2nd -->
-        </section>
+						<div class="col-sm-12 col-md-6 padding-0">
+							<div class="get-us">
+								<div class="get-head">
+									<div class="get-icon">
+										<img src="assets/images/icons/filter.png" alt="Icon">  
+									</div>
+									<div class="get-title">
+										<h4>{{$new->name}}</h4>
+									</div>
+                                    <p style="padding: 0px 38px 0px 38px;">{!! html_entity_decode($new->event_details) !!} </p>
+								</div> <!-- /.get-head -->
+
+								<div class="row get-all-items">
+									<ul class="slider slider-thumb slick-initialized slick-slider">
+										<div class="slick-list draggable">
+                                        <div class="slick-track" style="opacity: 1; width: 561px; transform: translate3d(0px, 0px, 0px);">
+                                        @for ($i = 0; $i < sizeof($images); $i++)
+                                            <li class="col-xs-6 col-sm-4 slick-slide" data-toggle="tab" data-target="#service-img{{$i}}" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 187px;">
+                                                <div class="get-item">
+                                                    <img src="{{$images[$i]}}" alt="Img">
+                                                    <!-- <h6>website build</h6> -->
+                                                </div><!-- /.get-item -->
+                                            </li>
+                                         @endfor
+                                        </div></div> 
+										 
+										 
+									</ul> <!-- /.slider-thumb -->
+								</div> <!-- /.get-all-items -->
+							</div> <!-- /.get-us -->					
+						</div> <!-- /.col- -->
+
+					</div> <!-- /.row -->  
+                    @endforeach
+				</div> <!-- /.container -->
+			</div> <!-- /.full-width-sec full-width-sec-2nd -->
+
+		</section>
         <div class="gallery-button" style="margin-top:50px" >
             <a href="events">       Show more</a>
         </div>

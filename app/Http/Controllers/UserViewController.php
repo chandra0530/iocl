@@ -22,8 +22,9 @@ class UserViewController extends Controller
         $event=Event::inRandomOrder()->limit(1)->get();
         $gallery=Gallery::inRandomOrder()->limit(3)->get();
         $news=News::inRandomOrder()->limit(3)->get();
-
-
+// print_r(json_decode($event[0]->event_images));
+// exit;
+// return $event;
         // Auth::guard('web');
         // if(auth()->id()){
             return view('user.home',compact('announcement','compitition','event','gallery','news'));
@@ -38,7 +39,18 @@ class UserViewController extends Controller
         // Auth::guard('web');
         // if(auth()->id()){
             $news=News::get();
-            return view('user.news',compact('news'));
+            $left=[];
+        $right=[];
+        for ($i=0; $i <sizeof($news) ; $i++) { 
+            if(($i%2)==0){
+array_push($left,$news[$i]);
+            }
+            else{
+                array_push($right,$news[$i]);
+            }
+            
+        }
+            return view('user.news',compact('news','right','left'));
         // }else{
         //     return view('user.login');
         // }

@@ -34,10 +34,13 @@
     <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css')}}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css')}}" type="text/css" />
     <!-- Css3 Transitions Styles  -->
+
+
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css')}}" type="text/css" />
     <!-- FancyBox -->
     <link rel="stylesheet" href="{{ asset('assets/css/jquery.fancybox.min.css')}}" type="text/css" />
     <!-- Slick Slider -->
+
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slick-theme.css')}}"/>
 
@@ -46,8 +49,8 @@
     <!-- Responsive CSS  -->
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/css/sharetastic.css')}}"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="{{ asset('assets/js/sharetastic.js')}}"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="{{ asset('assets/js/sharetastic.js')}}"></script> -->
 
 
 
@@ -216,6 +219,8 @@ function messenger(TheImg){
 
 
 
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{{ asset('assets/js/jquery-3.2.1.min.js')}}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -225,8 +230,8 @@ function messenger(TheImg){
     <!-- Bootstrap -->
     <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
     <!-- Contact Form Script -->
-    <script src="{{ asset('assets/contact-script/validator.js')}}"></script>
-    <script src="{{ asset('assets/contact-script/contact.js')}}"></script>
+    <!-- <script src="{{ asset('assets/contact-script/validator.js')}}"></script>
+    <script src="{{ asset('assets/contact-script/contact.js')}}"></script> -->
     <!-- Owl Carousel -->
     <script src="{{ asset('assets/js/owl.carousel.min.js')}}"></script>
     <!-- Slick Nav -->

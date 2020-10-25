@@ -48,6 +48,11 @@ class EventsController extends Controller
         $event->events_names=$request->event_name;
         $event->event_images=json_encode($images);
         $event->event_details=$request->desc;
+        $event->event_from=$request->event_from;
+        $event->event_to=$request->event_to;
+        $event->event_type=$request->event_type;
+        $event->event_location=$request->event_location;
+
       $event->save();
       return redirect()->back()->with(['success' => 'Competition added successfully.']);
 

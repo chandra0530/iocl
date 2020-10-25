@@ -24,7 +24,7 @@
                                     <li ><a href="/">Home</a></li>
                         <li><a href="/news">News</a></li>
                         <li><a href="/events">Events</a></li>
-                        <li><a href="/compotitions">COMPETITIONS</a></li>
+                        <li><a href="/compotitions">competition</a></li>
                         <li><a href="/announcement">ANNOUCEMENT</a></li>
                         <li><a href="/gallery">GALLERY</a></li>
 

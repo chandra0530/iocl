@@ -39,7 +39,7 @@
                                               action="{{ route('events.store') }}">
                                             @csrf
                                             <div class="row">
-                                                <div class="col-sm-12 col-6">
+                                                <div class="col-sm-6 col-12">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                         Event name
@@ -59,8 +59,47 @@
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-sm-6 col-12">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                        Event From
+                                                        </div>
+                                                        <input type="datetime-local" class="form-control" name="event_from"
+                                                               id="basicInput" placeholder="Enter news headline">
+                                                    </fieldset>
                                                     
                                                 </div>
+                                                <div class="col-sm-6 col-12">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                        Event to
+                                                        </div>
+                                                        <input type="datetime-local" class="form-control" name="event_to"
+                                                               id="basicInput" placeholder="Enter news headline">
+                                                    </fieldset>
+                                                    
+                                                </div>
+                                                <div class="col-sm-6 col-12">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                        Event Type
+                                                        </div>
+                                                        <select class="form-control" name="event_type">
+                                                        <option>Free</option>
+                                                        <option>Paid</option>
+                                                        </select>
+                                                    </fieldset>
+                                                    
+                                                </div>
+                                                <div class="col-sm-6 col-12">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                            Event location
+                                                        </div>
+                                                        <input type="text" class="form-control" name="event_location"
+                                                               id="basicInput" placeholder="Enter news headline">
+                                                    </fieldset>
+                                                </div>
+
                                                 <div class="col-sm-12 col-12">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
@@ -70,6 +109,7 @@
                                                                   style="height: 500px; width: 100%"></textarea>
                                                     </fieldset>
                                                 </div>
+                                               
                                             </div>
 
                                             <button class="btn btn-primary btn-block waves-effect waves-light"

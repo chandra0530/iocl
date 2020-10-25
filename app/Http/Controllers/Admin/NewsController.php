@@ -16,7 +16,18 @@ class NewsController extends Controller
     public function index()
     {
         $news=News::get();
-        return view('admin.news.index',compact('news'));
+        $left=[];
+        $right=[];
+        for ($i=0; $i <sizeof($news) ; $i++) { 
+            if(($i%2)==0){
+array_push($left,$news[$i]);
+            }
+            else{
+                array_push($right,$news[$i]);
+            }
+            
+        }
+        return view('admin.news.index',compact('news','left','right'));
 
     }
 

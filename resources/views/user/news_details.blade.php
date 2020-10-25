@@ -41,24 +41,10 @@
 							</div> <!-- /.blog-content -->
 
 							<div class="comments-section">
-								<div class="admin">
-									<div class="admin-img">
-										<img src="{{ asset('assets/images/400.jpg')}}" alt="Img">
-									</div>
-									<div class="admin-content">
-										<a href="#">
-											<h3>Admin</h3>
-										</a>
-										<div class="his-text">
-											
-										</div>
-									</div> <!-- /.admin-content -->
-								</div> <!-- /.admin -->
-								
 								<!-- /.comments -->
 								
 								<!-- Comment Form Start -->
-								<!-- <div class="contact-form comment-form">
+								<div class="contact-form comment-form">
 									<div class="comment-title">
 										<h3>Post your Comments</h3>
 										<p>Please don't hesitate, we will hide your email. Required fields are marked*</p>
@@ -66,26 +52,7 @@
 
 									<form method="post" action="#">
 										<div class="row">
-											<div class="col-xs-12 col-sm-12 col-md-6">
-												<div class="form-group">
-													<input type="text" name="Name" class="form-control" required="" placeholder="Name">
-												</div>
-											</div> 
-											<div class="col-xs-12 col-sm-12 col-md-6">
-												<div class="form-group">
-													<input type="email" name="Email" class="form-control" required="" placeholder="Email">
-												</div>
-											</div> 
-											<div class="col-xs-12 col-sm-12 col-md-6">
-												<div class="form-group">
-													<input type="text" name="Phone" class="form-control" placeholder="Phone Number">
-												</div>
-											</div> 
-											<div class="col-xs-12 col-sm-12 col-md-6">
-												<div class="form-group">
-													<input type="text" name="Subject" class="form-control" placeholder="Subject">
-												</div>
-											</div> 
+											
 											<div class="col-xs-12 col-sm-12 col-md-12">
 												<div class="form-group">
 													<textarea name="Comment" class="form-control" required="" placeholder="Message"></textarea>
@@ -98,7 +65,7 @@
 											</div>
 										</div> 
 									</form>
-								</div> -->
+								</div>
                                  <!-- /.contact-form -->
 
 								<!-- Recent Post -->

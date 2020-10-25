@@ -21,10 +21,10 @@
                                 <div class="menu-search">
                                     <nav class="main-menu">
                                     <ul>
-                                            <li class="active-item"><a href="#home">Home</a></li>
+                                            <li class="active-item"><a href="#main-slider">Home</a></li>
                                             <li><a href="#news_section">News</a></li>
                                             <li><a href="#our_events">Events</a></li>
-                                            <li><a href="#compititions">COMPETITIONS</a></li>
+                                            <li><a href="#compititions">competitions</a></li>
                                             <li><a href="#announcements">ANNOUCEMENT</a></li>
                                             <li><a href="#gallery">GALLERY</a></li>
 
