@@ -32,15 +32,7 @@ Use App\Http\Controllers\User\NewsUserController;
 |
 */
 
-Route::get('/login', function () {
-    return view('user.login');
-});
-Route::get('/signup', function () {
-    return view('user.signup');
-});
-Route::post('login', [AuthController::class, 'login'])->name('auth.login');
-Route::post('signup', [AuthController::class, 'signup'])->name('auth.signup');
-Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
+
 
 
 Route::get('/', [UserViewController::class, 'home'])->name('home');
@@ -61,27 +53,33 @@ Route::get('announcement_details/{id}', [UserViewController::class, 'announcemen
 
 Route::get('contact', [UserViewController::class, 'contact'])->name('contact');
 Route::get('videos', [UserViewController::class, 'videos'])->name('videos');
+Route::get('/login', [UserViewController::class, 'login'])->name('home');
+Route::get('/signup',[UserViewController::class, 'signup'])->name('home');
 
 
-Route::post('addNewslike',[NewsUserController::class, 'addNewsLike'])->name('addNewsLike');
-Route::post('deleteNewslike',[NewsUserController::class, 'deleteNewsLike'])->name('deleteNewsLike');
+Route::post('login', [AuthController::class, 'login'])->name('auth.login');
+Route::post('signup', [AuthController::class, 'signup'])->name('auth.signup');
+Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
+
+Route::get('addNewslike/{userid}/{newsid}',[NewsUserController::class, 'addNewsLike'])->name('addNewsLike');
+Route::get('deleteNewslike/{userid}/{newsid}',[NewsUserController::class, 'deleteNewsLike'])->name('deleteNewsLike');
 Route::post('addNewscomment',[NewsUserController::class, 'addNewscomment'])->name('addNewscomment');
 
-Route::post('addEventslike',[EventController::class, 'addEventsLike'])->name('addEventsLike');
-Route::post('deleteEventslike',[EventController::class, 'deleteEventsLike'])->name('deleteEventsLike');
+Route::get('addEventslike/{userid}/{eventid}',[EventController::class, 'addEventsLike'])->name('addEventsLike');
+Route::get('deleteEventslike/{userid}/{eventid}',[EventController::class, 'deleteEventsLike'])->name('deleteEventsLike');
 Route::post('addEventcomment',[EventController::class, 'addEventscomment'])->name('addEventscomment');
 
-Route::post('addcomplike',[CompetitionController::class, 'addcompLike'])->name('addcompLike');
-Route::post('deletecomplike',[CompetitionController::class, 'deletecompLike'])->name('deletecompLike');
+Route::get('addcomplike/{userid}/{compid}',[CompetitionController::class, 'addcompLike'])->name('addcompLike');
+Route::get('deletecomplike/{userid}/{compid}',[CompetitionController::class, 'deletecompLike'])->name('deletecompLike');
 Route::post('addcompcomment',[CompetitionController::class, 'addcompcomment'])->name('addcompcomment');
 
-Route::post('addannouncementlike',[AnnouncementController::class, 'addannouncementLike'])->name('addannouncementLike');
-Route::post('deleteannouncementlike',[AnnouncementController::class, 'deleteannouncementLike'])->name('deleteannouncementLike');
+Route::get('addannouncementlike/{userid}/{announcementid}',[AnnouncementController::class, 'addannouncementLike'])->name('addannouncementLike');
+Route::get('deleteannouncementlike/{userid}/{announcementid}',[AnnouncementController::class, 'deleteannouncementLike'])->name('deleteannouncementLike');
 Route::post('addannouncementcomment',[AnnouncementController::class, 'addannouncementcomment'])->name('addannouncementcomment');
 
 
-Route::post('addgallerylike',[GalleryController::class, 'addgalleryLike'])->name('addgalleryLike');
-Route::post('deletegallerylike',[GalleryController::class, 'deletegalleryLike'])->name('deletegalleryLike');
+Route::get('addgallerylike/{userid}/{galleryid}',[GalleryController::class, 'addgalleryLike'])->name('addgalleryLike');
+Route::get('deletegallerylike/{userid}/{galleryid}',[GalleryController::class, 'deletegalleryLike'])->name('deletegalleryLike');
 Route::post('addgallerycomment',[GalleryController::class, 'addgallerycomment'])->name('addgallerycomment');
 
 
@@ -91,19 +89,26 @@ Route::prefix('admin')->group(function () {
     Route::get('gallery/event/add', [GalleryEventsController::class, 'create']);
 
     Route::get('gallery/event/{id}', [GalleryEventsController::class, 'destroy'])->name('galleryevents.destroy');
+    
+
     Route::post('gallery/event', [GalleryEventsController::class, 'store'])->name('event.store');
     Route::get('gallery/event', [GalleryEventsController::class, 'index']);
     Route::get('gallery/eventprictures/add', [GalleryEventPicturesController::class, 'create']);
+    Route::get('gallery/eventpricturesactive/{id}', [GalleryEventPicturesController::class, 'active'])->name('galleryeventpicture.active');
 
     Route::post('gallery/eventpictures', [GalleryEventPicturesController::class, 'store'])->name('galleryevent.store');
     Route::get('gallery/eventpictures', [GalleryEventPicturesController::class, 'index']);
     Route::get('news/delete/{id}', [NewsController::class,'destroy'])->name('news.destroy');
+    Route::get('news/newsactive/{id}', [NewsController::class, 'active'])->name('news.active');
     Route::resource('news', NewsController::class);
     Route::get('events/delete/{id}', [EventsController::class,'destroy'])->name('events.destroy');
+    Route::get('events/eventsactive/{id}', [EventsController::class, 'active'])->name('events.active');
     Route::resource('events', EventsController::class);
     Route::get('compititions/delete/{id}', [CompititionsController::class,'destroy'])->name('compititions.destroy');
+    Route::get('compititions/compactive/{id}', [CompititionsController::class, 'active'])->name('compititions.active');
     Route::resource('compititions', CompititionsController::class);
     Route::get('announcements/delete/{id}', [AnnouncementsController::class,'destroy'])->name('announcements.destroy');
+    Route::get('announcements/announcementactive/{id}', [AnnouncementsController::class, 'active'])->name('announcement.active');
     Route::resource('announcements', AnnouncementsController::class);
     Route::resource('employes', EmployesController::class);
 

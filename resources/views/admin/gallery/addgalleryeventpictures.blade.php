@@ -96,6 +96,7 @@
                                                         <tr>
                                                             <th>ID</th>
                                                             <th>Event Name</th>
+                                                            <th>Preview</th>
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
@@ -106,6 +107,12 @@
                                                             <td scope="row">{{$picture->gallery_event_name}}</td>
                                                             <td scope="row"><img src="{{$picture->image}}" style="width:50px;height:50px;"></td>
                                                             <td>
+                                                            @if($picture->status=='inactive')
+                                                            <a
+                                                                href="{{ route('galleryeventpicture.active', $picture->id) }}"
+                                                                class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
+                                                            @endif
+
                                                             <a onclick="return confirm('Are you sure to delete?')"
                                                                 href="{{ route('galleryevents.destroy', $picture->id) }}"
                                                                 class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>

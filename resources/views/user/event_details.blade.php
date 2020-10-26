@@ -16,18 +16,19 @@
 							<div class="blog-content">
 								<div class="blog-feature" style="display: flex;">
 								<?php $images=json_decode($event_details->event_images);?>
-                            @for ($i = 0; $i < sizeof($images); $i++)
-                            <img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:100px;height:100px">
-                            @endfor
-								
-									
-									<br>
-									
+									@for ($i = 0; $i < sizeof($images); $i++)
+										<img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:100px;height:100px">
+									@endfor
+								<br>
 								</div> <!-- /.blog-feature -->
 								<div class="blog-share" style="display:flex">
 									<div class="row">
 									<div class="col-md-2">
-									<a href="#"><i class="fa fa-heart heart"></i></a>
+									@if(sizeof($like_status)>0)
+									<a href="/deleteEventslike/{{ Auth::user()->id }}/{{$event_details->id}}" ><i class="fa fa-heart heart"></i></a>
+									@else
+									<a href="/addEventslike/{{ Auth::user()->id }}/{{$event_details->id}}"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+									@endif
 									</div>
 									
 									<div class="col-md-2">

@@ -43,6 +43,7 @@ class GalleryEventsController extends Controller
         $gallery=new GalleryEvent();
         $gallery->gallery_event_name=$request->event_name;
         $gallery->slug=(new Slug())->createSlug($request->event_name);
+        $gallery->status=$request->status;
         $gallery->save();
         return redirect()->back()->with(['success' => 'New category completed successfully.']);
 

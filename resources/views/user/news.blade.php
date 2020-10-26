@@ -114,6 +114,7 @@
                               <form enctype="multipart/form-data" method="POST"
                                  action="{{ route('news.store') }}">
                                  @csrf
+                                 <input type="hidden" name="news_status" value="inactive">
                                  <div class="row">
                                     <div class="col-sm-12 col-6">
                                        <fieldset class="form-group">

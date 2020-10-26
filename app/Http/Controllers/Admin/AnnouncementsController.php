@@ -41,6 +41,7 @@ class AnnouncementsController extends Controller
         $announcement=new Announcement();
         $announcement->annoucemnt_name=$request->announcement_name;
         $announcement->announcement_details=$request->announcement_Desc;
+        $announcement->status=$request->status;
         if ($request->has('photos')) {
             $temp_url = $request->file('photos')->store('announcement', 'public');
             $announcement->announcement_image = url(Storage::url($temp_url));
@@ -93,5 +94,10 @@ class AnnouncementsController extends Controller
     {
         Announcement::where('id', $id)->delete();
         return redirect()->back()->with(['success' => 'Announcement deleted successfully.']);
+    }
+    public function active($id){
+        $affected = Announcement::where('id', $id)
+              ->update(['status' => 'active']);
+        return redirect()->back();
     }
 }

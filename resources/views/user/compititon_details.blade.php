@@ -27,7 +27,12 @@
 								<div class="blog-share" style="display:flex">
 									<div class="row">
 									<div class="col-md-2">
-									<a href="#"><i class="fa fa-heart heart"></i></a>
+									@if(sizeof($like_status)>0)
+										<a href="/deletecomplike/{{ Auth::user()->id }}/{{$comp_details->id}}"><i class="fa fa-heart heart"></i></a>
+									@else
+										<a href="/addcomplike/{{ Auth::user()->id }}/{{$comp_details->id}}" ><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+									@endif
+									
 									</div>
 									
 									<div class="col-md-2">

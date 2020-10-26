@@ -10,21 +10,21 @@ use App\Models\gallery_comment;
 class GalleryController extends Controller
 {
     //
-    public function addgalleryLike(Request $request){
+    public function addgalleryLike(Request $request,$userid,$galleryid){
         $like=new gallery_like();
-        $like->user_id=1;
-        $like->gallery_id=$request->gallery_id;
+        $like->user_id=$userid;
+        $like->gallery_id=$galleryid;
         $like->save();
-        
+        return redirect()->back();
     }
-    public function deletegalleryLike(Request $request,$id){
-        gallery_like::where('id', $id)->delete();
-        return redirect()->back()->with(['success' => 'Announcement deleted successfully.']);
+    public function deletegalleryLike(Request $request,$userid,$galleryid){
+        gallery_like::where('user_id', $userid)->where('gallery_id', $galleryid)->delete();
+        return redirect()->back();
     }
     public function addgallerycomment(Request $request){
         $like=new gallery_comment();
         $like->gallery_id=$request->gallery_id;
-        $like->user_id=1;
+        $like->user_id=auth()->id();
         $like->gallery_comment=$request->gallery_comment;
         $like->save();
         return redirect()->back();

@@ -30,7 +30,7 @@
 					<div class="portfolio-details">
 						<div class="portfolio-container grid" style="position: relative; height: 1189.78px;">
 
-						@foreach ($eventpictures as $picture)
+						@foreach ($eventpictures as $key => $picture)
 						<div class="grid-item col-md-4 col-sm-6 col-xs-12 {{$picture->slug}} limited" style="position: absolute; left: 0%; top: 0px;">
 								<div class="portfolio-item">
 									<img class="img-responsive" id="image{{$picture->id}}" src="{{$picture->image}}" alt="Gallery">
@@ -47,7 +47,11 @@
 								<div class="blog-share">
 									<div class="row">
 									<div class="col-md-2">
-									<a href="#"><i class="fa fa-heart heart"></i></a>
+                                    @if($userlikes[$key])
+									<a href="/deletegallerylike/{{ Auth::user()->id }}/{{$picture->id}}" ><i class="fa fa-heart heart"></i></a>
+									@else
+                                    <a href="/addgallerylike/{{ Auth::user()->id }}/{{$picture->id}}"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+									@endif
 									</div>
 									<div class="col-md-2">
 									<a href="gallery_details/{{$picture->id}}"><i class="fa fa-comment"></i></a>
@@ -132,13 +136,13 @@ Your browser does not support the video tag.
 
 
 
-		<div id="myModal" class="modal fade" role="dialog" style="margin-top: 100px;">
+		<div id="gallery" class="modal fade" role="dialog" style="margin-top: 100px;">
    <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Add News</h4>
+            <h4 class="modal-title">Add Gallery</h4>
          </div>
          <div class="modal-body">
             <div class="container-fluid">
@@ -146,13 +150,13 @@ Your browser does not support the video tag.
                   <div class="col-12">
                      <div class="card">
                         <div class="card-header">
-                           <h4 class="card-title">Add News</h4>
+                           <h4 class="card-title">Add Gallery</h4>
                         </div>
                         <div class="card-content">
                            <div class="card-body">
 						   <form enctype="multipart/form-data" method="POST" action="{{ route('galleryevent.store') }}">
                                         @csrf
-                        
+                        <input type="hidden" name="status" value="status" >
                         <div class="row">
                             <div class="col-lg-6 col-md-12">
                                 <fieldset class="form-group">

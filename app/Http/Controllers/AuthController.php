@@ -13,7 +13,7 @@ class AuthController extends Controller
       if (Auth::guard('web')->attempt($request->only('email', 'password'), $request->filled('remember'))) {
         //Authentication passed...
         // return "login successful";
-        return redirect()->route('/');
+        return redirect()->route('home');
     }
     else {
         return "login failed";

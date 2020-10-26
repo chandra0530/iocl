@@ -65,6 +65,11 @@
                                                     <td>{{$news->id}}</td>
                                                             <td scope="row">{{$news->heading}}</td>
                                                             <td>
+                                                            @if($news->news_status=='inactive')
+                                                            <a
+                                                                href="{{ route('news.active', $news->id) }}"
+                                                                class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
+                                                            @endif
                                                             <a onclick="return confirm('Are you sure to delete?')"
                                                                 href="news/delete/{{$news->id}}"
                                                                 class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>

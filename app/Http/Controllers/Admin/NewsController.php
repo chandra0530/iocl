@@ -53,6 +53,7 @@ array_push($left,$news[$i]);
         $news->heading=$request->news_heading;
         $news->news_short_description=$request->news_small_desc;
         $news->news_details=$request->desc;
+        $news->news_status=$request->news_status;
         if ($request->has('photos')) {
             $temp_url = $request->file('photos')->store('news_photos', 'public');
             $news->images = url(Storage::url($temp_url));
@@ -105,5 +106,10 @@ array_push($left,$news[$i]);
     {
         News::where('id', $id)->delete();
         return redirect()->back()->with(['success' => 'News deleted successfully.']);
+    }
+    public function active($id){
+        $affected = News::where('id', 1)
+              ->update(['news_status' => 'active']);
+        return redirect()->back();
     }
 }

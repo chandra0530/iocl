@@ -65,6 +65,11 @@
                                                     <td>{{$competition->id}}</td>
                                                             <td scope="row">{{$competition->competition_name}}</td>
                                                             <td>
+                                                            @if($competition->status=='inactive')
+                                                            <a
+                                                                href="{{ route('compititions.active', $competition->id) }}"
+                                                                class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
+                                                            @endif
                                                             <a onclick="return confirm('Are you sure to delete?')"
                                                                 href="compititions/delete/{{$competition->id}}"
                                                                 class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>

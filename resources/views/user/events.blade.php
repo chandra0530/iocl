@@ -1,8 +1,7 @@
 @extends('user.layouts.user2')
 
 @push('css')
-   
-
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 @endpush
 @section('content')  
 <section class="page-head">
@@ -50,13 +49,13 @@
 			</div> <!-- /.about-overview -->
 		</section>
 
-		<div id="myModal" class="modal fade" role="dialog" style="margin-top: 100px;">
+		<div id="events" class="modal fade" role="dialog" style="margin-top: 100px;">
    <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Add News</h4>
+            <h4 class="modal-title">Add Event</h4>
          </div>
          <div class="modal-body">
             <div class="container-fluid">
@@ -64,13 +63,14 @@
                   <div class="col-12">
                      <div class="card">
                         <div class="card-header">
-                           <h4 class="card-title">Add News</h4>
+                           <h4 class="card-title">Add Event</h4>
                         </div>
                         <div class="card-content">
                            <div class="card-body">
 						   <form enctype="multipart/form-data" method="POST"
                                               action="{{ route('events.store') }}">
                                             @csrf
+                                            <input type="hidden" name="status" value="inactive">
                                             <div class="row">
                                                 <div class="col-sm-6 col-12">
                                                     <fieldset class="form-group">
@@ -167,4 +167,44 @@
 
 
 @push('js')
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#desc').summernote();
+            $('#choice_attributes').on('change', function () {
+                $('#customer_choice_options').html(null);
+                $('#sku_choice_options').html(null);
+                $.each($("#choice_attributes option:selected"), function () {
+                    add_more_customer_choice_option($(this).val(), $(this).text());
+                });
+            });
+
+            function add_more_customer_choice_option(i, name) {
+                $('#customer_choice_options').append('' +
+                    '<div class="row mb-3">' +
+                    '<div class="col-8 col-md-3 order-1 order-md-0">' +
+                    '<input type="hidden" name="choice_no[]" value="' + i + '">' +
+                    '<input type="text" class="form-control" name="choice[]" value="' + name + '" placeholder="Choice Title" readonly>' +
+                    '</div>' +
+                    '<div class="col-12 col-md-7 col-xl-8 order-3 order-md-0 mt-2 mt-md-0">' +
+                    '<input type="text" class="form-control" id="choice_options_' + i + '" name="choice_options_' + i + '[]" onChange="getProductCombinations()" placeholder="Enter choice values by comma" >' +
+                    '</div>' +
+                    '<div class="col-4 col-xl-1 col-md-2 order-2 order-md-0 text-right">' +
+                    '<button type="button" onclick="delete_row(this)" class="btn btn-link btn-icon text-danger">' +
+                    '<i class="fa fa-trash-o"></i>' +
+                    '</button>' +
+                    '</div>' +
+                    '</div>');
+            }
+
+        });
+
+        function delete_row(em) {
+            $('#sku_choice_options').html(null);
+            $(em).closest('.row').remove();
+        }
+
+       
+
+    </script>
 @endpush

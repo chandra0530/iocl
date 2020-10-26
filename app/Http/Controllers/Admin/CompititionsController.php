@@ -53,6 +53,7 @@ class CompititionsController extends Controller
         $competition->event_from=$request->compitition_from;
         $competition->event_to=$request->compitition_to;
         $competition->event_type=$request->event_type;
+        $competition->status=$request->status;
 
         $competition->save();
         return redirect()->back()->with(['success' => 'Competition added successfully.']);
@@ -102,5 +103,10 @@ class CompititionsController extends Controller
     {
         Compitition::where('id', $id)->delete();
         return redirect()->back()->with(['success' => 'Announcement deleted successfully.']);
+    }
+    public function active($id){
+        $affected = Compitition::where('id', $id)
+              ->update(['status' => 'active']);
+        return redirect()->back();
     }
 }

@@ -12,13 +12,15 @@
 <section class="our-team section">
 			<div class="container">
 				<div class="row">
+            <button type="button" style="float: right;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#announcement">Add Announcement</button>
+
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
 							<h2 class="title"><span>Our</span> Announcements</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
 						</div>
 					</div>
-					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#announcement">Add Announcement</button>
+					
 					
 				</div> <!-- /.row -->
 				<div class="row">
@@ -57,7 +59,7 @@
       <div class="modal-content">
          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Add News</h4>
+            <h4 class="modal-title">Add Announcement</h4>
          </div>
          <div class="modal-body">
             <div class="container-fluid">
@@ -65,13 +67,14 @@
                   <div class="col-12">
                      <div class="card">
                         <div class="card-header">
-                           <h4 class="card-title">Add News</h4>
+                           <h4 class="card-title">Add Announcement</h4>
                         </div>
                         <div class="card-content">
                            <div class="card-body">
 						   <form enctype="multipart/form-data" method="POST"
                                               action="{{ route('announcements.store') }}">
                                             @csrf
+                                            <input type="hidden" name="status" value="inactive">
                                             <div class="row">
                                                 <div class="col-sm-12 col-6">
                                                     <fieldset class="form-group">

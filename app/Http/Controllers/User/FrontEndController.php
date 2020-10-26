@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\GalleryEvent;
 use App\Models\Gallery;
-
+use App\Models\gallery_like;
 class FrontEndController extends Controller
 {
     /**
@@ -87,9 +87,18 @@ class FrontEndController extends Controller
 
     public function showGallery(){
         $events=GalleryEvent::get();
+        $userlikes=[];
         $eventpictures=Gallery::join('gallery_events','gallery_events.id','=','galleries.event_id')->select('gallery_events.gallery_event_name','gallery_events.slug','galleries.*')->get();
+        for ($i=0; $i <sizeof($eventpictures); $i++) { 
+           $temp=gallery_like::where('id',$eventpictures[$i]->id)->where('user_id',auth()->id())->get();
+           if(sizeof($temp)){
+            array_push($userlikes,true);
+           }else{
+            array_push($userlikes,false);
+           }
+        }
         // return $eventpictures;
-        return view('user.gallery',compact('events','eventpictures'));
+        return view('user.gallery',compact('events','eventpictures','userlikes'));
 
     }
 }
