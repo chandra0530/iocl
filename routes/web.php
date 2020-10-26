@@ -53,8 +53,8 @@ Route::get('announcement_details/{id}', [UserViewController::class, 'announcemen
 
 Route::get('contact', [UserViewController::class, 'contact'])->name('contact');
 Route::get('videos', [UserViewController::class, 'videos'])->name('videos');
-Route::get('/login', [UserViewController::class, 'login'])->name('home');
-Route::get('/signup',[UserViewController::class, 'signup'])->name('home');
+Route::get('/login', [UserViewController::class, 'login'])->name('login');
+Route::get('/signup',[UserViewController::class, 'signup'])->name('signup');
 
 
 Route::post('login', [AuthController::class, 'login'])->name('auth.login');
