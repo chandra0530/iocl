@@ -14,38 +14,44 @@
 					<div class="blog">
 						<div class="col-xs-12 col-sm-12 col-md-12">
 							<div class="blog-content">
-								<div class="blog-feature">
-									<img src="{{$news_details->images}}" alt="Blog Photo">
-									<div class="blog-share" style="display:flex">
+								<div class="blog-feature" style="display: flex;">
+								<?php $images=json_decode($event_details->event_images);?>
+                            @for ($i = 0; $i < sizeof($images); $i++)
+                            <img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:100px;height:100px">
+                            @endfor
+								
+									
+									<br>
+									
+								</div> <!-- /.blog-feature -->
+								<div class="blog-share" style="display:flex">
 									<div class="row">
 									<div class="col-md-2">
 									<a href="#"><i class="fa fa-heart heart"></i></a>
 									</div>
 									
 									<div class="col-md-2">
-									<a href="#"><i class="fa fa-facebook" onclick="share_news_fb()"></i></a>
+									<a href="#"><i class="fa fa-facebook" onclick="fbs_click(1)"></i></a>
 									</div>
 									<div class="col-md-2">
-									<a href="#"><i class="fa fa-envelope" onclick="share_news_mail()"></i></a>
+									<a href="#"><i class="fa fa-envelope" onclick="mail(1)"></i></a>
 									</div>
 									<div class="col-md-2">
-									<a href="#"><i class="fa fa-whatsapp" onclick="share_news_whatsapp()"></i></a>
+									<a href="#"><i class="fa fa-whatsapp" onclick="whatsapp(1)"></i></a>
 									</div>
 									<div class="col-md-2">
 									<a href="#"><img src="assets/icons/facebook-messenger-brands.svg" style="width: 15px;" onclick="messenger(1)"></a>
 									</div>
 									</div>
 									</div> <!-- /.blog-share -->
-									<br>
-									
-								</div> <!-- /.blog-feature -->
 								<div class="post-title">
-									<h3>{{$news_details->heading}}.</h3>
-									<h6>{{$news_details->heading}}.</h6>
+									<h3>{{$event_details->events_names}}.</h3>
+									<h6>{{$event_details->created_at}}.</h6>
 								</div>
 								<div class="post-content">
-									<p>{{$news_details->news_short_description}}</p>
-									<p> {!! html_entity_decode($news_details->news_details) !!}</p>
+									<p>{{$event_details->event_location}}</p>
+									<p>{{$event_details->event_from}} {{$event_details->event_to}} {{$event_details->event_type}}</p>
+									<p> {!! html_entity_decode($event_details->event_details) !!}</p>
 								</div>
 							</div> <!-- /.blog-content -->
 
@@ -77,7 +83,7 @@
 													 - 
 													 <a href="#">{{$comment->created_at}}</a>
 												</h4>
-												<p>{{$comment->news_comment}}</p>
+												<p>{{$comment->event_comment}}</p>
 											</div> <!-- /.media-body -->
 										</div> <!-- /.media -->
 									@endforeach
@@ -91,9 +97,9 @@
 										<p>Please don't hesitate, we will hide your email. Required fields are marked*</p>
 									</div>
 
-									<form method="post" enctype="multipart/form-data" method="POST" action="{{ route('addNewscomment') }}">
+									<form method="post" enctype="multipart/form-data" method="POST" action="{{ route('addEventscomment') }}">
                               			@csrf
-										  <input type="hidden" name="news_id" value="{{$news_details->id}}"> 
+										  <input type="hidden" name="event_id" value="{{$event_details->id}}"> 
 										<div class="row">
 											<div class="col-xs-12 col-sm-12 col-md-12">
 												<div class="form-group">

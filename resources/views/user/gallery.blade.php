@@ -50,7 +50,7 @@
 									<a href="#"><i class="fa fa-heart heart"></i></a>
 									</div>
 									<div class="col-md-2">
-									<a href="#"><i class="fa fa-comment"></i></a>
+									<a href="gallery_details/{{$picture->id}}"><i class="fa fa-comment"></i></a>
 									</div>
 									<div class="col-md-2">
 									<a href="#"><i class="fa fa-facebook" onclick="fbs_click({{$picture->id}})"></i></a>

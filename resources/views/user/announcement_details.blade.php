@@ -14,9 +14,14 @@
 					<div class="blog">
 						<div class="col-xs-12 col-sm-12 col-md-12">
 							<div class="blog-content">
-								<div class="blog-feature">
-									<img src="{{$news_details->images}}" alt="Blog Photo">
-									<div class="blog-share" style="display:flex">
+								<div class="blog-feature" style="display: flex;">
+							
+                            <img class="img-responsive" src="{{$announcement->announcement_image}}" alt="Img" style="width:100px;height:100px">
+                            
+									<br>
+									
+								</div> <!-- /.blog-feature -->
+								<div class="blog-share" style="display:flex">
 									<div class="row">
 									<div class="col-md-2">
 									<a href="#"><i class="fa fa-heart heart"></i></a>
@@ -36,16 +41,12 @@
 									</div>
 									</div>
 									</div> <!-- /.blog-share -->
-									<br>
-									
-								</div> <!-- /.blog-feature -->
 								<div class="post-title">
-									<h3>{{$news_details->heading}}.</h3>
-									<h6>{{$news_details->heading}}.</h6>
+									<h3>{{$announcement->annoucemnt_name}}.</h3>
+									<h6>{{$announcement->created_at}}.</h6>
 								</div>
 								<div class="post-content">
-									<p>{{$news_details->news_short_description}}</p>
-									<p> {!! html_entity_decode($news_details->news_details) !!}</p>
+									<p> {!! html_entity_decode($announcement->announcement_details) !!}</p>
 								</div>
 							</div> <!-- /.blog-content -->
 
@@ -77,11 +78,11 @@
 													 - 
 													 <a href="#">{{$comment->created_at}}</a>
 												</h4>
-												<p>{{$comment->news_comment}}</p>
+												<p>{{$comment->announcement_coment}}</p>
 											</div> <!-- /.media-body -->
 										</div> <!-- /.media -->
 									@endforeach
-									</div>
+									</div>  
 								</div> <!-- /.comments -->
 								
 								<!-- Comment Form Start -->
@@ -91,13 +92,13 @@
 										<p>Please don't hesitate, we will hide your email. Required fields are marked*</p>
 									</div>
 
-									<form method="post" enctype="multipart/form-data" method="POST" action="{{ route('addNewscomment') }}">
+									<form method="post" enctype="multipart/form-data" method="POST" action="{{ route('addannouncementcomment') }}">
                               			@csrf
-										  <input type="hidden" name="news_id" value="{{$news_details->id}}"> 
+										  <input type="hidden" name="announcement_id" value="{{$announcement->id}}"> 
 										<div class="row">
 											<div class="col-xs-12 col-sm-12 col-md-12">
 												<div class="form-group">
-													<textarea name="comment" class="form-control" required="" placeholder="Message"></textarea>
+													<textarea name="announcement_coment" class="form-control" required="" placeholder="Message"></textarea>
 												</div>
 											</div> <!-- /.col- -->
 											<div class="form-group col-xs-12 col-md-12">

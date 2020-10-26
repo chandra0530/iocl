@@ -198,7 +198,6 @@ function instagram(TheImg) {
 function whatsapp(TheImg) {
      console.log(TheImg);
      var img = document.getElementById('image'+TheImg);
-
     window.open('https://wa.me/+97333161261/?text=Hi checkout out event images '+encodeURIComponent(img.src));return false;
 }
 function mail(TheImg){
@@ -210,6 +209,30 @@ function messenger(TheImg){
     var img = document.getElementById('image'+TheImg);
     window.open('fb-messenger://share?link=' + encodeURIComponent(img.src) + '&app_id=' + encodeURIComponent("1234"));
 
+}
+function share_news_fb(){
+    console.log("fb");
+    var url=window.location.href;
+    console.log(url);
+    window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(url),'sharer','toolbar=0,status=0,width=626,height=436');return false;
+}
+function share_news_mail(){
+    console.log("fb");
+    var url=window.location.href;
+    console.log(url);
+    window.open('mailto:test@example.com?subject=Checkoutout our event pictures&body='+encodeURIComponent(url));
+}
+function share_news_whatsapp(){
+    console.log("fb");
+    var url=window.location.href;
+    console.log(url);
+    window.open('https://wa.me/+97333161261/?text=Hi checkout out event images '+encodeURIComponent(url));return false;
+}
+function share_news_messenger(){
+    console.log("fb");
+    var url=window.location.href;
+    console.log(url);
+    window.open('fb-messenger://share?link=' + encodeURIComponent(url) + '&app_id=' + encodeURIComponent("1234"));
 }
 
     </script>

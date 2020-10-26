@@ -9,7 +9,11 @@ use App\Models\Compitition;
 use App\Models\Event;
 use App\Models\Gallery;
 Use App\Models\News;
-
+use App\Models\news_comment;
+use App\Models\event_comment;
+use App\Models\competition_comment;
+use App\Models\gallery_comment;
+use App\Models\AnnouncementComment;
 class UserViewController extends Controller
 {
     //
@@ -60,11 +64,24 @@ array_push($left,$news[$i]);
         // Auth::guard('web');
         // if(auth()->id()){
             $news_details=News::find($id);
-            return view('user.news_details',compact('news_details'));
+            $comments=news_comment::where('news_id',$id)->get();
+            return view('user.news_details',compact('news_details','comments'));
             // return view('user.news_details');
         // }else{
         //     return view('user.login');
         // }
+    }
+    public function event_detials($id){
+        // Auth::guard('web');
+        // if(auth()->id()){
+            $event_details=Event::find($id);
+            $comments=event_comment::where('event_id',$id)->get();
+            return view('user.event_details',compact('event_details','comments'));
+            // return view('user.news_details');
+        // }else{
+        //     return view('user.login');
+        // }
+
     }
     public function events(){
         
@@ -113,5 +130,20 @@ array_push($left,$news[$i]);
         // }else{
         //     return view('user.login');
         // }
+    }
+    public function compotition_details($id){
+        $comp_details=Compitition::find($id);
+        $comments=competition_comment::where('competition_id',$id)->get();
+        return view('user.compititon_details',compact('comp_details','comments'));
+    }
+    public function gallery_details($id){
+        $gallery=Gallery::find($id);
+        $comments=gallery_comment::where('gallery_id',$id)->get();
+        return view('user.gallery_details',compact('gallery','comments'));
+    }
+    public function announcement_details($id){
+        $announcement=Announcement::find($id);
+        $comments=AnnouncementComment::where('announcement_id',$id)->get();
+        return view('user.announcement_details',compact('announcement','comments'));
     }
 }

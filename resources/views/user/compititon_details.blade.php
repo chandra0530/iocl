@@ -14,9 +14,17 @@
 					<div class="blog">
 						<div class="col-xs-12 col-sm-12 col-md-12">
 							<div class="blog-content">
-								<div class="blog-feature">
-									<img src="{{$news_details->images}}" alt="Blog Photo">
-									<div class="blog-share" style="display:flex">
+								<div class="blog-feature" style="display: flex;">
+								<?php $images=json_decode($comp_details->competition_image);?>
+                            @for ($i = 0; $i < sizeof($images); $i++)
+                            <img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:100px;height:100px">
+                            @endfor
+								
+									
+									<br>
+									
+								</div> <!-- /.blog-feature -->
+								<div class="blog-share" style="display:flex">
 									<div class="row">
 									<div class="col-md-2">
 									<a href="#"><i class="fa fa-heart heart"></i></a>
@@ -36,16 +44,14 @@
 									</div>
 									</div>
 									</div> <!-- /.blog-share -->
-									<br>
-									
-								</div> <!-- /.blog-feature -->
 								<div class="post-title">
-									<h3>{{$news_details->heading}}.</h3>
-									<h6>{{$news_details->heading}}.</h6>
+									<h3>{{$comp_details->competition_name}}.</h3>
+									<h6>{{$comp_details->created_at}}.</h6>
 								</div>
 								<div class="post-content">
-									<p>{{$news_details->news_short_description}}</p>
-									<p> {!! html_entity_decode($news_details->news_details) !!}</p>
+									<p>{{$comp_details->compitition_location}}</p>
+									<p>{{$comp_details->event_from}} {{$comp_details->event_to}} {{$comp_details->event_type}}</p>
+									<p> {!! html_entity_decode($comp_details->competition_details) !!}</p>
 								</div>
 							</div> <!-- /.blog-content -->
 
@@ -77,7 +83,7 @@
 													 - 
 													 <a href="#">{{$comment->created_at}}</a>
 												</h4>
-												<p>{{$comment->news_comment}}</p>
+												<p>{{$comment->competition_comment}}</p>
 											</div> <!-- /.media-body -->
 										</div> <!-- /.media -->
 									@endforeach
@@ -91,9 +97,9 @@
 										<p>Please don't hesitate, we will hide your email. Required fields are marked*</p>
 									</div>
 
-									<form method="post" enctype="multipart/form-data" method="POST" action="{{ route('addNewscomment') }}">
+									<form method="post" enctype="multipart/form-data" method="POST" action="{{ route('addcompcomment') }}">
                               			@csrf
-										  <input type="hidden" name="news_id" value="{{$news_details->id}}"> 
+										  <input type="hidden" name="competition_id" value="{{$comp_details->id}}"> 
 										<div class="row">
 											<div class="col-xs-12 col-sm-12 col-md-12">
 												<div class="form-group">

@@ -163,7 +163,7 @@
 										<img src="assets/images/icons/filter.png" alt="Icon">  
 									</div>
 									<div class="get-title">
-										<h4>{{$new->name}}</h4>
+										<h4>{{$new->events_names}}</h4>
 									</div>
                                     <p style="padding: 0px 38px 0px 38px;">{!! html_entity_decode($new->event_details) !!} </p>
 								</div> <!-- /.get-head -->
@@ -213,7 +213,8 @@
                     <div class="tab-content">
                     @foreach($compitition as $key => $compit)
                     <div class="col-xs-12 col-sm-12 col-md-5 tab-pane fade   {{ $key ==  '0' ? 'in active' : ''  }}  " id="creative{{$key}}">
-                            <img src="{{$compit->competition_image}}" alt="Img">
+                    <?php $compimages=json_decode($compit->competition_image); ?>
+                            <img src="{{$compimages[0]}}" alt="Img">
                         </div> <!-- /.col- -->
                     @endforeach
                         

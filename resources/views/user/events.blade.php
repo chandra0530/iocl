@@ -26,14 +26,21 @@
 						
 					<div class="row">
 						<div class="col-sm-12 col-md-6">
-							<div class="about-text">
+							<div class="about-text" >
+                            <a  href="event_details/{{$event->id}}">
 								<h4>{{$event->events_names}}.</h4>
 								<p> {!! html_entity_decode($event->event_details) !!}</p>
+                                </a>
 							</div>
 						</div> <!-- /.col- -->
 						<!-- <div class="about-overview-img"> -->
-							<div class="col-sm-12 col-md-6 ">
-								<img class="img-responsive" src="{{$event->event_images}}" alt="Img">
+							<div class="col-sm-12 col-md-6 " style="display: flex;">
+                            <?php $images=json_decode($event->event_images);?>
+                            @for ($i = 0; $i < sizeof($images); $i++)
+                            <img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:100px;height:100px">
+                            @endfor
+								
+                                
 							
 							</div>
 						<!-- </div> /.about-overview-img -->

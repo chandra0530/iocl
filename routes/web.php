@@ -14,6 +14,13 @@ use App\Http\Controllers\Admin\EventsController;
 Use App\Http\Controllers\User\FrontEndController;
 Use App\Http\Controllers\AuthController;
 Use App\Http\Controllers\UserViewController;
+
+
+Use App\Http\Controllers\User\AnnouncementController;
+Use App\Http\Controllers\User\CompetitionController;
+Use App\Http\Controllers\User\EventController;
+Use App\Http\Controllers\User\GalleryController;
+Use App\Http\Controllers\User\NewsUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,11 +46,44 @@ Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::get('/', [UserViewController::class, 'home'])->name('home');
 Route::get('news', [UserViewController::class, 'news'])->name('news');
 Route::get('news_details/{id}', [UserViewController::class, 'news_detials'])->name('news_details');
+
+
 Route::get('events', [UserViewController::class, 'events'])->name('events');
+
+Route::get('event_details/{id}', [UserViewController::class, 'event_detials'])->name('event_detials');
+Route::get('gallery_details/{id}', [UserViewController::class, 'gallery_details'])->name('gallery_details');
+
 Route::get('compotitions', [UserViewController::class, 'compititions'])->name('compititions');
+Route::get('compotition_details/{id}', [UserViewController::class, 'compotition_details'])->name('comptition_details');
+
 Route::get('announcement', [UserViewController::class, 'ammouncement'])->name('announcements');
+Route::get('announcement_details/{id}', [UserViewController::class, 'announcement_details'])->name('announcementdetails');
+
 Route::get('contact', [UserViewController::class, 'contact'])->name('contact');
 Route::get('videos', [UserViewController::class, 'videos'])->name('videos');
+
+
+Route::post('addNewslike',[NewsUserController::class, 'addNewsLike'])->name('addNewsLike');
+Route::post('deleteNewslike',[NewsUserController::class, 'deleteNewsLike'])->name('deleteNewsLike');
+Route::post('addNewscomment',[NewsUserController::class, 'addNewscomment'])->name('addNewscomment');
+
+Route::post('addEventslike',[EventController::class, 'addEventsLike'])->name('addEventsLike');
+Route::post('deleteEventslike',[EventController::class, 'deleteEventsLike'])->name('deleteEventsLike');
+Route::post('addEventcomment',[EventController::class, 'addEventscomment'])->name('addEventscomment');
+
+Route::post('addcomplike',[CompetitionController::class, 'addcompLike'])->name('addcompLike');
+Route::post('deletecomplike',[CompetitionController::class, 'deletecompLike'])->name('deletecompLike');
+Route::post('addcompcomment',[CompetitionController::class, 'addcompcomment'])->name('addcompcomment');
+
+Route::post('addannouncementlike',[AnnouncementController::class, 'addannouncementLike'])->name('addannouncementLike');
+Route::post('deleteannouncementlike',[AnnouncementController::class, 'deleteannouncementLike'])->name('deleteannouncementLike');
+Route::post('addannouncementcomment',[AnnouncementController::class, 'addannouncementcomment'])->name('addannouncementcomment');
+
+
+Route::post('addgallerylike',[GalleryController::class, 'addgalleryLike'])->name('addgalleryLike');
+Route::post('deletegallerylike',[GalleryController::class, 'deletegalleryLike'])->name('deletegalleryLike');
+Route::post('addgallerycomment',[GalleryController::class, 'addgallerycomment'])->name('addgallerycomment');
+
 
 
 Route::prefix('admin')->group(function () {

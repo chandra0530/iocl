@@ -30,8 +30,10 @@
 								
 							</div> <!-- /.team-members -->
 							<div class="member-name">
+                     <a href="announcement_details/{{$announce->id}}">
 								<h4>{{$announce->annoucemnt_name}}</h4>
 								<p>{{$announce->announcement_details}}</p>
+                     </a>
 							</div><!-- /.member-name -->
 							<div class="member-content">
 								<p>{{$announce->updated_at}}</p>
