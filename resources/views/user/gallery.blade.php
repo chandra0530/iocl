@@ -156,7 +156,7 @@ Your browser does not support the video tag.
                            <div class="card-body">
 						   <form enctype="multipart/form-data" method="POST" action="{{ route('galleryevent.store') }}">
                                         @csrf
-                        <input type="hidden" name="status" value="status" >
+                        <input type="hidden" name="status" value="inactive" >
                         <div class="row">
                             <div class="col-lg-6 col-md-12">
                                 <fieldset class="form-group">

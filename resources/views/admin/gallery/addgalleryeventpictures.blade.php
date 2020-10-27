@@ -55,6 +55,7 @@
                                         @csrf
                         
                         <div class="row">
+                        <input type="hidden" name="status" value="active" >
                             <div class="col-lg-6 col-md-12">
                                 <fieldset class="form-group">
                                     <label for="basicInputFile">Select Event</label>

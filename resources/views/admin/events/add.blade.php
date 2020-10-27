@@ -39,6 +39,7 @@
                                               action="{{ route('events.store') }}">
                                             @csrf
                                             <div class="row">
+                                            <input type="hidden" name="status" value="active">
                                                 <div class="col-sm-6 col-12">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">

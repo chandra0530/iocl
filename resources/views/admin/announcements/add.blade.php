@@ -39,6 +39,7 @@
                                               action="{{ route('announcements.store') }}">
                                             @csrf
                                             <div class="row">
+                                            <input type="hidden" name="status" value="active">
                                                 <div class="col-sm-12 col-6">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">

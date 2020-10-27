@@ -37,6 +37,7 @@
                                     <div class="card-body">
                                         <form enctype="multipart/form-data" method="POST"
                                               action="{{ route('compititions.store') }}">
+                                              <input type="hidden" name="status" value="active">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-sm-6 col-6">
