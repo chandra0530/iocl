@@ -29,6 +29,7 @@
                                             <li><a href="#gallery">GALLERY</a></li>
 
                                             <li><a href="#contact_us">Contact</a></li>
+                                            <li><a href="/logout">Logout</a></li>
                                         </ul>
                                     </nav>
                                     

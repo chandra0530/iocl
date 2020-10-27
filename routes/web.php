@@ -110,6 +110,9 @@ Route::prefix('admin')->group(function () {
     Route::get('announcements/delete/{id}', [AnnouncementsController::class,'destroy'])->name('announcements.destroy');
     Route::get('announcements/announcementactive/{id}', [AnnouncementsController::class, 'active'])->name('announcement.active');
     Route::resource('announcements', AnnouncementsController::class);
+    Route::get('employes/delete/{id}', [EmployesController::class, 'destroy'])->name('employes.destroy');
+    Route::get('employes/active/{id}', [EmployesController::class, 'active'])->name('employes.active');
+
     Route::resource('employes', EmployesController::class);
 
    

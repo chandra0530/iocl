@@ -30,7 +30,8 @@
             </div>
           </div>
         </div>
-        <div class="content-body"><!-- Basic Inputs start -->
+        <div class="content-body">
+        <!-- Basic Inputs start -->
 <section id="basic-input">
     <div class="row">
         <div class="col-md-12">
@@ -91,10 +92,6 @@
     </div>
 </section>
 <!-- Basic Inputs end -->
-
-
-
-
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\User;
 class EmployesController extends Controller
 {
     /**
@@ -13,7 +14,9 @@ class EmployesController extends Controller
      */
     public function index()
     {
-        //
+        $users=User::get();
+
+        return view('admin.employes.index',compact('users'));
     }
 
     /**
@@ -23,7 +26,7 @@ class EmployesController extends Controller
      */
     public function create()
     {
-        return view('admin.news.add');
+        return view('admin.employes.add');
     }
 
     /**
@@ -79,6 +82,12 @@ class EmployesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::where('id', $id)->delete();
+        return redirect()->back()->with(['success' => 'Announcement deleted successfully.']);
+    }
+    public function active($id){
+        $affected = User::where('id', $id)
+        ->update(['status' => 'active']);
+        return redirect()->back();
     }
 }

@@ -42,10 +42,17 @@
 												<input type="text" name="employeid" class="form-control" placeholder="Your employee id">
 											</div>
 										</div>
-										<div class="form-group col-xs-12">
+										<div class="form-group col-xs-6">
 											<div class="form-btn">
 												<input type="submit" name="submit" value="Register" class="contact-form-btn disabled">
 											</div>
+										</div>
+										<div class="form-group col-xs-6">
+											
+											<div class="form-btn">
+											<a href="{{ route('login')  }}" class="contact-form-btn disabled">Login</a>
+											</div>
+
 										</div>
 									</div> <!-- /.row -->
 								</form>

@@ -12,8 +12,15 @@ class AuthController extends Controller
 
       if (Auth::guard('web')->attempt($request->only('email', 'password'), $request->filled('remember'))) {
         //Authentication passed...
+        $userdetails=User::find(auth()->id());
+        if($userdetails->status=='active'){
+            return redirect()->route('home');
+        }else{
+            Auth::logout();
+        return redirect()->back();
+        }
         // return "login successful";
-        return redirect()->route('home');
+        //
     }
     else {
         return "login failed";

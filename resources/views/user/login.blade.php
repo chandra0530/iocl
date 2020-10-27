@@ -35,10 +35,19 @@
 												<input type="password" name="password" class="form-control" placeholder="Your passsword" required="required" data-error="Write your valid email address">
 											</div>
 										</div> <!-- /.col- -->
-										<div class="form-group col-xs-12">
+										<div class="form-group col-xs-6">
 											<div class="form-btn">
 												<input type="submit" name="submit" value="Login" class="contact-form-btn disabled">
 											</div>
+											
+
+										</div>
+										<div class="form-group col-xs-6">
+											
+											<div class="form-btn">
+											<a href="{{ route('signup')  }}" class="contact-form-btn disabled">Signup</a>
+											</div>
+
 										</div>
 										<div class="messages"></div>
 									</div> <!-- /.row -->

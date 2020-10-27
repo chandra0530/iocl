@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dashboard -Dentco</title>
+    <title>Dashboard -Iocl</title>
     <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.html">
    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
     <!-- BEGIN: Vendor CSS-->

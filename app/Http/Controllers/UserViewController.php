@@ -25,11 +25,11 @@ class UserViewController extends Controller
     public function home(){
 
 
-        $announcement=Announcement::inRandomOrder()->limit(3)->get();
-        $compitition=Compitition::inRandomOrder()->limit(3)->get();
-        $event=Event::inRandomOrder()->limit(1)->get();
-        $gallery=Gallery::inRandomOrder()->limit(3)->get();
-        $news=News::inRandomOrder()->limit(3)->get();
+        $announcement=Announcement::where('status','active')->inRandomOrder()->limit(3)->get();
+        $compitition=Compitition::where('status','active')->inRandomOrder()->limit(3)->get();
+        $event=Event::where('status','active')->inRandomOrder()->limit(1)->get();
+        $gallery=Gallery::where('status','active')->inRandomOrder()->limit(3)->get();
+        $news=News::where('news_status','active')->inRandomOrder()->limit(3)->get();
         Auth::guard('web');
         if(auth()->id()){
             return view('user.home',compact('announcement','compitition','event','gallery','news'));
@@ -43,7 +43,7 @@ class UserViewController extends Controller
        
         Auth::guard('web');
         if(auth()->id()){
-            $news=News::get();
+            $news=News::where('news_status','active')->get();
             $left=[];
         $right=[];
         for ($i=0; $i <sizeof($news) ; $i++) { 
@@ -89,7 +89,7 @@ class UserViewController extends Controller
         
         Auth::guard('web');
         if(auth()->id()){
-            $event=Event::get();
+            $event=Event::where('status','active')->get();
             return view('user.events',compact('event'));
         }else{
             return view('user.login');
@@ -99,7 +99,7 @@ class UserViewController extends Controller
        
         Auth::guard('web');
         if(auth()->id()){
-            $comp=Compitition::get();
+            $comp=Compitition::where('status','active')->get();
             return view('user.competitions',compact('comp'));
         }else{
             return view('user.login');
@@ -109,7 +109,7 @@ class UserViewController extends Controller
        
         Auth::guard('web');
         if(auth()->id()){
-            $announcement=Announcement::get();
+            $announcement=Announcement::where('status','active')->get();
             return view('user.announcement',compact('announcement'));
         }else{
             return view('user.login');
