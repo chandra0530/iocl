@@ -107,6 +107,6 @@ class EventsController extends Controller
     public function active($id){
         $affected = Event::where('id', $id)
               ->update(['status' => 'active']);
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'Event activated successfully.']);
     }
 }

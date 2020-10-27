@@ -40,6 +40,7 @@
                 </div>
                 <div class="card-content">
                     <div class="card-body">
+                    @include('user.partials.message')
                         <div class="row" id="basic-table">
                             <div class="col-12">
                                 <div class="card">

@@ -27,6 +27,7 @@
                 <!-- Bootstrap Select start -->
                 <!-- Basic Select2 start -->
                 <section class="basic-select2">
+                @include('user.partials.message')
                     <div class="row">
                         <div class="col-12">
                             <div class="card">

@@ -33,6 +33,7 @@
         <div class="content-body"><!-- Basic Inputs start -->
 <section id="basic-input">
     <div class="row">
+    @include('user.partials.message')
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">

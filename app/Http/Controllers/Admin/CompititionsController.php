@@ -107,6 +107,6 @@ class CompititionsController extends Controller
     public function active($id){
         $affected = Compitition::where('id', $id)
               ->update(['status' => 'active']);
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'Compitition activated successfully.']);
     }
 }

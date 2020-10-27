@@ -24,6 +24,7 @@
                 </div>
             </div>
             <div class="content-body">
+            @include('user.partials.message')
                 <!-- Bootstrap Select start -->
                 <!-- Basic Select2 start -->
                 <section class="basic-select2">

@@ -110,6 +110,6 @@ array_push($left,$news[$i]);
     public function active($id){
         $affected = News::where('id', 1)
               ->update(['news_status' => 'active']);
-        return redirect()->back();
+        return redirect()->back() ->with(['success' => 'News activated successfully.']);
     }
 }

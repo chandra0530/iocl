@@ -31,6 +31,7 @@
           </div>
         </div>
         <div class="content-body">
+        @include('user.partials.message')
         <!-- Basic Inputs start -->
 <section id="basic-input">
     <div class="row">

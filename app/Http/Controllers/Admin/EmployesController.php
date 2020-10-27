@@ -88,6 +88,6 @@ class EmployesController extends Controller
     public function active($id){
         $affected = User::where('id', $id)
         ->update(['status' => 'active']);
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'Employes account activated successfully.']);
     }
 }

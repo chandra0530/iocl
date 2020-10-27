@@ -94,11 +94,12 @@ class GalleryEventPicturesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Gallery::where('id', $id)->delete();
+        return redirect()->back()->with(['success' => 'Gallery deleted successfully.']);
     }
     public function active($id){
         $affected = Gallery::where('id', $id)
               ->update(['status' => 'active']);
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'Gallery activated successfully.']);
     }
 }

@@ -13,6 +13,7 @@
 <section class="contact-us section">
 			<div class="container">    
 				<div class="row">
+				@include('user.partials.message')
                 <div class="col-xs-12 col-sm-3">
                 </div>
 					

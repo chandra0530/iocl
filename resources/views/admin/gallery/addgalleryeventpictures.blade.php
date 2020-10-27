@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="content-body">
-        
+        @include('user.partials.message')
 <!-- Basic File Browser start -->
 <section id="input-file-browser">
     <div class="row">
