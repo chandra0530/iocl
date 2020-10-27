@@ -17,7 +17,7 @@ class AuthController extends Controller
             return redirect()->route('home');
         }else{
             Auth::logout();
-        return redirect()->back();
+        return redirect()->back()->with(['error' => 'Account not yet activated.']);
         }
         // return "login successful";
         //
