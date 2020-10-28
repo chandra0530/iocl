@@ -102,7 +102,7 @@ class CompititionsController extends Controller
     public function destroy($id)
     {
         Compitition::where('id', $id)->delete();
-        return redirect()->back()->with(['success' => 'Announcement deleted successfully.']);
+        return redirect()->back()->with(['success' => 'Compitition deleted successfully.']);
     }
     public function active($id){
         $affected = Compitition::where('id', $id)

@@ -35,9 +35,10 @@ class AuthController extends Controller
       $user->email=$request->email;
       $user->password=bcrypt($request->password);
       $user->employeid=$request->employeid;
+      $user->status=$request->status;
       $user->save();
 
-      return redirect()->back()->with(['success' => 'Event pictures added successfully.']);
+      return redirect()->back()->with(['success' => 'Your account had been registered successfully.']);
     }
     public function logout()
     {

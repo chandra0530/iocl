@@ -98,6 +98,6 @@ class AnnouncementsController extends Controller
     public function active($id){
         $affected = Announcement::where('id', $id)
               ->update(['status' => 'active']);
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'Announcement activated successfully.']);
     }
 }

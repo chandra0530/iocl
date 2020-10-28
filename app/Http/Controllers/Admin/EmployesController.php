@@ -83,7 +83,7 @@ class EmployesController extends Controller
     public function destroy($id)
     {
         User::where('id', $id)->delete();
-        return redirect()->back()->with(['success' => 'Announcement deleted successfully.']);
+        return redirect()->back()->with(['success' => 'Employes deleted successfully.']);
     }
     public function active($id){
         $affected = User::where('id', $id)

@@ -15,11 +15,11 @@ class AnnouncementController extends Controller
         $like->user_id=$userid;
         $like->announcement_id=$announcementid;
         $like->save();
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
     }
     public function deleteannouncementLike(Request $request,$userid,$announcementid){
         AnnouncementLike::where('user_id', $userid)->where('announcement_id', $announcementid)->delete();
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
     }
     public function addannouncementcomment(Request $request){
         $like=new AnnouncementComment();
@@ -27,6 +27,6 @@ class AnnouncementController extends Controller
         $like->user_id=auth()->id();
         $like->announcement_coment=$request->announcement_coment;
         $like->save();
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
     }
 }

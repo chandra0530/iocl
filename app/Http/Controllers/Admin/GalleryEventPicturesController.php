@@ -48,6 +48,7 @@ class GalleryEventPicturesController extends Controller
             $temp_url = $request->file('gallery_image')->store('gallery_image', 'public');
             $gallery->image = url(Storage::url($temp_url));
         }
+        $gallery->status=$request->status;
         $gallery->save();
         return redirect()->back()->with(['success' => 'Event pictures added successfully.']);
     }

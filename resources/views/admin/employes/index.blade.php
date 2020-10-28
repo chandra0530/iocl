@@ -72,7 +72,7 @@
                                                             <td>
                                                             @if($user->status=='inactive')
                                                             <a
-                                                                href="{{ route('news.active', $user->id) }}"
+                                                                href="{{ route('employes.active', $user->id) }}"
                                                                 class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
                                                             @endif
                                                             <a onclick="return confirm('Are you sure to delete?')"

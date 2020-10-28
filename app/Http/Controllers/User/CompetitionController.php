@@ -14,7 +14,7 @@ class CompetitionController extends Controller
         $like->user_id=$userid;
         $like->competition_id=$compid;
         $like->save();
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
     }
     public function deletecompLike(Request $request,$userid,$compid){
         competition_like::where('user_id', $userid)->where('competition_id', $compid)->delete();
@@ -26,6 +26,6 @@ class CompetitionController extends Controller
         $like->user_id=auth()->id();
         $like->competition_comment=$request->comment;
         $like->save();
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
     }
 }

@@ -15,12 +15,12 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-left mb-0">All News List</h2>
+                <h2 class="content-header-title float-left mb-0">Add User</h2>
                 <div class="breadcrumb-wrapper col-12">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Home</a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">News</a>
+                    <li class="breadcrumb-item"><a href="#">Users</a>
                     </li>
                     <li class="breadcrumb-item active">List
                     </li>
@@ -37,7 +37,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">All News</h4>
+                    <h4 class="card-title">All User</h4>
                 </div>
                 <div class="card-content">
                     <div class="card-body">
@@ -45,41 +45,57 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4 class="card-title">All News</h4>
+                                        <h4 class="card-title">Register User</h4>
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
-                                           
-                                            <!-- Table with outer spacing -->
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>ID</th>
-                                                            <th>News Name</th>
-                                                            <th>Action</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    @foreach($news as $news)
-                                                    <tr>
-                                                    <td>{{$news->id}}</td>
-                                                            <td scope="row">{{$news->heading}}</td>
-                                                            <td>
-                                                            @if($news->news_status=='inactive')
-                                                            <a
-                                                                href="{{ route('news.active', $news->id) }}"
-                                                                class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
-                                                            @endif
-                                                            <a onclick="return confirm('Are you sure to delete?')"
-                                                                href="news/delete/{{$news->id}}"
-                                                                class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>
-                                                            </td>
-                                                    </tr>
-                                                    @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                        <form enctype="multipart/form-data" method="POST"
+                                              action="{{ route('employes.store') }}">
+                                              <input type="hidden" name="status" value="active">
+                                            @csrf
+                                            <div class="row">
+                                                <div class="col-sm-6 col-6">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                        Name
+                                                        </div>
+                                                        <input type="text" class="form-control" name="name"
+                                                               id="basicInput" placeholder="Enter employee name">
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-sm-6 col-6">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                        Email
+                                                        </div>
+                                                        <input type="text" class="form-control" name="email"
+                                                               id="basicInput" placeholder="Enter employee email">
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-sm-6 col-6">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                        Password
+                                                        </div>
+                                                        <input type="password" class="form-control" name="password"
+                                                               id="basicInput" placeholder="Enter employee password">
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-sm-6 col-6">
+                                                    <fieldset class="form-group">
+                                                        <div class="text-bold-600 font-medium-2 mb-2">
+                                                        Employe id
+                                                        </div>
+                                                        <input type="text" class="form-control" name="employeid"
+                                                               id="basicInput" placeholder="Enter employee password">
+                                                    </fieldset>
+                                                </div>
+                                            <button class="btn btn-primary btn-block waves-effect waves-light"
+                                                    type="submit">
+                                                Add user
+                                            </button>
+                                        </form>
+                                         
                                         </div>
                                     </div>
                                 </div>

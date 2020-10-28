@@ -24,6 +24,7 @@
                             <form enctype="multipart/form-data" method="POST" action="{{ route('auth.signup') }}">
                               @csrf
                               <div class="row">
+							  <input type="hidden" name="status" value="inactive">
 										<div class="col-xs-12 col-sm-12">
 											<div class="form-group">
 												<input type="text" name="name" class="form-control" placeholder="Your Name" required="required" data-error="Write your name">

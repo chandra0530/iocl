@@ -101,7 +101,7 @@
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                             Photo <small>( 900 * 400 )Px</small>
                                                         </div>
-                                                        <input type="file" multiple name="photos" class="form-control"
+                                                        <input type="file" name="photos" class="form-control"
                                                                id="photos" placeholder="Select product images">
                                                     </fieldset>
                                                 </div>

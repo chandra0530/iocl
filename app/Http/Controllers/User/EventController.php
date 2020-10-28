@@ -13,11 +13,11 @@ class EventController extends Controller
         $like->user_id=$userid;
         $like->event_id=$eventid;
         $like->save(); 
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
     }
     public function deleteEventsLike(Request $request,$userid,$eventid){
         event_like::where('user_id', $userid)->where('event_id', $eventid)->delete();
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
     }
     public function addEventscomment(Request $request){
         $like=new event_comment();
@@ -25,6 +25,6 @@ class EventController extends Controller
         $like->user_id=auth()->id();
         $like->event_comment=$request->comment;
         $like->save();
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
     }
 }

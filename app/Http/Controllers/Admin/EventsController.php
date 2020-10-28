@@ -55,7 +55,7 @@ class EventsController extends Controller
         $event->status=$request->status;
 
       $event->save();
-      return redirect()->back()->with(['success' => 'Competition added successfully.']);
+      return redirect()->back()->with(['success' => 'Event added successfully.']);
 
     }
 
@@ -102,7 +102,7 @@ class EventsController extends Controller
     public function destroy($id)
     {
         Event::where('id', $id)->delete();
-        return redirect()->back()->with(['success' => 'Announcement deleted successfully.']);
+        return redirect()->back()->with(['success' => 'Event deleted successfully.']);
     }
     public function active($id){
         $affected = Event::where('id', $id)

@@ -15,12 +15,12 @@ class NewsUserController extends Controller
         $like->user_id=$user_id;
         $like->news_id=$newsid;
         $like->save();
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
     }
     public function deleteNewsLike(Request $request,$user_id,$newsid){
         // echo json_encode(['user_id'=>$user_id,'newsid'=>$newsid]);
         news_like::where('user_id', $user_id)->where('news_id', $newsid)->delete();
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
         // return redirect()->back()->with(['success' => 'Announcement deleted successfully.']);
     }
     public function addNewscomment(Request $request){
@@ -29,6 +29,6 @@ class NewsUserController extends Controller
         $like->user_id=auth()->id();
         $like->news_comment=$request->comment;
         $like->save();
-        return redirect()->back();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
     }
 }
