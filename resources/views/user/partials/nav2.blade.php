@@ -29,6 +29,8 @@
                         <li><a href="/gallery">GALLERY</a></li>
 
                         <li><a href="/contact">Contact</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                        <li>{{Auth::user()->name}}</li>
                                         </ul>
                                     </nav>
                                     

@@ -13,13 +13,13 @@
                 <!-- Carousel inner -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img class="img-responsive" src="https://image.shutterstock.com/image-photo/group-indian-people-park-600w-735087061.jpg" alt="slider">
+                        <img class="img-responsive" src="{{ asset('assets/images/Log-In-Page-2.jpg')}}" alt="slider">
                         <div class="container">
                             <div class="slider-content">
                                 <div class="container">
-                                    <h2 class="animated4">
+                                    <!-- <h2 class="animated4">
                                         <span>Welcome To <strong>IOCL Parivaar</strong></span>
-                                    </h2>
+                                    </h2> -->
 <!--                                     
                                     <p class="animated4">
                                         <a href="#gallery" class="slider-btn cbiz-btn">Gallery</a>
@@ -35,12 +35,12 @@
                 <!-- Carousel inner end-->
 
                 <!-- Controls -->
-                <a class="left carousel-control" href="#main-slide" data-slide="prev">
+                <!-- <a class="left carousel-control" href="#main-slide" data-slide="prev">
                     <span><i class="fa fa-angle-left"></i></span>
                 </a>
                 <a class="right carousel-control" href="#main-slide" data-slide="next">
                     <span><i class="fa fa-angle-right"></i></span>
-                </a>
+                </a> -->
                 <div class="click-to-next bottom-top-animation">
                     <i></i>
                 </div>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="caption">
                                 <a href="/news_details/{{$new->id}}"><h4 class="gen-title">{{$new->heading}}</h4></a>
-                                <p>{{$new->news_short_description}}</p>
+                                <!-- <p>{{$new->news_short_description}}</p> -->
                             </div>
                             <div class="re-time">
                            {{  date('d-m-Y', strtotime($new->created_at)) }}
@@ -120,7 +120,7 @@
 				<div class="row">
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
-							<h2 class="title">Events <?=sizeof(json_decode($event[0]->event_images))?></h2>
+							<h2 class="title">Events</h2>
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
@@ -212,9 +212,9 @@
                 <div class="row">
                     <div class="tab-content">
                     @foreach($compitition as $key => $compit)
-                    <div class="col-xs-12 col-sm-12 col-md-5 tab-pane fade   {{ $key ==  '0' ? 'in active' : ''  }}  " id="creative{{$key}}">
+                    <div class="col-xs-12 col-sm-12 col-md-5 tab-pane fade   {{ $key ==  '0' ? 'in active' : ''  }}  " id="creative{{$key}}" >
                     <?php $compimages=json_decode($compit->competition_image); ?>
-                            <img src="{{$compimages[0]}}" alt="Img">
+                            <img src="{{$compimages[0]}}" alt="Img" style="width:400px">
                         </div> <!-- /.col- -->
                     @endforeach
                         
@@ -228,11 +228,12 @@
                             <li class="{{ $key ==  '1' ? 'in active' : ''  }}" data-toggle="tab" data-target="#creative{{$key}}">
                                     <div class="col-sm-4 col-md-4">
                                         <div class="we-item">
-                                            <i class="flaticon-idea"></i>
-                                            <!-- <img src="assets/images/paint-palette.png"> -->
+                                        <?php $compimages=json_decode($compit->competition_image); ?>
+                                            <!-- <i class="flaticon-idea"></i> -->
+                                            <img src="{{$compimages[0]}}" alt="Img" style="width:70px">
                                             
                                             <a href="#"><h4 class="gen-title">{{$compit->competition_name}} </h4></a>
-                                            <p> {!! html_entity_decode($compit->competition_details) !!}</p>
+                                            <!-- <p> {!! html_entity_decode($compit->competition_details) !!}</p> -->
                                         </div> <!-- /.we-item -->
                                     </div>
                                 </li>
@@ -283,7 +284,7 @@
                                     <a href="#">
                                         <h4 class="gen-title">{{$announce->annoucemnt_name}}</h4>
                                     </a>
-                                    <p>{{$announce->announcement_details}}</p>
+                                    <p></p>
                                 </div>
                             </li>
                     @endforeach

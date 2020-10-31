@@ -328,7 +328,7 @@ input[type="submit"]:hover {
     background-color: #e25732;;
 }
 .flaticon-img {
-    max-width: 45px;
+    /* max-width: 45px; */
 }
 
 #particles-js1,
@@ -1386,6 +1386,7 @@ ul.get-services li a:hover {
     margin-bottom: 60px;
     position: relative;
     border-radius: 10px;
+    background: #dedede;
 }
 
 .re-feature-img {
@@ -1716,6 +1717,7 @@ ul.get-services li a:hover {
     text-align: left;
 }
 .contact-form .contact-form-btn {
+    border-radius: 10px !important;
     padding: 10px 50px;
     border-radius: 0;
     border: 0;

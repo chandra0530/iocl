@@ -29,7 +29,13 @@
                                             <li><a href="#gallery">GALLERY</a></li>
 
                                             <li><a href="#contact_us">Contact</a></li>
-                                            <li><a href="/logout">Logout</a></li>
+                                            
+                                            <li>
+                                                <a>{{substr(Auth::user()->name, 0, 10)}}</a>
+                                                <ul class="dropdown-menus">
+                                                <li><a href="/logout">Logout</a></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </nav>
                                     
