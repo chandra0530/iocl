@@ -60,24 +60,24 @@
 									</div>
 									<div class="admin-content">
 										<a href="#">
-											<h3>Admin</h3>
+											<h3>Iocl Admin</h3>
 										</a>
 										<div class="his-text">
-											<p>It is a long established fact that a reader will be distracted by the readable content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci veritatis, tempora suscipit</p>
+											<!-- <p>It is a long established fact that a reader will be distracted by the readable content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci veritatis, tempora suscipit</p> -->
 										</div>
 									</div> <!-- /.admin-content -->
 								</div> <!-- /.admin -->
 								
 								<div class="comments">
 									<div class="comment-title">
-										<h3>2 Comments</h3>
+										<!-- <h3>2 Comments</h3> -->
 									</div>
 									<div class="media-all">
 									@foreach($comments as $comment)
 									<div class="media">
 											<div class="media-body">
 												<h4 class="media-heading">
-													<a href="#">Imran</a>
+													<a href="#">{{$comment->name}}</a>
 													 - 
 													 <a href="#">{{$comment->created_at}}</a>
 												</h4>

@@ -23,7 +23,8 @@
 				<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="team-member">
-							<img src="{{$new->competition_image}}" alt="Team Member">
+                        <?php $images=json_decode($new->competition_image); ?>
+							<img src="{{$images[0]}}" alt="Team Member">
 							
 						</div> <!-- /.team-members -->
 					</div> <!-- /.col -->
@@ -48,9 +49,7 @@
     </p>
   </div>
                     <div class="row">
-									<div class="col-md-2">
 									
-									</div>
 									
 									<div class="col-md-2">
 									<a href="#"><i class="fa fa-facebook" onclick="share_news_fb()"></i></a>
@@ -63,6 +62,9 @@
 									</div>
 									<div class="col-md-2">
 									<a href="#"><img src="assets/icons/facebook-messenger-brands.svg" style="width: 15px;" onclick="messenger(1)"></a>
+									</div>
+                                    <div class="col-md-2">
+									
 									</div>
 									</div>
 					</div> <!-- /.col- -->

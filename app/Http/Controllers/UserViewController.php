@@ -66,7 +66,9 @@ class UserViewController extends Controller
         if(auth()->id()){
             $news_details=News::find($id);
             $like_status=news_like::where('news_id',$id)->where('user_id',auth()->id())->get();
-            $comments=news_comment::where('news_id',$id)->get();
+            $comments=news_comment::where('news_id',$id)
+            ->join('users','users.id','=','news_comments.user_id')
+            ->get();
             return view('user.news_details',compact('news_details','comments','like_status'));
         }else{
             return view('user.login');
@@ -77,7 +79,9 @@ class UserViewController extends Controller
         if(auth()->id()){
             $event_details=Event::find($id);
             $like_status=event_like::where('event_id',$id)->where('user_id',auth()->id())->get();
-            $comments=event_comment::where('event_id',$id)->get();
+            $comments=event_comment::where('event_id',$id)
+            ->join('users','users.id','=','event_comments.user_id')
+            ->get();
             return view('user.event_details',compact('event_details','comments','like_status'));
             // return view('user.news_details');
         }else{
@@ -136,18 +140,24 @@ class UserViewController extends Controller
     public function compotition_details($id){
         $comp_details=Compitition::find($id);
         $like_status=competition_like::where('competition_id',$id)->where('user_id',auth()->id())->get();
-        $comments=competition_comment::where('competition_id',$id)->get();
+        $comments=competition_comment::where('competition_id',$id)
+        ->join('users','users.id','=','competition_comments.user_id')
+        ->get();
         return view('user.compititon_details',compact('comp_details','comments','like_status'));
     }
     public function gallery_details($id){
         $gallery=Gallery::find($id);
-        $comments=gallery_comment::where('gallery_id',$id)->get();
+        $comments=gallery_comment::where('gallery_id',$id)
+        ->join('users','users.id','=','gallery_comments.user_id')
+        ->get();
         return view('user.gallery_details',compact('gallery','comments'));
     }
     public function announcement_details($id){
         $announcement=Announcement::find($id);
         $like_status=AnnouncementLike::where('announcement_id',$id)->where('user_id',auth()->id())->get();
-        $comments=AnnouncementComment::where('announcement_id',$id)->get();
+        $comments=AnnouncementComment::where('announcement_id',$id)
+        ->join('users','users.id','=','announcement_comments.user_id')
+        ->get();
         return view('user.announcement_details',compact('announcement','comments','like_status'));
     }
     public function login(){

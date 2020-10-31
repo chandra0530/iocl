@@ -27,7 +27,7 @@
 							<div class="comments-section">
 								<div class="comments">
 									<div class="comment-title">
-										<h3>2 Comments</h3>
+										<!-- <h3>2 Comments</h3> -->
 									</div>
 									<div class="media-all">
 									@foreach($comments as $comment)

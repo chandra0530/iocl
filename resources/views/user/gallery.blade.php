@@ -175,7 +175,7 @@ Your browser does not support the video tag.
                                 <fieldset class="form-group">
                                     <label for="basicInputFile">With Browse button</label>
                                     <div class="custom-file">
-                                        <input type="file" name="gallery_image" class="custom-file-input" id="inputGroupFile01">
+                                        <input type="file" multiple name="gallery_image[]" class="custom-file-input" id="inputGroupFile01">
                                         <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                                     </div>
                                 </fieldset>

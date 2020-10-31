@@ -41,15 +41,20 @@ class GalleryEventPicturesController extends Controller
      */
     public function store(Request $request)
     {
-        $gallery=new Gallery();
-        $gallery->event_id=$request->event_id;
-       
-        if ($request->has('gallery_image')) {
-            $temp_url = $request->file('gallery_image')->store('gallery_image', 'public');
-            $gallery->image = url(Storage::url($temp_url));
+
+
+        if ($request->hasFile('gallery_image')) {
+            foreach ($request->photos as $key => $photo) {
+                $path = $photo->store('event_images', 'public');
+                $image_url= url(Storage::url($path));
+                // array_push($images,$image_url);
+                $gallery=new Gallery();
+                $gallery->event_id=$request->event_id;
+                $gallery->image =$image_url;
+                $gallery->status=$request->status;
+                $gallery->save();
+            }
         }
-        $gallery->status=$request->status;
-        $gallery->save();
         return redirect()->back()->with(['success' => 'Event pictures added successfully.']);
     }
 
