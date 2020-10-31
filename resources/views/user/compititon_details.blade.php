@@ -17,7 +17,7 @@
 								<div class="blog-feature" style="display: flex;">
 								<?php $images=json_decode($comp_details->competition_image);?>
                             @for ($i = 0; $i < sizeof($images); $i++)
-                            <img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:100px;height:100px">
+                            <img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:500px;height:500px">
                             @endfor
 								
 									
