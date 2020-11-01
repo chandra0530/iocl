@@ -24,13 +24,22 @@
 						<div class="lets-contact">
 							 <ul class="contact-list">
 								<li>
-									<a href="#"><i class="fa fa-paper-plane-o"></i>iocl</a>
+									<a href="#"><i class="fa fa-paper-plane-o"></i>Indian Oil Bhavan 
+                                    Eastern Region Office<br>
+                                    IndianOil Corporation Limited
+                                    2-Gariahat Road (South)<br>
+                                    Pin: 700068<br></a>
 								</li>
 								<li>
-									<a href="#"><i class="fa fa-envelope-o"></i>admin@iocl.com</a>
+									<a href="#"><i class="fa fa-envelope-o"></i>Souptik Mukherje
+                                   souptikmukherjee@indianoil.in<br>
+                                   <br>
+                                   Tapan Kumar Pradhan
+                                   tapankp@indianoil.in</a>
 								</li>
 								<li>
-									<a href="#"><i class="fa fa-phone"></i>+iocl</a>
+									<a href="#"><i class="fa fa-phone"></i>7044062168
+                                    7993542670<br><br></a>
 								</li>
 								<li>
 									<a href="#"><i class="fa fa-history"></i>9.00 am to 9.00 pm in a day, 7 days a week</a>
