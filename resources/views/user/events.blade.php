@@ -16,34 +16,62 @@
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
-					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#events">Contribution</button>
+					<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#events">Contribution</button> -->
 				</div> <!-- /.row -->
 			</div> <!-- /.container -->
 			<div class="about-overview">
 				<div class="container">   
 				@foreach($event as $key => $event)
-						
-					<div class="row">
-						<div class="col-sm-12 col-md-6">
-							<div class="about-text" >
-                            <a  href="event_details/{{$event->id}}">
-								<h4>{{$event->events_names}}.</h4>
-								<p> {!! html_entity_decode($event->event_details) !!}</p>
-                                </a>
-							</div>
-						</div> <!-- /.col- -->
-						<!-- <div class="about-overview-img"> -->
-							<div class="col-sm-12 col-md-6 " style="display: flex;">
-                            <?php $images=json_decode($event->event_images);?>
-                            @for ($i = 0; $i < sizeof($images); $i++)
-                            <img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:100px;height:100px">
-                            @endfor
-								
-                                
-							
-							</div>
-						<!-- </div> /.about-overview-img -->
-					</div> <!-- /.row -->  
+
+
+
+
+
+                <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-3">
+						<div class="team-member">
+                        <?php $images = json_decode($event->event_images); ?>
+							<img src="{{$images[0]}}" alt="Team Member">
+						</div> <!-- /.team-members -->
+					</div> <!-- /.col -->
+					<div class="col-xs-12 col-sm-6 col-md-5">
+						<div class="skill-info">
+						<a href="event_details/{{$event->id}}">	<h3>{{$event->events_names}}</h3>
+                          	<p> {!! html_entity_decode($event->event_details) !!}</p>
+                            </a>
+						</div>
+					</div> <!-- /.col -->
+
+					<div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Event detials</h5>
+                        <p class="card-text">
+                            Compitition location:{{$event->event_location}} <br>
+                            Compitition From: {{$event->event_from}}<br>
+                            Compitition To:{{$event->event_to}} <br>
+                            Compitition Type: {{$event->event_type}}<br>
+                        
+                        </p>
+                    </div>
+                    <div class="row">
+									<div class="col-md-2">
+									<a href="#"><i class="fa fa-facebook" onclick="share_news_fb()"></i></a>
+									</div>
+									<div class="col-md-2">
+									<a href="#"><i class="fa fa-envelope" onclick="share_news_mail()"></i></a>
+									</div>
+									<div class="col-md-2">
+									<a href="#"><i class="fa fa-whatsapp" onclick="share_news_whatsapp()"></i></a>
+									</div>
+									<div class="col-md-2">
+									<a href="#"><img src="assets/icons/facebook-messenger-brands.svg" style="width: 15px;" onclick="messenger(1)"></a>
+									</div>
+                                    <div class="col-md-2">
+									
+									</div>
+									</div>
+					</div> <!-- /.col- -->
+				</div><!-- row -->
 				@endforeach
 				</div> <!-- /.container -->
 			</div> <!-- /.about-overview -->

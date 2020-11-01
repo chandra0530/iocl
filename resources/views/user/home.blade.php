@@ -419,20 +419,26 @@
                             <div class="row">
                                 <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
                                     <div class="con-text in-map">
-                                        43, Chanmary Bazar,<br>
-                                        shipyards, khulna-9201
+                                    Indian Oil Bhavan<br>
+Eastern Region Office<br>
+IndianOil Corporation Limited<br>
+2-Gariahat Road (South)<br>
+Pin: 700068<br>
                                     </div>
                                 </div>
                                 <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
                                     <div class="con-text in-envelope">
-                                        admin@yoursite.com<br>
-                                        muzahid@yoursite.com
+                                    Souptik Mukherje
+                                   souptikmukherjee@indianoil.in<br>
+                                   <br>
+                                   Tapan Kumar Pradhan<br>
+                                   tapankp@indianoil.in
                                     </div>
                                 </div>
                                 <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
                                     <div class="con-text in-phone">
-                                        +880 123 727 525<br>
-                                        +8800 123 111 555
+                                    7044062168	<br><br><br>
+                                    7993542670<br><br>
                                     </div>
                                 </div>
                             </div> <!-- /.row -->

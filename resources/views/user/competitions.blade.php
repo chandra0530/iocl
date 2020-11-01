@@ -12,7 +12,7 @@
 				<div class="row">
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
-							<h2 class="title"><span>Our</span> Compition</h2>
+							<h2 class="title"><span>Our</span> Competition</h2>
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
@@ -23,7 +23,7 @@
 				<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="team-member">
-                        <?php $images=json_decode($new->competition_image); ?>
+                        <?php $images = json_decode($new->competition_image); ?>
 							<img src="{{$images[0]}}" alt="Team Member">
 							
 						</div> <!-- /.team-members -->
@@ -39,18 +39,16 @@
 
 					<div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="card-body">
-    <h5 class="card-title">Competition detials</h5>
-    <p class="card-text">
-        Compitition location:{{$new->compitition_location}} <br>
-        Compitition From: {{$new->event_from}}<br>
-        Compitition To:{{$new->event_to}} <br>
-        Compitition Type: {{$new->event_type}}<br>
-    
-    </p>
-  </div>
+                        <h5 class="card-title">Competition detials</h5>
+                        <p class="card-text">
+                            Compitition location:{{$new->compitition_location}} <br>
+                            Compitition From: {{$new->event_from}}<br>
+                            Compitition To:{{$new->event_to}} <br>
+                            Compitition Type: {{$new->event_type}}<br>
+                        
+                        </p>
+                    </div>
                     <div class="row">
-									
-									
 									<div class="col-md-2">
 									<a href="#"><i class="fa fa-facebook" onclick="share_news_fb()"></i></a>
 									</div>
@@ -68,7 +66,7 @@
 									</div>
 									</div>
 					</div> <!-- /.col- -->
-					</div><!-- row -->
+				</div><!-- row -->
 				@endforeach
 					
 				
