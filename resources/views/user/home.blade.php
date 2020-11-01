@@ -50,7 +50,7 @@
         </section> <!-- /.main-slider -->
         <!-- End Main Slider -->
 
-        <section class="recent-blog section" id="news_section">
+        <section class="recent-blog section" id="news_section" style="padding-top:0px !Important;">
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -131,7 +131,7 @@
 
         
         
-        <section class="working">
+        <!-- <section class="working">
 			<div class="full-width-sec">
 				<div class="container">    
                 @foreach($event as $new)
@@ -153,8 +153,8 @@
                             @endfor
 								
 								
-							</div> <!-- /.tab-content -->   
-						</div> <!-- /.col -->
+							</div>
+						</div> 
                         
 						<div class="col-sm-12 col-md-6 padding-0">
 							<div class="get-us">
@@ -166,7 +166,7 @@
 										<h4>{{$new->events_names}}</h4>
 									</div>
                                     <p style="padding: 0px 38px 0px 38px;">{!! html_entity_decode($new->event_details) !!} </p>
-								</div> <!-- /.get-head -->
+								</div> 
 
 								<div class="row get-all-items">
 									<ul class="slider slider-thumb slick-initialized slick-slider">
@@ -176,10 +176,128 @@
                                             <li class="col-xs-6 col-sm-4 slick-slide" data-toggle="tab" data-target="#service-img{{$i}}" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 187px;">
                                                 <div class="get-item">
                                                     <img src="{{$images[$i]}}" alt="Img">
-                                                    <!-- <h6>website build</h6> -->
-                                                </div><!-- /.get-item -->
+                                                   
+                                                </div>
                                             </li>
                                          @endfor
+                                        </div></div> 
+										 
+										 
+									</ul> 
+								</div> 
+							</div> 				
+						</div> 
+
+					</div> 
+                    @endforeach
+				</div> 
+			</div> 
+
+		</section> -->
+
+        <section class="working">
+			<div class="full-width-sec">
+				<div class="container">    
+					<div class="row">
+						<div class="col-sm-12 col-md-6 padding-0 pos-static">
+							<div class="tab-content">
+                            @foreach($event as $key =>$new)
+                            <?php $images=json_decode($new->event_images); ?>
+                            @if ($key == 0)
+                            <div class="cel-feature full-w-h tab-pane active in" id="service-img{{$key}}">
+									<img class="img-responsive" src="{{$images[0]}}" alt="Img">
+							</div>
+                            @else
+                            <div class="cel-feature full-w-h tab-pane fade" id="service-img{{$key}}">
+									<img class="img-responsive" src="{{$images[0]}}" alt="Img">
+							</div>
+                            @endif
+
+                            
+                            @endforeach
+								
+								<!-- <div class="cel-feature full-w-h tab-pane fade" id="service-img2">
+									<img class="img-responsive" src="assets/images/services/2.jpg" alt="Img">
+								</div>
+								<div class="cel-feature full-w-h tab-pane fade active in" id="service-img3">
+									<img class="img-responsive" src="assets/images/services/3.jpg" alt="Img">
+								</div> -->
+							</div> <!-- /.tab-content -->
+						</div> <!-- /.col -->
+
+						<div class="col-sm-12 col-md-6 padding-0">
+							<div class="get-us">
+								<div class="get-head">
+									
+									<div class="get-title">
+										<h4 style="padding-left: 0px !Important;">Upcoming Events</h4>
+									</div>
+								</div> <!-- /.get-head -->
+								<div class="slider service-slider-content slick-initialized slick-slider">
+									<div class="slick-list"><div class="slick-track" style="opacity: 1; width: 2120px; transform: translate3d(-1590px, 0px, 0px);">
+
+                                    @foreach($event as $key =>$new)
+                                    <div class="get-content slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 530px;">
+										<p> {{$new->events_names}}</p>
+									</div>
+                                    @endforeach
+                                    <div class="get-content slick-slide" data-slick-index="0" aria-hidden="true" tabindex="-1" style="width: 530px;">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+									</div>
+                                    @foreach($event as $key =>$new)
+                                    <div class="get-content slick-slide" data-slick-index="{{$key}}" aria-hidden="true" tabindex="-1" style="width: 530px;">
+										<p>{{$new->events_names}}</p>
+									</div>
+                                    @endforeach
+                                    <div class="get-content slick-slide slick-current slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" style="width: 530px;">
+										<p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									</div>
+                                    </div>
+                                </div>
+									
+									
+								</div> <!-- /.service-slider-content -->
+
+								<div class="row get-all-items">
+									<ul class="slider slider-thumb slick-initialized slick-slider">
+										<div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 561px; transform: translate3d(0px, 0px, 0px);">
+                                        @foreach($event as $key => $new)
+                            <?php $images=json_decode($new->event_images); ?>
+                            <!-- <div class="cel-feature full-w-h tab-pane fade" id="service-img1">
+									<img class="img-responsive" src="{{$images[0]}}" alt="Img">
+							</div> -->
+                            @if ($key == 0)
+                            <li class="col-xs-6 col-sm-4 active slick-slide slick-active" data-toggle="tab" data-target="#service-img{{$key}}" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 187px;">
+											<div class="get-item">
+												<img src="{{$images[0]}}" alt="Img">
+												<h6>{{$new->events_names}}</h6>
+											</div><!-- /.get-item -->
+										</li>
+                            @else
+                            <li class="col-xs-6 col-sm-4 active slick-slide slick-active" data-toggle="tab" data-target="#service-img{{$key}}" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 187px;">
+											<div class="get-item">
+												<img src="{{$images[0]}}" alt="Img">
+												<h6>{{$new->events_names}}</h6>
+											</div><!-- /.get-item -->
+										</li>
+                            @endif
+                            
+                            @endforeach
+
+                                       
+                                        <!-- <li class="col-xs-6 col-sm-4 slick-slide active slick-active" data-toggle="tab" data-target="#service-img2" data-slick-index="1" aria-hidden="false" tabindex="0" style="width: 187px;">
+											<div class="get-item">
+												<img src="assets/images/services/2.jpg" alt="Img">
+												<h6>redesign website</h6>
+											</div>
+										</li>
+                                        <li class="col-xs-6 col-sm-4 slick-slide active slick-current slick-active" data-toggle="tab" data-target="#service-img3" data-slick-index="2" aria-hidden="false" tabindex="0" style="width: 187px;">
+											<div class="get-item">
+												<img src="assets/images/services/3.jpg" alt="Img">
+												<h6>heavy marketing</h6>
+											</div>
+										</li> -->
+                                        
                                         </div></div> 
 										 
 										 
@@ -187,13 +305,13 @@
 								</div> <!-- /.get-all-items -->
 							</div> <!-- /.get-us -->					
 						</div> <!-- /.col- -->
-
 					</div> <!-- /.row -->  
-                    @endforeach
 				</div> <!-- /.container -->
-			</div> <!-- /.full-width-sec full-width-sec-2nd -->
+			</div> 
 
+			 
 		</section>
+      
         <div class="gallery-button" style="margin-top:50px" >
             <a href="events">       Show more</a>
         </div>
