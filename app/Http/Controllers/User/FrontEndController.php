@@ -88,7 +88,7 @@ class FrontEndController extends Controller
     public function showGallery(){
         $events=GalleryEvent::get();
         $userlikes=[];
-        $eventpictures=Gallery::WHERE('status','active')->join('gallery_events','gallery_events.id','=','galleries.event_id')->select('gallery_events.gallery_event_name','gallery_events.slug','galleries.*')->get();
+        $eventpictures=Gallery::join('gallery_events','gallery_events.id','=','galleries.event_id')->select('gallery_events.gallery_event_name','gallery_events.slug','galleries.*')->WHERE('galleries.status','active')->get();
         for ($i=0; $i <sizeof($eventpictures); $i++) { 
            $temp=gallery_like::where('id',$eventpictures[$i]->id)->where('user_id',auth()->id())->get();
            if(sizeof($temp)){
