@@ -956,13 +956,13 @@ input[type="submit"]:hover {
  ================================================== */
  .we-do img {
     width: 100%;
-    padding-right: 30px;
+    /* padding-right: 30px; */
     margin-bottom: 30px;
  }
 .we-item {
     text-align: center;
     border: 1px solid #f1f1f1;
-    padding-top: 25px;
+    /* padding-top: 25px; */
     padding-bottom: 15px;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
@@ -1127,7 +1127,7 @@ input[type="submit"]:hover {
 .cel-img img {
     display: inline-block;
     text-align: center;
-    padding-top: 18px;
+    /* padding-top: 18px; */
 }
 .cel-img img.flaticon-img {
     width: 65px;

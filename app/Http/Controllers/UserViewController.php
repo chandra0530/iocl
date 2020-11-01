@@ -25,8 +25,8 @@ class UserViewController extends Controller
     public function home(){
 
 
-        $announcement=Announcement::where('status','active')->inRandomOrder()->limit(3)->get();
-        $compitition=Compitition::where('status','active')->inRandomOrder()->limit(3)->get();
+        $announcement=Announcement::where('status','active')->inRandomOrder()->limit(5)->get();
+        $compitition=Compitition::where('status','active')->inRandomOrder()->limit(6)->get();
         $event=Event::where('status','active')->inRandomOrder()->limit(1)->get();
         $gallery=Gallery::where('status','active')->inRandomOrder()->limit(3)->get();
         $news=News::where('news_status','active')->inRandomOrder()->limit(3)->get();

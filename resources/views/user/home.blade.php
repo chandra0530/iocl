@@ -199,7 +199,7 @@
         </div>
       
 
-<section class="we-do section" id="compititions">
+<section class="we-do section" id="compititions" style="background: aliceblue;">
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -230,7 +230,7 @@
                                         <div class="we-item">
                                         <?php $compimages=json_decode($compit->competition_image); ?>
                                             <!-- <i class="flaticon-idea"></i> -->
-                                            <img src="{{$compimages[0]}}" alt="Img" style="width:70px">
+                                            <img src="{{$compimages[0]}}" alt="Img" style="width:100%">
                                             
                                             <a href="#"><h4 class="gen-title">{{$compit->competition_name}} </h4></a>
                                             <!-- <p> {!! html_entity_decode($compit->competition_details) !!}</p> -->
