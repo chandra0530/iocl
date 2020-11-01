@@ -12,7 +12,7 @@
 <section class="our-team section">
 			<div class="container">
 				<div class="row">
-            <button type="button" style="float: right;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#announcement">Add Announcement</button>
+            <!-- <button type="button" style="float: right;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#announcement">Add Announcement</button> -->
 
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">

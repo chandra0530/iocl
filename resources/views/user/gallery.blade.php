@@ -18,7 +18,7 @@
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
-					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#gallery">Add Gallery</button>
+					<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#gallery">Add Gallery</button> -->
 				</div> <!-- /.row -->
 				<div class="portfolio-filter">
 					<a class="current" href="#" data-filter="*">All</a>
