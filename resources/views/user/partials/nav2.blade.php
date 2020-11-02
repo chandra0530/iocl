@@ -1,5 +1,4 @@
-
-        <header class="clearfix header" data-spy="affix" data-offset-top="60">
+<header class="clearfix header" data-spy="affix" data-offset-top="60">
             <!-- Header Top Start -->
            
             
@@ -21,14 +20,14 @@
                                 <div class="menu-search">
                                     <nav class="main-menu">
                                     <ul>
-                                    <li ><a href="/">Home</a></li>
-                        <li><a href="/news">News</a></li>
-                        <li><a href="/events">Events</a></li>
-                        <li><a href="/compotitions">competition</a></li>
-                        <li><a href="/announcement">ANNOUCEMENT</a></li>
-                        <li><a href="/gallery">GALLERY</a></li>
+                                    <li ><a href="{{ route('home') }}">Home</a></li>
+                        <li class="{{ Request::is('news')? 'active-item' : ''  }}"><a href="{{ route('news') }}">News</a></li>
+                        <li class="{{ Request::is('events')? 'active-item' : ''  }}"><a href="{{ route('events') }}">Events</a></li>
+                        <li class="{{ Request::is('compititions')? 'active-item' : ''  }}"><a href="{{ route('compititions') }}">competition</a></li>
+                        <li class="{{ Request::is('announcements')? 'active-item' : ''  }}"><a href="{{ route('announcements') }}">ANNOUCEMENT</a></li>
+                        <li class="{{ Request::is('gallery')? 'active-item' : ''  }}"><a href="{{ route('user.gallery') }}">GALLERY</a></li>
 
-                        <li><a href="/contact">Contact</a></li>
+                        <li class="{{ Request::is('contact')? 'active-item' : ''  }}"><a href="{{ route('contact') }}">Contact</a></li>
                         <li>
                                                 <a>{{substr(Auth::user()->name, 0, 10)}}</a>
                                                 <ul class="dropdown-menus">
