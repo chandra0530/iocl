@@ -16,7 +16,7 @@
 							<div class="blog-content">
 								<div class="blog-feature" style="display: flex;">
 								
-                            <img class="img-responsive" src="{{$gallery->image}}" alt="Img" style="width:100px;height:100px">
+                            <img class="img-responsive" src="{{$gallery->image}}" alt="Img" style="width:500px;height:500px">
                             	
 									<br>
 									
