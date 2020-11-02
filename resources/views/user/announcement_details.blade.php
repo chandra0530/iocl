@@ -21,33 +21,36 @@
 									<br>
 									
 								</div> <!-- /.blog-feature -->
-								<div class="blog-share" style="display:flex">
-									<div class="row">
-									<div class="col-md-2">
-									@if(sizeof($like_status)>0)
-									<a href="/deleteannouncementlike/{{ Auth::user()->id }}/{{$announcement->id}}" ><i class="fa fa-heart heart"></i></a>
-									@else
-									<a href="/addannouncementlike/{{ Auth::user()->id }}/{{$announcement->id}}"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-									@endif
+								<div class="blog-share" style="display:flex;position: relative;">
+									<div class="row" style="border: 3px solid #d4d4d4;
+										background: #11193d; margin-left:0px !important;display: flex;">
+										<div class="col-md-1"></div>
+										<div class="col-md-2">
+										@if(sizeof($like_status)>0)
+											<a href="/deleteNewslike/{{ Auth::user()->id }}/{{$announcement->id}}" ><i style="font-size: 39px;color: white;" class="fa fa-heart heart"></i></a>
+										@else
+											<a href="/addNewslike/{{ Auth::user()->id }}/{{$announcement->id}}"><i style="font-size: 39px;color: white;" class="fa fa-heart-o" aria-hidden="true"></i></a> 
+										@endif
+										</div>
 									
-									
-									
+										<div class="col-md-2">
+										<a href="#"><i class="fa fa-facebook" style="font-size: 39px;color: white;" onclick="share_news_fb()"></i></a>
+										</div>
+										<div class="col-md-2">
+										<a href="#"><i style="font-size: 39px;color: white;" class="fa fa-envelope" onclick="share_news_mail()"></i></a>
+										</div>
+										<div class="col-md-2">
+										<a href="#"><i style="font-size: 39px;color: white;" class="fa fa-whatsapp" onclick="share_news_whatsapp()"></i></a>
+										</div>
+										<div class="col-md-2">
+										<a href="#">
+										<!-- <i style="font-size: 39px;color: white;" class="fa fa-facebook-messenger" onclick="messenger(1)"></i> -->
+										<img src="{{ asset('assets/icons/messenger-white.png')}}" style="width: 40px;" onclick="messenger(1)">
+										</a>
+										</div>
+										<div class="col-md-1"></div>
 									</div>
-									
-									<div class="col-md-2">
-									<a href="#"><i class="fa fa-facebook" onclick="share_news_fb()"></i></a>
-									</div>
-									<div class="col-md-2">
-									<a href="#"><i class="fa fa-envelope" onclick="share_news_mail()"></i></a>
-									</div>
-									<div class="col-md-2">
-									<a href="#"><i class="fa fa-whatsapp" onclick="share_news_whatsapp()"></i></a>
-									</div>
-									<div class="col-md-2">
-									<a href="#"><img src="assets/icons/facebook-messenger-brands.svg" style="width: 15px;" onclick="messenger(1)"></a>
-									</div>
-									</div>
-									</div> <!-- /.blog-share -->
+								</div> <!-- /.blog-share -->
 								<div class="post-title">
 									<h3>{{$announcement->annoucemnt_name}}.</h3>
 									<h6>{{$announcement->created_at}}.</h6>

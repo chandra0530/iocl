@@ -50,7 +50,7 @@
                     <div class="container">
                         <div class="mobile-logo">
                             <a href="index.html">
-                                <img src="assets/images/IndianOil-Parivaar-Logo.png" style="width:200px;" alt="Logo">
+                                <img src="{{ asset('assets/images/IndianOil-Parivaar-Logo.png')}}" style="width:200px;" alt="Logo">
                             </a>
                         </div>
                         <div class="toggle-inner"></div>
@@ -60,7 +60,7 @@
                     <div class="mobile-in-logo">
                         <div class="mob-inner-logo">
                             <a href="index.html">
-                               <img src="assets/images/IndianOil-Parivaar-Logo.png" style="width:200px;" alt="Logo">
+                               <img src="{{ asset('assets/images/IndianOil-Parivaar-Logo.png')}}" style="width:200px;" alt="Logo">
                             </a>
                         </div>
                         <div class="close-menu">

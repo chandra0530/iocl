@@ -234,24 +234,14 @@
 									</div>
 								</div> <!-- /.get-head -->
 								<div class="slider service-slider-content slick-initialized slick-slider">
-									<div class="slick-list"><div class="slick-track" style="opacity: 1; width: 2120px; transform: translate3d(-1590px, 0px, 0px);">
+									<div class="slick-list"><div class="slick-track">
 
+                                  
                                     @foreach($event as $key =>$new)
-                                    <div class="get-content slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 530px;">
-										<p> {{$new->events_names}}</p>
-									</div>
-                                    @endforeach
-                                    <div class="get-content slick-slide" data-slick-index="0" aria-hidden="true" tabindex="-1" style="width: 530px;">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
-									</div>
-                                    @foreach($event as $key =>$new)
-                                    <div class="get-content slick-slide" data-slick-index="{{$key}}" aria-hidden="true" tabindex="-1" style="width: 530px;">
+                                    <div class="get-content slick-slide"  style="width: 530px;">
 										<p>{{$new->events_names}}</p>
 									</div>
                                     @endforeach
-                                    <div class="get-content slick-slide slick-current slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" style="width: 530px;">
-										<p> Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-									</div>
                                     </div>
                                 </div>
 									
