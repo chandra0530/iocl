@@ -30,6 +30,7 @@
             @include('user.partials.message')
 				<form enctype="multipart/form-data" method="POST" action="{{ route('auth.signup') }}">
                 {{ csrf_field() }}
+				<input  type="hidden" name="status" value="inactive">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
