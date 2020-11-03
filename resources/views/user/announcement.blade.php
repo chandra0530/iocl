@@ -17,7 +17,7 @@
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
 							<h2 class="title"><span>Our</span> Announcements</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
 					
@@ -34,7 +34,8 @@
 							<div class="member-name">
                      <a href="announcement_details/{{$announce->id}}">
 								<h4>{{$announce->annoucemnt_name}}</h4>
-								<p>{{$announce->announcement_details}}</p>
+								<!-- <p >{{$announce->announcement_details}}</p> -->
+                        <p style="-webkit-line-clamp: 2; !Important">{{$announce->announcement_details}}</p>
                      </a>
 							</div><!-- /.member-name -->
 							<div class="member-content">

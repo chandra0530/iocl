@@ -12,7 +12,7 @@
 				<div class="row">
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
-							<h2 class="title"><span>Our</span> Events</h2>
+							<h2 class="title"><span>Our</span> Happenings</h2>
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
@@ -37,7 +37,7 @@
 					<div class="col-xs-12 col-sm-6 col-md-5">
 						<div class="skill-info">
 						<a href="event_details/{{$event->id}}">	<h3>{{$event->events_names}}</h3>
-                          	<p> {!! html_entity_decode($event->event_details) !!}</p>
+                          	<p  style="-webkit-line-clamp: 2; !Important"> {!! html_entity_decode($event->event_details) !!}</p>
                             </a>
 						</div>
 					</div> <!-- /.col -->

@@ -13,7 +13,7 @@
                             <div class="col-lg-2 col-sm-2">
                                 <div class="logo">
                                     <a href="#home">
-                                        <img src="{{ asset('assets/images/IndianOil-Parivaar-Logo.png')}}" style="width:200px;" alt="">
+                                        <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:200px;" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                     <div class="container">
                         <div class="mobile-logo">
                             <a href="index.html">
-                                <img src="{{ asset('assets/images/IndianOil-Parivaar-Logo.png')}}" style="width:200px;" alt="Logo">
+                                <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:200px;" alt="Logo">
                             </a>
                         </div>
                         <div class="toggle-inner"></div>

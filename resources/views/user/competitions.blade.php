@@ -2,6 +2,7 @@
 
 @push('css')
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    
 @endpush
 @section('content')  
 <section class="page-head">
@@ -21,6 +22,7 @@
 				
 				@foreach($comp as $new)
 				<div class="row">
+                
 				<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="team-member">
                         <?php $images = json_decode($new->competition_image); ?>
@@ -32,7 +34,7 @@
 						<div class="skill-info">
 						<a href="compotition_details/{{$new->id}}">	<h3>{{$new->competition_name}}</h3>
                             <p>Location: {{$new->compitition_location}}</p>
-							<p> {!! html_entity_decode($new->competition_details) !!}</p>
+							<p  style="-webkit-line-clamp: 2; !Important"> {!! html_entity_decode($new->competition_details) !!}</p>
                             </a>
 						</div>
 					</div> <!-- /.col -->

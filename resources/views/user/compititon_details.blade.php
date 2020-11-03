@@ -54,6 +54,11 @@
 										<div class="col-md-1"></div>
 									</div>
 								</div>  <!-- /.blog-share -->
+								<p style="
+    color: cadetblue;
+    font-size: 24px;
+    font-family: initial;
+">Live In 2d 6 h 40mins 20sec</p>
 								<div class="post-title">
 									<h3>{{$comp_details->competition_name}}.</h3>
 									<h6>{{$comp_details->created_at}}.</h6>

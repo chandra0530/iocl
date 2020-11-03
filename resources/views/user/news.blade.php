@@ -44,7 +44,7 @@
 								</a>
 							</div>
 							<div class="post-content">
-								<p>{{$news->news_short_description}}</p>
+								<p style="-webkit-line-clamp: 2 !Important">{{$news->news_short_description}}</p>
 							</div>
 							<div class="read-more">
 								<a href="/news_details/{{$news->id}}">Read More</a>
@@ -71,7 +71,7 @@
 								</a>
 							</div>
 							<div class="post-content">
-								<p>{{$news->news_short_description}}</p>
+								<p style="-webkit-line-clamp: 2; !Important">{{$news->news_short_description}}</p>
 							</div>
 							<div class="read-more">
 								<a href="/news_details/{{$news->id}}">Read More</a>

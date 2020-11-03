@@ -12,7 +12,7 @@
                             <div class="col-lg-2 col-sm-2">
                                 <div class="logo">
                                     <a href="#home">
-                                        <img src="{{ asset('assets/images/IndianOil-Parivaar-Logo.png')}}" style="width:200px;" alt="">
+                                        <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:200px;" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -22,10 +22,11 @@
                                     <ul>
                                     <li ><a href="{{ route('home') }}">Home</a></li>
                         <li class="{{ Request::is('news')? 'active-item' : ''  }}"><a href="{{ route('news') }}">News</a></li>
-                        <li class="{{ Request::is('events')? 'active-item' : ''  }}"><a href="{{ route('events') }}">Events</a></li>
+                        <li class="{{ Request::is('events')? 'active-item' : ''  }}"><a href="{{ route('events') }}">Happenings</a></li>
                         <li class="{{ Request::is('compititions')? 'active-item' : ''  }}"><a href="{{ route('compititions') }}">competition</a></li>
                         <li class="{{ Request::is('announcements')? 'active-item' : ''  }}"><a href="{{ route('announcements') }}">ANNOUCEMENT</a></li>
                         <li class="{{ Request::is('gallery')? 'active-item' : ''  }}"><a href="{{ route('user.gallery') }}">GALLERY</a></li>
+                        <li ><a href="">UShare</a></li>
 
                         <li class="{{ Request::is('contact')? 'active-item' : ''  }}"><a href="{{ route('contact') }}">Contact</a></li>
                         <li>
@@ -48,7 +49,7 @@
                     <div class="container">
                         <div class="mobile-logo">
                             <a href="index.html">
-                                <img src="{{ asset('assets/images/IndianOil-Parivaar-Logo.png')}}" style="width:200px;" alt="Logo">
+                                <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:200px;" alt="Logo">
                             </a>
                         </div>
                         <div class="toggle-inner"></div>
