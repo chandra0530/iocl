@@ -34,7 +34,7 @@
 						<div class="skill-info">
 						<a href="compotition_details/{{$new->id}}">	<h3>{{$new->competition_name}}</h3>
                             <p>Location: {{$new->compitition_location}}</p>
-							<p  style="-webkit-line-clamp: 2; !Important"> {{$new->competition_details}}</p>
+							<p  style="-webkit-line-clamp: 2; !Important"> {!! html_entity_decode($new->competition_details) !!}</p>
                             </a>
 						</div>
 					</div> <!-- /.col -->
