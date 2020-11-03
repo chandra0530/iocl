@@ -37,10 +37,10 @@
 					<div class="col-xs-12 col-sm-6 col-md-5">
 						<div class="skill-info">
 						<a href="event_details/{{$event->id}}">	<h3>{{$event->events_names}}</h3>
-                          	<!-- <p  style="-webkit-line-clamp: 2 !Important;"> {!! html_entity_decode($event->event_details) !!}</p> -->
-                              <div style="-webkit-line-clamp: 2 !Important;">
+                          	<p  style="-webkit-line-clamp: 2 !Important;"> {{$event->event_details}}</p>
+                              <!-- <div style="-webkit-line-clamp: 2 !Important;">
                               {!! html_entity_decode($event->event_details) !!}
-                              </div>
+                              </div> -->
                             </a>
 						</div>
 					</div> <!-- /.col -->
