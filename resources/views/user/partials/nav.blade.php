@@ -23,10 +23,11 @@
                                     <ul>
                                             <li class="active-item"><a href="#main-slider">Home</a></li>
                                             <li><a href="#news_section">News</a></li>
-                                            <li><a href="#our_events">Events</a></li>
-                                            <li><a href="#compititions">competitions</a></li>
+                                            <li><a href="#our_events">Happenings</a></li>
+                                            <li><a href="#compititions">competitions (Live)</a></li>
                                             <li><a href="#announcements">ANNOUCEMENT</a></li>
                                             <li><a href="#gallery">GALLERY</a></li>
+                                            <li><a href="#gallery">Ushare</a></li>
 
                                             <li><a href="#contact_us">Contact</a></li>
                                             

@@ -23,7 +23,7 @@
                                     <li ><a href="{{ route('home') }}">Home</a></li>
                         <li class="{{ Request::is('news')? 'active-item' : ''  }}"><a href="{{ route('news') }}">News</a></li>
                         <li class="{{ Request::is('events')? 'active-item' : ''  }}"><a href="{{ route('events') }}">Happenings</a></li>
-                        <li class="{{ Request::is('compititions')? 'active-item' : ''  }}"><a href="{{ route('compititions') }}">competition</a></li>
+                        <li class="{{ Request::is('compititions')? 'active-item' : ''  }}"><a href="{{ route('compititions') }}">Competitions (Live)</a></li>
                         <li class="{{ Request::is('announcements')? 'active-item' : ''  }}"><a href="{{ route('announcements') }}">ANNOUCEMENT</a></li>
                         <li class="{{ Request::is('gallery')? 'active-item' : ''  }}"><a href="{{ route('user.gallery') }}">GALLERY</a></li>
                         <li ><a href="">UShare</a></li>
