@@ -105,49 +105,49 @@
           <li class=" navigation-header"><span>Apps</span>
           </li>
 
-          <li class=" nav-item"><a href="#"><i class="feather icon-film"></i><span class="menu-title" data-i18n="Ecommerce">Gallery</span></a>
+          <!-- <li class=" nav-item"><a href="#"><i class="feather icon-film"></i><span class="menu-title" data-i18n="Ecommerce">Gallery</span></a>
             <ul class="menu-content">
               <li><a href="/admin/gallery/event/add"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add Event</span></a>
               </li>
               <li><a href="/admin/gallery/eventprictures/add"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Add Event Pictures</span></a>
               </li>
             </ul>
-          </li>
+          </li> -->
 
 
 
-          <li class=" nav-item"><a href="#"><i class="feather icon-globe"></i><span class="menu-title" data-i18n="Ecommerce">News</span></a>
+          <!-- <li class=" nav-item"><a href="#"><i class="feather icon-globe"></i><span class="menu-title" data-i18n="Ecommerce">News</span></a>
             <ul class="menu-content">
               <li><a href="/admin/news/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add News</span></a>
               </li>
               <li><a href="/admin/news"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">News List</span></a>
               </li>
             </ul>
-          </li>
-          <li class=" nav-item"><a href="#"><i class="feather icon-loader"></i><span class="menu-title" data-i18n="Ecommerce">Events</span></a>
+          </li> -->
+          <!-- <li class=" nav-item"><a href="#"><i class="feather icon-loader"></i><span class="menu-title" data-i18n="Ecommerce">Events</span></a>
             <ul class="menu-content">
               <li><a href="/admin/events/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add Events</span></a>
               </li>
               <li><a href="/admin/events"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Events List</span></a>
               </li>
             </ul>
-          </li>
-          <li class=" nav-item"><a href="#"><i class="feather icon-award"></i><span class="menu-title" data-i18n="Ecommerce">Compititions</span></a>
+          </li> -->
+          <!-- <li class=" nav-item"><a href="#"><i class="feather icon-award"></i><span class="menu-title" data-i18n="Ecommerce">Compititions</span></a>
             <ul class="menu-content">
               <li><a href="/admin/compititions/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add Compititions</span></a>
               </li>
               <li><a href="/admin/compititions"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Compititions List</span></a>
               </li>
             </ul>
-          </li>
-          <li class=" nav-item"><a href="#"><i class="feather icon-speaker"></i><span class="menu-title" data-i18n="Ecommerce">Announcements</span></a>
+          </li> -->
+          <!-- <li class=" nav-item"><a href="#"><i class="feather icon-speaker"></i><span class="menu-title" data-i18n="Ecommerce">Announcements</span></a>
             <ul class="menu-content">
               <li><a href="/admin/announcements/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add Announcements</span></a>
               </li>
               <li><a href="/admin/announcements"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Announcements List</span></a>
               </li>
             </ul>
-          </li>
+          </li> -->
           <li class=" nav-item"><a href="#"><i class="feather icon-cpu"></i><span class="menu-title" data-i18n="Ecommerce">Employes</span></a>
             <ul class="menu-content">
               <li><a href="/admin/employes/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Pending Activation Request</span></a>
