@@ -7,7 +7,7 @@
 @section('content')      
         <!-- Start Main Slider -->
         <!-- Start Main Slider -->
-        <section id="main-slider">
+        <section id="main-slider" style="display:none">
             <!-- Carousel -->
             <div id="main-slide" class="main-slider carousel slide" data-ride="carousel">
                 <!-- Carousel inner -->
@@ -50,7 +50,7 @@
         </section> <!-- /.main-slider -->
         <!-- End Main Slider -->
 
-        <section class="recent-blog section" id="news_section" style="padding-top:0px !Important;">
+        <section class="recent-blog section" id="news_section" style="padding-top:0px !Important; display:none;">
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -111,11 +111,11 @@
                 </div> <!-- /.row -->  
             </div> <!-- /.container -->
         </section>
-        <div class="gallery-button" >
+        <div class="gallery-button" style="display:none;">
             <a href="news">       Show more</a> 
         </div>
 
-        <section class="our-service section" id="our_events">
+        <section class="our-service section" id="our_events"  style="display:none;">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -195,7 +195,7 @@
 
 		</section> -->
 
-        <section class="working">
+        <section class="working"  style="display:none;">
 			<div class="full-width-sec">
 				<div class="container">    
 					<div class="row">
@@ -302,12 +302,12 @@
 			 
 		</section>
       
-        <div class="gallery-button" style="margin-top:50px" >
+        <div class="gallery-button" style="margin-top:50px;display:none;" >
             <a href="events">       Show more</a>
         </div>
       
 
-<section class="we-do section" id="compititions" style="background: aliceblue;">
+        <section class="we-do section" id="compititions" style="background: aliceblue;display:none;"  >
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -355,11 +355,11 @@
                 </div> <!-- /.row -->  
             </div> <!-- /.container -->
         </section>
-        <div class="gallery-button">
+        <div class="gallery-button" style="display:none;">
             <a href="compotitions">       Show more</a>
         </div>
 
-        <section class="our-service section" id="announcements">
+        <section class="our-service section" id="announcements" style="display:none;">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -372,7 +372,7 @@
 			
 			</div><!-- container -->
 		</section>
-<section class="full-width-sec" >
+<section class="full-width-sec"   style="display:none;">
 <!-- /.row -->
             <div class="container">    
                 <div class="row">
@@ -427,14 +427,27 @@
             </div> <!-- /.container -->
             
         </section>
-        <div class="gallery-button" style="margin-top: 51px;">
+        <div class="gallery-button" style="margin-top: 51px;display:none;">
                           <a href="announcement">       Show more</a>
                         </div>
 
+                        <section class="our-service section" style="text-align: center;padding-top: 190px">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                    <img src="https://www.metabuild.io/wp-content/uploads/competition-750x268.jpg" width="100%" height="100%">
+                                   <a href="/compotitions"> <p>Compitition</p></a>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <img src="https://news.ok.ubc.ca/exchange/files/2014/10/wes-blog.png" width="100%" height="100%">
+                                    <a href="/ushare"> <p>Ushare</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
 
-
-        <section class="portfolios section" id="gallery">
+        <section class="portfolios section" id="gallery" style="display:none;">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">

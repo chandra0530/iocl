@@ -154,6 +154,7 @@
               </li>
               <li><a href="/admin/employes"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Employes List</span></a>
               </li>
+              <li><a href="/admin/employes/posts"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Employes Posts</span></a></li>
             </ul>
           </li>
           <!-- <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="Ecommerce">Users</span></a>

@@ -10,26 +10,28 @@
                 <div class="menu-area">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-2 col-sm-2">
-                                <div class="logo">
+                        <div class="col-lg-4 col-sm-4">
+                        </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="logo" style="text-align: center;">
                                     <a href="#home">
                                         <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:200px;" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-10 col-sm-10">
+                            <div class="col-lg-4 col-sm-4">
                                 <div class="menu-search">
                                     <nav class="main-menu">
                                     <ul>
-                                            <li class="active-item"><a href="#main-slider">Home</a></li>
-                                            <li><a href="#news_section">News</a></li>
-                                            <li><a href="#our_events">Happenings</a></li>
-                                            <li><a href="#compititions">competitions (Live)</a></li>
-                                            <li><a href="#announcements">ANNOUCEMENT</a></li>
-                                            <li><a href="#gallery">GALLERY</a></li>
-                                            <li><a href="#gallery">Ushare</a></li>
+                                            <!-- <li class="active-item"><a href="#main-slider">Home</a></li> -->
+                                            <!-- <li><a href="#news_section">News</a></li>
+                                            <li><a href="#our_events">Happenings</a></li> -->
+                                            <!-- <li><a href="#compititions">competitions (Live)</a></li> -->
+                                            <!-- <li><a href="#announcements">ANNOUCEMENT</a></li>
+                                            <li><a href="#gallery">GALLERY</a></li> -->
+                                            <!-- <li><a href="#gallery">Ushare</a></li>
 
-                                            <li><a href="#contact_us">Contact</a></li>
+                                            <li><a href="#contact_us">Contact</a></li> -->
                                             
                                             <li>
                                                 <a>{{substr(Auth::user()->name, 0, 10)}}</a>
@@ -70,14 +72,11 @@
                     </div>
                     <nav id="accordian">
                         <ul class="slide-menu">
-                        <li ><a href="#home">Home</a></li>
+                        <!-- <li ><a href="#home">Home</a></li>
                                             <li><a href="#news_section">News</a></li>
-                                            <li><a href="#our_events">Events</a></li>
-                                            <li><a href="#compititions">COMPETITIONS</a></li>
-                                            <li><a href="#announcements">ANNOUCEMENT</a></li>
-                                            <li><a href="#gallery">GALLERY</a></li>
-
-                                            <li><a href="#contact_us">Contact</a></li>
+                                            <li><a href="#compititions">competitions (Live)</a></li>
+                                            <li><a href="#gallery">Ushare</a></li>
+                                            <li><a href="#contact_us">Contact</a></li> -->
                         </ul>
                     </nav>
                    

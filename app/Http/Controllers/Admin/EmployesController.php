@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
+use App\Models\Ushare;
 class EmployesController extends Controller
 {
     /**
@@ -85,9 +86,25 @@ class EmployesController extends Controller
         User::where('id', $id)->delete();
         return redirect()->back()->with(['success' => 'Employes deleted successfully.']);
     }
+
+
     public function active($id){
         $affected = User::where('id', $id)
         ->update(['status' => 'active']);
         return redirect()->back()->with(['success' => 'Employes account activated successfully.']);
+    }
+    public function postdestroy($id)
+    {
+        Ushare::where('id', $id)->delete();
+        return redirect()->back()->with(['success' => 'Employes deleted successfully.']);
+    }
+    public function postactive($id){
+        $affected = Ushare::where('id', $id)
+        ->update(['ushare_status' => 'active']);
+        return redirect()->back()->with(['success' => 'Employes account activated successfully.']);
+    }
+    public function posts(){
+        $posts=Ushare::join('users','users.id','=','ushares.user_id')->select('users.name as user_name','ushares.*')->get();
+        return view('admin.ushare.index',compact('posts'));
     }
 }

@@ -12,10 +12,15 @@ use App\Http\Controllers\Admin\EmployesController;
 use App\Http\Controllers\Admin\EventsController;
 
 Use App\Http\Controllers\User\FrontEndController;
+
+
+Use App\Http\Controllers\User\UshareCommentController;
+Use App\Http\Controllers\User\UshareLikeController;
+
+
 Use App\Http\Controllers\AuthController;
 Use App\Http\Controllers\UserViewController;
-
-
+Use App\Http\Controllers\UShareController;
 Use App\Http\Controllers\User\AnnouncementController;
 Use App\Http\Controllers\User\CompetitionController;
 Use App\Http\Controllers\User\EventController;
@@ -48,6 +53,11 @@ Route::get('gallery_details/{id}', [UserViewController::class, 'gallery_details'
 Route::get('compotitions', [UserViewController::class, 'compititions'])->name('compititions');
 Route::get('compotition_details/{id}', [UserViewController::class, 'compotition_details'])->name('comptition_details');
 
+Route::get('ushare', [UShareController::class, 'index'])->name('ushare_index');
+Route::post('ushare', [UShareController::class, 'store'])->name('ushare_store');
+Route::get('ushare/{id}', [UShareController::class, 'show'])->name('ushare_show');
+
+
 Route::get('announcement', [UserViewController::class, 'ammouncement'])->name('announcements');
 Route::get('announcement_details/{id}', [UserViewController::class, 'announcement_details'])->name('announcementdetails');
 
@@ -63,6 +73,12 @@ Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 Route::get('addNewslike/{userid}/{newsid}',[NewsUserController::class, 'addNewsLike'])->name('addNewsLike');
 Route::get('deleteNewslike/{userid}/{newsid}',[NewsUserController::class, 'deleteNewsLike'])->name('deleteNewsLike');
+
+Route::get('addUsharelike/{userid}/{newsid}',[UshareLikeController::class, 'addUshareLike'])->name('addUshareLike');
+Route::get('deleteUsharelike/{userid}/{newsid}',[UshareLikeController::class, 'deleteUshareLike'])->name('deleteUshareLike');
+Route::post('addUsharecomment',[UshareLikeController::class, 'addUsharecomment'])->name('addUsharecomment');
+
+
 Route::post('addNewscomment',[NewsUserController::class, 'addNewscomment'])->name('addNewscomment');
 
 Route::get('addEventslike/{userid}/{eventid}',[EventController::class, 'addEventsLike'])->name('addEventsLike');
@@ -112,9 +128,11 @@ Route::prefix('admin')->group(function () {
     Route::resource('announcements', AnnouncementsController::class);
     Route::get('employes/delete/{id}', [EmployesController::class, 'destroy'])->name('employes.destroy');
     Route::get('employes/active/{id}', [EmployesController::class, 'active'])->name('employes.active');
-
+    Route::get('employes/post/delete/{id}', [EmployesController::class, 'postdestroy'])->name('employespost.destroy');
+    Route::get('employes/post/active/{id}', [EmployesController::class, 'postactive'])->name('employespost.active');
+    Route::get('employes/posts', [EmployesController::class, 'posts'])->name('employes.posts');
     Route::resource('employes', EmployesController::class);
-
+   
    
 });
 
