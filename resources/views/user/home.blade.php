@@ -437,14 +437,17 @@
                                     <div class="col-md-6">
                                     <a href="/compotitions">
                                     <img src="{{ asset('assets/images/home_compitition.jpg')}}" width="100%" height="100%">
-                                    <p style="font-size: 20px;
-    font-family: initial;font-weight: bold;">Compitition</p></a>
+                                    <!-- <p style="font-size: 20px;
+    font-family: initial;font-weight: bold;">COMPETITION</p> -->
+     <h2 class="title">COMPETITION</h2></a>
                                     </div>
                                     <div class="col-md-6">
                                     <a href="/ushare"> 
                                     <img src="{{ asset('assets/images/home_share.jpg')}}" width="100%" height="100%">
-                                    <p style="font-size: 20px;
-    font-family: initial;font-weight: bold;">Ushare</p></a>
+                                    <!-- <p style="font-size: 20px;
+    font-family: initial;font-weight: bold;">USHARE</p> -->
+         <h2 class="title">USHARE</h2></a>
+
                                     </div>
                                 </div>
                             </div>
@@ -612,6 +615,14 @@
                 </div> <!-- /.row -->  
             </div> <!-- /.container -->
         </section>  
+        <footer class="footer">
+             <!-- /.footer-main -->
+            <div class="copyright">
+                <div class="container">
+                    Designelit © 2018 All rights reserved. Terms of use and Privacy Policy
+                </div>
+            </div> <!-- /.copyright -->
+        </footer>
 @endsection
 
 

@@ -143,7 +143,14 @@
 				</div> <!-- /.row -->  
 			</div> <!-- /.container -->
 		</section>
-
+		<footer class="footer">
+             <!-- /.footer-main -->
+            <div class="copyright">
+                <div class="container">
+                    Designelit © 2018 All rights reserved. Terms of use and Privacy Policy
+                </div>
+            </div> <!-- /.copyright -->
+        </footer>
 
 @endsection
 

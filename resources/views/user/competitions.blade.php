@@ -291,7 +291,15 @@
                     </div> <!-- /.col- -->
                 </div> <!-- /.row -->  
             </div> <!-- /.container -->
-        </section>  
+        </section>
+        <footer class="footer">
+             <!-- /.footer-main -->
+            <div class="copyright">
+                <div class="container">
+                    Designelit © 2018 All rights reserved. Terms of use and Privacy Policy
+                </div>
+            </div> <!-- /.copyright -->
+        </footer>  
 		<div id="competition" class="modal fade" role="dialog" style="margin-top: 100px;">
    <div class="modal-dialog">
       <!-- Modal content-->
