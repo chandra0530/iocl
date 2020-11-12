@@ -431,16 +431,20 @@
                           <a href="announcement">       Show more</a>
                         </div>
 
-                        <section class="our-service section" style="text-align: center;padding-top: 190px">
+                        <section class="our-service section home_top" style="text-align: center;padding-top: 190px;">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-6">
-                                    <img src="https://www.metabuild.io/wp-content/uploads/competition-750x268.jpg" width="100%" height="100%">
-                                   <a href="/compotitions"> <p>Compitition</p></a>
+                                    <a href="/compotitions">
+                                    <img src="{{ asset('assets/images/home_compitition.jpg')}}" width="100%" height="100%">
+                                    <p style="font-size: 20px;
+    font-family: initial;font-weight: bold;">Compitition</p></a>
                                     </div>
                                     <div class="col-md-6">
-                                    <img src="https://news.ok.ubc.ca/exchange/files/2014/10/wes-blog.png" width="100%" height="100%">
-                                    <a href="/ushare"> <p>Ushare</p></a>
+                                    <a href="/ushare"> 
+                                    <img src="{{ asset('assets/images/home_share.jpg')}}" width="100%" height="100%">
+                                    <p style="font-size: 20px;
+    font-family: initial;font-weight: bold;">Ushare</p></a>
                                     </div>
                                 </div>
                             </div>
@@ -524,7 +528,7 @@
 
        
 
-        <section class="get-touch section" id="contact_us"> 
+        <section class="get-touch section contact" id="contact_us"> 
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -541,10 +545,10 @@
                                 <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
                                     <div class="con-text in-map">
                                     Indian Oil Bhavan<br>
-Eastern Region Office<br>
-IndianOil Corporation Limited<br>
-2-Gariahat Road (South)<br>
-Pin: 700068<br>
+                                        Eastern Region Office<br>
+                                        IndianOil Corporation Limited<br>
+                                        2-Gariahat Road (South)<br>
+                                        Pin: 700068<br>
                                     </div>
                                 </div>
                                 <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">

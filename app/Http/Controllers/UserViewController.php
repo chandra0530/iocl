@@ -18,6 +18,8 @@ use App\Models\news_like;
 use App\Models\event_like;
 use App\Models\competition_like;
 use App\Models\AnnouncementLike;
+use Carbon\Carbon;
+
 class UserViewController extends Controller
 {
     //
@@ -103,8 +105,10 @@ class UserViewController extends Controller
        
         Auth::guard('web');
         if(auth()->id()){
-            $comp=Compitition::where('status','active')->get();
-            return view('user.competitions',compact('comp'));
+            $comp=Compitition::whereDate('event_from', '=', Carbon::now()->toDateString())->where('status','active')->get();
+            $upcomingcomp=Compitition::whereDate('event_from', '>=', Carbon::now()->toDateString())->where('status','active')->get();
+            $pastcomp=Compitition::whereDate('event_from', '<', Carbon::now()->toDateString())->where('status','active')->get();
+            return view('user.competitions',compact('comp','upcomingcomp','pastcomp'));
         }else{
             return view('user.login');
         }

@@ -8,12 +8,12 @@
 <section class="page-head">
 			
 		</section>
-<section class="skill section">
+        <section class="skill section">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
-							<h2 class="title"><span>Our</span> Competition</h2>
+							<h2 class="title"><span>Ongoing</span> Competition</h2>
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
@@ -74,7 +74,224 @@
 				
 			</div><!-- container -->
 		</section>
+        <section class="skill section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
+						<div class="section-heading">
+							<h2 class="title"><span>Upcoming</span> Competition</h2>
+							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
+						</div>
+					</div>
+					<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#competition">Contribution</button> -->
+				</div> <!-- /.row -->
+				
+				@foreach($upcomingcomp as $new)
+				<div class="row">
+                
+				<div class="col-xs-12 col-sm-6 col-md-3">
+						<div class="team-member">
+                        <?php $images = json_decode($new->competition_image); ?>
+							<img src="{{$images[0]}}" alt="Team Member">
+							
+						</div> <!-- /.team-members -->
+					</div> <!-- /.col -->
+					<div class="col-xs-12 col-sm-6 col-md-5">
+						<div class="skill-info">
+						<a href="compotition_details/{{$new->id}}">	<h3>{{$new->competition_name}}</h3>
+                            <p>Location: {{$new->compitition_location}}</p>
+							<p  style="-webkit-line-clamp: 2; !Important"> {!! html_entity_decode($new->competition_details) !!}</p>
+                            </a>
+						</div>
+					</div> <!-- /.col -->
 
+					<div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Competition detials</h5>
+                        <p class="card-text">
+                            Compitition location:{{$new->compitition_location}} <br>
+                            Compitition From: {{$new->event_from}}<br>
+                            Compitition To:{{$new->event_to}} <br>
+                            Compitition Type: {{$new->event_type}}<br>
+                        
+                        </p>
+                    </div>
+                    <div class="row">
+									<div class="col-md-2">
+									<a href="#"><i class="fa fa-facebook" onclick="share_news_fb()"></i></a>
+									</div>
+									<div class="col-md-2">
+									<a href="#"><i class="fa fa-envelope" onclick="share_news_mail()"></i></a>
+									</div>
+									<div class="col-md-2">
+									<a href="#"><i class="fa fa-whatsapp" onclick="share_news_whatsapp()"></i></a>
+									</div>
+									<div class="col-md-2">
+									<a href="#"><img src="assets/icons/facebook-messenger-brands.svg" style="width: 15px;" onclick="messenger(1)"></a>
+									</div>
+                                    <div class="col-md-2">
+									
+									</div>
+									</div>
+					</div> <!-- /.col- -->
+				</div><!-- row -->
+				@endforeach
+					
+				
+			</div><!-- container -->
+		</section>
+        <section class="skill section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
+						<div class="section-heading">
+							<h2 class="title"><span>Past</span> Competition</h2>
+							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
+						</div>
+					</div>
+					<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#competition">Contribution</button> -->
+				</div> <!-- /.row -->
+				
+				@foreach($pastcomp as $new)
+				<div class="row">
+                
+				<div class="col-xs-12 col-sm-6 col-md-3">
+						<div class="team-member">
+                        <?php $images = json_decode($new->competition_image); ?>
+							<img src="{{$images[0]}}" alt="Team Member">
+							
+						</div> <!-- /.team-members -->
+					</div> <!-- /.col -->
+					<div class="col-xs-12 col-sm-6 col-md-5">
+						<div class="skill-info">
+						<a href="compotition_details/{{$new->id}}">	<h3>{{$new->competition_name}}</h3>
+                            <p>Location: {{$new->compitition_location}}</p>
+							<p  style="-webkit-line-clamp: 2; !Important"> {!! html_entity_decode($new->competition_details) !!}</p>
+                            </a>
+						</div>
+					</div> <!-- /.col -->
+
+					<div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Competition detials</h5>
+                        <p class="card-text">
+                            Compitition location:{{$new->compitition_location}} <br>
+                            Compitition From: {{$new->event_from}}<br>
+                            Compitition To:{{$new->event_to}} <br>
+                            Compitition Type: {{$new->event_type}}<br>
+                        
+                        </p>
+                    </div>
+                    <div class="row">
+									<div class="col-md-2">
+									<a href="#"><i class="fa fa-facebook" onclick="share_news_fb()"></i></a>
+									</div>
+									<div class="col-md-2">
+									<a href="#"><i class="fa fa-envelope" onclick="share_news_mail()"></i></a>
+									</div>
+									<div class="col-md-2">
+									<a href="#"><i class="fa fa-whatsapp" onclick="share_news_whatsapp()"></i></a>
+									</div>
+									<div class="col-md-2">
+									<a href="#"><img src="assets/icons/facebook-messenger-brands.svg" style="width: 15px;" onclick="messenger(1)"></a>
+									</div>
+                                    <div class="col-md-2">
+									
+									</div>
+									</div>
+					</div> <!-- /.col- -->
+				</div><!-- row -->
+				@endforeach
+					
+				
+			</div><!-- container -->
+		</section>
+
+
+        <section class="get-touch section contact" id="contact_us"> 
+            <div class="container">    
+                <div class="row">
+                    <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
+                        <div class="section-heading">
+                            <h2 class="title"><span>Get</span> in Touch</h2>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
+                        </div>
+                    </div> <!-- /.col- -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-xs-offset-0">
+                        <div class="contact-info">
+                            <div class="row">
+                                <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
+                                    <div class="con-text in-map">
+                                    Indian Oil Bhavan<br>
+                                        Eastern Region Office<br>
+                                        IndianOil Corporation Limited<br>
+                                        2-Gariahat Road (South)<br>
+                                        Pin: 700068<br>
+                                    </div>
+                                </div>
+                                <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
+                                    <div class="con-text in-envelope">
+                                    Souptik Mukherje
+                                   souptikmukherjee@indianoil.in<br>
+                                   <br>
+                                   Tapan Kumar Pradhan<br>
+                                   tapankp@indianoil.in
+                                    </div>
+                                </div>
+                                <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
+                                    <div class="con-text in-phone">
+                                    7044062168	<br><br><br>
+                                    7993542670<br><br>
+                                    </div>
+                                </div>
+                            </div> <!-- /.row -->
+                        </div> <!-- /.contact-info -->
+                        
+                        
+                        
+                        <div class="contact-form">
+                            <form id="contact-form" method="post" action="" novalidate="true">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" placeholder="Name" required="required" data-error="Write your name">
+                                        </div>
+                                    </div> <!-- /.col- -->
+                                    <div class="col-xs-12 col-sm-12 col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" placeholder="Email" required="required" data-error="Write your valid email address">
+                                        </div>
+                                    </div> <!-- /.col- -->
+                                    <div class="col-xs-12 col-sm-12 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                        </div>
+                                    </div> <!-- /.col- -->
+                                    <div class="col-xs-12 col-sm-12 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="subject" class="form-control" placeholder="Subject" required="required" data-error="Write your subject">
+                                        </div>
+                                    </div> <!-- /.col- -->
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="comment" class="form-control" placeholder="Message" required="required" data-error="Write your comment"></textarea>
+                                        </div>
+                                    </div> <!-- /.col- -->
+                                    <div class="form-group col-xs-12 col-md-12">
+                                        <div class="form-btn">
+                                            <input type="submit" name="submit" value="Send" class="contact-form-btn disabled">
+                                        </div>
+                                    </div>
+                                    <div class="messages"></div>
+                                </div> <!-- /.row -->
+                            </form>
+                        </div> <!-- /.contact-form -->
+                    </div> <!-- /.col- -->
+                </div> <!-- /.row -->  
+            </div> <!-- /.container -->
+        </section>  
 		<div id="competition" class="modal fade" role="dialog" style="margin-top: 100px;">
    <div class="modal-dialog">
       <!-- Modal content-->

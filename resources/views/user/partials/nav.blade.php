@@ -34,7 +34,7 @@
                                             <li><a href="#contact_us">Contact</a></li> -->
                                             
                                             <li>
-                                                <a>{{substr(Auth::user()->name, 0, 10)}}</a>
+                                                <a>{{Auth::user()->name}}</a>
                                                 <ul class="dropdown-menus">
                                                 <li><a href="/logout">Logout</a></li>
                                                 </ul>
