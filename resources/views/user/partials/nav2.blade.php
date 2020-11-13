@@ -20,7 +20,7 @@
                                 <div class="menu-search">
                                     <nav class="main-menu">
                                     <ul>
-                                    <li ><a href="{{ route('home') }}">Parivar</a></li>
+                                    <li ><a href="{{ route('home') }}">Parivaar</a></li>
                         <!-- <li class="{{ Request::is('news')? 'active-item' : ''  }}"><a href="{{ route('news') }}">News</a></li>
                         <li class="{{ Request::is('events')? 'active-item' : ''  }}"><a href="{{ route('events') }}">Happenings</a></li> -->
                         <li class="{{ Request::is('compititions')? 'active-item' : ''  }}"><a href="{{ route('compititions') }}">Competitions</a></li>
@@ -68,7 +68,7 @@
                     </div>
                     <nav id="accordian">
                         <ul class="slide-menu">
-                        <li ><a href="/">Parivar</a></li>
+                        <li ><a href="/">Parivaar</a></li>
                         <!-- <li><a href="/news">News</a></li>
                         <li><a href="/events">Events</a></li>
                          -->
