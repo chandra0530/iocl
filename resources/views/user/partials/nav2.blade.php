@@ -20,7 +20,7 @@
                                 <div class="menu-search">
                                     <nav class="main-menu">
                                     <ul>
-                                    <li ><a href="{{ route('home') }}">Home</a></li>
+                                    <li ><a href="{{ route('home') }}">Parivar</a></li>
                         <!-- <li class="{{ Request::is('news')? 'active-item' : ''  }}"><a href="{{ route('news') }}">News</a></li>
                         <li class="{{ Request::is('events')? 'active-item' : ''  }}"><a href="{{ route('events') }}">Happenings</a></li> -->
                         <li class="{{ Request::is('compititions')? 'active-item' : ''  }}"><a href="{{ route('compititions') }}">Competitions</a></li>
@@ -68,15 +68,17 @@
                     </div>
                     <nav id="accordian">
                         <ul class="slide-menu">
-                        <li ><a href="/">Home</a></li>
-                        <li><a href="/news">News</a></li>
+                        <li ><a href="/">Parivar</a></li>
+                        <!-- <li><a href="/news">News</a></li>
                         <li><a href="/events">Events</a></li>
-                        <li><a href="/compotitions">COMPETITIONS</a></li>
-                        <li><a href="/announcement">ANNOUCEMENT</a></li>
-                        <li><a href="/gallery">GALLERY</a></li>
+                         -->
+                         <li><a href="/compotitions">COMPETITIONS</a></li>
+                        <!-- <li><a href="/gallery">GALLERY</a></li>
 
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/logout">Logout</a></li>
+                        <li><a href="/contact">Contact</a></li> -->
+                       <li> <a>{{Auth::user()->name}}</a>
+                                                <ul class="dropdown-menus">
+                                                <li><a href="/logout">Logout</a></li>
                         </ul>
                     </nav>
                    
