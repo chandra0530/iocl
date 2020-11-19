@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Compitition;
+use App\Models\CompotitionUserUploads;
 class CompititionsController extends Controller
 {
     /**
@@ -36,11 +37,11 @@ class CompititionsController extends Controller
      */
     public function store(Request $request)
     {
-        $images=[];
+        // $images=[];
         $competition=new Compitition();
         $competition->competition_name=$request->competition_name;
         $competition->competition_details=$request->desc;
-
+        $images=[];
         if ($request->hasFile('photos')) {
             foreach ($request->photos as $key => $photo) {
                 $path = $photo->store('event_images', 'public');
@@ -108,5 +109,28 @@ class CompititionsController extends Controller
         $affected = Compitition::where('id', $id)
               ->update(['status' => 'active']);
         return redirect()->back()->with(['success' => 'Compitition activated successfully.']);
+    }
+    public function uploadRequests(){
+        $competitions=CompotitionUserUploads::join('compititions','compititions.id','=','compotition_user_uploads.comp_id')->select('compotition_user_uploads.*','compititions.competition_name as comp_name')->where('compotition_user_uploads.status','submitted')->get();
+        // return $competitions;
+        return view('admin.compititions.publishupdates',compact('competitions'));
+        // return $uploads;
+    }
+    public function publish_request($id){
+        $publishd_details=CompotitionUserUploads::find($id);
+        $comp_Details=Compitition::find($publishd_details->comp_id);
+        ;
+        $publishd_details->compotition_images;
+        $new_images=array_merge(json_decode($comp_Details->competition_image),json_decode($publishd_details->compotition_images));
+        $new_videos=array_merge(json_decode($comp_Details->competition_videos),json_decode($publishd_details->compotition_videos));
+
+        $affected = Compitition::where('id', $publishd_details->comp_id)
+        ->update(['competition_image' => json_encode($new_images),'competition_videos' => json_encode($new_videos)]);
+        CompotitionUserUploads::where('id', $id)->delete();
+        return redirect()->back()->with(['success' => 'Details published successfully.']);
+    }
+    public function reject_request($id){
+        CompotitionUserUploads::where('id', $id)->delete();
+        return redirect()->back()->with(['success' => 'Details rejected successfully.']);
     }
 }

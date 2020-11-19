@@ -119,4 +119,24 @@ class OrderController extends Controller
     {
         //
     }
+    public function showreciptdetails($id){
+        $stack = HandlerStack::create();
+
+        $middleware = new Oauth1([
+            'consumer_key'    => 'tuzmb385i09hqz433r85y1yz',
+            'consumer_secret' => 'yefj0uy7q7',
+            'token'           => 'e0fad8d8a376802b87a7296d67c46b',
+            'token_secret'    => '18c4bd3910'
+        ]);
+        $stack->push($middleware);
+
+        $client = new Client([
+            'handler' => $stack
+        ]);
+
+        // Set the "auth" request option to "oauth" to sign using oauth
+        // shops/18818012/receipts
+        $res = $client->get('https://openapi.etsy.com/v2/receipts/1830210487', ['auth' => 'oauth']);
+        return $res;
+    }
 }

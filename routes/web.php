@@ -97,6 +97,7 @@ Route::post('addannouncementcomment',[AnnouncementController::class, 'addannounc
 Route::get('addgallerylike/{userid}/{galleryid}',[GalleryController::class, 'addgalleryLike'])->name('addgalleryLike');
 Route::get('deletegallerylike/{userid}/{galleryid}',[GalleryController::class, 'deletegalleryLike'])->name('deletegalleryLike');
 Route::post('addgallerycomment',[GalleryController::class, 'addgallerycomment'])->name('addgallerycomment');
+Route::post('publishreview',[CompetitionController::class, 'publishreview'])->name('publishreview');
 
 
 
@@ -122,6 +123,12 @@ Route::prefix('admin')->group(function () {
     Route::resource('events', EventsController::class);
     Route::get('compititions/delete/{id}', [CompititionsController::class,'destroy'])->name('compititions.destroy');
     Route::get('compititions/compactive/{id}', [CompititionsController::class, 'active'])->name('compititions.active');
+    Route::get('compititions/upload-request', [CompititionsController::class, 'uploadRequests'])->name('compititions.upload-request');
+    
+    Route::get('compititions/publish_request/{id}', [CompititionsController::class, 'publish_request'])->name('compititions.publish_request');
+    Route::get('compititions/reject_request/{id}', [CompititionsController::class, 'reject_request'])->name('compititions.reject_request');
+
+
     Route::resource('compititions', CompititionsController::class);
     Route::get('announcements/delete/{id}', [AnnouncementsController::class,'destroy'])->name('announcements.destroy');
     Route::get('announcements/announcementactive/{id}', [AnnouncementsController::class, 'active'])->name('announcement.active');

@@ -17,12 +17,12 @@
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
 						</div>
 					</div>
-					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#competition">Contribution</button>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#competition">Participate</button>
 				</div> <!-- /.row -->
 				
 				@foreach($comp as $new)
 				<div class="row">
-                
+                <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#competition">Participate</button> -->
 				<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="team-member">
                         <?php $images = json_decode($new->competition_image); ?>
@@ -88,7 +88,7 @@
 				
 				@foreach($upcomingcomp as $new)
 				<div class="row">
-                
+                <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#competition">Participate</button> -->
 				<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="team-member">
                         <?php $images = json_decode($new->competition_image); ?>
@@ -154,7 +154,7 @@
 				
 				@foreach($pastcomp as $new)
 				<div class="row">
-                
+                <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#competition">Participate</button> -->
 				<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="team-member">
                         <?php $images = json_decode($new->competition_image); ?>
@@ -319,29 +319,24 @@
                         <div class="card-content">
                            <div class="card-body">
 						   <form enctype="multipart/form-data" method="POST"
-                                              action="{{ route('compititions.store') }}">
+                                              action="{{ route('publishreview') }}">
                                             @csrf
-                                            <input type="hidden" name="status" value="inactive">
                                             <div class="row">
                                                 <div class="col-sm-6 col-6">
-                                                    <fieldset class="form-group">
+                                                <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                         Compitition Name
                                                         </div>
-                                                        <input type="text" class="form-control" name="competition_name"
-                                                               id="basicInput" placeholder="Enter compitition name">
+                                                        <select class="form-control" name="comp_id">
+                                                        @foreach($competitions as $competition)
+
+
+<option value="{{$competition->id}}">{{$competition->competition_name}}</option>
+
+@endforeach
+                                                        </select>
                                                     </fieldset>
                                                 </div>
-                                                <div class="col-sm-6 col-6">
-                                                    <fieldset class="form-group">
-                                                        <div class="text-bold-600 font-medium-2 mb-2">
-                                                        Compitition Location
-                                                        </div>
-                                                        <input type="text" class="form-control" name="competition_location"
-                                                               id="basicInput" placeholder="Enter compitition location">
-                                                    </fieldset>
-                                                </div>
-                                                
                                                 <div class="col-sm-6 col-6">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
@@ -354,33 +349,15 @@
                                                 <div class="col-sm-6 col-6">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
-                                                        Compitition From
+                                                            Videos 
                                                         </div>
-                                                        <input type="datetime-local" class="form-control" name="compitition_from"
-                                                               id="basicInput" placeholder="Enter compitition from date">
+                                                        <input type="file" multiple name="videos[]" class="form-control"
+                                                               id="videos" placeholder="Select compitition images">
                                                     </fieldset>
-                                                    
                                                 </div>
+                                                
                                                 <div class="col-sm-6 col-6">
-                                                    <fieldset class="form-group">
-                                                        <div class="text-bold-600 font-medium-2 mb-2">
-                                                        Compitition to
-                                                        </div>
-                                                        <input type="datetime-local" class="form-control" name="compitition_to"
-                                                               id="basicInput" placeholder="Enter compitition to date">
-                                                    </fieldset>
-                                                    
-                                                </div>
-                                                <div class="col-sm-6 col-6">
-                                                    <fieldset class="form-group">
-                                                        <div class="text-bold-600 font-medium-2 mb-2">
-                                                        Compitition Type
-                                                        </div>
-                                                        <select class="form-control" name="event_type">
-                                                        <option>Free</option>
-                                                        <option>Paid</option>
-                                                        </select>
-                                                    </fieldset>
+                                                   
                                                     
                                                 </div>  
                                                 <div class="col-sm-12 col-12">
@@ -388,15 +365,15 @@
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                             Description
                                                         </div>
-                                                        <textarea id="desc" name="desc"
-                                                                  style="height: 500px; width: 100%"></textarea>
+                                                        <textarea name="desc"
+                                                                  style="height: 300px; width: 100%"></textarea>
                                                     </fieldset>
                                                 </div>
                                             </div>
 
                                             <button class="btn btn-primary btn-block waves-effect waves-light"
                                                     type="submit">
-                                                Add Competition
+                                               Submit
                                             </button>
                                         </form>
                            </div>

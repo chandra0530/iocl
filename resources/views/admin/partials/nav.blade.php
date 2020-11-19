@@ -132,14 +132,15 @@
               </li>
             </ul>
           </li> -->
-          <!-- <li class=" nav-item"><a href="#"><i class="feather icon-award"></i><span class="menu-title" data-i18n="Ecommerce">Compititions</span></a>
+          <li class=" nav-item"><a href="#"><i class="feather icon-award"></i><span class="menu-title" data-i18n="Ecommerce">Compititions</span></a>
             <ul class="menu-content">
               <li><a href="/admin/compititions/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add Compititions</span></a>
               </li>
               <li><a href="/admin/compititions"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Compititions List</span></a>
               </li>
+              <li><a href="/admin/compititions/upload-request"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Compititions Upload request</span></a></li>
             </ul>
-          </li> -->
+          </li>
           <!-- <li class=" nav-item"><a href="#"><i class="feather icon-speaker"></i><span class="menu-title" data-i18n="Ecommerce">Announcements</span></a>
             <ul class="menu-content">
               <li><a href="/admin/announcements/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add Announcements</span></a>

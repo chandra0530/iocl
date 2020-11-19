@@ -20,3 +20,4 @@ Use App\Http\Controllers\OrderController;
 // });
 Route::get('orders', [OrderController::class, 'index'])->name('orders');
 Route::get('orders/{id}', [OrderController::class, 'show'])->name('order_details');
+Route::get('recipt/{id}', [OrderController::class, 'showreciptdetails'])->name('recipt_details');
