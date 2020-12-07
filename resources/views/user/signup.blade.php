@@ -56,6 +56,43 @@
 						</div>
                         <input type="text" name="employeid" class="form-control" placeholder="Your employee id">
 					</div>
+
+
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+                        <input type="text" name="mobile_no" class="form-control" placeholder="Your contact number">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+                        <input type="text" name="spouce_name" class="form-control" placeholder="Your spouse name">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+                        <input type="text" name="spouce_email" class="form-control" placeholder="Your spouse email">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+                        <input type="text" name="child_name" class="form-control" placeholder="Your child name">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+                        <input type="text" name="child_email" class="form-control" placeholder="Your child email">
+					</div>
+
+
+
+					
 					<div class="form-group">
 						<input type="submit" value="Signup" class="btn float-right login_btn">
 					</div>

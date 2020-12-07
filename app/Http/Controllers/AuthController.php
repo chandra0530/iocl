@@ -36,6 +36,13 @@ class AuthController extends Controller
       $user->password=bcrypt($request->password);
       $user->employeid=$request->employeid;
       $user->status=$request->status;
+
+      $user->phone_number=$request->mobile_no;
+      $user->spouce_name=$request->spouce_name;
+      $user->spouce_email=$request->spouce_email;
+      $user->child_name=$request->child_name;
+      $user->child_email=$request->child_email;
+
       $user->save();
 
       return redirect()->back()->with(['success' => 'Your account had been registered successfully.']);
