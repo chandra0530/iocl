@@ -37,11 +37,11 @@ class AuthController extends Controller
       $user->employeid=$request->employeid;
       $user->status=$request->status;
 
-      $user->phone_number=$request->mobile_no;
-      $user->spouce_name=$request->spouce_name;
-      $user->spouce_email=$request->spouce_email;
-      $user->child_name=$request->child_name;
-      $user->child_email=$request->child_email;
+    //   $user->phone_number=$request->mobile_no;
+    //   $user->spouce_name=$request->spouce_name;
+    //   $user->spouce_email=$request->spouce_email;
+    //   $user->child_name=$request->child_name;
+    //   $user->child_email=$request->child_email;
 
       $user->save();
 

@@ -434,21 +434,18 @@
                         <section class="our-service section home_top" style="text-align: center;padding-top: 190px;">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                    <a href="/compotitions">
-                                    <img src="{{ asset('assets/images/home_compitition.jpg')}}" width="100%" height="100%">
-                                    <!-- <p style="font-size: 20px;
-    font-family: initial;font-weight: bold;">COMPETITION</p> -->
-     <h2 class="title">COMPETITION</h2></a>
-                                    </div>
-                                    <div class="col-md-6">
+                                <div class="col-md-6 hovernow" style="position: relative;">
                                     <a href="/ushare"> 
-                                    <img src="{{ asset('assets/images/home_share.jpg')}}" width="100%" height="100%">
-                                    <!-- <p style="font-size: 20px;
-    font-family: initial;font-weight: bold;">USHARE</p> -->
-         <h2 class="title">USHARE</h2></a>
-
+                                    <img src="{{ asset('assets/images/home_share.jpg')}}"  style="opacity: 0.5;" width="100%" height="100%">
+                                     <h2 class="title">USHARE</h2></a>
                                     </div>
+
+                                    <div class="col-md-6 hovernow" style="position: relative;">
+                                    <a href="/compotitions">
+                                    <img src="{{ asset('assets/images/home_compitition.jpg')}}" style="opacity: 0.5;" width="100%" height="100%">
+                                     <h2 class="title">COMPETITION</h2></a>
+                                    </div>
+                                   
                                 </div>
                             </div>
                         </section>

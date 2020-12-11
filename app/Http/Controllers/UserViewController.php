@@ -19,6 +19,7 @@ use App\Models\event_like;
 use App\Models\competition_like;
 use App\Models\AnnouncementLike;
 use Carbon\Carbon;
+use App\Models\User;
 
 class UserViewController extends Controller
 {
@@ -170,5 +171,23 @@ class UserViewController extends Controller
     }
     public function signup(){
         return view('user.signup');
+    }
+    public function profile(){
+        $user_details=User::find(auth()->id());
+        // return $user_details;
+        return view('user.profile',compact('user_details'));
+    }
+    public function updateprofile(Request $request){
+        $user_details=User::find(auth()->id());
+        $user_details->phone_number=$request->mobile_no;
+        $user_details->spouce_name=$request->spouce_name;
+        $user_details->spouce_email=$request->spouce_email;
+        $user_details->child_name=$request->child_name;
+        $user_details->child_email=$request->child_email;
+        if($request->password){
+            $user_details->password=$request->password;
+        }
+        $user_details->save();
+        return redirect()->back()->with(['success' => 'User profile details updated successfully']);
     }
 }

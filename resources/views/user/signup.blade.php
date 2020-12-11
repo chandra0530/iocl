@@ -59,7 +59,7 @@
 
 
 
-					<div class="input-group form-group">
+					<!-- <div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
@@ -88,7 +88,7 @@
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
                         <input type="text" name="child_email" class="form-control" placeholder="Your child email">
-					</div>
+					</div> -->
 
 
 

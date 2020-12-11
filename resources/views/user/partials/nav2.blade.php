@@ -32,6 +32,7 @@
                         <li>
                                                 <a>{{Auth::user()->name}}</a>
                                                 <ul class="dropdown-menus">
+                                                <li><a href="/profile">Profile</a></li>
                                                 <li><a href="/logout">Logout</a></li>
                                                 </ul>
                                             </li>

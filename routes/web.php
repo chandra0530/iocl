@@ -41,6 +41,8 @@ Use App\Http\Controllers\User\NewsUserController;
 
 
 Route::get('/', [UserViewController::class, 'home'])->name('home');
+Route::get('profile', [UserViewController::class, 'profile'])->name('profile');
+Route::post('profile', [UserViewController::class, 'updateprofile'])->name('update_profile');
 Route::get('news', [UserViewController::class, 'news'])->name('news');
 Route::get('news_details/{id}', [UserViewController::class, 'news_detials'])->name('news_details');
 
