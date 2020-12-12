@@ -434,16 +434,16 @@
                         <section class="our-service section home_top" style="text-align: center;padding-top: 190px;">
                             <div class="container">
                                 <div class="row">
-                                <div class="col-md-6 hovernow" style="position: relative;">
+                                <div class="col-md-6 hovernow" >
                                     <a href="/ushare"> 
                                     <img src="{{ asset('assets/images/home_share.jpg')}}"  style="opacity: 0.5;" width="100%" height="100%">
-                                     <h2 class="title">USHARE</h2></a>
+                                     <h2 class="title header_back hide">USHARE</h2></a>
                                     </div>
 
-                                    <div class="col-md-6 hovernow" style="position: relative;">
+                                    <div class="col-md-6 hovernow">
                                     <a href="/compotitions">
                                     <img src="{{ asset('assets/images/home_compitition.jpg')}}" style="opacity: 0.5;" width="100%" height="100%">
-                                     <h2 class="title">COMPETITION</h2></a>
+                                     <h2 class="title header_back  hide">COMPETITION</h2></a>
                                     </div>
                                    
                                 </div>
@@ -616,7 +616,7 @@
              <!-- /.footer-main -->
             <div class="copyright">
                 <div class="container">
-                    Designelit © 2018 All rights reserved. Terms of use and Privacy Policy
+                    IOCL Parivar © 2018 All rights reserved.
                 </div>
             </div> <!-- /.copyright -->
         </footer>

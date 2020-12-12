@@ -118,7 +118,7 @@ button:focus{
     line-height: 100px;
 }
 .menu-area {
-	background-color: rgba(17, 25, 61,.8);
+	background-color: rgb(44 54 80);
 }
 .menu-search {
 	float: right;

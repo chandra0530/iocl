@@ -141,7 +141,11 @@ function share_news_messenger(){
     console.log(url);
     window.open('fb-messenger://share?link=' + encodeURIComponent(url) + '&app_id=' + encodeURIComponent("1234"));
 }
-
+function addChild() {
+	$("#items").append(
+      '<div class="col-xs-12 col-sm-12"><div class="form-group"><input type="text" name="child_name[]" class="form-control" placeholder="Your Child Name" required="required" ></div></div> ');
+	$("#items").append('<div class="col-xs-12 col-sm-12"><div class="form-group"><input type="text" name="child_email[]" class="form-control" placeholder="Your Child Email" required="required" ></div></div>');
+}
     </script>
 
 

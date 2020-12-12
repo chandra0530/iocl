@@ -59,21 +59,39 @@
 												<input type="text" name="spouce_email" class="form-control" placeholder="Your Spouce Email" required="required" value="{{$user_details->spouce_email}}">
 											</div>
                                         </div> <!-- /.col- -->
-                                        <div class="col-xs-12 col-sm-12">
+										<div  id="items">
+
+										@php
+										$childnames = explode(">>",$user_details->child_name);
+										$childemails = explode(">>",$user_details->child_email);
+
+										
+										@endphp
+										@for ($i = 0; $i < sizeof($childnames); $i++)
+										<div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="text" name="child_name" class="form-control" placeholder="Your Child Name" required="required" value="{{$user_details->child_name}}">
+												<input type="text" name="child_name[]" class="form-control" placeholder="Your Child Name" required="required" value="{{$childnames[$i]}}">
 											</div>
                                         </div> <!-- /.col- -->
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="text" name="child_email" class="form-control" placeholder="Your Child Email" required="required" value="{{$user_details->child_email}}">
+												<input type="text" name="child_email[]" class="form-control" placeholder="Your Child Email" required="required" value="{{$childemails[$i]}}">
 											</div>
 										</div> <!-- /.col- -->
+										@endfor
+										
+										</div>
+
+                                        
                                         
 
 
 
-
+										<div class="form-group col-xs-12">
+											<div class="form-btn">
+												<button type="button" class="contact-form-btn" onclick="addChild()">Add Child</button>
+											</div>
+										</div>
 
 
 										<div class="form-group col-xs-12">
@@ -96,4 +114,10 @@
 
 
 @push('js')
+
+<script>
+
+
+
+</script>
 @endpush
