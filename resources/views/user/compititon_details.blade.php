@@ -132,9 +132,9 @@
 										</div> <!-- /.row -->
 									</form>
 								</div> <!-- /.contact-form -->
-
-								<!-- Recent Post -->
-								@foreach ($user_uploads as $user)
+<div class="row">
+@foreach ($user_uploads as $user)
+<div class="col-md-6">
 								<div class="blog-feature" style="">
 
 								<?php $images=json_decode($user->compotition_images);?>
@@ -146,7 +146,14 @@
 								@endfor
 								<br>
 							</div>
+</div>
 							@endforeach
+
+
+
+</div>
+								<!-- Recent Post -->
+								
 							
 							</div>
 						</div> <!-- /.col- -->
