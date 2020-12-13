@@ -119,11 +119,16 @@ class CompititionsController extends Controller
     public function publish_request($id){
         $publishd_details=CompotitionUserUploads::find($id);
         $comp_Details=Compitition::find($publishd_details->comp_id);
-        ;
-        $publishd_details->compotition_images;
-        $new_images=array_merge(json_decode($comp_Details->competition_image),json_decode($publishd_details->compotition_images));
-        $new_videos=array_merge(json_decode($comp_Details->competition_videos),json_decode($publishd_details->compotition_videos));
 
+        $new_videos=json_decode($comp_Details->competition_videos);
+        $new_images=json_decode($comp_Details->competition_image);
+        if(is_array(json_decode($publishd_details->compotition_videos))){
+            $new_images=array_merge(json_decode($comp_Details->competition_image),json_decode($publishd_details->compotition_images));
+        }
+        if(is_array(json_decode($publishd_details->compotition_videos))){
+            $new_videos=array_merge(json_decode($comp_Details->competition_videos),json_decode($publishd_details->compotition_videos));
+        }
+       
         $affected = Compitition::where('id', $publishd_details->comp_id)
         ->update(['competition_image' => json_encode($new_images),'competition_videos' => json_encode($new_videos)]);
         CompotitionUserUploads::where('id', $id)->delete();
