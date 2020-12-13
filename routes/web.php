@@ -144,9 +144,11 @@ Route::prefix('admin')->group(function () {
     Route::get('employes/post/delete/{id}', [EmployesController::class, 'postdestroy'])->name('employespost.destroy');
     Route::get('employes/post/active/{id}', [EmployesController::class, 'postactive'])->name('employespost.active');
     Route::get('employes/posts', [EmployesController::class, 'posts'])->name('employes.posts');
+    Route::post('employes/update_password', [EmployesController::class, 'updateemployepassword'])->name('employes.updatepassword');
     Route::resource('employes', EmployesController::class);
    
-   
+    Route::get('logout', [AdminAuthController::class, 'logout'])->name('auth.logout');
+
 });
 
 

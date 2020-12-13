@@ -49,7 +49,9 @@ class EmployesController extends Controller
      */
     public function show($id)
     {
-        //
+        $user_Details=User::find($id);
+        // return $user_Details;
+        return view('admin.employes.edit',compact('user_Details'));
     }
 
     /**
@@ -106,5 +108,11 @@ class EmployesController extends Controller
     public function posts(){
         $posts=Ushare::join('users','users.id','=','ushares.user_id')->select('users.name as user_name','ushares.*')->get();
         return view('admin.ushare.index',compact('posts'));
+    }
+    public function updateemployepassword(Request $request){
+        $user = User::find($request->user_id);
+        $user->password=bcrypt($request->password);
+        $user->save();
+        return redirect()->back()->with(['success' => 'Employes password updated successfully.']);
     }
 }

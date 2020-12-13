@@ -158,6 +158,9 @@
               <li><a href="/admin/employes/posts"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Employees Posts</span></a></li>
             </ul>
           </li>
+
+
+          <li><a href="/admin/logout">Logout</a></li>
           <!-- <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="Ecommerce">Users</span></a>
             <ul class="menu-content">
               <li><a href="/user/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add User</span></a>

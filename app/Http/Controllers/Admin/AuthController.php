@@ -27,4 +27,11 @@ class AuthController extends Controller
         
         return $this->loginFailed();
     }
+    public function logout()
+    {
+        Auth::guard('admin')->logout();
+        return redirect()
+            ->route('admin.login')
+            ->with('status', 'Admin has been logged out!');
+    }
 }

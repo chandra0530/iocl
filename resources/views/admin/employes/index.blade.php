@@ -75,6 +75,9 @@
                                                                 href="{{ route('employes.active', $user->id) }}"
                                                                 class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
                                                             @endif
+                                                            <a
+                                                                href="/admin/employes/{{$user->id}}"
+                                                                class="btn btn-circle btn-success"><i class="fa fa-pencil"></i></a>
                                                             <a onclick="return confirm('Are you sure to delete?')"
                                                                 href="employes/delete/{{$user->id}}"
                                                                 class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>
