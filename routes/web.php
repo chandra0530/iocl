@@ -26,6 +26,7 @@ Use App\Http\Controllers\User\CompetitionController;
 Use App\Http\Controllers\User\EventController;
 Use App\Http\Controllers\User\GalleryController;
 Use App\Http\Controllers\User\NewsUserController;
+Use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -104,6 +105,9 @@ Route::post('publishreview',[CompetitionController::class, 'publishreview'])->na
 
 
 Route::prefix('admin')->group(function () {
+    Route::get('/login', [AdminAuthController::class ,'showLoginForm'])->name('admin.login');
+    Route::post('/login', [AdminAuthController::class ,'login'])->name('admin.login.validate');
+    
     Route::get('/', [AdminHomeController::class, 'index'])->name('admin.home');
     Route::get('gallery/event/add', [GalleryEventsController::class, 'create']);
 

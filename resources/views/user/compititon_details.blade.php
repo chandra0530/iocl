@@ -19,11 +19,27 @@
                             @for ($i = 0; $i < sizeof($images); $i++)
                             <img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:500px;height:500px">
                             @endfor
-								
-									
-									<br>
+
+
+							
 									
 								</div> <!-- /.blog-feature -->
+
+								@foreach ($user_uploads as $user)
+								<div class="blog-feature">
+
+<?php $images=json_decode($user->compotition_images);?>
+@for ($i = 0; $i < sizeof($images); $i++)
+<img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:500px;height:500px">
+<p>Uploaded By : {{$user->user_name}}</p>
+@endfor
+
+	
+	<br>
+</div>
+@endforeach
+
+								
 								<div class="blog-share" style="display:flex;position: relative;">
 									<div class="row" style="border: 3px solid #d4d4d4;
 										background: #11193d; margin-left:0px !important;display: flex;">

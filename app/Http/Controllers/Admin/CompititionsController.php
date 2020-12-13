@@ -118,23 +118,8 @@ class CompititionsController extends Controller
     }
     public function publish_request($id){
         $publishd_details=CompotitionUserUploads::find($id);
-        $comp_Details=Compitition::find($publishd_details->comp_id);
-
-        $new_videos=json_decode($comp_Details->competition_videos);
-        $new_images=json_decode($comp_Details->competition_image);
-        $temp=json_decode($publishd_details->competition_image);
-
-        if((is_array($temp))&&(sizeof($temp)>0)){
-            $new_images=array_merge(json_decode($comp_Details->competition_image),json_decode($publishd_details->compotition_images));
-        }
-        $temp2=json_decode($publishd_details->compotition_videos);
-        if((is_array($temp2))&&(sizeof($temp2)>0)){
-            $new_videos=array_merge(json_decode($comp_Details->competition_videos),json_decode($publishd_details->compotition_videos));
-        }
-       
-        $affected = Compitition::where('id', $publishd_details->comp_id)
-        ->update(['competition_image' => json_encode($new_images),'competition_videos' => json_encode($new_videos)]);
-        CompotitionUserUploads::where('id', $id)->delete();
+        $publishd_details->status='published';
+        $publishd_details->save();
         return redirect()->back()->with(['success' => 'Details published successfully.']);
     }
     public function reject_request($id){

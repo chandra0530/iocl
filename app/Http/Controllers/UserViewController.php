@@ -20,7 +20,7 @@ use App\Models\competition_like;
 use App\Models\AnnouncementLike;
 use Carbon\Carbon;
 use App\Models\User;
-
+use App\Models\CompotitionUserUploads;
 class UserViewController extends Controller
 {
     //
@@ -146,10 +146,14 @@ class UserViewController extends Controller
     public function compotition_details($id){
         $comp_details=Compitition::find($id);
         $like_status=competition_like::where('competition_id',$id)->where('user_id',auth()->id())->get();
+        $user_uploads=CompotitionUserUploads::where('comp_id',$id)
+        ->join('users','users.id','=','compotition_user_uploads.user_id')
+        ->select('compotition_user_uploads.*','users.name as user_name')
+        ->get();
         $comments=competition_comment::where('competition_id',$id)
         ->join('users','users.id','=','competition_comments.user_id')
         ->get();
-        return view('user.compititon_details',compact('comp_details','comments','like_status'));
+        return view('user.compititon_details',compact('comp_details','comments','like_status','user_uploads'));
     }
     public function gallery_details($id){
         $gallery=Gallery::find($id);
