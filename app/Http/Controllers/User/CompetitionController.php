@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\competition_like;
 use App\Models\competition_comment;
-use App\MOdels\CompotitionUserUploads;
+use App\Models\CompotitionUserUploads;
 use Illuminate\Support\Facades\Storage;
 
 class CompetitionController extends Controller
@@ -38,7 +38,7 @@ class CompetitionController extends Controller
             foreach ($request->photos as $key => $photo) {
                 $path = $photo->store('comp_images', 'public');
                 $image_url= url(Storage::url($path));
-                array_push($images,$image_url);
+                array_push($images,$image_url);  
             }
         }
         $videos=[];
