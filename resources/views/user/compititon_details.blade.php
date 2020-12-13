@@ -26,18 +26,17 @@
 								</div> <!-- /.blog-feature -->
 
 								@foreach ($user_uploads as $user)
-								<div class="blog-feature">
+								<div class="blog-feature" style="">
 
-<?php $images=json_decode($user->compotition_images);?>
-@for ($i = 0; $i < sizeof($images); $i++)
-<img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:500px;height:500px">
-<p>Uploaded By : {{$user->user_name}}</p>
-@endfor
-
-	
-	<br>
-</div>
-@endforeach
+								<?php $images=json_decode($user->compotition_images);?>
+								@for ($i = 0; $i < sizeof($images); $i++)
+								<img class="img-responsive" src="{{$images[$i]}}" style="width:70px;height:70px;" alt="Img" style="width:500px;height:500px">
+								<p>Uploaded By : {{$user->user_name}}</p>
+								<p>Description : {{$user->compotition_details}}</p>
+								@endfor
+								<br>
+							</div>
+							@endforeach
 
 								
 								<div class="blog-share" style="display:flex;position: relative;">
