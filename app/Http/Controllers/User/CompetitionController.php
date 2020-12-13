@@ -49,6 +49,7 @@ class CompetitionController extends Controller
                 array_push($videos,$image_url);
             }
         }
+        $publish->user_id=auth()->id();
         $publish->comp_id=$request->comp_id;
         $publish->compotition_images=json_encode($images);
         $publish->compotition_videos=json_encode($videos);
