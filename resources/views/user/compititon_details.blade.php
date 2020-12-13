@@ -24,19 +24,7 @@
 									
 								</div> <!-- /.blog-feature -->
 
-								@foreach ($user_uploads as $user)
-								<div class="blog-feature" style="">
-
-								<?php $images=json_decode($user->compotition_images);?>
-								@for ($i = 0; $i < sizeof($images); $i++)
-								<a class="example-image-link" href="{{$images[$i]}}" data-lightbox="example-set" data-title="Uploaded By : {{$user->user_name}}  Description : {{$user->compotition_details}} "><img style="width:100px;height:100px;" class="example-image" src="{{$images[$i]}}" alt=""/></a>
-								<!-- <img class="img-responsive" src="{{$images[$i]}}" style="width:70px;height:70px;" alt="Img" style="width:500px;height:500px"> -->
-								<p>Uploaded By : {{$user->user_name}}</p>
-								<p>Description : {{$user->compotition_details}}</p>
-								@endfor
-								<br>
-							</div>
-							@endforeach
+							
 
 								
 								<div class="blog-share" style="display:flex;position: relative;">
@@ -146,7 +134,19 @@
 								</div> <!-- /.contact-form -->
 
 								<!-- Recent Post -->
-								
+								@foreach ($user_uploads as $user)
+								<div class="blog-feature" style="">
+
+								<?php $images=json_decode($user->compotition_images);?>
+								@for ($i = 0; $i < sizeof($images); $i++)
+								<a class="example-image-link" href="{{$images[$i]}}" data-lightbox="example-set" data-title="Uploaded By : {{$user->user_name}}  Description : {{$user->compotition_details}} "><img style="width:100px;height:100px;" class="example-image" src="{{$images[$i]}}" alt=""/></a>
+								<!-- <img class="img-responsive" src="{{$images[$i]}}" style="width:70px;height:70px;" alt="Img" style="width:500px;height:500px"> -->
+								<p>Uploaded By : {{$user->user_name}}</p>
+								<p>Description : {{$user->compotition_details}}</p>
+								@endfor
+								<br>
+							</div>
+							@endforeach
 							
 							</div>
 						</div> <!-- /.col- -->
