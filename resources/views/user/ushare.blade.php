@@ -276,7 +276,7 @@
              <!-- /.footer-main -->
             <div class="copyright">
                 <div class="container">
-                    Designelit © 2018 All rights reserved. Terms of use and Privacy Policy
+                    IOCL Parivar © 2018 All rights reserved.
                 </div>
             </div> <!-- /.copyright -->
         </footer>
