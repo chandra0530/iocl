@@ -555,15 +555,18 @@
                                     <div class="con-text in-envelope">
                                     Souptik Mukherje
                                    souptikmukherjee@indianoil.in<br>
+                                   7044062168<br>
                                    <br>
                                    Tapan Kumar Pradhan<br>
-                                   tapankp@indianoil.in
+                                   tapankp@indianoil.in<br>
+                                   7993542670
                                     </div>
                                 </div>
                                 <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
-                                    <div class="con-text in-phone">
-                                    7044062168	<br><br><br>
-                                    7993542670<br><br>
+                                    <div class="con-text in-envelope">
+                                    Arup Das<br>
+                                    arupdas@indianoil.in<br>
+                                    98306 04960
                                     </div>
                                 </div>
                             </div> <!-- /.row -->
