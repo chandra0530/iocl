@@ -77,9 +77,13 @@
                         <!-- <li><a href="/gallery">GALLERY</a></li>
 
                         <li><a href="/contact">Contact</a></li> -->
-                       <li> <a>{{Auth::user()->name}}</a>
-                                                <ul class="dropdown-menus">
+                        <li >
+	                            <a href="#" class="dropdown-here">{{Auth::user()->name}}</a>
+	                            <ul class="submenuItems">
+                                <li><a href="/profile">Profile</a></li>
                                                 <li><a href="/logout">Logout</a></li>
+	                            </ul>
+	                        </li>
                         </ul>
                     </nav>
                    

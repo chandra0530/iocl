@@ -72,14 +72,16 @@
                         </div>
                     </div>
                     <nav id="accordian">
-                        <ul class="slide-menu">
-                        <!-- <li ><a href="#home">Home</a></li>
-                                            <li><a href="#news_section">News</a></li>
-                                            <li><a href="#compititions">competitions (Live)</a></li>
-                                            <li><a href="#gallery">Ushare</a></li>
-                                            <li><a href="#contact_us">Contact</a></li> -->
-                        </ul>
-                    </nav>
+	                    <ul class="slide-menu">
+	                        <li >
+	                            <a href="#" class="dropdown-here">{{Auth::user()->name}}</a>
+	                            <ul class="submenuItems">
+                                <li><a href="/profile">Profile</a></li>
+                                                <li><a href="/logout">Logout</a></li>
+	                            </ul>
+	                        </li>
+	                    </ul>
+	                </nav>
                    
                     <div class="top-left smallest visible-xs">
                         <ul>
