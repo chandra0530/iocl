@@ -3141,12 +3141,12 @@ ul.get-services li a:hover {
 .home_top{
     background-image:url('../images/texture_home.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 .contact{
     background-image:url('../images/contact_page.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 

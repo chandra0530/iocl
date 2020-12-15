@@ -25,7 +25,7 @@ class AuthController extends Controller
                 ->with('status', 'You are Logged in as Admin!');
         }
         
-        return $this->loginFailed();
+        return $this->logout();
     }
     public function logout()
     {
