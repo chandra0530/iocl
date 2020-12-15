@@ -53,7 +53,7 @@
                 <div id="mobile-nav-wrap" class="clearfix">
                     <div class="container">
                         <div class="mobile-logo">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:200px;" alt="Logo">
                             </a>
                         </div>
@@ -63,7 +63,7 @@
                 <div class="mobile-menu-inner">
                     <div class="mobile-in-logo">
                         <div class="mob-inner-logo">
-                            <a href="index.html">
+                            <a href="/">
                                <img src="{{ asset('assets/images/IndianOil-Parivaar-Logo.png')}}" style="width:200px;" alt="Logo">
                             </a>
                         </div>
