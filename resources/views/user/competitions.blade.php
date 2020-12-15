@@ -208,7 +208,7 @@
 		</section>
 
 
-        <section class="get-touch section contact" id="contact_us"> 
+        <section class="get-touch section contact" id="contact_us" style="padding-top:0px !important;"> 
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
