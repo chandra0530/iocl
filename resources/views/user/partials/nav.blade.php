@@ -15,7 +15,7 @@
                             <div class="col-lg-4 col-sm-4">
                                 <div class="logo" style="text-align: center;">
                                     <a href="#home">
-                                        <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:200px;" alt="">
+                                        <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:350px;height: 100px;" alt="">
                                     </a>
                                 </div>
                             </div>

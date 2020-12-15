@@ -12,7 +12,7 @@
                             <div class="col-lg-2 col-sm-2">
                                 <div class="logo">
                                     <a href="#home">
-                                        <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:200px;" alt="">
+                                        <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:350px;height: 100px;" alt="">
                                     </a>
                                 </div>
                             </div>
