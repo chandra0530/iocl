@@ -2,7 +2,8 @@
 
 @section('content')      
 
-<section class="our-service section home_top" style="text-align: center;padding-top: 190px;">
+<section class="our-service section home_top" style="text-align: center;padding-top: 130px;">
+
                             <div class="container">
                                 <div class="row">
                                 <div class="col-md-6 hovernow">
@@ -22,7 +23,7 @@
                         </section>
 
 
-        <section class="get-touch section contact" id="contact_us" style="padding-top:0px !important;"> 
+        <section class="get-touch section contact" id="contact_us" style="padding-top:30px !important;"> 
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
@@ -47,7 +48,7 @@
                                 </div>
                                 <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
                                     <div class="con-text in-envelope">
-                                    Souptik Mukherje
+                                    Souptik Mukherje<br>
                                    souptikmukherjee@indianoil.in<br>
                                    7044062168<br>
                                    <br>
