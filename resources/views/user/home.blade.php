@@ -8,13 +8,13 @@
                                 <div class="row">
                                 <div class="col-md-6 hovernow">
                                     <a href="/ushare"> 
-                                    <img src="http://127.0.0.1:8000/assets/images/home_share.jpg" width="100%" height="100%">
+                                    <img src="{{ asset('assets/images/home_share.jpg')}}" width="100%" height="100%">
                                      <h2 class="title header_back hide">USHARE</h2></a>
                                     </div>
 
                                     <div class="col-md-6 hovernow">
                                     <a href="/compotitions">
-                                    <img src="http://127.0.0.1:8000/assets/images/home_compitition.jpg" width="100%" height="100%">
+                                    <img src="{{ asset('assets/images/home_compitition.jpg')}}" width="100%" height="100%">
                                      <h2 class="title header_back  hide">COMPETITION</h2></a>
                                     </div>
                                    
