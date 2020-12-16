@@ -74,6 +74,7 @@
                         <li><a href="/events">Events</a></li>
                          -->
                          <li><a href="/compotitions">COMPETITIONS</a></li>
+                         <li ><a href="/ushare">UShare</a></li>
                         <!-- <li><a href="/gallery">GALLERY</a></li>
 
                         <li><a href="/contact">Contact</a></li> -->
