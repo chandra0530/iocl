@@ -85,8 +85,8 @@
                    
                     <div class="top-left smallest visible-xs">
                         <ul>
-                            <li><a href="#"><span><i class="fa fa-paper-plane"></i>Location:</span> Iocl parival </a></li>
-                            <li><a href="#"><span><i class="fa fa-phone"></i>Phone:</span> iocl parivar</a></li>
+                            <!-- <li><a href="#"><span><i class="fa fa-paper-plane"></i>Location:</span> Iocl parival </a></li>
+                            <li><a href="#"><span><i class="fa fa-phone"></i>Phone:</span> iocl parivar</a></li> -->
                         </ul>
                     </div> <!-- /.top-left -->
                 </div>
