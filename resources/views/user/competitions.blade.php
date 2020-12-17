@@ -116,7 +116,7 @@
                         
                         </p>
                     </div>
-                    <div class="row">
+                    <div class="row" style="display:flex;position: relative;">
 									<div class="col-md-2">
 									<a href="#"><i class="fa fa-facebook" onclick="share_news_fb()"></i></a>
 									</div>
@@ -182,7 +182,7 @@
                         
                         </p>
                     </div>
-                    <div class="row">
+                    <div class="row" style="display:flex;position: relative;">
 									<div class="col-md-2">
 									<a href="#"><i class="fa fa-facebook" onclick="share_news_fb()"></i></a>
 									</div>
