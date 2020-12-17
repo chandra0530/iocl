@@ -9,14 +9,15 @@
                 <div class="menu-area">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-2 col-sm-2">
+                        <div class="col-lg-4 col-sm-4"></div>
+                            <div class="col-lg-4 col-sm-4">
                                 <div class="logo">
                                     <a href="#home">
-                                        <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:350px;height: 100px;" alt="">
+                                        <img src="{{ asset('assets/images/logo.jpg')}}" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-10 col-sm-10">
+                            <div class="col-lg-4 col-sm-4">
                                 <div class="menu-search">
                                     <nav class="main-menu">
                                     <ul>
@@ -50,7 +51,7 @@
                     <div class="container">
                         <div class="mobile-logo">
                             <a href="/">
-                                <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:200px;" alt="Logo">
+                                <img src="{{ asset('assets/images/logo.jpg')}}"  alt="Logo">
                             </a>
                         </div>
                         <div class="toggle-inner"></div>
@@ -60,7 +61,7 @@
                     <div class="mobile-in-logo">
                         <div class="mob-inner-logo">
                             <a href="/">
-                               <img src="{{ asset('assets/images/IndianOil-Parivaar-Logo.png')}}" style="width:200px;" alt="Logo">
+                               <img src="{{ asset('assets/images/logo.jpg')}}" alt="Logo">
                             </a>
                         </div>
                         <div class="close-menu">
