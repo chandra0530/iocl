@@ -51,7 +51,7 @@
                     <div class="container">
                         <div class="mobile-logo">
                             <a href="/">
-                                <img src="{{ asset('assets/images/logo.jpg')}}"  alt="Logo">
+                                <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:200px;"  alt="Logo">
                             </a>
                         </div>
                         <div class="toggle-inner"></div>
@@ -61,7 +61,7 @@
                     <div class="mobile-in-logo">
                         <div class="mob-inner-logo">
                             <a href="/">
-                               <img src="{{ asset('assets/images/logo.jpg')}}" alt="Logo">
+                               <img src="{{ asset('assets/images/final-logo.jpg')}}" style="width:200px;" alt="Logo">
                             </a>
                         </div>
                         <div class="close-menu">
