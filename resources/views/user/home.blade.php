@@ -48,6 +48,13 @@
                                 </div>
                                 <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
                                     <div class="con-text in-envelope">
+                                    Arup Das<br>
+                                    arupdas@indianoil.in<br>
+                                    98306 04960
+                                    </div>
+                                </div>
+                                <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
+                                    <div class="con-text in-envelope">
                                     Souptik Mukherje<br>
                                    souptikmukherjee@indianoil.in<br>
                                    7044062168<br>
@@ -57,13 +64,7 @@
                                    7993542670
                                     </div>
                                 </div>
-                                <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
-                                    <div class="con-text in-envelope">
-                                    Arup Das<br>
-                                    arupdas@indianoil.in<br>
-                                    98306 04960
-                                    </div>
-                                </div>
+                                
                             </div> <!-- /.row -->
                         </div> <!-- /.contact-info -->
                         
