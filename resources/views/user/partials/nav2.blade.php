@@ -20,7 +20,7 @@
                             <div class="col-lg-4 col-sm-4">
                                 <div class="menu-search">
                                     <nav class="main-menu">
-                                    <ul>
+                                    <ul style="display: flex;">
                                     <li ><a href="{{ route('home') }}">Parivaar</a></li>
                         <!-- <li class="{{ Request::is('news')? 'active-item' : ''  }}"><a href="{{ route('news') }}">News</a></li>
                         <li class="{{ Request::is('events')? 'active-item' : ''  }}"><a href="{{ route('events') }}">Happenings</a></li> -->
