@@ -7,15 +7,30 @@
                             <div class="container">
                                 <div class="row">
                                 <div class="col-md-6 hovernow">
+                                <h2 class="title header_back hide">USHARE</h2></a>
                                     <a href="/ushare"> 
                                     <img src="{{ asset('assets/images/home_share.jpg')}}" width="100%" height="100%">
-                                     <h2 class="title header_back hide">USHARE</h2></a>
+                                     
+                                     <button class="btn btn-info" style="
+    width: 100%;
+    color: white;
+    background-color: #11193d;
+    font-size: 20px;
+    border-color: transparent;
+">Ushare</button>
                                     </div>
 
                                     <div class="col-md-6 hovernow">
+                                     <h2 class="title">COMPETITION</h2></a>
                                     <a href="/compotitions">
                                     <img src="{{ asset('assets/images/home_compitition.jpg')}}" width="100%" height="100%">
-                                     <h2 class="title header_back  hide">COMPETITION</h2></a>
+                                    <button class="btn btn-info" style="
+    width: 100%;
+    color: white;
+    background-color: #11193d;
+    font-size: 20px;
+    border-color: transparent;
+">COMPETITION</button>
                                     </div>
                                    
                                 </div>
