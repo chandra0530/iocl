@@ -16,7 +16,7 @@
     background-color: #11193d;
     font-size: 20px;
     border-color: transparent;
-">Ushare</button>
+">USHARE - CLICK HERE </button>
                                     </div>
 
                                     <div class="col-md-6 hovernow">
@@ -28,7 +28,7 @@
     background-color: #11193d;
     font-size: 20px;
     border-color: transparent;
-">COMPETITION</button>
+">COMPETITION - CLICK HERE</button>
                                     </div>
                                    
                                 </div>
