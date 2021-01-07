@@ -124,7 +124,7 @@
                                              Ushare name
                                           </div>
                                           <input type="text" class="form-control" name="share_name"
-                                             id="basicInput" placeholder="Enter news headline">
+                                             id="basicInput" placeholder="Enter news headline" required>
                                        </fieldset>
                                     </div>
                                     <div class="col-sm-12 col-6">
@@ -133,7 +133,7 @@
                                              Videos
                                           </div>
                                           <input type="file" class="form-control" name="videos[]" multiple 
-                                             id="basicInput" placeholder="Enter news small description">
+                                             id="basicInput" placeholder="Enter news small description" required>
                                        </fieldset>
                                     </div>
                                     <div class="col-sm-6 col-12">
@@ -142,7 +142,7 @@
                                              Photo <small>( 900 * 400 )Px</small>
                                           </div>
                                           <input type="file" name="photos[]" class="form-control" multiple
-                                             id="photos" placeholder="Select product images">
+                                             id="photos" placeholder="Select product images" required>
                                        </fieldset>
                                     </div>
                                     <div class="col-sm-6 col-12">
@@ -150,7 +150,7 @@
                                             <div class="text-bold-600 font-medium-2 mb-2">
                                                Ushare Type</small>
                                             </div>
-                                            <select name="ushare_type" class="form-control" placeholder="Select product images">
+                                            <select name="ushare_type" class="form-control" placeholder="Select product images" required>
                                              <option value="my_holiday_experience">My holiday Experience </option>
                                              <option value="my_pession">My Passion</option>
                                              <option value="social_service">Social service </option>
@@ -165,7 +165,7 @@
                                              Experience
                                           </div>
                                           <textarea name="desc"
-                                             style="height: 500px; width: 100%"></textarea>
+                                             style="height: 500px; width: 100%" required></textarea>
                                        </fieldset>
                                     </div>
                                  </div>
