@@ -47,7 +47,7 @@
                                                         Compitition Name
                                                         </div>
                                                         <input type="text" class="form-control" name="competition_name"
-                                                               id="basicInput" placeholder="Enter compitition name">
+                                                               id="basicInput" placeholder="Enter compitition name" required>
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-sm-6 col-6">
@@ -56,7 +56,7 @@
                                                         Compitition Location
                                                         </div>
                                                         <input type="text" class="form-control" name="competition_location"
-                                                               id="basicInput" placeholder="Enter compitition location">
+                                                               id="basicInput" placeholder="Enter compitition location" required>
                                                     </fieldset>
                                                 </div>
                                                 
@@ -66,7 +66,7 @@
                                                             Photo <small>( 900 * 400 )Px</small>
                                                         </div>
                                                         <input type="file" multiple name="photos[]" class="form-control"
-                                                               id="photos" placeholder="Select compitition images">
+                                                               id="photos" placeholder="Select compitition images" required>
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-sm-6 col-12">
@@ -75,7 +75,7 @@
                                                         Compitition From
                                                         </div>
                                                         <input type="datetime-local" class="form-control" name="compitition_from"
-                                                               id="basicInput" placeholder="Enter compitition from date">
+                                                               id="basicInput" placeholder="Enter compitition from date" required>
                                                     </fieldset>
                                                     
                                                 </div>
@@ -85,7 +85,7 @@
                                                         Compitition to
                                                         </div>
                                                         <input type="datetime-local" class="form-control" name="compitition_to"
-                                                               id="basicInput" placeholder="Enter compitition to date">
+                                                               id="basicInput" placeholder="Enter compitition to date" required>
                                                     </fieldset>
                                                     
                                                 </div>
@@ -94,7 +94,7 @@
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                         Compitition Type
                                                         </div>
-                                                        <select class="form-control" name="event_type">
+                                                        <select class="form-control" name="event_type" required>
                                                         <option>Free</option>
                                                         <option>Paid</option>
                                                         </select>
@@ -107,7 +107,7 @@
                                                             Description
                                                         </div>
                                                         <textarea id="desc" name="desc"
-                                                                  style="height: 500px; width: 100%"></textarea>
+                                                                  style="height: 500px; width: 100%" required></textarea>
                                                     </fieldset>
                                                 </div>
                                             </div>
