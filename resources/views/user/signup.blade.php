@@ -54,44 +54,8 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-                        <input type="text" name="employeid" class="form-control" placeholder="Your employee id">
+                        <input type="text" name="employeid" class="form-control" placeholder="Your employee id"  onkeypress="return isNumberKey(event)">
 					</div>
-
-
-
-					<!-- <div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-                        <input type="text" name="mobile_no" class="form-control" placeholder="Your contact number">
-					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-                        <input type="text" name="spouce_name" class="form-control" placeholder="Your spouse name">
-					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-                        <input type="text" name="spouce_email" class="form-control" placeholder="Your spouse email">
-					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-                        <input type="text" name="child_name" class="form-control" placeholder="Your child name">
-					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-                        <input type="text" name="child_email" class="form-control" placeholder="Your child email">
-					</div> -->
-
-
-
 					
 					<div class="form-group">
 						<input type="submit" value="Signup" class="btn float-right login_btn">
@@ -110,4 +74,23 @@
 	</div>
 </div>
 </body>
+<script>
+function isNumberKey(evt){
+	console.log(evt.target.value);
+	var str=evt.target.value;
+	console.log(str.length);
+	var length=parseInt(str.length);
+	if(length<8){
+		var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57)){
+		return false;
+	}   
+    return true;
+	}else{
+		return false;
+	}
+    
+}    
+</script>
+
 </html>

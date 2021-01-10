@@ -41,12 +41,12 @@
 
 					<div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="card-body">
-                        <h5 class="card-title">Competition detials</h5>
+                        <h5 class="card-title">Competition Details</h5>
                         <p class="card-text">
-                            Compitition location:{{$new->compitition_location}} <br>
-                            Compitition From: {{$new->event_from}}<br>
-                            Compitition To:{{$new->event_to}} <br>
-                            Compitition Type: {{$new->event_type}}<br>
+                        Competition location:{{$new->compitition_location}} <br>
+                        Competition From: {{$new->event_from}}<br>
+                        Competition To:{{$new->event_to}} <br>
+                        Competition Type: {{$new->event_type}}<br>
                         
                         </p>
                     </div>
@@ -109,10 +109,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Competition detials</h5>
                         <p class="card-text">
-                            Compitition location:{{$new->compitition_location}} <br>
-                            Compitition From: {{$new->event_from}}<br>
-                            Compitition To:{{$new->event_to}} <br>
-                            Compitition Type: {{$new->event_type}}<br>
+                        Competition location:{{$new->compitition_location}} <br>
+                        Competition From: {{$new->event_from}}<br>
+                        Competition To:{{$new->event_to}} <br>
+                        Competition Type: {{$new->event_type}}<br>
                         
                         </p>
                     </div>
@@ -175,10 +175,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Competition detials</h5>
                         <p class="card-text">
-                            Compitition location:{{$new->compitition_location}} <br>
-                            Compitition From: {{$new->event_from}}<br>
-                            Compitition To:{{$new->event_to}} <br>
-                            Compitition Type: {{$new->event_type}}<br>
+                        Competition location:{{$new->compitition_location}} <br>
+                        Competition From: {{$new->event_from}}<br>
+                        Competition To:{{$new->event_to}} <br>
+                        Competition Type: {{$new->event_type}}<br>
                         
                         </p>
                     </div>

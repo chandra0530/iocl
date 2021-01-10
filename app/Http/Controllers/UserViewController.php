@@ -103,10 +103,10 @@ class UserViewController extends Controller
         }
     }
     public function compititions(){
-       
+         
         Auth::guard('web');
         if(auth()->id()){
-            $comp=Compitition::whereDate('event_from', '=', Carbon::now()->toDateString())->where('status','active')->get();
+            $comp=Compitition::whereDate('event_from', '<', Carbon::now()->toDateString())->whereDate('event_to', '>', Carbon::now()->toDateString())->where('status','active')->get();
             $upcomingcomp=Compitition::whereDate('event_from', '>=', Carbon::now()->toDateString())->where('status','active')->get();
             $pastcomp=Compitition::whereDate('event_from', '<', Carbon::now()->toDateString())->where('status','active')->get();
             $competitions=Compitition::whereDate('event_from', '>=', Carbon::now()->toDateString())->where('status','active')->get();
@@ -189,6 +189,7 @@ class UserViewController extends Controller
         $user_details->spouce_email=$request->spouce_email;
         $user_details->child_name=implode('>>',$request->child_name);
         $user_details->child_email=implode('>>',$request->child_email);
+        $user_details->child_gender=implode('>>',$request->child_gender);
         if($request->password){
             $user_details->password=$request->password;
         }

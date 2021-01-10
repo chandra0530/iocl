@@ -18,6 +18,7 @@ class UShareController extends Controller
     public function index()
     {
         $posts=Ushare::Where('ushare_status','active')->join('users','users.id','=','ushares.user_id')->select('users.name as user_name','ushares.*')->get();
+        // return $posts;
         $left=[];
         $right=[];
         for ($i=0; $i <sizeof($posts) ; $i++) { 

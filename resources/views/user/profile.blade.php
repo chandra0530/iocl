@@ -59,14 +59,16 @@
 												<input type="text" name="spouce_email" class="form-control" placeholder="Your Spouce Email" required="required" value="{{$user_details->spouce_email}}">
 											</div>
                                         </div> <!-- /.col- -->
+                                        
 										<div  id="items">
 
 										@php
 										$childnames = explode(">>",$user_details->child_name);
 										$childemails = explode(">>",$user_details->child_email);
-
+                                        $childgender = explode(">>",$user_details->child_gender);
 										
 										@endphp
+                                        <input type="hidden" id="child_number" name="no_of_childs" value="{{sizeOf($childgender)}}">
 										@for ($i = 0; $i < sizeof($childnames); $i++)
 										<div class="col-xs-12 col-sm-12">
 											<div class="form-group">
@@ -78,6 +80,22 @@
 												<input type="text" name="child_email[]" class="form-control" placeholder="Your Child Email" required="required" value="{{$childemails[$i]}}">
 											</div>
 										</div> <!-- /.col- -->
+                                        <div class="col-xs-12 col-sm-12">
+                                        <div class="form-group">
+                                        <label class="radio-inline">
+      <input type="radio" name="child_gender{{$i}}[]" value="male"  value="{{$childgender[$i]}}" @if($childgender[$i]=='male'){{ "checked" }} @endif>Male
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="child_gender{{$i}}[]" value="female" value="{{$childgender[$i]}}" @if($childgender[$i]=='female'){{ "checked" }} @endif>Female
+    </label>
+                                        
+                                      
+                                       
+											
+											</div>
+                                        </div>
+
+                                        
 										@endfor
 										
 										</div>

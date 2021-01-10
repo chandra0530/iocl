@@ -11,12 +11,12 @@
                         <div class="row">
                             <div class="col-lg-4 col-sm-4">
                                 <div class="logo">
-                                    <a href="#home">
+                                    <a href="{{ route('home') }}">
                                         <img src="{{ asset('assets/images/logo.jpg')}}" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-sm-4">
+                            <div class="col-lg-8 col-sm-8">
                                 <div class="menu-search">
                                     <nav class="main-menu">
                                     <ul style="display: flex;">

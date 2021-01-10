@@ -30,19 +30,17 @@ class AuthController extends Controller
         return $request;
     }
     public function signup(Request $request){
+$check=User::where('email',$request->email)->where('employeid',$request->employeid)->get();
+if(sizeof($check)>1){
+    return redirect()->back()->with(['error' => 'Emailid or employid is already registered.']);
+}
+
       $user = new User();
       $user->name=$request->name; 
       $user->email=$request->email;
       $user->password=bcrypt($request->password);
       $user->employeid=$request->employeid;
       $user->status=$request->status;
-
-    //   $user->phone_number=$request->mobile_no;
-    //   $user->spouce_name=$request->spouce_name;
-    //   $user->spouce_email=$request->spouce_email;
-    //   $user->child_name=$request->child_name;
-    //   $user->child_email=$request->child_email;
-
       $user->save();
 
       return redirect()->back()->with(['success' => 'Your account had been registered successfully.']);
