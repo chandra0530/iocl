@@ -54,7 +54,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-                        <input type="text" data-toggle="tooltip" title="Your employe id should be numeric and 8 digit long." name="employeid" class="form-control" placeholder="Your employee id"  onkeypress="return isNumberKey(event)">
+                        <input type="text" data-toggle="tooltip" title="Employe id should be numeric and 8 digit long." name="employeid" class="form-control" placeholder="Your employee id"  onkeypress="return isNumberKey(event)">
 					</div>
 					
 					<div class="form-group">
