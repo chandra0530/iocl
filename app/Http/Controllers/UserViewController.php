@@ -106,10 +106,10 @@ class UserViewController extends Controller
          
         Auth::guard('web');
         if(auth()->id()){
-            $comp=Compitition::whereDate('event_from', '<', Carbon::now()->toDateString())->whereDate('event_to', '>', Carbon::now()->toDateString())->where('status','active')->get();
-            $upcomingcomp=Compitition::whereDate('event_from', '>=', Carbon::now()->toDateString())->where('status','active')->get();
-            $pastcomp=Compitition::whereDate('event_from', '<', Carbon::now()->toDateString())->where('status','active')->get();
-            $competitions=Compitition::whereDate('event_from', '>=', Carbon::now()->toDateString())->where('status','active')->get();
+            $comp=Compitition::whereDate('event_from', '<', Carbon::now()->toDateString())->whereDate('event_to', '>', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
+            $upcomingcomp=Compitition::whereDate('event_from', '>=', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
+            $pastcomp=Compitition::whereDate('event_to', '<', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
+            $competitions=Compitition::whereDate('event_from', '>=', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
             return view('user.competitions',compact('comp','upcomingcomp','pastcomp','competitions'));
         }else{
             return view('user.login');
