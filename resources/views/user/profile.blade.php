@@ -18,7 +18,7 @@
 					<div class="col-xs-12 col-sm-6">
 						<div class="border-in">
 							<div class="comm-title">
-								<h3>Update Your Profile Details</h3>
+								<h3 style="text-transform: CAPITALIZE;">Update Your Profile Details</h3>
 							</div>
 							<div class="contact-form">
 								<form method="post" action="{{ route('update_profile') }}" novalidate="true">

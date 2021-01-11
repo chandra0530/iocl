@@ -316,7 +316,7 @@
       <div class="modal-content">
          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Add Compition</h4>
+            <h4 class="modal-title">Add Competition</h4>
          </div>
          <div class="modal-body">
             <div class="container-fluid">
@@ -324,7 +324,7 @@
                   <div class="col-12">
                      <div class="card">
                         <div class="card-header">
-                           <h4 class="card-title">Add Compition</h4>
+                           <h4 class="card-title">Add Competition</h4>
                         </div>
                         <div class="card-content">
                            <div class="card-body">
