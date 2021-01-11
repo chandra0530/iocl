@@ -44,9 +44,11 @@
                         <h5 class="card-title">Competition Details</h5>
                         <p class="card-text">
                         Competition location:{{$new->compitition_location}} <br>
-                        Competition From: {{$new->event_from}}<br>
-                        Competition To:{{$new->event_to}} <br>
-                        Competition Type: {{$new->event_type}}<br>
+                        
+
+                        Competition From: {{ date('d-M-Y', strtotime($new->event_from)) }}<br>
+                        Competition To:{{ date('d-M-Y', strtotime($new->event_to)) }} <br>
+                        Competition Type: {{ $new->event_type}}<br>
                         
                         </p>
                     </div>
@@ -110,8 +112,8 @@
                         <h5 class="card-title">Competition detials</h5>
                         <p class="card-text">
                         Competition location:{{$new->compitition_location}} <br>
-                        Competition From: {{$new->event_from}}<br>
-                        Competition To:{{$new->event_to}} <br>
+                        Competition From: {{ date('d-M-Y', strtotime($new->event_from)) }}<br>
+                        Competition To:{{ date('d-M-Y', strtotime($new->event_to)) }} <br>
                         Competition Type: {{$new->event_type}}<br>
                         
                         </p>
@@ -176,8 +178,8 @@
                         <h5 class="card-title">Competition detials</h5>
                         <p class="card-text">
                         Competition location:{{$new->compitition_location}} <br>
-                        Competition From: {{$new->event_from}}<br>
-                        Competition To:{{$new->event_to}} <br>
+                        Competition From: {{ date('d-M-Y', strtotime($new->event_from)) }}<br>
+                        Competition To:{{ date('d-M-Y', strtotime($new->event_to)) }} <br>
                         Competition Type: {{$new->event_type}}<br>
                         
                         </p>
@@ -348,7 +350,7 @@
                                                 <div class="col-sm-6 col-6">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
-                                                            Photo <small>( 900 * 400 )Px</small>
+                                                            Photo <small>( 900 * 400 )Px</small> (Max size 5mb)
                                                         </div>
                                                         <input type="file" multiple name="photos[]" class="form-control"
                                                                id="photos" placeholder="Select compitition images">
@@ -357,7 +359,7 @@
                                                 <div class="col-sm-6 col-6">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
-                                                            Videos 
+                                                            Videos (Max size 30mb)
                                                         </div>
                                                         <input type="file" multiple name="videos[]" class="form-control"
                                                                id="videos" placeholder="Select compitition images">

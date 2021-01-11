@@ -17,6 +17,27 @@
 
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styles2.css')}}">
+	<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+function isNumberKey(evt){
+	console.log(evt.target.value);
+	var str=evt.target.value;
+	console.log(str.length);
+	var length=parseInt(str.length);
+	if(length<8){
+		var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57)){
+		return false;
+	}   
+    return true;
+	}else{
+		return false;
+	}
+    
+}    
+</script>
 </head>
 <body>
 <div class="container">
@@ -74,26 +95,6 @@
 	</div>
 </div>
 </body>
-<script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();   
-});
-function isNumberKey(evt){
-	console.log(evt.target.value);
-	var str=evt.target.value;
-	console.log(str.length);
-	var length=parseInt(str.length);
-	if(length<8){
-		var charCode = (evt.which) ? evt.which : event.keyCode
-    if (charCode > 31 && (charCode < 48 || charCode > 57)){
-		return false;
-	}   
-    return true;
-	}else{
-		return false;
-	}
-    
-}    
-</script>
+
 
 </html>
