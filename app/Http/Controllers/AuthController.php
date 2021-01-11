@@ -31,11 +31,11 @@ class AuthController extends Controller
     }
     public function signup(Request $request){
     $check=User::where('email',$request->email)->get();
-    if(sizeof($check)>1){
+    if(sizeof($check)>0){
         return redirect()->back()->with(['error' => 'Emailid is already registered.']);
     }
     $check=User::where('employeid',$request->employeid)->get();
-    if(sizeof($check)>1){
+    if(sizeof($check)>0){
         return redirect()->back()->with(['error' => 'Employid is already registered.']);
     }
       $user = new User();
