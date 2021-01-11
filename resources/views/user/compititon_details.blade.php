@@ -69,7 +69,7 @@
 								<div class="post-content">
 									<p>{{$comp_details->compitition_location}}</p>
 									<p>{{$comp_details->event_from}} {{$comp_details->event_to}} {{$comp_details->event_type}}</p>
-									<p> {!! html_entity_decode($comp_details->competition_details) !!}</p>
+									<p style="text-align: justify;"> {!! html_entity_decode($comp_details->competition_details) !!}</p>
 								</div>
 							</div> <!-- /.blog-content -->
 

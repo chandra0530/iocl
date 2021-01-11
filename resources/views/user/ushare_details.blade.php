@@ -71,7 +71,7 @@
 									<h6>{{$post_details->ushare_name}}.</h6>
 								</div>
 								<div class="post-content">
-									<p>{{$post_details->experience}}</p>
+									<p style="text-align: justify;">{{$post_details->experience}}</p>
 								</div>
 							</div> <!-- /.blog-content -->
 
