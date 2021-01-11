@@ -45,9 +45,9 @@
                         <div class="row" id="basic-table">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-header">
+                                    <!-- <div class="card-header">
                                         <h4 class="card-title">All Competitions</h4>
-                                    </div>
+                                    </div> -->
                                     <div class="card-content">
                                         <div class="card-body">
                                            
@@ -67,6 +67,9 @@
                                                     <td>{{$competition->id}}</td>
                                                             <td scope="row">{{$competition->competition_name}}</td>
                                                             <td>
+                                                            <a
+                                                                href="/admin/compititions/{{ $competition->id}}"
+                                                                class="btn btn-circle btn-success"><i class="fa fa-pencil"></i></a>
                                                             @if($competition->status=='inactive')
                                                             <a
                                                                 href="{{ route('compititions.active', $competition->id) }}"

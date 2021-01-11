@@ -28,7 +28,7 @@
     background-color: #11193d;
     font-size: 20px;
     border-color: transparent;
-">COMPETITION - CLICK HERE</button>
+">COMPETITIONS - CLICK HERE</button>
                                     </div>
                                    
                                 </div>

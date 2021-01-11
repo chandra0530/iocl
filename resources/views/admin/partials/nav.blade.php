@@ -92,7 +92,7 @@
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
       <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
-          <li class="nav-item mr-auto"><a class="navbar-brand" href="/">
+          <li class="nav-item mr-auto"><a class="navbar-brand" href="/admin">
               <div class="brand-logo"></div>
               <h2 class="brand-text mb-0">IOCL</h2></a></li>
         </ul>
@@ -100,7 +100,7 @@
       <div class="shadow-bottom"></div>
       <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-          <li ><a href="/"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
+          <li ><a href="/admin"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
           </li>
           <li class=" navigation-header"><span>Apps</span>
           </li>
@@ -151,11 +151,19 @@
           </li> -->
           <li class=" nav-item"><a href="#"><i class="feather icon-cpu"></i><span class="menu-title" data-i18n="Ecommerce">Employees</span></a>
             <ul class="menu-content">
-              <li><a href="/admin/employes/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Pending Activation Request</span></a>
+              <li><a href="/admin/employes/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add New User</span></a>
               </li>
               <li><a href="/admin/employes"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Employees List</span></a>
               </li>
-              <li><a href="/admin/employes/posts"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Employees Posts</span></a></li>
+              <!-- <li><a href="/admin/employes/posts"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Employees Posts</span></a></li> -->
+            </ul>
+          </li>
+
+
+
+          <li class=" nav-item"><a href="#"><i class="feather icon-cpu"></i><span class="menu-title" data-i18n="Ecommerce">Ushare</span></a>
+            <ul class="menu-content">
+              <li><a href="/admin/employes/posts"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Ushare List</span></a></li>
             </ul>
           </li>
 

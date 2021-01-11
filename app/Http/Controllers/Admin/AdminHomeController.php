@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
+use App\Models\Ushare;
+use App\Models\User;
+use App\Models\Compitition;
 class AdminHomeController extends Controller
 {
    
@@ -15,11 +18,20 @@ class AdminHomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {if(auth('admin')->user()){
-        return view('admin.home');
-    }else{
-        return view('admin.login');
-    }
+    {
+
+        $total_ushares=Ushare::where('ushare_status','active')->get()->count();
+        $pending_ushares=Ushare::where('ushare_status','inactive')->get()->count();
+        $total_users_list=User::where('status','active')->get()->count();
+        $pending_users_list=User::where('status','inactive')->get()->count();
+        $total_comp=Compitition::where('status','active')->get()->count();
+        
+        
+        if(auth('admin')->user()){
+            return view('admin.home',compact('total_ushares','pending_ushares','total_users_list','pending_users_list','total_comp'));
+        }else{
+            return view('admin.login');
+        }
         
     }
 

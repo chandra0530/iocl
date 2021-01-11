@@ -68,7 +68,8 @@ class CompititionsController extends Controller
      */
     public function show($id)
     {
-        //
+        $competitions=Compitition::find($id);
+        return view('admin.compititions.edit',compact('competitions'));
     }
 
     /**
@@ -91,7 +92,25 @@ class CompititionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $competition=Compitition::find($id);
+        $competition->competition_name=$request->competition_name;
+        $competition->competition_details=$request->desc;
+        $images=[];
+        if ($request->hasFile('photos')) {
+            foreach ($request->photos as $key => $photo) {
+                $path = $photo->store('event_images', 'public');
+                $image_url= url(Storage::url($path));
+                array_push($images,$image_url);
+            }
+        }
+        $competition->competition_image=json_encode($images);
+        $competition->compitition_location=$request->competition_location;
+        $competition->event_from=$request->compitition_from;
+        $competition->event_to=$request->compitition_to;
+        $competition->event_type=$request->event_type;
+
+        $competition->save();
+        return redirect()->back()->with(['success' => 'Competition updated successfully.']);
     }
 
     /**
