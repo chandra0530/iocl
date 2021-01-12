@@ -73,7 +73,7 @@
                         <!-- <li><a href="/news">News</a></li>
                         <li><a href="/events">Events</a></li>
                          -->
-                         <li><a href="/compotitions">COMPETITIONS</a></li>
+                         <li><a href="/compotitions">Competitions</a></li>
                          <li ><a href="/ushare">UShare</a></li>
                         <!-- <li><a href="/gallery">GALLERY</a></li>
 
