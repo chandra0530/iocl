@@ -109,7 +109,7 @@ class UserViewController extends Controller
             $comp=Compitition::whereDate('event_from', '<', Carbon::now()->toDateString())->whereDate('event_to', '>', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
             $upcomingcomp=Compitition::whereDate('event_from', '>=', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
             $pastcomp=Compitition::whereDate('event_to', '<', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
-            $competitions=Compitition::whereDate('event_from', '>=', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
+            $competitions=Compitition::whereDate('event_from', '<', Carbon::now()->toDateString())->whereDate('event_to', '>', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
             return view('user.competitions',compact('comp','upcomingcomp','pastcomp','competitions'));
         }else{
             return view('user.login');
