@@ -138,7 +138,6 @@ button:focus{
 	padding: 0px 5px;
 	line-height: 108px;
 	font-family: 'Poppins', sans-serif;
-	text-transform: uppercase;
 	position: relative;
 	display: inline-block;
 	overflow: hidden;

@@ -10,15 +10,15 @@
                 <div class="menu-area">
                     <div class="container">
                         <div class="row">
-                        
-                            <div class="col-lg-8 col-sm-8">
-                                <div class="logo" style="text-align: left;">
+                        <div class="col-lg-4 col-sm-4">
+                                <div class="logo" style="padding: 0px 0px;">
                                     <a href="#home">
-                                        <img src="{{ asset('assets/images/logo.jpg')}}"  alt="">
+                                        <img src="{{ asset('assets/images/logo.jpg')}}" alt="">
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-sm-4">
+                            
+                            <div class="col-lg-8 col-sm-8">
                                 <div class="menu-search">
                                     <nav class="main-menu">
                                     <ul>

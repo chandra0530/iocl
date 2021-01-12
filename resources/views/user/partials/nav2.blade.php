@@ -8,7 +8,7 @@
             <div id="menu-area">
                 <div class="menu-area">
                     <div class="container">
-                        <div class="row">
+                        <div class="row">  
                             <div class="col-lg-4 col-sm-4">
                                 <div class="logo" style="padding: 0px 0px;">
                                     <a href="{{ route('home') }}">
