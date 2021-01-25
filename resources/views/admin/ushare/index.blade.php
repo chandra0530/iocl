@@ -1,9 +1,6 @@
 @extends('admin.layouts.admin')
-
-
 @push('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/charts/apexcharts.css') }}">
-
 @endpush
 @section('content')
 
@@ -32,70 +29,77 @@
         </div>
         <div class="content-body"><!-- Basic Inputs start -->
         @include('user.partials.message')
-<section id="basic-input">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">All Posts</h4>
-                </div>
-                <div class="card-content">
-                    <div class="card-body">
-                        <div class="row" id="basic-table">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">All Posts</h4>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-body">
-                                           
-                                            <!-- Table with outer spacing -->
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>ID</th>
-                                                            <th>Users Name</th>
-                                                            <th>Post Type</th>
-                                                            <!-- <th>Users Employee Id</th> -->
-                                                            <th>Action</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    @foreach($posts as $post)
-                                                    <tr>
-                                                    <td>{{$post->id}}</td>
-                                                            <td scope="row">{{$post->user_name}}</td>
-                                                            <td scope="row">
-                                                            
-                                                            
-                                                            @if ($post->ushare_type == 'my_holiday_experience')
-                                My holiday experience.
-                                @endif
-                                @if ($post->ushare_type == 'my_pession')
-                                My Passion.
-                                @endif
-                                @if ($post->ushare_type == 'social_service')
-                                Social Service
-                                @endif
-                                @if ($post->ushare_type == 'my_views')
-                                My Views.
-                                @endif</td>
-                                                            <td>
-                                                            @if($post->ushare_status=='inactive')
+            <section id="basic-input">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">All Posts</h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="row" id="basic-table">
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h4 class="card-title">All Posts</h4>
+                                                </div>
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                    
+                                                        <!-- Table with outer spacing -->
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>ID</th>
+                                                                        <th>Users Name</th>
+                                                                        <th>Post Type</th>
+                                                                        <!-- <th>Users Employee Id</th> -->
+                                                                        <th>Action</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                @foreach($posts as $post)
+                                                                <tr>
+                                                                <td>{{$post->id}}</td>
+                                                                        <td scope="row">{{$post->user_name}}</td>
+                                                                        <td scope="row">
+                                                                        
+                                                                        
+                                                                        @if ($post->ushare_type == 'my_holiday_experience')
+                                            My holiday experience.
+                                            @endif
+                                            @if ($post->ushare_type == 'my_pession')
+                                            My Passion.
+                                            @endif
+                                            @if ($post->ushare_type == 'social_service')
+                                            Social Service
+                                            @endif
+                                            @if ($post->ushare_type == 'my_views')
+                                            My Views.
+                                            @endif</td>
+                                                                        <td>
+                                                                        @if($post->ushare_status=='inactive')
+                                                                        <a
+                                                                            href="{{ route('employespost.active', $post->id) }}"
+                                                                            class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
+                                                                         @else
                                                             <a
-                                                                href="{{ route('employespost.active', $post->id) }}"
-                                                                class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
-                                                            @endif
-                                                            <a onclick="return confirm('Are you sure to delete?')"
-                                                                href="{{ route('employespost.active', $post->id) }}"
-                                                                class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>
-                                                            </td>
-                                                    </tr>
-                                                    @endforeach
-                                                    </tbody>
-                                                </table>
+                                                                href="/admin/ushare/comments/{{ $post->id }}"
+                                                                class="btn btn-circle btn-success"><i class="fa fa-eye"></i></a>
+                                                                        @endif
+                                                                        <a onclick="return confirm('Are you sure to delete?')"
+                                                                            href="{{ route('employespost.active', $post->id) }}"
+                                                                            class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>
+                                                                        </td>
+                                                                </tr>
+                                                                @endforeach
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -104,15 +108,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Basic Inputs end -->
-
-
-
-
+            </section>
         </div>
       </div>
     </div>

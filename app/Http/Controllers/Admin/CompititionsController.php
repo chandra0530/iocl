@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Compitition;
+use App\Models\competition_comment;
 use App\Models\CompotitionUserUploads;
 class CompititionsController extends Controller
 {
@@ -144,5 +145,14 @@ class CompititionsController extends Controller
     public function reject_request($id){
         CompotitionUserUploads::where('id', $id)->delete();
         return redirect()->back()->with(['success' => 'Details rejected successfully.']);
+    }
+
+    public function comments_list($id){
+        $comp_comments=competition_comment::join('users','users.id','=','competition_comments.user_id')->select('competition_comments.*','competition_comments.id as comp_id','users.*')->where('competition_comments.competition_id',$id)->get();
+        return view('admin.compititions.comments',compact('comp_comments'));
+    }
+    public function comments_delete($id){
+        competition_comment::where('id', $id)->delete();
+        return redirect()->back()->with(['success' => 'Compitition comment deleted successfully.']);
     }
 }

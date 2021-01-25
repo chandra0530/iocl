@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\ushare_types;
 class UshareTypeController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class UshareTypeController extends Controller
      */
     public function index()
     {
-        //
+        $ushare_types=ushare_types::get();
+        return view('admin.ushare.ushare_types',compact('ushare_types'));
     }
 
     /**
@@ -34,7 +35,11 @@ class UshareTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ushare_type=new ushare_types();
+        $ushare_type->ushare_type=$request->ushare_name;
+        $ushare_type->save();
+
+        return redirect()->back()->with(['success' => 'New ushare type added']);
     }
 
     /**
@@ -79,6 +84,8 @@ class UshareTypeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ushare_types::where('id', $id)->delete();
+        return redirect()->back()->with(['success' => 'Ushare deleted successfully.']);
+        return $id;
     }
 }

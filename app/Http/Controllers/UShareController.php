@@ -138,4 +138,12 @@ class UShareController extends Controller
     {
         //
     }
+    public function comments_list($id){
+        $comp_comments=UshareComment::join('users','users.id','=','ushare_comments.user_id')->select('ushare_comments.*','ushare_comments.id as ushare_comp_id','users.*')->where('ushare_comments.share_id',$id)->get();
+        return view('admin.ushare.comments',compact('comp_comments'));
+    }
+    public function comments_delete($id){
+        UshareComment::where('id', $id)->delete();
+        return redirect()->back()->with(['success' => 'Ushare comment deleted successfully.']);
+    }
 }

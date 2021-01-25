@@ -60,35 +60,11 @@
 											</div>
                                         </div> <!-- /.col- -->
 <hr>
-                                        <!-- <div class="col-xs-12 col-sm-12">
+<div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<select class="form-control" placeholder="Select Member" required="required">
-                                                <option>Select member type</option>
-                                                    <option value="father">Father</option>
-                                                    <option value="mother">Mother</option>
-                                                    <option value="husband">Husband</option>
-                                                    <option value="wife">Wife</option>
-                                                    <option value="son">Son</option>
-                                                    <option value="daughter">Daughter</option>
-                                                </select>
+                                                <h6 class="family-members-details">Family members details</h6>
 											</div>
-                                        </div>  -->
-<!-- 
-                                        <div class="col-xs-12 col-sm-12">
-											<div class="form-group">
-												<input type="text" name="member_name" class="form-control" placeholder="Member Name" required="required" value="{{$user_details->spouce_name}}">
-											</div>
-                                        </div> 
-                                        <div class="col-xs-12 col-sm-12">
-											<div class="form-group">
-												<input type="text" name="member_email" class="form-control" placeholder="Member Email" required="required" value="{{$user_details->spouce_email}}">
-											</div>
-                                        </div> 
-                                        <div class="col-xs-12 col-sm-12">
-											<div class="form-group">
-												<input type="text" name="member_phone_number" class="form-control" placeholder="Member Phone" required="required" value="{{$user_details->spouce_email}}">
-											</div>
-                                        </div>  -->
+                                        </div>
                                         
 										<div  id="items">
                                        

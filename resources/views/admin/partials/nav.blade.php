@@ -164,7 +164,8 @@
           <li class=" nav-item"><a href="#"><i class="feather icon-cpu"></i><span class="menu-title" data-i18n="Ecommerce">Ushare</span></a>
             <ul class="menu-content">
               <li><a href="/admin/employes/posts"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Ushare List</span></a></li>
-            </ul>
+              <li><a href="/admin/ushare/types"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Add Ushare Type</span></a></li>
+              </ul>
           </li>
 
 

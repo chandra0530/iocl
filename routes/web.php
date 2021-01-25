@@ -16,7 +16,7 @@ Use App\Http\Controllers\User\FrontEndController;
 
 Use App\Http\Controllers\User\UshareCommentController;
 Use App\Http\Controllers\User\UshareLikeController;
-
+Use App\Http\Controllers\UshareTypeController;
 
 Use App\Http\Controllers\AuthController;
 Use App\Http\Controllers\UserViewController;
@@ -133,6 +133,8 @@ Route::prefix('admin')->group(function () {
     
     Route::get('compititions/publish_request/{id}', [CompititionsController::class, 'publish_request'])->name('compititions.publish_request');
     Route::get('compititions/reject_request/{id}', [CompititionsController::class, 'reject_request'])->name('compititions.reject_request');
+    Route::get('compititions/comments/{id}', [CompititionsController::class, 'comments_list'])->name('compititions.comments_list');
+    Route::get('compititions/comment_delete/{id}', [CompititionsController::class, 'comments_delete'])->name('compititions.comment_delete');
 
 
     Route::resource('compititions', CompititionsController::class);
@@ -146,6 +148,14 @@ Route::prefix('admin')->group(function () {
     Route::get('employes/posts', [EmployesController::class, 'posts'])->name('employes.posts');
     Route::post('employes/update_password', [EmployesController::class, 'updateemployepassword'])->name('employes.updatepassword');
     Route::resource('employes', EmployesController::class);
+
+    Route::get('ushare/comments/{id}', [UShareController::class, 'comments_list'])->name('ushare.comments_list');
+    Route::get('ushare/comment_delete/{id}', [UShareController::class, 'comments_delete'])->name('ushare.comment_delete');
+
+
+    Route::get('ushare/types',[UshareTypeController::class, 'index']);
+    Route::post('ushare/types',[UshareTypeController::class, 'store'])->name('ushare_type.store');
+    Route::get('ushare/types/{id}',[UshareTypeController::class, 'destroy'])->name('ushare_type.delete');
    
     Route::get('logout', [AdminAuthController::class, 'logout'])->name('auth.logout');
 

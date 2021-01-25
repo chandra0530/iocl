@@ -3183,3 +3183,9 @@ ul.get-services li a:hover {
     background: #11193d !important;
 }
 
+.family-members-details{
+    font-size: x-large;
+    font-family: emoji;
+    text-align: center;
+
+}
