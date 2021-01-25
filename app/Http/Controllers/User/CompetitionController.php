@@ -56,6 +56,7 @@ class CompetitionController extends Controller
         $publish->compotition_details=$request->desc;
         $publish->status='submitted';
         $publish->save();
-        return redirect()->back()->with(['success' => 'Compitition Details Submitted Successfully']);
+        $success=1;
+        return redirect()->back()->with(['success' => 'Compitition Details Submitted Successfully. Admin approval pending.']);
     }
 }

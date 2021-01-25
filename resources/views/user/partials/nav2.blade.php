@@ -30,7 +30,7 @@
 
                         <!-- <li class="{{ Request::is('contact')? 'active-item' : ''  }}"><a href="{{ route('contact') }}">Contact</a></li> -->
                         <li>
-                                                <a>{{Auth::user()->name}}</a>
+                        <a>{{Auth::user()->name}} <img src="{{Auth::user()->profile_image}}" style="border-radius: 10px;" width="50px" height="50px"></a>
                                                 <ul class="dropdown-menus">
                                                 <li><a href="/profile">Profile</a></li>
                                                 <li><a href="/logout">Logout</a></li>

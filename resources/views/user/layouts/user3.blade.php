@@ -116,11 +116,15 @@ function messenger(TheImg){
 }
 function addChild() {
     var child_number = $('#child_number').val();
+    $("#items").append(
+      '<div class="col-xs-12 col-sm-12"><div class="form-group"><select class="form-control" name="member_type[]" placeholder="Select Member" required="required"><option>Select member type</option><option value="father">Father</option> <option value="mother">Mother</option><option value="husband">Husband</option><option value="wife">Wife</option><option value="son">Son</option><option value="daughter">Daughter</option></select></div></div>');
 	$("#items").append(
-      '<div class="col-xs-12 col-sm-12"><div class="form-group"><input type="text" name="child_name[]" class="form-control" placeholder="Your Child Name" required="required" ></div></div> ');
-	$("#items").append('<div class="col-xs-12 col-sm-12"><div class="form-group"><input type="text" name="child_email[]" class="form-control" placeholder="Your Child Email" required="required"></div></div>');
+      '<div class="col-xs-12 col-sm-12"><div class="form-group"><input type="text" name="member_name[]" class="form-control" placeholder="Your member Name" required="required" ></div></div> ');
+	$("#items").append('<div class="col-xs-12 col-sm-12"><div class="form-group"><input type="text" name="member_email[]" class="form-control" placeholder="Your member Email" required="required"></div></div>');
+    $("#items").append('<div class="col-xs-12 col-sm-12"><div class="form-group"><input type="text" name="member_phone[]" class="form-control" placeholder="Your member phone" required="required"></div></div>');
+   
     $("#items").append('<div class="col-xs-12 col-sm-12"><div class="form-group"><label class="radio-inline"><input type="radio" name="child_gender{{'+child_number+'}}[]" value="male"  >Male</label><label class="radio-inline"><input type="radio" name="child_gender{{'+child_number+'}}[]" value="female" >Female </label></div></div>');
-   var increment=parseInt(child_number)+1;
+    var increment=parseInt(child_number)+1;
     $('#child_number').val(increment);
 
 }

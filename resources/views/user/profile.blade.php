@@ -21,7 +21,7 @@
 								<h3 style="text-transform: CAPITALIZE;">Update Your Profile Details</h3>
 							</div>
 							<div class="contact-form">
-								<form method="post" action="{{ route('update_profile') }}" novalidate="true">
+								<form method="post" action="{{ route('update_profile') }}" novalidate="true" enctype="multipart/form-data">
 									<div class="row">
                                     {{ csrf_field() }}
 										<div class="col-xs-12 col-sm-12">
@@ -34,6 +34,16 @@
 												<input type="email" name="email" class="form-control" placeholder="Your Email" required="required" value="{{$user_details->email}}" readonly>
 											</div>
 										</div> <!-- /.col- -->
+
+
+                                        <div class="col-xs-12 col-sm-12">
+											<div class="form-group">
+												<input type="file" name="profile_image" class="form-control" placeholder="Your Email" required="required">
+											</div>
+										</div> <!-- /.col- -->
+
+
+
 										<div class="col-xs-12 col-sm-12">
 											<div class="form-group">
 												<input type="text" name="password" class="form-control" placeholder="Your Password" >
@@ -49,54 +59,91 @@
 												<input type="text" name="mobile_no" class="form-control" placeholder="Your Mobile Number" required="required" value="{{$user_details->phone_number}}">
 											</div>
                                         </div> <!-- /.col- -->
+<hr>
+                                        <!-- <div class="col-xs-12 col-sm-12">
+											<div class="form-group">
+												<select class="form-control" placeholder="Select Member" required="required">
+                                                <option>Select member type</option>
+                                                    <option value="father">Father</option>
+                                                    <option value="mother">Mother</option>
+                                                    <option value="husband">Husband</option>
+                                                    <option value="wife">Wife</option>
+                                                    <option value="son">Son</option>
+                                                    <option value="daughter">Daughter</option>
+                                                </select>
+											</div>
+                                        </div>  -->
+<!-- 
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="text" name="spouce_name" class="form-control" placeholder="Your Spouce Name" required="required" value="{{$user_details->spouce_name}}">
+												<input type="text" name="member_name" class="form-control" placeholder="Member Name" required="required" value="{{$user_details->spouce_name}}">
 											</div>
-                                        </div> <!-- /.col- -->
+                                        </div> 
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="text" name="spouce_email" class="form-control" placeholder="Your Spouce Email" required="required" value="{{$user_details->spouce_email}}">
+												<input type="text" name="member_email" class="form-control" placeholder="Member Email" required="required" value="{{$user_details->spouce_email}}">
 											</div>
-                                        </div> <!-- /.col- -->
+                                        </div> 
+                                        <div class="col-xs-12 col-sm-12">
+											<div class="form-group">
+												<input type="text" name="member_phone_number" class="form-control" placeholder="Member Phone" required="required" value="{{$user_details->spouce_email}}">
+											</div>
+                                        </div>  -->
                                         
 										<div  id="items">
-
-										@php
-										$childnames = explode(">>",$user_details->child_name);
-										$childemails = explode(">>",$user_details->child_email);
-                                        $childgender = explode(">>",$user_details->child_gender);
-										
-										@endphp
-                                        <input type="hidden" id="child_number" name="no_of_childs" value="{{sizeOf($childgender)}}">
-										@for ($i = 0; $i < sizeof($childnames); $i++)
+                                       
+                                       @php
+                                       $numberof_members=array();
+                                       @endphp
+                                        @if($user_details->member_type!=NULL)
+                                        @php
+                                        $member_type = explode(">>",$user_details->member_type);
+                                        $numberof_members=explode(">>",$user_details->member_type);
+										$member_name = explode(">>",$user_details->member_name);
+                                        $member_email = explode(">>",$user_details->member_email);
+                                        $member_phone = explode(">>",$user_details->member_phone);
+                                        @endphp
+                                        <input type="hidden" id="child_number" name="no_of_childs" value="{{sizeOf($member_type)}}">
+										@for ($i = 0; $i < sizeof($member_type); $i++)
+                                        <div class="col-xs-12 col-sm-12">
+											<div class="form-group">
+												<select class="form-control" name="member_type[]" value="{{$member_type[$i]}}" placeholder="Select Member" required="required">
+                                                <option>Select member type</option>
+                                                    <option value="father" {{ $member_type[$i] == 'father' ? "selected" : "" }} >Father</option>
+                                                    <option value="mother" {{ $member_type[$i] == 'mother' ? "selected" : "" }}>Mother</option>
+                                                    <option value="husband" {{ $member_type[$i] == 'husband' ? "selected" : "" }}>Husband</option>
+                                                    <option value="wife" {{ $member_type[$i] == 'wife' ? "selected" : "" }}>Wife</option>
+                                                    <option value="son" {{ $member_type[$i] == 'son' ? "selected" : "" }}>Son</option>
+                                                    <option value="daughter" {{ $member_type[$i] == 'daughter' ? "selected" : "" }}>Daughter</option>
+                                                </select>
+											</div>
+                                        </div>
 										<div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="text" name="child_name[]" class="form-control" placeholder="Your Child Name" required="required" value="{{$childnames[$i]}}">
+												<input type="text" name="member_name[]" class="form-control" placeholder="Your member Name" required="required" value="{{$member_name[$i]}}">
 											</div>
                                         </div> <!-- /.col- -->
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="text" name="child_email[]" class="form-control" placeholder="Your Child Email" required="required" value="{{$childemails[$i]}}">
+												<input type="text" name="member_email[]" class="form-control" placeholder="Your member Email" required="required" value="{{$member_email[$i]}}">
 											</div>
-										</div> <!-- /.col- -->
+										</div>
                                         <div class="col-xs-12 col-sm-12">
-                                        <div class="form-group">
-                                        <label class="radio-inline">
-      <input type="radio" name="child_gender{{$i}}[]" value="male"  value="{{$childgender[$i]}}" @if($childgender[$i]=='male'){{ "checked" }} @endif>Male
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="child_gender{{$i}}[]" value="female" value="{{$childgender[$i]}}" @if($childgender[$i]=='female'){{ "checked" }} @endif>Female
-    </label>
-                                        
-                                      
-                                       
-											
+											<div class="form-group">
+												<input type="text" name="member_phone[]" class="form-control" placeholder="Member Phone" required="required" value="{{$member_phone[$i]}}">
 											</div>
                                         </div>
+                                         <!-- /.col- -->
+                                      
+                                        
 
                                         
 										@endfor
+@elseif($user_details->child_name==NULL)
+<input type="hidden" id="child_number" name="no_of_childs" value="{{sizeOf($numberof_members)}}">
+                                        @endif
+
+							
 										
 										</div>
 
@@ -107,7 +154,7 @@
 
 										<div class="form-group col-xs-12">
 											<div class="form-btn">
-												<button type="button" class="contact-form-btn" onclick="addChild()">Add Child</button>
+												<button type="button" class="contact-form-btn" onclick="addChild()">Add Member</button>
 											</div>
 										</div>
 

@@ -6,7 +6,6 @@
 @endpush
 @section('content')  
 <section class="page-head">
-			
 		</section>
         <section class="skill section">
 			<div class="container">
@@ -19,7 +18,7 @@
 					</div>
 					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#competition">Participate</button>
 				</div> <!-- /.row -->
-				
+                @include('user.partials.message')
 				@foreach($comp as $new)
 				<div class="row">
                 <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#competition">Participate</button> -->

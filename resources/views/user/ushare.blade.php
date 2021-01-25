@@ -21,6 +21,7 @@
 					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add</button>
 					
 				</div> <!-- /.row -->
+                @include('user.partials.message')
             <div class="row">
 				<div class="blog">
 				<div class="col-xs-12 col-sm-12 col-md-6">

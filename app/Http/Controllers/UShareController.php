@@ -79,7 +79,7 @@ class UShareController extends Controller
 
         $share->ushare_status=$request->ushare_status;
         $share->save();
-        return redirect()->back()->with(['success' => 'your share submitted successfully.']);
+        return redirect()->back()->with(['success' => 'Your share submitted successfully. Admin approval pending.']);
 
     }
 

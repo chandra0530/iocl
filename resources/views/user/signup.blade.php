@@ -49,7 +49,7 @@ function isNumberKey(evt){
 			</div>
 			<div class="card-body">
             @include('user.partials.message')
-				<form enctype="multipart/form-data" method="POST" action="{{ route('auth.signup') }}">
+				<form enctype="multipart/form-data" method="POST" action="{{ route('auth.signup') }}" enctype="multipart/form-data">
                 {{ csrf_field() }}
 				<input  type="hidden" name="status" value="inactive">
 					<div class="input-group form-group">
@@ -59,6 +59,17 @@ function isNumberKey(evt){
 						<input  type="text" name="name" class="form-control" placeholder="Your Name" required="required" data-error="Write your name">
 						
 					</div>
+
+				
+
+										<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="file" name="profile_image" class="form-control" placeholder="Your Email" required="required">
+					</div>
+
+
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>

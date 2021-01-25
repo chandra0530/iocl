@@ -21,6 +21,7 @@ use App\Models\AnnouncementLike;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\CompotitionUserUploads;
+use Illuminate\Support\Facades\Storage;
 class UserViewController extends Controller
 {
     //
@@ -106,11 +107,12 @@ class UserViewController extends Controller
          
         Auth::guard('web');
         if(auth()->id()){
+            $success=0;
             $comp=Compitition::whereDate('event_from', '<', Carbon::now()->toDateString())->whereDate('event_to', '>', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
             $upcomingcomp=Compitition::whereDate('event_from', '>=', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
             $pastcomp=Compitition::whereDate('event_to', '<', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
             $competitions=Compitition::whereDate('event_from', '<', Carbon::now()->toDateString())->whereDate('event_to', '>', Carbon::now()->toDateString())->where('status','active')->orderBy('id', 'desc')->get();
-            return view('user.competitions',compact('comp','upcomingcomp','pastcomp','competitions'));
+            return view('user.competitions',compact('success','comp','upcomingcomp','pastcomp','competitions'));
         }else{
             return view('user.login');
         }
@@ -178,18 +180,20 @@ class UserViewController extends Controller
     }
     public function profile(){
         $user_details=User::find(auth()->id());
-        // return $user_details;
         return view('user.profile',compact('user_details'));
     }
     public function updateprofile(Request $request){
-        // return $request;
         $user_details=User::find(auth()->id());
+        if ($request->has('profile_image')) {
+            $temp_url = $request->file('profile_image')->store('profile_image', 'public');
+           
+            $user_details->profile_image = url(Storage::url($temp_url));
+        }
         $user_details->phone_number=$request->mobile_no;
-        $user_details->spouce_name=$request->spouce_name;
-        $user_details->spouce_email=$request->spouce_email;
-        $user_details->child_name=implode('>>',$request->child_name);
-        $user_details->child_email=implode('>>',$request->child_email);
-        $user_details->child_gender=implode('>>',$request->child_gender);
+        $user_details->member_type=implode('>>',$request->member_type);
+        $user_details->member_name=implode('>>',$request->member_name);
+        $user_details->member_email=implode('>>',$request->member_email);
+        $user_details->member_phone=implode('>>',$request->member_phone);
         if($request->password){
             $user_details->password=$request->password;
         }

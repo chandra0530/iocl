@@ -41,6 +41,10 @@ class AuthController extends Controller
       $user = new User();
       $user->name=$request->name; 
       $user->email=$request->email;
+      if ($request->has('profile_image')) {
+        $temp_url = $request->file('profile_image')->store('profile_image', 'public');
+        $user->profile_image = url(Storage::url($temp_url));
+    }
       $user->password=bcrypt($request->password);
       $user->employeid=$request->employeid;
       $user->status=$request->status;
