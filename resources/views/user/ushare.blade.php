@@ -153,10 +153,10 @@
                                                Ushare Type</small>
                                             </div>
                                             <select name="ushare_type" class="form-control" placeholder="Select product images" required>
-                                             <option value="my_holiday_experience">My holiday Experience </option>
-                                             <option value="my_pession">My Passion</option>
-                                             <option value="social_service">Social service </option>
-                                             <option value="my_views">My views</option>
+                                            @foreach($ushare_types as $ushare_type)
+                                            <option value="{{$ushare_type->id}}">{{$ushare_type->ushare_type}} </option>
+                                            @endforeach
+                                             
 
                                             </select>
                                         </fieldset>

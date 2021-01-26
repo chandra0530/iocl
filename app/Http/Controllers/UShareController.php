@@ -8,6 +8,7 @@ use App\Models\UshareComment;
 use App\Models\UshareLike;
 use Illuminate\Support\Facades\Storage;
 use Auth;
+use App\Models\ushare_types;
 class UShareController extends Controller
 {
     /**
@@ -16,7 +17,7 @@ class UShareController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {$ushare_types=ushare_types::get();
         $posts=Ushare::Where('ushare_status','active')->join('users','users.id','=','ushares.user_id')->select('users.name as user_name','ushares.*')->orderBy('ushares.id', 'desc')->get();
         // return $posts;
         $left=[];
@@ -32,7 +33,7 @@ class UShareController extends Controller
         }
         // return $posts;
 
-        return view('user.ushare',compact('right','left'));
+        return view('user.ushare',compact('right','left','ushare_types'));
     }
 
     /**

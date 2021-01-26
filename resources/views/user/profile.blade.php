@@ -110,7 +110,7 @@
 											</div>
                                         </div>
                                          <!-- /.col- -->
-                                      
+                                         <hr class="new1">
                                         
 
                                         
