@@ -9,7 +9,24 @@
 			
 		</section>
         @include('user.partials.message')
-
+        <script>
+        function isNumberKey(evt){
+	console.log(evt.target.value);
+	var str=evt.target.value;
+	console.log(str.length);
+	var length=parseInt(str.length);
+	if(length<10){
+		var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57)){
+		return false;
+	}   
+    return true;
+	}else{
+		return false;
+	}
+    
+} 
+        </script>
 <section class="contact-us section">
 			<div class="container">    
 				<div class="row">
@@ -106,7 +123,7 @@
 										</div>
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="text" name="member_phone[]" class="form-control" placeholder="Member Phone" required="required" value="{{$member_phone[$i]}}">
+												<input type="text" name="member_phone[]" class="form-control" placeholder="Member Phone" required="required" onkeypress="return isNumberKey(event)" value="{{$member_phone[$i]}}">
 											</div>
                                         </div>
                                          <!-- /.col- -->

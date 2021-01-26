@@ -352,7 +352,7 @@
                                                             Photo <small>( 900 * 400 )Px</small> (Max size 5mb)
                                                         </div>
                                                         <input type="file" multiple name="photos[]" class="form-control"
-                                                               id="photos" placeholder="Select compitition images" required>
+                                                               id="photos" placeholder="Select compitition images" accept="image/x-png,image/gif,image/jpeg" required>
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-sm-6 col-6">
@@ -361,7 +361,8 @@
                                                             Videos (Max size 30mb)
                                                         </div>
                                                         <input type="file" multiple name="videos[]" class="form-control"
-                                                               id="videos" placeholder="Select compitition images">
+                                                               id="videos" placeholder="Select compitition images" accept="video/mp4,video/x-m4v,video/*"
+>
                                                     </fieldset>
                                                 </div>
                                                 

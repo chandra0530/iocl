@@ -135,7 +135,8 @@
                                              Videos (Max size 30Mb)
                                           </div>
                                           <input type="file" class="form-control" name="videos[]" multiple 
-                                             id="basicInput" placeholder="Enter news small description">
+                                             id="basicInput" placeholder="Enter news small description" accept="video/mp4,video/x-m4v,video/*"
+>
                                        </fieldset>
                                     </div>
                                     <div class="col-sm-6 col-12">
@@ -144,7 +145,7 @@
                                              Photo <small>( 900 * 400 )Px</small> (Max size 5Mb)
                                           </div>
                                           <input type="file" name="photos[]" class="form-control" multiple
-                                             id="photos" placeholder="Select product images" required>
+                                             id="photos" placeholder="Select product images" accept="image/x-png,image/gif,image/jpeg" required>
                                        </fieldset>
                                     </div>
                                     <div class="col-sm-6 col-12">

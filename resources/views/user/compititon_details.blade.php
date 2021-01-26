@@ -97,7 +97,7 @@
 									<div class="media">
 											<div class="media-body">
 												<h4 class="media-heading">
-													<a href="#">Imran</a>
+													<a href="#">{{$comment->name}}</a>
 													 - 
 													 <a href="#">{{$comment->created_at}}</a>
 												</h4>
