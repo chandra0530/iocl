@@ -109,7 +109,7 @@ function whatsapp(TheImg) {
      console.log(TheImg);
      var img = document.getElementById('image'+TheImg);
 
-    window.open('https://wa.me/+97333161261/?text=Hi checkout out event images '+encodeURIComponent(img.src));return false;
+    window.open('https://wa.me/?text=Hi checkout out event images '+encodeURIComponent(img.src));return false;
 }
 function mail(TheImg){
     var img = document.getElementById('image'+TheImg);
