@@ -336,7 +336,7 @@
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                         Compitition Name
                                                         </div>
-                                                        <select class="form-control" name="comp_id">
+                                                        <select class="form-control" name="comp_id" required>
                                                         @foreach($competitions as $competition)
 
 
@@ -352,7 +352,7 @@
                                                             Photo <small>( 900 * 400 )Px</small> (Max size 5mb)
                                                         </div>
                                                         <input type="file" multiple name="photos[]" class="form-control"
-                                                               id="photos" placeholder="Select compitition images">
+                                                               id="photos" placeholder="Select compitition images" required>
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-sm-6 col-6">
@@ -375,7 +375,7 @@
                                                             Description
                                                         </div>
                                                         <textarea name="desc"
-                                                                  style="height: 300px; width: 100%"></textarea>
+                                                                  style="height: 300px; width: 100%" required></textarea>
                                                     </fieldset>
                                                 </div>
                                             </div>

@@ -135,7 +135,7 @@
                                              Videos (Max size 30Mb)
                                           </div>
                                           <input type="file" class="form-control" name="videos[]" multiple 
-                                             id="basicInput" placeholder="Enter news small description" required>
+                                             id="basicInput" placeholder="Enter news small description">
                                        </fieldset>
                                     </div>
                                     <div class="col-sm-6 col-12">
