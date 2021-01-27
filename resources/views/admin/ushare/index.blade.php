@@ -65,20 +65,9 @@
                                                                 <td>{{$post->id}}</td>
                                                                         <td scope="row">{{$post->user_name}}</td>
                                                                         <td scope="row">
+                                                                        {{$post->ushare_type}}
                                                                         
-                                                                        
-                                                                        @if ($post->ushare_type == 'my_holiday_experience')
-                                            My holiday experience.
-                                            @endif
-                                            @if ($post->ushare_type == 'my_pession')
-                                            My Passion.
-                                            @endif
-                                            @if ($post->ushare_type == 'social_service')
-                                            Social Service
-                                            @endif
-                                            @if ($post->ushare_type == 'my_views')
-                                            My Views.
-                                            @endif</td>
+                                                                       </td>
                                                                         <td>
                                                                         @if($post->ushare_status=='inactive')
                                                                         <a
