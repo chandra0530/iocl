@@ -82,6 +82,19 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="card">
+                                <div class="card-header d-flex flex-column align-items-start pb-0">
+                                    <div class="avatar bg-rgba-warning p-50 m-0">
+                                        <div class="avatar-content">
+                                            <i class="feather icon-package text-warning font-medium-5"></i>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-bold-700 mt-1">{{$comp_user_uploads}}</h2>
+                                    <p class="mb-0">Pending Competition</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 

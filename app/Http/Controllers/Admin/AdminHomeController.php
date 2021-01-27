@@ -8,6 +8,7 @@ use Auth;
 use App\Models\Ushare;
 use App\Models\User;
 use App\Models\Compitition;
+use App\Models\CompotitionUserUploads;
 class AdminHomeController extends Controller
 {
    
@@ -25,10 +26,10 @@ class AdminHomeController extends Controller
         $total_users_list=User::where('status','active')->get()->count();
         $pending_users_list=User::where('status','inactive')->get()->count();
         $total_comp=Compitition::where('status','active')->get()->count();
-        
+        $comp_user_uploads=CompotitionUserUploads::where('status','submitted')->get()->count();
         
         if(auth('admin')->user()){
-            return view('admin.home',compact('total_ushares','pending_ushares','total_users_list','pending_users_list','total_comp'));
+            return view('admin.home',compact('total_ushares','pending_ushares','total_users_list','pending_users_list','total_comp','comp_user_uploads'));
         }else{
             return view('admin.login');
         }

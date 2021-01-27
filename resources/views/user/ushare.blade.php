@@ -132,7 +132,7 @@
                                     <div class="col-sm-12 col-6">
                                        <fieldset class="form-group">
                                           <div class="text-bold-600 font-medium-2 mb-2">
-                                             Videos (Max size 30Mb)
+                                             Videos (Max size 30Mb)(Accepted video formats .mp4)
                                           </div>
                                           <input type="file" class="form-control" name="videos[]" multiple 
                                              id="basicInput" placeholder="Enter news small description" accept="video/mp4,video/x-m4v,video/*"
@@ -142,10 +142,10 @@
                                     <div class="col-sm-6 col-12">
                                        <fieldset class="form-group">
                                           <div class="text-bold-600 font-medium-2 mb-2">
-                                             Photo <small>( 900 * 400 )Px</small> (Max size 5Mb)
+                                             Photo <small>( 900 * 400 )Px</small> (Max size 5Mb)(Accepted image formats .jpeg, .jpg, .png,)
                                           </div>
                                           <input type="file" name="photos[]" class="form-control" multiple
-                                             id="photos" placeholder="Select product images" accept="image/x-png,image/gif,image/jpeg" required>
+                                             id="photos" placeholder="Select product images" accept="image/x-png,image/jpeg" required>
                                        </fieldset>
                                     </div>
                                     <div class="col-sm-6 col-12">

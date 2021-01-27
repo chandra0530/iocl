@@ -138,7 +138,7 @@
               </li>
               <li><a href="/admin/compititions"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Competition List</span></a>
               </li>
-              <li><a href="/admin/compititions/upload-request"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Competition Upload request</span></a></li>
+              <li><a href="/admin/compititions/upload-request"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Pending Approvals</span></a></li>
             </ul>
           </li>
           <!-- <li class=" nav-item"><a href="#"><i class="feather icon-speaker"></i><span class="menu-title" data-i18n="Ecommerce">Announcements</span></a>
