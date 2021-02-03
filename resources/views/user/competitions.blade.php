@@ -349,7 +349,7 @@
                                                 <div class="col-sm-6 col-6">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
-                                                            Photo <small>( 900 * 400 )Px</small> (Max size 5mb)(Accepted image formats .jpeg, .jpg, .png,)
+                                                            Photo <small>( 600 * 400 )Px</small> (Max size 5mb)(Accepted image formats .jpeg, .jpg, .png,)
                                                         </div>
                                                         <input type="file" multiple name="photos[]" class="form-control"
                                                                id="photos" placeholder="Select compitition images" accept="image/x-png,image/gif,image/jpeg" required>

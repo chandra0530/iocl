@@ -196,6 +196,7 @@ function addChild() {
 
     <!-- Main / Custom JS  -->
     <script src="{{ asset('assets/js/custom.js')}}"></script>
+    <script src="{{ asset('assets/js/bootstrap-filestyle.js')}}">
     @stack('js')
 </body>
 

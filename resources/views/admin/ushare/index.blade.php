@@ -73,6 +73,9 @@
                                                                         <a
                                                                             href="{{ route('employespost.active', $post->id) }}"
                                                                             class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
+                                                                            <a
+                                                                            href="{{ route('employespost.view', $post->id) }}"
+                                                                            class="btn btn-circle btn-success"><i class="fa fa-eye"></i></a>
                                                                          @else
                                                             <a
                                                                 href="/admin/ushare/comments/{{ $post->id }}"

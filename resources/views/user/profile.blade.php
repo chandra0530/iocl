@@ -27,13 +27,13 @@
     
 } 
         </script>
-<section class="contact-us section">
+<section class="contact-us section" style="background-color: aliceblue;">
 			<div class="container">    
 				<div class="row">
                 <div class="col-xs-12 col-sm-3">
 					</div> <!-- /.col- -->
 					<div class="col-xs-12 col-sm-6">
-						<div class="border-in">
+						<div class="border-in" style="background-color: white;">
 							<div class="comm-title">
 								<h3 style="text-transform: CAPITALIZE;">Update Your Profile Details</h3>
 							</div>
@@ -55,7 +55,7 @@
 
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="file" name="profile_image" class="form-control" placeholder="Your Email" required="required">
+												<input type="file" id="input07" name="profile_image" class="form-control" placeholder="Your Email" required="required">
 											</div>
 										</div> <!-- /.col- -->
 
@@ -264,10 +264,4 @@
 
 
 @push('js')
-
-<script>
-
-
-
-</script>
 @endpush

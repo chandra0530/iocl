@@ -46,6 +46,8 @@ Route::get('profile', [UserViewController::class, 'profile'])->name('profile');
 Route::post('profile', [UserViewController::class, 'updateprofile'])->name('update_profile');
 Route::get('news', [UserViewController::class, 'news'])->name('news');
 Route::get('news_details/{id}', [UserViewController::class, 'news_detials'])->name('news_details');
+Route::get('delete-comment/{cid}/{userid}', [UserViewController::class, 'deleteComment'])->name('delete_comment');
+Route::get('delete-ushare-comment/{cid}/{userid}', [UShareController::class, 'deleteUshareComment'])->name('delete_ushare_comment');
 
 
 Route::get('events', [UserViewController::class, 'events'])->name('events');
@@ -132,6 +134,9 @@ Route::prefix('admin')->group(function () {
     Route::get('compititions/upload-request', [CompititionsController::class, 'uploadRequests'])->name('compititions.upload-request');
     
     Route::get('compititions/publish_request/{id}', [CompititionsController::class, 'publish_request'])->name('compititions.publish_request');
+
+    Route::get('compititions/view-comp/{id}', [CompititionsController::class, 'view_compDetails'])->name('compititions.view-comp');
+
     Route::get('compititions/reject_request/{id}', [CompititionsController::class, 'reject_request'])->name('compititions.reject_request');
     Route::get('compititions/comments/{id}', [CompititionsController::class, 'comments_list'])->name('compititions.comments_list');
     Route::get('compititions/comment_delete/{id}', [CompititionsController::class, 'comments_delete'])->name('compititions.comment_delete');
@@ -146,6 +151,7 @@ Route::prefix('admin')->group(function () {
     Route::get('employes/post/delete/{id}', [EmployesController::class, 'postdestroy'])->name('employespost.destroy');
     Route::get('employes/post/active/{id}', [EmployesController::class, 'postactive'])->name('employespost.active');
     Route::get('employes/posts', [EmployesController::class, 'posts'])->name('employes.posts');
+    Route::get('employes/posts/{id}', [EmployesController::class, 'emppostdetails'])->name('employespost.view');
     Route::post('employes/update_password', [EmployesController::class, 'updateemployepassword'])->name('employes.updatepassword');
     Route::resource('employes', EmployesController::class);
 

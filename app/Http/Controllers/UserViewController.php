@@ -202,4 +202,10 @@ class UserViewController extends Controller
         $user_details->save();
         return redirect()->back()->with(['success' => 'User profile details updated successfully']);
     }
+    public function deleteComment(Request $request,$cid,$userid){
+        competition_comment::where('competition_id', $cid)->where('user_id', $userid)->delete();
+        return redirect()->back()->with(['success' => 'User comment deleted successfully.']);
+        return $userid;
+    }
+   
 }

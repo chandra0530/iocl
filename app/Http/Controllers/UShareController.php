@@ -147,4 +147,9 @@ class UShareController extends Controller
         UshareComment::where('id', $id)->delete();
         return redirect()->back()->with(['success' => 'Ushare comment deleted successfully.']);
     }
+    public function deleteUshareComment(Request $request,$cid,$userid){
+        UshareComment::where('share_id', $cid)->where('user_id', $userid)->delete();
+        return redirect()->back()->with(['success' => 'User comment deleted successfully.']);
+        return $userid;
+    }
 }

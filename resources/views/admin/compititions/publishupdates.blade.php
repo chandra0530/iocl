@@ -70,6 +70,7 @@
                                                             <a
                                                                 href="{{ route('compititions.publish_request', $competition->id) }}"
                                                                 class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
+                                                               
                                                             <a onclick="return confirm('Are you sure to delete?')"
                                                                 href="compititions/reject_request/{{$competition->id}}"
                                                                 class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>

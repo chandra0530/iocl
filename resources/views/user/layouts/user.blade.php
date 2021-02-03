@@ -49,6 +49,7 @@
     <!-- Responsive CSS  -->
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/css/sharetastic.css')}}"/>
+    
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="{{ asset('assets/js/sharetastic.js')}}"></script> -->
 
@@ -179,6 +180,8 @@ function addChild() {
 
     <!-- Main / Custom JS  -->
     <script src="{{ asset('assets/js/custom.js')}}"></script>
+    <script src="{{ asset('assets/js/bootstrap-filestyle.js')}}">
+
 </body>
 
 </html>

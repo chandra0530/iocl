@@ -132,9 +132,7 @@ class CompititionsController extends Controller
     }
     public function uploadRequests(){
         $competitions=CompotitionUserUploads::join('compititions','compititions.id','=','compotition_user_uploads.comp_id')->select('compotition_user_uploads.*','compititions.competition_name as comp_name')->where('compotition_user_uploads.status','submitted')->get();
-        // return $competitions;
         return view('admin.compititions.publishupdates',compact('competitions'));
-        // return $uploads;
     }
     public function publish_request($id){
         $publishd_details=CompotitionUserUploads::find($id);
@@ -154,5 +152,9 @@ class CompititionsController extends Controller
     public function comments_delete($id){
         competition_comment::where('id', $id)->delete();
         return redirect()->back()->with(['success' => 'Compitition comment deleted successfully.']);
+    }
+    public function view_compDetails($id){
+        $comp_Details = Compitition::find($id);
+       return view('admin.compititions.view_comp_details',compact('comp_Details')); 
     }
 }
