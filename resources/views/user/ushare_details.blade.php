@@ -112,7 +112,7 @@
 													 <a href="#">{{$comment->created_at}}</a>
 												</h4>
 												@if($comment->user_id == Auth::user()->id)         
-<a href="/delete-ushare-comment/{{$comment->competition_id}}/{{$comment->user_id}}" class="btn btn-danger">Delete</a>
+<a href="/delete-ushare-comment/{{$comment->competition_id}}/{{$comment->user_id}}" class="btn btn-danger" style="float: right;">Delete</a>
 @endif
 												<p>{{$comment->ushare_comment}}</p>
 											</div> <!-- /.media-body -->
