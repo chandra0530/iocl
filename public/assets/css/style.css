@@ -2210,8 +2210,7 @@ ul.get-services li a:hover {
 .posted-details {
     display: table;
     width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
+    text-align: center;
 }
 .blog-no-sidebar .posted-by {
     left: 50px;
