@@ -27,8 +27,9 @@
 				<div class="col-xs-12 col-sm-12 col-md-6">
 					@foreach($left as $key => $news)
 						<div class="blog-content">
-							<div class="blog-feature" style="max-width: 400px;
-    max-height: 600px;">
+							<div class="blog-feature" style="width: 500px;
+    height: 500px;
+    overflow: hidden;">
                      <?php $images = json_decode($news->ushare_images); ?>
 							<img src="{{$images[0]}}" alt="Team Member" height="500px" width="500px">
 								
@@ -59,8 +60,9 @@
 				<div class="col-xs-12 col-sm-12 col-md-6">
 					@foreach($right as $key => $news)
 						<div class="blog-content">
-							<div class="blog-feature" style="max-width: 400px;
-    max-height: 600px;">
+							<div class="blog-feature" style="width: 500px;
+    height: 500px;
+    overflow: hidden;">
                      <?php $images = json_decode($news->ushare_images); ?>
 							<img src="{{$images[0]}}" alt="Team Member" height="500px" width="500px">
 								<div class="posted-by">
