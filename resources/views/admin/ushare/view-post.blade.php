@@ -46,17 +46,28 @@
                                                     
                                                         <!-- Table with outer spacing -->
                                                         <?php $images = json_decode($ushare->ushare_images); ?>
-                                @foreach ($images as $image)
-                                <img src="{{$image}}" alt="Blog Photo">
+                                                        @if(sizeof($images) >0)         
+                                                        @foreach ($images as $image)
+                                <img src="{{$image}}" alt="Blog Photo" height="500px" width="500px">
                                 @endforeach
+     
+@endif
+
+                               
 
 								<?php $videos = json_decode($ushare->videos); ?>
+
+                                @if(sizeof($videos) >0)         
+                                                        
                                 @foreach ($videos as $video)
 								<video width="320" height="240" controls>
 								<source src="{{$video}}" type="video/mp4">
 								Your browser does not support the video tag.
 								</video>
                                 @endforeach
+     
+@endif
+
 
 
                                                     </div>

@@ -56,9 +56,12 @@
                 </div>
                 
                 <?php $images=json_decode($comp_Details->competition_image);?>
-                            @for ($i = 0; $i < sizeof($images); $i++)
-                            <img class="img-responsive" src="{{$images[$i]}}" alt="Img" style="width:500px;height:500px">
+                @if(sizeof($videos) >0)    
+                @for ($i = 0; $i < sizeof($images); $i++)
+                            <img class="img-responsive" src="{{$images[$i]}}" alt="Img" height="500px" width="500px">
                             @endfor
+                @endif
+                            
                             <div>
                             <a
                                                                 href="{{ route('compititions.active', $comp_Details->id) }}"
