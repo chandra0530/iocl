@@ -17,12 +17,12 @@
 								<div class="blog-feature">
                                 <?php $images = json_decode($post_details->ushare_images); ?>
                                 @foreach ($images as $image)
-                                <img src="{{$image}}" alt="Blog Photo">
+                                <img src="{{$image}}" alt="Blog Photo" width="500px" height="500px">
                                 @endforeach
 
 								<?php $videos = json_decode($post_details->videos); ?>
                                 @foreach ($videos as $video)
-								<video width="320" height="240" controls>
+								<video width="500px" height="500px" controls>
 								<source src="{{$video}}" type="video/mp4">
 								Your browser does not support the video tag.
 								</video>

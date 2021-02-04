@@ -82,7 +82,7 @@
                                                                 class="btn btn-circle btn-success"><i class="fa fa-eye"></i></a>
                                                                         @endif
                                                                         <a onclick="return confirm('Are you sure to delete?')"
-                                                                            href="{{ route('employespost.active', $post->id) }}"
+                                                                            href="{{ route('employespost.destroy', $post->id) }}"
                                                                             class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>
                                                                         </td>
                                                                 </tr>
