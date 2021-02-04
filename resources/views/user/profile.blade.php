@@ -55,7 +55,7 @@
 
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="file" id="input07" name="profile_image" class="form-control" placeholder="Your Email" required="required">
+												<input type="file" name="profile_image" class="form-control" placeholder="Your Email" required="required">
 											</div>
 										</div> <!-- /.col- -->
 
