@@ -15,7 +15,7 @@
                 <h2 class="content-header-title float-left mb-0">All Posts List</h2>
                 <div class="breadcrumb-wrapper col-12">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Home</a>
+                    <li class="breadcrumb-item"><a href="/admin">Home</a>
                     </li>
                     <li class="breadcrumb-item"><a href="#">Posts</a>
                     </li>
