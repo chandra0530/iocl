@@ -27,7 +27,7 @@
     
 } 
         </script>
-<section class="contact-us section" style="background-color: aliceblue;">
+<section class="contact-us section" style="background-color: #f7d9b5;">
 			<div class="container">    
 				<div class="row">
                 <div class="col-xs-12 col-sm-3">
