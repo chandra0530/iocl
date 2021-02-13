@@ -181,8 +181,10 @@ class UserViewController extends Controller
         return view('user.signup');
     }
     public function profile(){
+       
         $user_details=User::find(auth()->id());
-        return view('user.profile',compact('user_details'));
+        $family_member_Details=User::where('employe_id',auth()->id())->get();
+        return view('user.profile',compact('user_details','family_member_Details'));
     }
     public function updateprofile(Request $request){
         $user_details=User::find(auth()->id());
@@ -192,15 +194,30 @@ class UserViewController extends Controller
             $user_details->profile_image = url(Storage::url($temp_url));
         }
         $user_details->phone_number=$request->mobile_no;
-        $user_details->member_type=implode('>>',$request->member_type);
-        $user_details->member_name=implode('>>',$request->member_name);
-        $user_details->member_email=implode('>>',$request->member_email);
-        $user_details->member_phone=implode('>>',$request->member_phone);
         if($request->password){
             $user_details->password=$request->password;
         }
         $user_details->save();
+       if((sizeof($request->member_type))===(sizeof($request->member_name))&&(sizeof($request->member_email))===(sizeof($request->member_phone))){
+        User::where('employe_id', auth()->id())->delete();
+      
+
+        foreach ($request->member_type as $key => $value) {
+            $newuser=new User();
+            $newuser->employe_id=auth()->id();
+            $newuser->relation=$request->member_type[$key];
+            $newuser->name=$request->member_name[$key];
+            $newuser->email=$request->member_email[$key];
+            $newuser->password=bcrypt('password');
+            $newuser->phone_number=$request->member_phone[$key];
+            $newuser->save();
+        }
         return redirect()->back()->with(['success' => 'User profile details updated successfully']);
+       }else{
+        return redirect()->back()->with(['error' => 'All users all details are not filled']);
+
+       }
+       
     }
     public function deleteComment(Request $request,$cid,$userid){
         competition_comment::where('competition_id', $cid)->where('user_id', $userid)->delete();

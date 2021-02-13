@@ -54,20 +54,20 @@
 @endif
 
                                
-
+@if($ushare->videos != null)   
 								<?php $videos = json_decode($ushare->videos); ?>
 
                                 @if(sizeof($videos) >0)         
                                                         
                                 @foreach ($videos as $video)
-								<video width="320" height="240" controls>
+								<video width="500" height="500" controls>
 								<source src="{{$video}}" type="video/mp4">
 								Your browser does not support the video tag.
 								</video>
                                 @endforeach
      
 @endif
-
+@endif
 
 
                                                     </div>

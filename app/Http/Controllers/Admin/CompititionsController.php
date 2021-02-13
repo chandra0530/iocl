@@ -155,6 +155,7 @@ class CompititionsController extends Controller
     }
     public function view_compDetails($id){
         $comp_Details = Compitition::find($id);
+        // return $comp_Details;
        return view('admin.compititions.view_comp_details',compact('comp_Details')); 
     }
 }

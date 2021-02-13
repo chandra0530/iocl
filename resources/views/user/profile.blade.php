@@ -77,64 +77,52 @@
 											</div>
                                         </div> <!-- /.col- -->
 <hr>
+@if($user_details->employe_id ==NULL)
 <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
                                                 <h6 class="family-members-details">Family members details</h6>
 											</div>
                                         </div>
-                                        
+                                        @endif
 										<div  id="items">
-                                       
-                                       @php
-                                       $numberof_members=array();
-                                       @endphp
-                                        @if($user_details->member_type!=NULL)
-                                        @php
-                                        $member_type = explode(">>",$user_details->member_type);
-                                        $numberof_members=explode(">>",$user_details->member_type);
-										$member_name = explode(">>",$user_details->member_name);
-                                        $member_email = explode(">>",$user_details->member_email);
-                                        $member_phone = explode(">>",$user_details->member_phone);
-                                        @endphp
-                                        <input type="hidden" id="child_number" name="no_of_childs" value="{{sizeOf($member_type)}}">
-										@for ($i = 0; $i < sizeof($member_type); $i++)
+                                       @If($user_details->employe_id ==NULL)
+                                       @for ($i = 0; $i < sizeof($family_member_Details); $i++)
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<select class="form-control" name="member_type[]" value="{{$member_type[$i]}}" placeholder="Select Member" required="required">
+												<select class="form-control" name="member_type[]" value="{{$family_member_Details[$i]->relation}}" placeholder="Select Member" required="required">
                                                 <option>Select member type</option>
-                                                    <option value="father" {{ $member_type[$i] == 'father' ? "selected" : "" }} >Father</option>
-                                                    <option value="mother" {{ $member_type[$i] == 'mother' ? "selected" : "" }}>Mother</option>
-                                                    <option value="husband" {{ $member_type[$i] == 'husband' ? "selected" : "" }}>Husband</option>
-                                                    <option value="wife" {{ $member_type[$i] == 'wife' ? "selected" : "" }}>Wife</option>
-                                                    <option value="son" {{ $member_type[$i] == 'son' ? "selected" : "" }}>Son</option>
-                                                    <option value="daughter" {{ $member_type[$i] == 'daughter' ? "selected" : "" }}>Daughter</option>
+                                                    <option value="father" {{ $family_member_Details[$i]->relation == 'father' ? "selected" : "" }} >Father</option>
+                                                    <option value="mother" {{ $family_member_Details[$i]->relation == 'mother' ? "selected" : "" }}>Mother</option>
+                                                    <option value="husband" {{ $family_member_Details[$i]->relation == 'husband' ? "selected" : "" }}>Husband</option>
+                                                    <option value="wife" {{ $family_member_Details[$i]->relation == 'wife' ? "selected" : "" }}>Wife</option>
+                                                    <option value="son" {{ $family_member_Details[$i]->relation == 'son' ? "selected" : "" }}>Son</option>
+                                                    <option value="daughter" {{ $family_member_Details[$i]->relation == 'daughter' ? "selected" : "" }}>Daughter</option>
                                                 </select>
 											</div>
                                         </div>
 										<div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="text" name="member_name[]" class="form-control" placeholder="Your member Name" required="required" value="{{$member_name[$i]}}">
+												<input type="text" name="member_name[]" class="form-control" placeholder="Your member Name" required="required" value="{{$family_member_Details[$i]->name}}">
 											</div>
                                         </div> <!-- /.col- -->
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="text" name="member_email[]" class="form-control" placeholder="Your member Email" required="required" value="{{$member_email[$i]}}">
+												<input type="text" name="member_email[]" class="form-control" placeholder="Your member Email" required="required" value="{{$family_member_Details[$i]->email}}">
 											</div>
 										</div>
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="text" name="member_phone[]" class="form-control" placeholder="Member Phone" required="required" onkeypress="return isNumberKey(event)" value="{{$member_phone[$i]}}">
+												<input type="text" name="member_phone[]" class="form-control" placeholder="Member Phone" required="required" onkeypress="return isNumberKey(event)" value="{{$family_member_Details[$i]->phone_number}}">
 											</div>
                                         </div>
+                                        @endfor
+                                       @endif
+                                   
+									
                                          <!-- /.col- -->
                                          <hr class="new1">
                                         
 
-                                        
-										@endfor
-@elseif($user_details->child_name==NULL)
-<input type="hidden" id="child_number" name="no_of_childs" value="{{sizeOf($numberof_members)}}">
-                                        @endif
 
 							
 										
@@ -144,13 +132,13 @@
                                         
 
 
-
+                                        @if($user_details->employe_id ==NULL)
 										<div class="form-group col-xs-12">
 											<div class="form-btn">
 												<button type="button" class="contact-form-btn" onclick="addChild()">Add Member</button>
 											</div>
 										</div>
-
+                                        @endif
 
 										<div class="form-group col-xs-12">
 											<div class="form-btn">

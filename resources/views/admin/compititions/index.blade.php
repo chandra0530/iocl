@@ -76,7 +76,7 @@
                                                                 class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
                                                                 <a
                                                                 href="{{ route('compititions.view-comp', $competition->id) }}"
-                                                                class="btn btn-circle btn-success"><i class="fa fa-eye"></i></a>
+                                                                class="btn btn-circle btn-success">View</a>
                                                             @else
                                                             <a
                                                                 href="/admin/compititions/comments/{{ $competition->id }}"

@@ -56,12 +56,26 @@
                 </div>
                 
                 <?php $images=json_decode($comp_Details->competition_image);?>
-                @if(sizeof($videos) >0)    
+                @if(sizeof($images) >0)    
                 @for ($i = 0; $i < sizeof($images); $i++)
                             <img class="img-responsive" src="{{$images[$i]}}" alt="Img" height="500px" width="500px">
                             @endfor
                 @endif
                             
+                @if($comp_Details->competition_videos != null)    
+                <?php $videos=json_decode($comp_Details->competition_videos);?>
+                @if(sizeof($videos) >0)    
+                @for ($i = 0; $i < sizeof($videos); $i++)
+                <video width="500" height="500" controls>
+								<source src="{{$videos[$i]}}" type="video/mp4">
+								Your browser does not support the video tag.
+								</video>
+
+                              @endfor
+                @endif
+
+                @endif
+
                             <div>
                             <a
                                                                 href="{{ route('compititions.active', $comp_Details->id) }}"

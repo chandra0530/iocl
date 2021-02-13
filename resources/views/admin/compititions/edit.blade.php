@@ -12,10 +12,10 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Compitition</h2>
+                            <h2 class="content-header-title float-left mb-0">Competition</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item active">Edit Compitition
+                                    <li class="breadcrumb-item active">Edit Competition
                                     </li>
                                 </ol>
                             </div>
@@ -32,7 +32,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Edit Compitition</h4>
+                                    <h4 class="card-title">Edit Competition</h4>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body">
@@ -46,19 +46,19 @@
                                                 <div class="col-sm-6 col-6">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
-                                                        Compitition Name
+                                                        Competition Name
                                                         </div>
                                                         <input type="text" class="form-control" name="competition_name"
-                                                               id="basicInput" placeholder="Enter compitition name" value="{{$competitions->competition_name}}" required>
+                                                               id="basicInput" placeholder="Enter Competition name" value="{{$competitions->competition_name}}" required>
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-sm-6 col-6">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
-                                                        Compitition Location
+                                                        Competition Location
                                                         </div>
                                                         <input type="text" class="form-control" name="competition_location"
-                                                               id="basicInput" placeholder="Enter compitition location" value="{{$competitions->compitition_location}}" required>
+                                                               id="basicInput" placeholder="Enter Competition location" value="{{$competitions->Competition_location}}" required>
                                                     </fieldset>
                                                 </div>
                                                 
@@ -68,33 +68,33 @@
                                                             Photo <small>( 900 * 400 )Px</small>
                                                         </div>
                                                         <input type="file" multiple name="photos[]" class="form-control"
-                                                               id="photos" placeholder="Select compitition images">
+                                                               id="photos" placeholder="Select Competition images">
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-sm-6 col-12">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
-                                                        Compitition From
+                                                        Competition From
                                                         </div>
-                                                        <input type="datetime-local" class="form-control" name="compitition_from"
-                                                               id="basicInput" placeholder="Enter compitition from date" value="{{$competitions->event_from}}" required>
+                                                        <input type="datetime-local" class="form-control" name="Competition_from"
+                                                               id="basicInput" placeholder="Enter Competition from date" value="{{$competitions->event_from}}" required>
                                                     </fieldset>
                                                     
                                                 </div>
                                                 <div class="col-sm-6 col-12">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
-                                                        Compitition to
+                                                        Competition to
                                                         </div>
-                                                        <input type="datetime-local" class="form-control" name="compitition_to"
-                                                               id="basicInput" placeholder="Enter compitition to date" value="{{$competitions->event_to}}" required>
+                                                        <input type="datetime-local" class="form-control" name="Competition_to"
+                                                               id="basicInput" placeholder="Enter Competition to date" value="{{$competitions->event_to}}" required>
                                                     </fieldset>
                                                     
                                                 </div>
                                                 <div class="col-sm-6 col-12">
                                                     <fieldset class="form-group">
                                                         <div class="text-bold-600 font-medium-2 mb-2">
-                                                        Compitition Type
+                                                        Competition Type
                                                         </div>
                                                         <select class="form-control" name="event_type" value="{{$competitions->event_type}}" required>
                                                         <option>Free</option>

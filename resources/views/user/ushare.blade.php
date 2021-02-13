@@ -78,8 +78,9 @@
 									<h3>{{$news->ushare_name}}.</h3>
 								</a>
 							</div>
-							<div class="post-content">
-								<p style="-webkit-line-clamp: 2; !Important">{{$news->experience}}</p>
+                            <div class="post-content">
+								<p style="-webkit-line-clamp: 2 !Important">{{$news->experience}} </b></p>
+                                <p><b>Posted by {{$news->user_name}}</b></p>
 							</div>
 							<div class="read-more">
 								<a href="/ushare/{{$news->id}}">Read More</a>
