@@ -70,6 +70,13 @@
 @endif
 
 
+<a
+                                                                            href="{{ route('employespost.active', $ushare->id) }}"
+                                                                            class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
+                                                                            <a onclick="return confirm('Are you sure to delete?')"
+                                                                            href="{{ route('employespost.destroy', $ushare->id) }}"
+                                                                            class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>
+
                                                     </div>
                                                 </div>
                                             </div>

@@ -148,16 +148,6 @@
 								<p>Description : {{$user->compotition_details}}</p>
 								@endfor
 								<br>
-
-								<?php $videos=json_decode($user->compotition_videos);?>
-								@for ($i = 0; $i < sizeof($videos); $i++)
-								<a class="example-image-link" href="{{$videos[$i]}}" target="_blank" data-lightbox="example-set" data-title="Uploaded By : {{$user->user_name}}  Description : {{$user->compotition_details}} "><img style="width:100px;height:100px;" class="example-image" src="{{$videos[$i]}}" alt=""/></a>
-								<!-- <img class="img-responsive" src="{{$images[$i]}}" style="width:70px;height:70px;" alt="Img" style="width:500px;height:500px"> -->
-								<p>Uploaded By : {{$user->user_name}}</p>
-								<p>Description : {{$user->compotition_details}}</p>
-								@endfor
-
-
 								<?php $videos=json_decode($user->compotition_videos);?>
                                			@for ($i = 0; $i < sizeof($videos); $i++)
 								<a class="example-image-link" href="{{$videos[$i]}}" data-lightbox="example-set" data-title="Uploaded By : {{$user->user_name}}  Description : {{$user->compotition_details}} "><video width="320" height="240" controls><source src="{{$videos[$i]}}" type="video/mp4">Your browser does not support the video tag.</video></a>

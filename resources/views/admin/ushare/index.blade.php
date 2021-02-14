@@ -54,6 +54,7 @@
                                                                     <tr>
                                                                         <th>ID</th>
                                                                         <th>Users Name</th>
+                                                                        <th>Ushare Name</th>
                                                                         <th>Post Type</th>
                                                                         <!-- <th>Users Employee Id</th> -->
                                                                         <th>Action</th>
@@ -64,6 +65,7 @@
                                                                 <tr>
                                                                 <td>{{$post->id}}</td>
                                                                         <td scope="row">{{$post->user_name}}</td>
+                                                                        <td scope="row">{{$post->ushare_name}}</td>
                                                                         <td scope="row">
                                                                         {{$post->ushare_type}}
                                                                         
