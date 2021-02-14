@@ -67,7 +67,7 @@
                                                             <td scope="row">{{$share->competition_comment}}</td>
                                                             <td>
                                                             <a onclick="return confirm('Are you sure to delete?')"
-                                                                href="{{ route('Competitions.comment_delete', $share->comp_id) }}"
+                                                                href="{{ route('compititions.comment_delete', $share->comp_id) }}"
                                                                 class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>
                                                             </td>
                                                     </tr>
