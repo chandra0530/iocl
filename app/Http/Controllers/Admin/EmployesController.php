@@ -106,7 +106,7 @@ class EmployesController extends Controller
         return redirect()->back()->with(['success' => 'Employes account activated successfully.']);
     }
     public function posts(){
-        $posts=Ushare::join('users','users.id','=','ushares.user_id')->join('ushare_types','ushare_types.id','=','ushares.ushare_type')->select('users.name as user_name','ushares.*','ushare_types.ushare_type as ushare_type')->get();
+        $posts=Ushare::join('users','users.id','=','ushares.user_id')->join('ushare_types','ushare_types.id','=','ushares.ushare_type')->where('ushares.ushare_status','active')->select('users.name as user_name','ushares.*','ushare_types.ushare_type as ushare_type')->get();
         
         return view('admin.ushare.index',compact('posts'));
     }
@@ -119,5 +119,10 @@ class EmployesController extends Controller
     public function emppostdetails($id){
         $ushare = Ushare::find($id);
         return view('admin.ushare.view-post',compact('ushare'));
+    }
+    public function pendingUshares(Request $request){
+        $posts=Ushare::join('users','users.id','=','ushares.user_id')->join('ushare_types','ushare_types.id','=','ushares.ushare_type')->where('ushares.ushare_status','inactive')->select('users.name as user_name','ushares.*','ushare_types.ushare_type as ushare_type')->get();
+        
+        return view('admin.ushare.pending',compact('posts'));
     }
 }

@@ -15,12 +15,12 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-left mb-0">All Competitions Update List</h2>
+                <h2 class="content-header-title float-left mb-0">All Compitition User Upload Request</h2>
                 <div class="breadcrumb-wrapper col-12">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/admin">Home</a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Competitions</a>
+                    <li class="breadcrumb-item"><a href="#">User Upload Request</a>
                     </li>
                     <li class="breadcrumb-item active">List
                     </li>
@@ -38,7 +38,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Competition Update</h4>
+                    <h4 class="card-title">User Upload Request</h4>
                 </div>
                 <div class="card-content">
                     <div class="card-body">
@@ -46,7 +46,7 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4 class="card-title">Competition Update</h4>
+                                        <h4 class="card-title">User Upload Request</h4>
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
@@ -70,7 +70,10 @@
                                                             <a
                                                                 href="{{ route('compititions.publish_request', $competition->id) }}"
                                                                 class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
-                                                               
+                                                            <a
+                                                                href="/admin/compititions/view-uploads/{{ $competition->id }}"
+                                                                class="btn btn-circle btn-success">View</a>
+
                                                             <a onclick="return confirm('Are you sure to delete?')"
                                                                 href="compititions/reject_request/{{$competition->id}}"
                                                                 class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>

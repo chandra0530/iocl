@@ -85,6 +85,71 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">All User uploads</h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <div class="row" id="basic-table">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">All User uploads</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-body">
+                                           
+                                            <!-- Table with outer spacing -->
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Username</th>
+                                                            <th>Upload Comment</th>
+                                                            <th>Upload image</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    @foreach($user_uploads as $upload)
+                                                    <tr>
+                                                    <td>{{$upload->name}}</td>
+                                                            <td scope="row">{{$upload->compotition_details}}</td>
+                                                          <td>
+                                                            <?php $images=json_decode($upload->compotition_images);?>
+                @if(sizeof($images) >0)    
+                            <img class="img-responsive" src="{{$images[0]}}" alt="Img" height="50px" width="50px">
+                          
+                @endif
+                </td>
+                                                            <td>
+                                                            <a
+                                                                href="{{ route('compititions.publish_request', $upload->upload_id) }}"
+                                                                class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
+                                                         
+
+                                                            <a onclick="return confirm('Are you sure to delete?')"
+                                                                href="compititions/reject_request/{{$upload->upload_id}}"
+                                                                class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>   
+                                                            </td>
+                                                    </tr>
+                                                    @endforeach
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Basic Inputs end -->
 

@@ -147,7 +147,9 @@ class CompititionsController extends Controller
 
     public function comments_list($id){
         $comp_comments=competition_comment::join('users','users.id','=','competition_comments.user_id')->select('competition_comments.*','competition_comments.id as comp_id','users.*')->where('competition_comments.competition_id',$id)->get();
-        return view('admin.compititions.comments',compact('comp_comments'));
+        $user_uploads=CompotitionUserUploads::join('users','users.id','=','compotition_user_uploads.user_id')->select('compotition_user_uploads.*','compotition_user_uploads.id as upload_id','users.*')->where('compotition_user_uploads.comp_id', $id)->where('compotition_user_uploads.status', 'published')->get();
+    //   return $user_uploads;
+        return view('admin.compititions.comments',compact('comp_comments','user_uploads'));
     }
     public function comments_delete($id){
         competition_comment::where('id', $id)->delete();
@@ -157,5 +159,11 @@ class CompititionsController extends Controller
         $comp_Details = Compitition::find($id);
         // return $comp_Details;
        return view('admin.compititions.view_comp_details',compact('comp_Details')); 
+    }
+    public function viewUserUploads($id){
+        $useruploaddetails=CompotitionUserUploads::join('users','users.id','=','compotition_user_uploads.user_id')->select('compotition_user_uploads.*','compotition_user_uploads.id as upload_id','users.*')->where('compotition_user_uploads.id', $id)->get();
+        $useruploaddetails=$useruploaddetails[0];
+        // return $useruploaddetails;
+        return view('admin.compititions.view_user_upload_detials',compact('useruploaddetails')); 
     }
 }

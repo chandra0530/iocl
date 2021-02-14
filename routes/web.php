@@ -140,7 +140,8 @@ Route::prefix('admin')->group(function () {
     Route::get('compititions/reject_request/{id}', [CompititionsController::class, 'reject_request'])->name('compititions.reject_request');
     Route::get('compititions/comments/{id}', [CompititionsController::class, 'comments_list'])->name('compititions.comments_list');
     Route::get('compititions/comment_delete/{id}', [CompititionsController::class, 'comments_delete'])->name('compititions.comment_delete');
-
+    Route::get('compititions/view-uploads/{id}', [CompititionsController::class, 'viewUserUploads'])->name('compititions.viewUserUploads');
+    
 
     Route::resource('compititions', CompititionsController::class);
     Route::get('announcements/delete/{id}', [AnnouncementsController::class,'destroy'])->name('announcements.destroy');
@@ -151,6 +152,7 @@ Route::prefix('admin')->group(function () {
     Route::get('employes/post/delete/{id}', [EmployesController::class, 'postdestroy'])->name('employespost.destroy');
     Route::get('employes/post/active/{id}', [EmployesController::class, 'postactive'])->name('employespost.active');
     Route::get('employes/posts', [EmployesController::class, 'posts'])->name('employes.posts');
+    Route::get('ushare/pending', [EmployesController::class, 'pendingUshares'])->name('employes.pendingushares');
     Route::get('employes/posts/{id}', [EmployesController::class, 'emppostdetails'])->name('employespost.view');
     Route::post('employes/update_password', [EmployesController::class, 'updateemployepassword'])->name('employes.updatepassword');
     Route::resource('employes', EmployesController::class);
