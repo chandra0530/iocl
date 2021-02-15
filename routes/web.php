@@ -141,8 +141,7 @@ Route::prefix('admin')->group(function () {
     Route::get('compititions/comments/{id}', [CompititionsController::class, 'comments_list'])->name('compititions.comments_list');
     Route::get('compititions/comment_delete/{id}', [CompititionsController::class, 'comments_delete'])->name('compititions.comment_delete');
     Route::get('compititions/view-uploads/{id}', [CompititionsController::class, 'viewUserUploads'])->name('compititions.viewUserUploads');
-    
-
+   
     Route::resource('compititions', CompititionsController::class);
     Route::get('announcements/delete/{id}', [AnnouncementsController::class,'destroy'])->name('announcements.destroy');
     Route::get('announcements/announcementactive/{id}', [AnnouncementsController::class, 'active'])->name('announcement.active');

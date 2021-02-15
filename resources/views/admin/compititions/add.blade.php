@@ -37,7 +37,7 @@
                                 <div class="card-content">
                                     <div class="card-body">
                                         <form enctype="multipart/form-data" method="POST"
-                                              action="{{ route('Competitions.store') }}">
+                                              action="{{ url('admin/compititions') }}">
                                               <input type="hidden" name="status" value="active">
                                             @csrf
                                             <div class="row">
@@ -74,7 +74,7 @@
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                         Competition From
                                                         </div>
-                                                        <input type="datetime-local" class="form-control" name="Competition_from"
+                                                        <input type="datetime-local" class="form-control" name="compitition_from"
                                                                id="basicInput" placeholder="Enter Competition from date" required>
                                                     </fieldset>
                                                     
@@ -84,7 +84,7 @@
                                                         <div class="text-bold-600 font-medium-2 mb-2">
                                                         Competition to
                                                         </div>
-                                                        <input type="datetime-local" class="form-control" name="Competition_to"
+                                                        <input type="datetime-local" class="form-control" name="compitition_to"
                                                                id="basicInput" placeholder="Enter Competition to date" required>
                                                     </fieldset>
                                                     
