@@ -43,7 +43,8 @@
                                                 
                                                 <div class="card-content">
                                                     <div class="card-body">
-                                                    
+                                                    {{$ushare->ushare_name}}<br>
+                                                    {{$ushare->experience}}<br>
                                                         <!-- Table with outer spacing -->
                                                         <?php $images = json_decode($ushare->ushare_images); ?>
                                                         @if(sizeof($images) >0)         
@@ -69,16 +70,18 @@
 @endif
 @endif
 
+<br>
 
-<a
+
+                                                    </div>
+                                                     <a
                                                                             href="{{ route('employespost.active', $ushare->id) }}"
                                                                             class="btn btn-circle btn-success"><i class="fa fa-check"></i></a>
                                                                             <a onclick="return confirm('Are you sure to delete?')"
                                                                             href="{{ route('employespost.destroy', $ushare->id) }}"
                                                                             class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>
-
-                                                    </div>
                                                 </div>
+                                               
                                             </div>
                                         </div>
                                     </div>

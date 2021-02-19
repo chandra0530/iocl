@@ -64,7 +64,7 @@ function isNumberKey(evt){
 
 										<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class="fas fa-camera"></i></span>
 						</div>
 						<input type="file" name="profile_image" class="form-control" placeholder="Your Email" required="required" data-toggle="tooltip" title="Select a file to upload.">
 					</div>
