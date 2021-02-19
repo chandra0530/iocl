@@ -103,7 +103,7 @@ class EmployesController extends Controller
     public function postactive($id){
         $affected = Ushare::where('id', $id)
         ->update(['ushare_status' => 'active']);
-        return redirect()->back()->with(['success' => 'Employes account activated successfully.']);
+        return redirect()->back()->with(['success' => 'Employe post activated successfully.']);
     }
     public function posts(){
         $posts=Ushare::join('users','users.id','=','ushares.user_id')->join('ushare_types','ushare_types.id','=','ushares.ushare_type')->where('ushares.ushare_status','active')->select('users.name as user_name','ushares.*','ushare_types.ushare_type as ushare_type')->get();

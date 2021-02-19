@@ -30,7 +30,7 @@
 								<div class="blog-share" style="display:flex;position: relative;">
 									<div class="row" style="border: 3px solid #d4d4d4;
 										background: #11193d; margin-left:0px !important;display: flex;">
-										<div class="col-md-1"></div>
+										 <div class="col-md-4"> <p  style="color: white;">Total like {{$total_count}}</p></div>
 										<div class="col-md-2">
 										@if(sizeof($like_status)>0)
 											<a href="/deleteNewslike/{{ Auth::user()->id }}/{{$comp_details->id}}" ><i style="font-size: 39px;color: white;" class="fa fa-heart heart"></i></a>
@@ -48,13 +48,7 @@
 										<div class="col-md-2">
 										<a href="#"><i style="font-size: 39px;color: white;" class="fa fa-whatsapp" onclick="share_news_whatsapp()"></i></a>
 										</div>
-										<div class="col-md-2">
-										<a href="#">
-										<!-- <i style="font-size: 39px;color: white;" class="fa fa-facebook-messenger" onclick="messenger(1)"></i> -->
-										<img src="{{ asset('assets/icons/messenger-white.png')}}" style="width: 40px;" onclick="messenger(1)">
-										</a>
-										</div>
-										<div class="col-md-1"></div>
+										
 									</div>
 								</div>  <!-- /.blog-share -->
 								<p style="

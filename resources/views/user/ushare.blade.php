@@ -48,8 +48,7 @@
 								</a>
 							</div>
 							<div class="post-content">
-								<p style="-webkit-line-clamp: 2 !Important">{{$news->experience}} </b></p>
-                                <p><b>Posted by {{$news->user_name}}</b></p>
+							  <p><b>Posted by {{$news->user_name}}</b></p>
 							</div>
 							<div class="read-more">
 								<a href="/ushare/{{$news->id}}">Read More</a>
@@ -79,8 +78,7 @@
 								</a>
 							</div>
                             <div class="post-content">
-								<p style="-webkit-line-clamp: 2 !Important">{{$news->experience}} </b></p>
-                                <p><b>Posted by {{$news->user_name}}</b></p>
+								    <p><b>Posted by {{$news->user_name}}</b></p>
 							</div>
 							<div class="read-more">
 								<a href="/ushare/{{$news->id}}">Read More</a>
@@ -97,7 +95,7 @@
 				<!-- /.blog-pagination -->
 
 				
-
+                {{ $posts->links() }}
 			</div> <!-- /.container -->
 		</div>
 
@@ -131,7 +129,7 @@
                                              Ushare name
                                           </div>
                                           <input type="text" class="form-control" name="share_name"
-                                             id="basicInput" placeholder="Enter news headline" required>
+                                             id="basicInput" placeholder="Enter ushare name" required>
                                        </fieldset>
                                     </div>
                                     <div class="col-sm-12 col-6">

@@ -18,7 +18,7 @@ class UShareController extends Controller
      */
     public function index()
     {$ushare_types=ushare_types::get();
-        $posts=Ushare::Where('ushare_status','active')->join('users','users.id','=','ushares.user_id')->select('users.name as user_name','ushares.*')->orderBy('ushares.id', 'desc')->get();
+        $posts=Ushare::Where('ushare_status','active')->join('users','users.id','=','ushares.user_id')->select('users.name as user_name','ushares.*')->orderBy('ushares.id', 'desc')->paginate(10);
         // return $posts;
         $left=[];
         $right=[];
@@ -33,7 +33,7 @@ class UShareController extends Controller
         }
         // return $posts;
 
-        return view('user.ushare',compact('right','left','ushare_types'));
+        return view('user.ushare',compact('right','left','ushare_types','posts'));
     }
 
     /**
@@ -100,7 +100,9 @@ class UShareController extends Controller
             $comments=UshareComment::where('share_id',$id)
             ->join('users','users.id','=','ushare_comments.user_id')
             ->get();
-            return view('user.ushare_details',compact('post_details','comments','like_status'));
+            $total_count = UshareLike::where('share_id',$id)->count();
+
+            return view('user.ushare_details',compact('post_details','comments','like_status','total_count'));
         }else{
             return view('user.login');
         }

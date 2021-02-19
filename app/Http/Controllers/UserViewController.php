@@ -157,7 +157,8 @@ class UserViewController extends Controller
         
         ->join('users','users.id','=','competition_comments.user_id')
         ->get();
-        return view('user.compititon_details',compact('comp_details','comments','like_status','user_uploads'));
+        $total_count = competition_like::where('competition_id',$id)->count();
+        return view('user.compititon_details',compact('comp_details','comments','like_status','user_uploads','total_count'));
     }
     public function gallery_details($id){
         $gallery=Gallery::find($id);
