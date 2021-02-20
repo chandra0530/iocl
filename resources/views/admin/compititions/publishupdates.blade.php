@@ -65,8 +65,8 @@
                                                     <tbody>
                                                     @foreach($competitions as $competition)
                                                     <tr>
+                                                    <td>{{$competition->id}}</td>
                                                     <td>{{$competition->comp_name}}</td>
-                                                            <td scope="row">{{$competition->compotition_details}}</td>
                                                             <td>   {{$competition->compotition_details}}</td>
                                                             <td>
                                                             <a

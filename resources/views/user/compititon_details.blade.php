@@ -33,9 +33,9 @@
 										 <div class="col-md-4"> <p  style="color: white;">Total like {{$total_count}}</p></div>
 										<div class="col-md-2">
 										@if(sizeof($like_status)>0)
-											<a href="/deleteNewslike/{{ Auth::user()->id }}/{{$comp_details->id}}" ><i style="font-size: 39px;color: white;" class="fa fa-heart heart"></i></a>
+											<a href="/deletecomplike/{{ Auth::user()->id }}/{{$comp_details->id}}" ><i style="font-size: 39px;color: white;" class="fa fa-heart heart"></i></a>
 										@else
-											<a href="/addNewslike/{{ Auth::user()->id }}/{{$comp_details->id}}"><i style="font-size: 39px;color: white;" class="fa fa-heart-o" aria-hidden="true"></i></a> 
+											<a href="/addcomplike/{{ Auth::user()->id }}/{{$comp_details->id}}"><i style="font-size: 39px;color: white;" class="fa fa-heart-o" aria-hidden="true"></i></a> 
 										@endif
 										</div>
 									

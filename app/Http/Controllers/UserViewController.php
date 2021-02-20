@@ -154,7 +154,6 @@ class UserViewController extends Controller
         ->select('compotition_user_uploads.*','users.name as user_name')
         ->get();
         $comments=competition_comment::where('competition_id',$id)
-        
         ->join('users','users.id','=','competition_comments.user_id')
         ->get();
         $total_count = competition_like::where('competition_id',$id)->count();
