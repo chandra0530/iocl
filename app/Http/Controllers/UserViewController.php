@@ -22,6 +22,7 @@ use Carbon\Carbon;
 use App\Models\User;
 use App\Models\CompotitionUserUploads;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
 class UserViewController extends Controller
 {
     //
@@ -210,6 +211,13 @@ class UserViewController extends Controller
             $newuser->email=$request->member_email[$key];
             $newuser->password=bcrypt('password');
             $newuser->phone_number=$request->member_phone[$key];
+            $data = array(
+                'name'=>$request->member_name[$key],
+                'email'=>$request->member_email[$key],
+                'password'=>'password',
+                'phone_number'=>$request->member_phone[$key]);
+                Mail::to($request->member_email[$key])->send(new \App\Mail\FamilyMemberRegistration($data));
+
             $newuser->save();
         }
         return redirect()->back()->with(['success' => 'User profile details updated successfully']);

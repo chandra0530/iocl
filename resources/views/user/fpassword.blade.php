@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Page</title>
+	<title>Forget Password</title>
    <!--Made with love by Mutiullah Samim -->
    
 	<!--Bootsrap 4 CDN-->
@@ -27,7 +27,7 @@
 			</div>
 			<div class="card-body">
             @include('user.partials.message')
-				<form enctype="multipart/form-data" method="POST" action="{{ route('auth.login') }}">
+				<form enctype="multipart/form-data" method="POST" action="{{ route('auth.forgetpassword') }}">
                 {{ csrf_field() }}
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
@@ -36,12 +36,7 @@
 						<input  type="email" name="email" class="form-control" placeholder="Your Email" required="required" data-error="Write your valid email address">
 						
 					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="password" name="password" class="form-control" placeholder="Your passsword" required="required" data-error="Write your valid email address">
-					</div>
+					
 					<div class="form-group">
 						<input type="submit" value="Login" class="btn float-right login_btn">
 					</div>

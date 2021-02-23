@@ -7,7 +7,7 @@
                             <div class="container">
                                 <div class="row">
                                 <div class="col-md-6 hovernow">
-                                    <a href="/ushare"> 
+                                <a href="/ushare">
                                     <img src="{{ asset('assets/images/home_share.jpg')}}" width="100%" height="100%">
                                      
                                      <button class="btn btn-info" style="
@@ -17,7 +17,8 @@
     font-size: 20px;
     border-color: transparent;
 ">Ushare - Click Here </button>
-                                    </div>
+                                   
+                                   </a> </div>
 
                                     <div class="col-md-6 hovernow">
                                     <a href="/compotitions">
@@ -29,6 +30,7 @@
     font-size: 20px;
     border-color: transparent;
 ">Competitions - Click Here</button>
+</a>
                                     </div>
                                    
                                 </div>
@@ -84,7 +86,9 @@
                         
                         
                         <div class="contact-form">
-                            <form id="contact-form" method="post" action="assets/contact-script/contact.php" novalidate="true">
+                             @include('user.partials.message')
+                            <form  method="post" action="{{ route('submitcontactform') }}" >
+                            @csrf
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group">
@@ -98,7 +102,7 @@
                                     </div> <!-- /.col- -->
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                            <input type="text" name="phone" class="form-control" required="required"  placeholder="Phone Number">
                                         </div>
                                     </div> <!-- /.col- -->
                                     <div class="col-xs-12 col-sm-12 col-md-6">

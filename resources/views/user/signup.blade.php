@@ -66,7 +66,7 @@ function isNumberKey(evt){
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-camera"></i></span>
 						</div>
-						<input type="file" name="profile_image" class="form-control" placeholder="Your Email" required="required" data-toggle="tooltip" title="Select a photo to upload.">
+						<input type="file" name="profile_image" class="form-control" placeholder="Your Email" data-toggle="tooltip" title="Select a photo to upload.">
 					</div>
 
 
@@ -99,7 +99,7 @@ function isNumberKey(evt){
 					Don't have an account?<a href="{{ route('login')  }}">Login</a>
 				</div>
 				<div class="d-flex justify-content-center">
-					<a href="#">Forgot your password?</a>
+					<a href="{{ route('auth.forgetpasswordpage')  }}">Forgot your password?</a>
 				</div>
 			</div>
 		</div>

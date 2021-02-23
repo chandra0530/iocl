@@ -257,7 +257,9 @@
                         
                         
                         <div class="contact-form">
-                            <form id="contact-form" method="post" action="" novalidate="true">
+                             @include('user.partials.message')
+                            <form  method="post" action="{{ route('submitcontactform') }}" >
+                            @csrf
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group">
@@ -271,12 +273,12 @@
                                     </div> <!-- /.col- -->
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                            <input type="text" name="phone" class="form-control" required="required"  placeholder="Phone Number">
                                         </div>
                                     </div> <!-- /.col- -->
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="subject" class="form-control" placeholder="Subject" required="required" data-error="Write your subject">
+                                            <input type="text" name="subject" class="form-control" placeholder="Subject " required="required" data-error="Write your subject">
                                         </div>
                                     </div> <!-- /.col- -->
                                     <div class="col-xs-12 col-sm-12 col-md-12">

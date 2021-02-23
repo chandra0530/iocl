@@ -27,6 +27,9 @@ Use App\Http\Controllers\User\EventController;
 Use App\Http\Controllers\User\GalleryController;
 Use App\Http\Controllers\User\NewsUserController;
 Use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+Use App\Http\Controllers\MailController;
+Use App\Http\Controllers\ContactUsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -105,6 +108,14 @@ Route::post('addgallerycomment',[GalleryController::class, 'addgallerycomment'])
 Route::post('publishreview',[CompetitionController::class, 'publishreview'])->name('publishreview');
 
 
+Route::get('sendbasicemail',[MailController::class, 'basic_email']);
+Route::get('sendhtmlemail',[MailController::class, 'html_email']);
+Route::post('submit-contact-details',[MailController::class, 'basic_email'])->name('submitcontactform');
+Route::get('/forgot-password',[AuthController::class, 'forgetpasswordpage'])->name('auth.forgetpasswordpage');
+Route::post('/forgot-password',[AuthController::class, 'forgetpassword'])->name('auth.forgetpassword');
+Route::post('password/reset', [AuthController::class, 'postReset'])->name('password.reset');
+Route::get('/password/reset', [AuthController::class, 'resetpasswordPorm']);
+Route::post('/password/updatepassword', [AuthController::class, 'updatePassword'])->name('password.update');
 
 Route::prefix('admin')->group(function () {
     Route::get('/login', [AdminAuthController::class ,'showLoginForm'])->name('admin.login');
