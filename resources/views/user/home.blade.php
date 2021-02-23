@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="con-align col-xs-12 col-xs-offset- col-sm-4 col-sm-offset-0">
                                     <div class="con-text in-envelope">
-                                    Souptik Mukherje<br>
+                                    Souptik Mukherje <br>
                                    souptikmukherjee@indianoil.in<br>
                                    7044062168<br>
                                    <br>
@@ -84,7 +84,7 @@
                         
                         
                         <div class="contact-form">
-                            <form id="contact-form" method="post" action="" novalidate="true">
+                            <form id="contact-form" method="post" action="assets/contact-script/contact.php" novalidate="true">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group">
@@ -103,7 +103,7 @@
                                     </div> <!-- /.col- -->
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="subject" class="form-control" placeholder="Subject" required="required" data-error="Write your subject">
+                                            <input type="text" name="subject" class="form-control" placeholder="Subject " required="required" data-error="Write your subject">
                                         </div>
                                     </div> <!-- /.col- -->
                                     <div class="col-xs-12 col-sm-12 col-md-12">

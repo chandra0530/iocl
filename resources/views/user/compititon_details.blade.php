@@ -98,7 +98,7 @@
 @if($comment->user_id == Auth::user()->id)         
 <a href="/delete-comment/{{$comment->competition_id}}/{{$comment->user_id}}" class="btn btn-danger" style="float: right;">Delete</a>
 @endif
-												<p>{{$comment->competition_comment}}</p>
+												<p style="text-align: justify;">{{$comment->competition_comment}}</p>
 											</div> <!-- /.media-body -->
 										</div> <!-- /.media -->
 									@endforeach
@@ -139,7 +139,7 @@
 								<a class="example-image-link" href="{{$images[$i]}}" target="_blank" data-lightbox="example-set" data-title="Uploaded By : {{$user->user_name}}  Description : {{$user->compotition_details}} "><img style="width:100px;height:100px;" class="example-image" src="{{$images[$i]}}" alt=""/></a>
 								<!-- <img class="img-responsive" src="{{$images[$i]}}" style="width:70px;height:70px;" alt="Img" style="width:500px;height:500px"> -->
 								<p>Uploaded By : {{$user->user_name}}</p>
-								<p>Description : {{$user->compotition_details}}</p>
+								<p style="text-align: justify;">Description : {{$user->compotition_details}}</p>
 								@endfor
 								<br>
 								<?php $videos=json_decode($user->compotition_videos);?>
@@ -147,7 +147,7 @@
 								<a class="example-image-link" href="{{$videos[$i]}}" data-lightbox="example-set" data-title="Uploaded By : {{$user->user_name}}  Description : {{$user->compotition_details}} "><video width="320" height="240" controls><source src="{{$videos[$i]}}" type="video/mp4">Your browser does not support the video tag.</video></a>
 								<!-- <img class="img-responsive" src="{{$images[$i]}}" style="width:70px;height:70px;" alt="Img" style="width:500px;height:500px"> -->
 								<p>Uploaded By : {{$user->user_name}}</p>
-								<p>Description : {{$user->compotition_details}}</p>
+								<p style="text-align: justify;">Description : {{$user->compotition_details}}</p>
 								@endfor
 
 								<br>

@@ -64,7 +64,7 @@
                                                     @foreach($comp_comments as $share)
                                                     <tr>
                                                     <td>{{$share->name}}</td>
-                                                            <td scope="row">{{$share->competition_comment}}</td>
+                                                            <td scope="row" style="text-align: justify;">{{$share->competition_comment}}</td>
                                                             <td>
                                                             <a onclick="return confirm('Are you sure to delete?')"
                                                                 href="{{ route('compititions.comment_delete', $share->comp_id) }}"
@@ -132,7 +132,7 @@
                                                          
 
                                                             <a onclick="return confirm('Are you sure to delete?')"
-                                                                href="compititions/reject_request/{{$upload->upload_id}}"
+                                                                href="{{ route('compititions.reject_request',$upload->upload_id) }}"
                                                                 class="btn btn-circle btn-danger"><i class="fa fa-trash"></i></a>   
                                                             </td>
                                                     </tr>

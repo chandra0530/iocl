@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
+use Mail;
 use Illuminate\Support\Facades\Storage;
 class AuthController extends Controller
 {
@@ -50,6 +51,7 @@ class AuthController extends Controller
       $user->employeid=$request->employeid;
       $user->status=$request->status;
       $user->save();
+     
       return redirect()->back()->with(['success' => 'Your account had been registered successfully.']);
     }
     public function logout()
