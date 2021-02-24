@@ -146,10 +146,37 @@
                                			@for ($i = 0; $i < sizeof($videos); $i++)
 								<a class="example-image-link" href="{{$videos[$i]}}" data-lightbox="example-set" data-title="Uploaded By : {{$user->user_name}}  Description : {{$user->compotition_details}} "><video width="320" height="240" controls><source src="{{$videos[$i]}}" type="video/mp4">Your browser does not support the video tag.</video></a>
 								<!-- <img class="img-responsive" src="{{$images[$i]}}" style="width:70px;height:70px;" alt="Img" style="width:500px;height:500px"> -->
-								<p>Uploaded By : {{$user->user_name}}</p>
-								<p style="text-align: justify;">Description : {{$user->compotition_details}}</p>
+								
 								@endfor
+								<div class="blog-share" style="display:flex;position: relative;">
+									<div class="row" style="border: 3px solid #d4d4d4;
+										background: #11193d; margin-left:0px !important;display: flex;">
+										<?php
+										$total_likes = \App\Models\CompetitionUserUploadLikes::where('user_upload_id',$user->upload_id)->count();
+										$user_like=\App\Models\CompetitionUserUploadLikes::where('user_upload_id',$user->upload_id)->where('user_id',Auth::user()->id)->get();
+										?>
 
+										 <div class="col-md-4"> <p  style="color: white;">Total like {{$total_likes}}</p></div>
+										<div class="col-md-2">
+										@if(sizeof($user_like)>0)
+											<a href="/deleteuploadcomplike/{{ Auth::user()->id }}/{{$user->upload_id}}" ><i style="font-size: 39px;color: white;" class="fa fa-heart heart"></i></a>
+										@else
+											<a href="/adduploadcomplike/{{ Auth::user()->id }}/{{$user->upload_id}}"><i style="font-size: 39px;color: white;" class="fa fa-heart-o" aria-hidden="true"></i></a> 
+										@endif
+										</div>
+									
+										<div class="col-md-2">
+										<a href="#"><i class="fa fa-facebook" style="font-size: 39px;color: white;" onclick="share_news_fb()"></i></a>
+										</div>
+										<div class="col-md-2">
+										<a href="#"><i style="font-size: 39px;color: white;" class="fa fa-envelope" onclick="share_news_mail()"></i></a>
+										</div>
+										<div class="col-md-2">
+										<a href="#"><i style="font-size: 39px;color: white;" class="fa fa-whatsapp" onclick="share_news_whatsapp()"></i></a>
+										</div>
+										
+									</div>
+								</div>  <!-- /.blog-share -->
 								<br>
 							</div>
 </div>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\competition_like;
 use App\Models\competition_comment;
 use App\Models\CompotitionUserUploads;
+use App\Models\CompetitionUserUploadLikes;
 use Illuminate\Support\Facades\Storage;
 
 class CompetitionController extends Controller
@@ -58,5 +59,17 @@ class CompetitionController extends Controller
         $publish->save();
         $success=1;
         return redirect()->back()->with(['success' => 'Compitition Details Submitted Successfully. Admin approval pending.']);
+    }
+
+    public function adduploadcomplike(Request $request,$userid,$compid){
+        $like=new CompetitionUserUploadLikes();
+        $like->user_id=$userid;
+        $like->user_upload_id=$compid;
+        $like->save();
+        return redirect()->back()->with(['success' => 'New news added successfully.']);
+    }
+    public function deleteuploadcomplike(Request $request,$userid,$compid){
+        CompetitionUserUploadLikes::where('user_id', $userid)->where('user_upload_id', $compid)->delete();
+        return redirect()->back();
     }
 }

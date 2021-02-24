@@ -95,6 +95,10 @@ Route::post('addEventcomment',[EventController::class, 'addEventscomment'])->nam
 
 Route::get('addcomplike/{userid}/{compid}',[CompetitionController::class, 'addcompLike'])->name('addcompLike');
 Route::get('deletecomplike/{userid}/{compid}',[CompetitionController::class, 'deletecompLike'])->name('deletecompLike');
+
+Route::get('adduploadcomplike/{userid}/{compid}',[CompetitionController::class, 'adduploadcomplike'])->name('adduploadcomplike');
+Route::get('deleteuploadcomplike/{userid}/{compid}',[CompetitionController::class, 'deleteuploadcomplike'])->name('deleteuploadcomplike');
+
 Route::post('addcompcomment',[CompetitionController::class, 'addcompcomment'])->name('addcompcomment');
 
 Route::get('addannouncementlike/{userid}/{announcementid}',[AnnouncementController::class, 'addannouncementLike'])->name('addannouncementLike');
