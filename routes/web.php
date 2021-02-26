@@ -58,7 +58,7 @@ Route::get('events', [UserViewController::class, 'events'])->name('events');
 Route::get('event_details/{id}', [UserViewController::class, 'event_detials'])->name('event_detials');
 Route::get('gallery_details/{id}', [UserViewController::class, 'gallery_details'])->name('gallery_details');
 
-Route::get('compotitions', [UserViewController::class, 'compititions'])->name('compititions');
+Route::get('competitions', [UserViewController::class, 'compititions'])->name('compititions');
 Route::get('compotition_details/{id}', [UserViewController::class, 'compotition_details'])->name('comptition_details');
 
 Route::get('ushare', [UShareController::class, 'index'])->name('ushare_index');

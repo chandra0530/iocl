@@ -9,6 +9,7 @@
 		</section>
         <section class="skill section">
 			<div class="container">
+            <!-- @include('user.partials.message') -->
 				<div class="row">
 					<div class="col-sm-8 col-xs-12 col-sm-offset-2 col-xs-offset-0">
 						<div class="section-heading">
@@ -257,7 +258,7 @@
                         
                         
                         <div class="contact-form">
-                             @include('user.partials.message')
+                            
                             <form  method="post" action="{{ route('submitcontactform') }}" >
                             @csrf
                                 <div class="row">

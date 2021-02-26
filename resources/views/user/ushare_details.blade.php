@@ -9,7 +9,8 @@
 			
 		</section>
 <section class="page-in section">
-			<div class="container">    
+			<div class="container">  
+			@include('user.partials.message')  
 				<div class="row">
 					<div class="blog">
 						<div class="col-xs-12 col-sm-12 col-md-12">
@@ -202,7 +203,7 @@
                         
                         
 						<div class="contact-form">
-                             @include('user.partials.message')
+                             
                             <form  method="post" action="{{ route('submitcontactform') }}" >
                             @csrf
                                 <div class="row">

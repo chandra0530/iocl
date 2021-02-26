@@ -149,11 +149,11 @@
               </li>
             </ul>
           </li> -->
-          <li class=" nav-item"><a href="#"><i class="feather icon-cpu"></i><span class="menu-title" data-i18n="Ecommerce">Employees</span></a>
+          <li class=" nav-item"><a href="#"><i class="feather icon-cpu"></i><span class="menu-title" data-i18n="Ecommerce">Users</span></a>
             <ul class="menu-content">
               <li><a href="/admin/employes/create"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Add New User</span></a>
               </li>
-              <li><a href="/admin/employes"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Employees List</span></a>
+              <li><a href="/admin/employes"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Users List</span></a>
               </li>
               <!-- <li><a href="/admin/employes/posts"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Details">Employees Posts</span></a></li> -->
             </ul>

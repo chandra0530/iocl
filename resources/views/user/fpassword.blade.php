@@ -23,7 +23,7 @@
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>Sign In</h3>
+				<h3>Forget Password</h3>
 			</div>
 			<div class="card-body">
             @include('user.partials.message')
@@ -38,7 +38,7 @@
 					</div>
 					
 					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn">
+						<input type="submit" value="Reset" class="btn float-right login_btn">
 					</div>
 				</form>
 			</div>

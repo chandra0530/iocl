@@ -200,32 +200,35 @@ class UserViewController extends Controller
             $user_details->password=$request->password;
         }
         $user_details->save();
-       if((sizeof($request->member_type))===(sizeof($request->member_name))&&(sizeof($request->member_email))===(sizeof($request->member_phone))){
-        User::where('employe_id', auth()->id())->delete();
-      
-
-        foreach ($request->member_type as $key => $value) {
-            $newuser=new User();
-            $newuser->employe_id=auth()->id();
-            $newuser->relation=$request->member_type[$key];
-            $newuser->name=$request->member_name[$key];
-            $newuser->email=$request->member_email[$key];
-            $newuser->password=bcrypt('password');
-            $newuser->phone_number=$request->member_phone[$key];
-            $data = array(
-                'name'=>$request->member_name[$key],
-                'email'=>$request->member_email[$key],
-                'password'=>'password',
-                'phone_number'=>$request->member_phone[$key]);
-                Mail::to($request->member_email[$key])->send(new \App\Mail\FamilyMemberRegistration($data));
-
-            $newuser->save();
+        if(($request->member_type)&&($request->member_name)&&($request->member_email)&&($request->member_phone)){
+            if((sizeof($request->member_type))===(sizeof($request->member_name))&&(sizeof($request->member_email))===(sizeof($request->member_phone))){
+                User::where('employe_id', auth()->id())->delete();
+              
+        
+                foreach ($request->member_type as $key => $value) {
+                    $newuser=new User();
+                    $newuser->employe_id=auth()->id();
+                    $newuser->relation=$request->member_type[$key];
+                    $newuser->name=$request->member_name[$key];
+                    $newuser->email=$request->member_email[$key];
+                    $newuser->password=bcrypt('password');
+                    $newuser->phone_number=$request->member_phone[$key];
+                    $data = array(
+                        'name'=>$request->member_name[$key],
+                        'email'=>$request->member_email[$key],
+                        'password'=>'password',
+                        'phone_number'=>$request->member_phone[$key]);
+                        Mail::to($request->member_email[$key])->send(new \App\Mail\FamilyMemberRegistration($data));
+        
+                    $newuser->save();
+                }
+                return redirect()->back()->with(['success' => 'User profile details updated successfully']);
+               }else{
+                return redirect()->back()->with(['error' => 'All users all details are not filled']);
+        
+               }
         }
         return redirect()->back()->with(['success' => 'User profile details updated successfully']);
-       }else{
-        return redirect()->back()->with(['error' => 'All users all details are not filled']);
-
-       }
        
     }
     public function deleteComment(Request $request,$cid,$userid){

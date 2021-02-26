@@ -5,6 +5,7 @@
 <section class="our-service section home_top" style="text-align: center;padding-top: 130px;">
 
                             <div class="container">
+                            @include('user.partials.message')
                                 <div class="row">
                                 <div class="col-md-6 hovernow">
                                 <a href="/ushare">
@@ -21,7 +22,7 @@
                                    </a> </div>
 
                                     <div class="col-md-6 hovernow">
-                                    <a href="/compotitions">
+                                    <a href="/competitions">
                                     <img src="{{ asset('assets/images/home_compitition.jpg')}}" width="100%" height="100%">
                                     <button class="btn btn-info" style="
     width: 100%;
@@ -86,7 +87,7 @@
                         
                         
                         <div class="contact-form">
-                             @include('user.partials.message')
+                            
                             <form  method="post" action="{{ route('submitcontactform') }}" >
                             @csrf
                                 <div class="row">

@@ -26,7 +26,7 @@
                                         </div>
                                     </div>
                                     <h2 class="text-bold-700 mt-1">{{$total_users_list}}</h2>
-                                    <p class="mb-0">Employes</p>
+                                    <p class="mb-0">User</p>
                                 </div>
                             </div>
                         </div>
