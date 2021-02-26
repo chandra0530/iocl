@@ -87,7 +87,7 @@ class AuthController extends Controller
         return view('user.fpassword');
     }
     public function postReset(Request $request){
-        return redirect()->back()->with(['success' => 'Password reset link has been sent.']);
+        return redirect()->back()->with(['success' => 'Link to reset password has been sent to registered mail id.']);
         return $request;
     }
     public function resetpasswordPorm(Request $request){
