@@ -65,7 +65,7 @@ class AuthController extends Controller
       $user->status=$request->status;
       $user->save();
      
-      return redirect()->back()->with(['success' => 'Your account had been registered successfully.']);
+      return redirect()->back()->with(['success' => 'Your registration is under review and it would take max of 72 hours for you to access']);
     }
     public function logout()
     {
@@ -87,7 +87,7 @@ class AuthController extends Controller
         return view('user.fpassword');
     }
     public function postReset(Request $request){
-        return redirect()->back()->with(['success' => 'Link to reset password has been sent to registered mail id.']);
+        return redirect()->back()->with(['success' => 'A link had been sent to the registered mail to reset the password.']);
         return $request;
     }
     public function resetpasswordPorm(Request $request){

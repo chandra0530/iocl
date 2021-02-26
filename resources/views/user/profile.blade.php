@@ -8,7 +8,7 @@
 <section class="page-head">
 			
 		</section>
-        @include('user.partials.message')
+        <!-- @include('user.partials.message') -->
         <script>
         function isNumberKey(evt){
 	console.log(evt.target.value);
