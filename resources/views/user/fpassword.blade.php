@@ -23,7 +23,7 @@
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>Forget Password</h3>
+				<h3>Forgot Password</h3>
 			</div>
 			<div class="card-body">
             @include('user.partials.message')

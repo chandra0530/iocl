@@ -99,7 +99,7 @@ function isNumberKey(evt){
 					Don't have an account?<a href="{{ route('login')  }}">Login</a>
 				</div>
 				<div class="d-flex justify-content-center">
-					<a href="{{ route('auth.forgetpasswordpage')  }}">Forget your password?</a>
+					<a href="{{ route('auth.forgetpasswordpage')  }}">Forgot your password?</a>
 				</div>
 			</div>
 		</div>
