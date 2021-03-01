@@ -58,6 +58,7 @@
                                                         <tr>
                                                             <th>ID</th>
                                                             <th>Competition Name</th>
+                                                            <th>User Name</th>
                                                             <th>User comment</th>
                                                             <th>Action</th>
                                                         </tr>
@@ -67,6 +68,7 @@
                                                     <tr>
                                                     <td>{{$competition->id}}</td>
                                                     <td>{{$competition->comp_name}}</td>
+                                                    <td>{{$competition->user_name}}</td>
                                                             <td>   {{$competition->compotition_details}}</td>
                                                             <td>
                                                             <a
