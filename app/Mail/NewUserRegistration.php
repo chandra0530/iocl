@@ -28,7 +28,7 @@ class NewUserRegistration extends Mailable
      */
     public function build()
     {
-        return $this->subject('New contact details')->view('emails.NewAccountCreation');
+        return $this->subject('Thank you for joining us')->view('emails.NewAccountCreation');
         
     }
 }
