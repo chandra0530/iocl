@@ -139,7 +139,14 @@
 								@for ($i = 0; $i < sizeof($images); $i++)
 								<a class="example-image-link" href="{{$images[$i]}}" target="_blank" data-lightbox="example-set" data-title="Uploaded By : {{$user->user_name}}  Description : {{$user->compotition_details}} "><img style="width:100px;height:100px;" class="example-image" src="{{$images[$i]}}" alt=""/></a>
 								<!-- <img class="img-responsive" src="{{$images[$i]}}" style="width:70px;height:70px;" alt="Img" style="width:500px;height:500px"> -->
-								<p>Uploaded By : {{$user->user_name}}</p>
+								<p>Uploaded By : {{$user->user_name}}  
+								
+								@if($user->relation_type !=NULL)         
+                              $user = \App\Models\User::find($user->employe_relation_id);
+                                {{ $user->relation_type}} of {{$user->name}}
+                                @endif
+								
+								</p>
 								<p style="text-align: justify;">Description : {{$user->compotition_details}}</p>
 								@endfor
 								<br>

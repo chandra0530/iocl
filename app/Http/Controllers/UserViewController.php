@@ -152,7 +152,7 @@ class UserViewController extends Controller
         $user_uploads=CompotitionUserUploads::where('comp_id',$id)
         ->join('users','users.id','=','compotition_user_uploads.user_id')
         ->where('compotition_user_uploads.status','published')
-        ->select('compotition_user_uploads.*','users.name as user_name','compotition_user_uploads.id as upload_id')
+        ->select('compotition_user_uploads.*','users.name as user_name','users.employe_id as employe_relation_id','users.relation as relation_type','compotition_user_uploads.id as upload_id')
         ->get();
         $comments=competition_comment::where('competition_id',$id)
         ->join('users','users.id','=','competition_comments.user_id')
