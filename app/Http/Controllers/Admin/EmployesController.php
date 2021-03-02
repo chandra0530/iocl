@@ -106,7 +106,7 @@ class EmployesController extends Controller
         return redirect()->back()->with(['success' => 'Employe post activated successfully.']);
     }
     public function posts(){
-        $posts=Ushare::join('users','users.id','=','ushares.user_id')->join('ushare_types','ushare_types.id','=','ushares.ushare_type')->where('ushares.ushare_status','active')->select('users.name as user_name','ushares.*','ushare_types.ushare_type as ushare_type')->get();
+        $posts=Ushare::join('users','users.id','=','ushares.user_id')->join('ushare_types','ushare_types.id','=','ushares.ushare_type')->where('ushares.ushare_status','active')->select('users.name as user_name', 'users.relation as relation_type','users.employe_id as employe_relation_id','ushares.*','ushare_types.ushare_type as ushare_type')->get();
         
         return view('admin.ushare.index',compact('posts'));
     }

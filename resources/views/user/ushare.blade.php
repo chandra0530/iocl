@@ -51,9 +51,12 @@
 							<div class="post-content">
 
 							  <p><b>Posted by {{$news->user_name}}</b> 
+                              @if($news->relation_type !=null)         
+                              <?php
+  $user = \App\Models\User::find($news->employe_relation_id);
+?>    
 
-                              @if($news->relation_type !=NULL)         
-                              $user = \App\Models\User::find($news->employe_relation_id);
+                            
                                 {{ $news->relation_type}} of {{$user->name}}
                                 @endif
 </p>
@@ -86,7 +89,17 @@
 								</a>
 							</div>
                             <div class="post-content">
-								    <p><b>Posted by {{$news->user_name}}</b></p>
+								    <p><b>Posted by {{$news->user_name}}</b>
+                                    
+                                    @if($news->relation_type !=null)         
+                              <?php
+  $user = \App\Models\User::find($news->employe_relation_id);
+?>    
+
+                            
+                                {{ $news->relation_type}} of {{$user->name}}
+                                @endif
+                                    </p>
 							</div>
 							<div class="read-more">
 								<a href="/ushare/{{$news->id}}">Read More</a>

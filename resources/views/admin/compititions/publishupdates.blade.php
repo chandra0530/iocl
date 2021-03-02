@@ -68,7 +68,20 @@
                                                     <tr>
                                                     <td>{{$competition->id}}</td>
                                                     <td>{{$competition->comp_name}}</td>
-                                                    <td>{{$competition->user_name}}</td>
+                                                    <td>{{$competition->user_name}}
+                                                                                           
+                                    @if($competition->relation_type !=null)         
+                              <?php
+  $user = \App\Models\User::find($competition->employe_relation_id);
+?>    
+
+                            
+                                {{ $competition->relation_type}} of {{$user->name}}
+                                @endif
+                                                    
+                                                    
+                                                    
+                                                    </td>
                                                             <td>   {{$competition->compotition_details}}</td>
                                                             <td>
                                                             <a

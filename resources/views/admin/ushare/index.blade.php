@@ -64,7 +64,21 @@
                                                                 @foreach($posts as $post)
                                                                 <tr>
                                                                 <td>{{$post->id}}</td>
-                                                                        <td scope="row">{{$post->user_name}}</td>
+                                                                        <td scope="row">{{$post->user_name}} 
+
+                                                                          
+                                    @if($post->relation_type !=null)         
+                              <?php
+  $user = \App\Models\User::find($post->employe_relation_id);
+?>    
+
+                            
+                                {{ $post->relation_type}} of {{$user->name}}
+                                @endif
+                                                                        
+                                                                        
+                                                                        
+                                                                        </td>
                                                                         <td scope="row">{{$post->ushare_name}}</td>
                                                                         <td scope="row">
                                                                         {{$post->ushare_type}}

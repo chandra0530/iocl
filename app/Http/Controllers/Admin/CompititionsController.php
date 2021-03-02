@@ -131,7 +131,7 @@ class CompititionsController extends Controller
         return redirect()->back()->with(['success' => 'Compitition activated successfully.']);
     }
     public function uploadRequests(){
-        $competitions=CompotitionUserUploads::join('compititions','compititions.id','=','compotition_user_uploads.comp_id')->join('users','users.id','=','compotition_user_uploads.user_id')->select('compotition_user_uploads.*','compititions.competition_name as comp_name','users.name as user_name')->where('compotition_user_uploads.status','submitted')->get();
+        $competitions=CompotitionUserUploads::join('compititions','compititions.id','=','compotition_user_uploads.comp_id')->join('users','users.id','=','compotition_user_uploads.user_id')->select('compotition_user_uploads.*','users.relation as relation_type','users.employe_id as employe_relation_id','compititions.competition_name as comp_name','users.name as user_name')->where('compotition_user_uploads.status','submitted')->get();
         return view('admin.compititions.publishupdates',compact('competitions'));
     }
     public function publish_request($id){
