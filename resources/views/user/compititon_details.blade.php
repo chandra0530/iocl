@@ -154,7 +154,7 @@ $user = \App\Models\User::find($user->employe_relation_id);
 								@endfor
 								<br>
 								<?php $videos=json_decode($user->compotition_videos);?>
-								@if(sizeof($videos)>0)   
+								@if(sizeof($videos)>0 && is_array($videos))   
                                			@for ($i = 0; $i < sizeof($videos); $i++)
 								<a class="example-image-link" href="{{$videos[$i]}}" data-lightbox="example-set" data-title="Uploaded By : {{$user->user_name}}  Description : {{$user->compotition_details}} "><video width="320" height="240" controls><source src="{{$videos[$i]}}" type="video/mp4">Your browser does not support the video tag.</video></a>
 								<!-- <img class="img-responsive" src="{{$images[$i]}}" style="width:70px;height:70px;" alt="Img" style="width:500px;height:500px"> -->
