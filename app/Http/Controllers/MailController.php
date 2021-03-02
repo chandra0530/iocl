@@ -12,7 +12,7 @@ class MailController extends Controller {
       'subject'=>$request->subject,
       'comment'=>$request->comment);
   
-      Mail::to('sanjeev@mindstormme.com')->send(new \App\Mail\Mailer($data));
+      Mail::to('tapankp@indianoil.in')->send(new \App\Mail\Mailer($data));
       return redirect()->back()->with(['success' => 'Thank you for submitting your query. Someone from our team will respond to you shortly']);
    }
 
