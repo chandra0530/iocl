@@ -28,7 +28,7 @@ class NewUserRegistration extends Mailable
      */
     public function build()
     {
-        return $this->subject('Thank you for joining us . Your acount will be activated in next 72 hours.')->view('emails.NewAccountCreation');
+        return $this->subject('Welcome to IOCL PARIVAAR .')->view('emails.NewAccountCreation');
         
     }
 }
