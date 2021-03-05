@@ -28,6 +28,6 @@ class FamilyMemberRegistration extends Mailable
      */
     public function build()
     {
-        return $this->subject('New contact details')->view('emails.NewFamilyMemberAccount');
+        return $this->subject('Welcome to IOCL PARIVAAR . ')->view('emails.NewFamilyMemberAccount');
     }
 }
