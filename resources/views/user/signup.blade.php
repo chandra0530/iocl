@@ -44,8 +44,8 @@ function isNumberKey(evt){
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>Register</h3>
-                
+				<h3 style=" padding-left: 33%;">Register</h3>
+				<img src="{{ asset('assets/images/512x512-web-icon.jpg')}}" style="text-align: center;width: 100px;margin-left: 33%;"> 
 			</div>
 			<div class="card-body">
             @include('user.partials.message')
