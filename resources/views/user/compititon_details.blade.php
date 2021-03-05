@@ -153,6 +153,7 @@ $user = \App\Models\User::find($user->employe_relation_id);
 								<p style="text-align: justify;">Description : {{$user->compotition_details}}</p>
 								@endfor
 								<br>
+								<div class="blog-feature" style="margin-top: 23px;">
 								<?php $videos=json_decode($user->compotition_videos);?>
 								@if(is_array($videos))   
                                			@for ($i = 0; $i < sizeof($videos); $i++)
@@ -161,6 +162,7 @@ $user = \App\Models\User::find($user->employe_relation_id);
 								
 								@endfor
 								@endif
+								</div>
 								<div class="blog-share" style="display:flex;position: relative;">
 									<div class="row" style="border: 3px solid #d4d4d4;
 										background: #11193d; margin-left:0px !important;display: flex;">

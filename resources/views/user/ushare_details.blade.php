@@ -27,6 +27,7 @@
 									<br>
 									
 								</div> <!-- /.blog-feature -->
+								<div class="blog-feature" style="margin-top: 23px;">
 								<?php $videos = json_decode($post_details->videos); ?>
                                 @foreach ($videos as $video)
 								<video width="500px" height="500px" controls>
@@ -34,6 +35,7 @@
 								Your browser does not support the video tag.
 								</video>
                                 @endforeach
+								</div>
 								<div class="blog-share" style="display:flex;position: relative;">
 									<div class="row" style="border: 3px solid #d4d4d4;
 										background: #11193d; margin-left:0px !important;display: flex;">
