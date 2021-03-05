@@ -63,7 +63,7 @@
                 <?php $videos=json_decode($useruploaddetails->compotition_videos);?>
                 @if(sizeof($videos) >0)    
                 @for ($i = 0; $i < sizeof($videos); $i++)
-                <video width="500" height="500" controls>
+                <video width="500" height="500" style="max-width: 100%;" controls>
 								<source src="{{$videos[$i]}}" type="video/mp4">
 								Your browser does not support the video tag.
 								</video>
