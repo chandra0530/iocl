@@ -28,6 +28,6 @@ class Mailer extends Mailable
      */
     public function build()
     {
-        return $this->subject('New contact details')->view('emails.TestMail');
+        return $this->subject('GET IN TOUCH')->view('emails.TestMail');
     }
 }
