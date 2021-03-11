@@ -32,7 +32,7 @@
 					</div> <!-- /.col -->
 					<div class="col-xs-12 col-sm-6 col-md-5">
 						<div class="skill-info">
-						<a href="compotition_details/{{$new->id}}">	<h3>{{$new->competition_name}}</h3>
+						<a href="competition_details/{{$new->id}}">	<h3>{{$new->competition_name}}</h3>
                             <p>Location: {{$new->compitition_location}}</p>
 							<p  style="-webkit-line-clamp: 2; !Important"> {!! html_entity_decode($new->competition_details) !!}</p>
                             </a>
@@ -100,7 +100,7 @@
 					</div> <!-- /.col -->
 					<div class="col-xs-12 col-sm-6 col-md-5">
 						<div class="skill-info">
-						<a href="compotition_details/{{$new->id}}">	<h3>{{$new->competition_name}}</h3>
+						<a href="competition_details/{{$new->id}}">	<h3>{{$new->competition_name}}</h3>
                             <p>Location: {{$new->compitition_location}}</p>
 							<p  style="-webkit-line-clamp: 2; !Important"> {!! html_entity_decode($new->competition_details) !!}</p>
                             </a>
@@ -166,7 +166,7 @@
 					</div> <!-- /.col -->
 					<div class="col-xs-12 col-sm-6 col-md-5">
 						<div class="skill-info">
-						<a href="compotition_details/{{$new->id}}">	<h3>{{$new->competition_name}}</h3>
+						<a href="competition_details/{{$new->id}}">	<h3>{{$new->competition_name}}</h3>
                             <p>Location: {{$new->compitition_location}}</p>
 							<p  style="-webkit-line-clamp: 2; !Important"> {!! html_entity_decode($new->competition_details) !!}</p>
                             </a>
