@@ -20,14 +20,14 @@
                     <div class="portfolio-details">
                         <div class="portfolio-container grid" style="position: relative; height: 270.188px;">
                             <div class="grid-item col-md-4 col-xs-6 figts limited" style="position: absolute; left: 0px; top: 0px;">
-                            <video width="320" height="240" style="max-width: 100%;" controls>
+                            <video width="320" height="240" style="max-width: 100%;" controls playsinline>
   <source src="{{ asset('assets/videos/video1.mp4')}}" type="video/mp4">
 Your browser does not support the video tag.
 </video>
                             </div> <!-- /.grid-item -->
                             <div class="grid-item col-md-4 col-xs-6 feature bseller" style="position: absolute; left: 390px; top: 0px;">
                                 <div class="portfolio-item">
-                                <video width="320" height="240" style="max-width: 100%;" controls>
+                                <video width="320" height="240" style="max-width: 100%;" controls playsinline>
   <source src="{{ asset('assets/videos/video2.mp4')}}" type="video/mp4">
 Your browser does not support the video tag.
 </video>

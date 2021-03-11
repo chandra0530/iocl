@@ -30,7 +30,7 @@
 								<div class="blog-feature" style="margin-top: 23px;">
 								<?php $videos = json_decode($post_details->videos); ?>
                                 @foreach ($videos as $video)
-								<video width="500px" height="500px" style="max-width: 100%;" controls>
+								<video width="500px" height="500px" style="max-width: 100%;" controls playsinline>
 								<source src="{{$video}}" type="video/mp4">
 								Your browser does not support the video tag.
 								</video>

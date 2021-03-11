@@ -61,7 +61,7 @@
                                 @if(sizeof($videos) >0)         
                                                         
                                 @foreach ($videos as $video)
-								<video width="500" height="500" style="max-width: 100%;" controls>
+								<video width="500" height="500" style="max-width: 100%;" controls playsinline>
 								<source src="{{$video}}" type="video/mp4">
 								Your browser does not support the video tag.
 								</video>
