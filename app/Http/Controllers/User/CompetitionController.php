@@ -33,6 +33,11 @@ class CompetitionController extends Controller
         return redirect()->back()->with(['success' => 'New comment added successfully.']);
     }
     public function publishreview(Request $request){
+        $comp_id=intval($request->comp_id);
+        $comp=Compitition::where('id',$comp_id)->get();
+        if(sizeOf($comp)==0){
+            return redirect()->back()->with(['error' => 'Invalid input']);
+        }
         $publish=new CompotitionUserUploads();
         $images=[];
         if ($request->hasFile('photos')) {
@@ -51,10 +56,10 @@ class CompetitionController extends Controller
             }
         }
         $publish->user_id=auth()->id();
-        $publish->comp_id=$request->comp_id;
+        $publish->comp_id=intval($request->comp_id);
         $publish->compotition_images=json_encode($images);
         $publish->compotition_videos=json_encode($videos);
-        $publish->compotition_details=$request->desc;
+        $publish->compotition_details=strval($request->desc);
         $publish->status='submitted';
         $publish->save();
         $success=1;

@@ -10,7 +10,7 @@ class MailController extends Controller {
       'email'=>$request->email,
       'phone'=>$request->phone,
       'subject'=>$request->subject,
-      'comment'=>$request->comment);
+      'comment'=>strval($request->comment));
   
       Mail::to('info@ioclparivaar.com')->send(new \App\Mail\Mailer($data));
       return redirect()->back()->with(['success' => 'Thank you for submitting your query. Someone from our team will respond to you shortly']);
