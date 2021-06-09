@@ -180,8 +180,22 @@ function addChild() {
 
     <!-- Main / Custom JS  -->
     <script src="{{ asset('assets/js/custom.js')}}"></script>
-    <script src="{{ asset('assets/js/bootstrap-filestyle.js')}}">
-
+    <script src="{{ asset('assets/js/bootstrap-filestyle.js')}}"></script>
+    <script>
+$( document ).ready(function() {
+    $('input').on('keypress', function (event) {
+    var regex = new RegExp("^[a-zA-Z0-9]+$");
+    var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+    if (!regex.test(key)) {
+       event.preventDefault();
+       return false;
+    }
+});
+$(document).bind("contextmenu",function(e){
+      return false;
+   });
+});
+</script>
 </body>
 
 </html>
