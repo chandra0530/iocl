@@ -23,6 +23,7 @@ use App\Models\User;
 use App\Models\CompotitionUserUploads;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
+use Validator;
 class UserViewController extends Controller
 {
     //
@@ -191,9 +192,24 @@ class UserViewController extends Controller
     public function updateprofile(Request $request){
         $user_details=User::find(auth()->id());
         if ($request->has('profile_image')) {
-            $temp_url = $request->file('profile_image')->store('profile_image', 'public');
+
+            $fileArray = array('image' => $user_details->profile_image);
+
+            // Tell the validator that this file should be an image
+            $rules = array(
+            'image' => 'mimes:jpeg,jpg,png,gif|required' // max 10000kb
+            );
+
+            // Now pass the input and rules into the validator
+            $validator = Validator::make($fileArray, $rules);
+            if(!$validator->fails()){
+                $temp_url = $request->file('profile_image')->store('profile_image', 'public');
            
-            $user_details->profile_image = url(Storage::url($temp_url));
+                $user_details->profile_image = url(Storage::url($temp_url));
+            }else{
+                return redirect()->back()->with(['error' => 'Please select profile picture with .jpg .png or .jepg format']);
+            }
+            
         }
         $user_details->phone_number=$request->mobile_no;
         if($request->password){

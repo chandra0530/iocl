@@ -355,7 +355,9 @@
                                                             Photo <small>( 600 * 400 )Px</small> (Max size 5mb)(Accepted image formats .jpeg, .jpg, .png,)
                                                         </div>
                                                         <input type="file" multiple name="photos[]" class="form-control"
-                                                               id="photos" placeholder="Select compitition images" accept="image/x-png,image/gif,image/jpeg" required>
+                                                               id="photos" placeholder="Select compitition images" 
+                                                               accept="image/x-png,image/gif,image/jpeg" 
+                                                               required>
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-sm-6 col-6">

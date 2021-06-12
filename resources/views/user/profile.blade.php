@@ -56,7 +56,7 @@
 
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="file" name="profile_image" class="form-control" placeholder="Your Email" required="required"  data-toggle="tooltip" title="Select a photo to upload.">
+												<input type="file" name="profile_image" class="form-control" placeholder="Your Email" required="required" accept="image/x-png,image/gif,image/jpeg"   data-toggle="tooltip" title="Select a photo to upload.">
 											</div>
 										</div> <!-- /.col- -->
 

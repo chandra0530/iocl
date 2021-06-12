@@ -8,7 +8,9 @@ use App\Models\competition_like;
 use App\Models\competition_comment;
 use App\Models\CompotitionUserUploads;
 use App\Models\CompetitionUserUploadLikes;
+use App\Models\Compitition;
 use Illuminate\Support\Facades\Storage;
+use Validator;
 
 class CompetitionController extends Controller
 {
@@ -42,17 +44,48 @@ class CompetitionController extends Controller
         $images=[];
         if ($request->hasFile('photos')) {
             foreach ($request->photos as $key => $photo) {
-                $path = $photo->store('comp_images', 'public');
-                $image_url= url(Storage::url($path));
-                array_push($images,$image_url);  
+                $fileArray = array('image' => $photo);
+
+                // Tell the validator that this file should be an image
+                $rules = array(
+                  'image' => 'mimes:jpeg,jpg,png,gif|required' // max 10000kb
+                );
+            
+                // Now pass the input and rules into the validator
+                $validator = Validator::make($fileArray, $rules);
+                if(!$validator->fails()){
+                    $path = $photo->store('comp_images', 'public');
+                    $image_url= url(Storage::url($path));
+                    array_push($images,$image_url);  
+                }else{
+                    return redirect()->back()->with(['error' => 'Invalid file formats selected.']);
+                }
+
+                
             }
         }
         $videos=[];
         if ($request->hasFile('videos')) {
             foreach ($request->videos as $key => $photo) {
-                $path = $photo->store('comp_videos', 'public');
-                $image_url= url(Storage::url($path));
-                array_push($videos,$image_url);
+                $fileArray = array('comp_videos' => $photo);
+
+                // Tell the validator that this file should be an image
+                $rules = array(
+                  'comp_videos' => 'mimes:mp4,jpg,png,gif|required' // max 10000kb
+                );
+            
+                // Now pass the input and rules into the validator
+                $validator = Validator::make($fileArray, $rules);
+
+                if(!$validator->fails()){
+                    $path = $photo->store('comp_videos', 'public');
+                    $image_url= url(Storage::url($path));
+                    array_push($videos,$image_url);
+                }
+                else{
+                    return redirect()->back()->with(['error' => 'Invalid file formats selected.']);
+                }
+                
             }
         }
         $publish->user_id=auth()->id();
