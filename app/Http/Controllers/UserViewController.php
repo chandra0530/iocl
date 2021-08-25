@@ -221,24 +221,28 @@ class UserViewController extends Controller
                
         
                 foreach ($request->member_type as $key => $value) {
-                    $checkuser= User::where('email', $request->member_email[$key])->get();
-                    if(sizeof($checkuser)==0){
-                        $newuser=new User();
-                        $newuser->employe_id=auth()->id();
-                        $newuser->relation=$request->member_type[$key];
-                        $newuser->name=$request->member_name[$key];
-                        $newuser->email=$request->member_email[$key];
-                        $newuser->password=bcrypt('password');
-                        $newuser->phone_number=$request->member_phone[$key];
-                        $data = array(
-                            'name'=>$request->member_name[$key],
-                            'email'=>$request->member_email[$key],
-                            'password'=>'password',
-                            'phone_number'=>$request->member_phone[$key]);
-                            Mail::to($request->member_email[$key])->send(new \App\Mail\FamilyMemberRegistration($data));
-            
-                        $newuser->save();
+                    if(isset($request->member_email[$key])){
+                        $checkuser= User::where('email', $request->member_email[$key])->get();
+                        if(sizeof($checkuser)==0){
+                            $newuser=new User();
+                            $newuser->employe_id=auth()->id();
+                            $newuser->relation=$request->member_type[$key];
+                            $newuser->name=$request->member_name[$key];
+                            $newuser->email=$request->member_email[$key];
+                            $newuser->password=bcrypt('password');
+                            $newuser->phone_number=$request->member_phone[$key];
+                            $data = array(
+                                'name'=>$request->member_name[$key],
+                                'email'=>$request->member_email[$key],
+                                'password'=>'password',
+                                'phone_number'=>$request->member_phone[$key]);
+                                Mail::to($request->member_email[$key])->send(new \App\Mail\FamilyMemberRegistration($data));
+                
+                            $newuser->save();
+                        }
+                        
                     }
+                   
                    
                 }
                 return redirect()->back()->with(['success' => 'User profile details updated successfully']);

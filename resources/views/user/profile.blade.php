@@ -108,7 +108,7 @@
                                         </div> <!-- /.col- -->
                                         <div class="col-xs-12 col-sm-12">
 											<div class="form-group">
-												<input type="text" name="member_email[]" class="form-control" placeholder="Your member Email" required="required" value="{{$family_member_Details[$i]->email}}">
+												<input type="email" name="member_email[]" class="form-control" placeholder="Your member Email" required="required" value="{{$family_member_Details[$i]->email}}">
 											</div>
 										</div>
                                         <div class="col-xs-12 col-sm-12">
