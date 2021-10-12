@@ -93,27 +93,27 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" placeholder="Name" required="required" data-error="Write your name">
+                                            <input type="text" name="name" class="form-control" placeholder="Name"  autocomplete="off" required="required" data-error="Write your name">
                                         </div>
                                     </div> <!-- /.col- -->
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" placeholder="Email" required="required" data-error="Write your valid email address">
+                                            <input type="email" name="email" class="form-control" placeholder="Email"  autocomplete="off" required="required" data-error="Write your valid email address">
                                         </div>
                                     </div> <!-- /.col- -->
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="phone" class="form-control" required="required"  placeholder="Phone Number">
+                                            <input type="text" name="phone" class="form-control" required="required"  autocomplete="off"  placeholder="Phone Number">
                                         </div>
                                     </div> <!-- /.col- -->
                                     <div class="col-xs-12 col-sm-12 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="subject" class="form-control" placeholder="Subject " required="required" data-error="Write your subject">
+                                            <input type="text" name="subject" class="form-control" placeholder="Subject "  autocomplete="off" required="required" data-error="Write your subject">
                                         </div>
                                     </div> <!-- /.col- -->
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <textarea name="comment" class="form-control" placeholder="Message" required="required" data-error="Write your comment"></textarea>
+                                            <textarea name="comment" class="form-control" placeholder="Message" required="required"  autocomplete="off" data-error="Write your comment"></textarea>
                                         </div>
                                     </div> <!-- /.col- -->
                                     <div class="form-group col-xs-12 col-md-12">

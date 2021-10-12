@@ -110,7 +110,7 @@
 													 <a href="#">{{$comment->created_at}}</a>
 												</h4>
 												@if($comment->user_id == Auth::user()->id)         
-<a href="/delete-ushare-comment/{{$comment->competition_id}}/{{$comment->user_id}}" class="btn btn-danger" style="float: right;">Delete</a>
+<!-- <a href="/delete-ushare-comment/{{$comment->competition_id}}/{{$comment->user_id}}" class="btn btn-danger" style="float: right;">Delete</a> -->
 @endif
 												<p style="text-align: justify;">{{$comment->ushare_comment}}</p>
 											</div> <!-- /.media-body -->
@@ -206,7 +206,7 @@
                         
 						<div class="contact-form">
                              
-                            <form  method="post" action="{{ route('submitcontactform') }}" >
+                            <form  method="post" action="{{ route('submitcontactform') }}"  autocomplete="off">
                             @csrf
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6">

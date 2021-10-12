@@ -264,7 +264,7 @@
                         
                         <div class="contact-form">
                              
-                            <form  method="post" action="{{ route('submitcontactform') }}" >
+                            <form  method="post" action="{{ route('submitcontactform') }}" autocomplete="off">
                             @csrf
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6">

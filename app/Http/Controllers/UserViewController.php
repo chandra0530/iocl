@@ -193,7 +193,7 @@ class UserViewController extends Controller
         $user_details=User::find(auth()->id());
         if ($request->has('profile_image')) {
 
-            $fileArray = array('image' => $user_details->profile_image);
+            $fileArray = array('image' => $request->file('profile_image'));
 
             // Tell the validator that this file should be an image
             $rules = array(
