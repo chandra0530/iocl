@@ -99,6 +99,7 @@ class UShareController extends Controller
             $like_status=UshareLike::where('share_id',$id)->where('user_id',auth()->id())->get();
             $comments=UshareComment::where('share_id',$id)
             ->join('users','users.id','=','ushare_comments.user_id')
+            ->select('ushare_comments.*','users.name')
             ->get();
             $total_count = UshareLike::where('share_id',$id)->count();
 
