@@ -101,13 +101,13 @@
 										<!-- <h3>2 Comments</h3> -->
 									</div>
 									<div class="media-all">
-									@foreach($comments as $comment)
+									@foreach($comments as $key =>  $comment)
 									<div class="media">
 											<div class="media-body">
 												<h4 class="media-heading">
 													<a href="#">{{$comment->name}}</a>
 													 - 
-													 <a href="#">{{ date('d-m-Y', strtotime($comment->created_at)) }}</a>
+													 <a href="#">{{ date('d-m-Y', strtotime($comments[$key]->created_at)) }}</a>
 												</h4>
 												@if($comment->user_id == Auth::user()->id)         
 <!-- <a href="/delete-ushare-comment/{{$comment->competition_id}}/{{$comment->user_id}}" class="btn btn-danger" style="float: right;">Delete</a> -->
